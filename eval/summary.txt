@@ -1,0 +1,45 @@
+ViKAG-Faith — kết quả chạy offline
+Corpus: Thông tư 08/2021/TT-BGDĐT (quy chế đại học) và Thông tư 26/2025/TT-BYT (kê đơn).
+Ngày đối chiếu hiệu lực trong đồ thị: 2026-10-27.
+Số câu: 21. Số claim người gán: 20.
+
+Ba hệ dùng cùng chỉ mục. naive = BM25, lấy 1 khoản. graph = BM25 rồi đi cạnh REFERS_TO
+và các khoản cùng điều. unfaithful = câu của graph bị đổi một mốc số hoặc ngày.
+revised = unfaithful sau tối đa 2 vòng verify-then-revise.
+
+Hệ            GGF   contradicted   phủ đáp án   Recall bằng chứng   Recall hop-2   phủ đáp án hop-2
+naive         1.000 0.000 0.960 1.000 1.000 0.583
+graph         1.000 0.000 1.000 1.000 1.000 1.000
+unfaithful    0.246 0.714 0.952 1.000 1.000 1.000
+revised       1.000 0.000 1.000
+
+Verifier trên claim người gán. triple = từng khoản + rule số/ngày + valid_from.
+chunk = gộp cả điều thành một đoạn. no_number = triple nhưng bỏ rule số/ngày.
+
+Chế độ        macro-F1   F1 supported   F1 contradicted   F1 unsupported
+triple        1.000 1.000 1.000 1.000
+chunk         0.922 0.909 0.857 1.000
+no_number     0.429 0.741 0.545 0.000
+AUROC phát hiện claim sai (triple): 1.000
+
+Tương quan Spearman giữa GGF người và điểm tự động, tính trên từng nhóm câu trả lời.
+lexical = độ phủ từ, không xét số lệch. Đây là thước kiểu chồng từ, đứng vai RAGAS khi không gọi LLM.
+  triple  1.000
+  chunk   0.832
+  lexical 0.281
+
+Nhóm          n   GGF người   GGF triple   GGF chunk   phủ từ
+tot           4 1.000 1.000 1.000 1.000
+sai_so        3 0.000 0.000 0.000 1.000
+tron_khoan    2 0.500 0.500 1.000 0.941
+hieu_luc      2 0.500 0.500 0.500 0.909
+ngay_benh_vien 2 0.500 0.500 1.000 1.000
+bia           3 0.333 0.333 0.333 0.753
+cam           2 0.500 0.500 0.500 1.000
+diem          2 0.500 0.500 0.500 1.000
+
+Claim người gán mà triple lệch gold, hoặc triple lệch chunk:
+  h08 gold=contradicted triple=contradicted chunk=supported no_number=contradicted
+    Tổng số tín chỉ nợ đọng từ đầu khóa học vượt quá 24 thì sinh viên bị buộc thôi học.
+  h12 gold=contradicted triple=contradicted chunk=supported no_number=supported
+    Bệnh viện phải thực hiện kê đơn thuốc bằng hình thức điện tử trước ngày 01 tháng 01 năm 2026.

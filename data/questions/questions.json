@@ -1,0 +1,180 @@
+{
+  "as_of": "2026-10-27",
+  "note": "Đáp án đối chiếu trực tiếp với điều khoản trong src/legal_corpus.py. Một câu có thể có nhiều cụm đáp án; câu được tính là phủ đáp án khi mỗi cụm đều xuất hiện.",
+  "questions": [
+    {
+      "id": "q01",
+      "domain": "quy_che",
+      "hop": 1,
+      "question": "Thời gian tối đa để sinh viên hoàn thành khóa học là bao lâu?",
+      "answers": ["không vượt quá 02 lần thời gian theo kế hoạch học tập chuẩn toàn khóa"],
+      "evidence": [{"doc": "08-2021-tt-bgddt", "dieu": 2, "khoan": 5}]
+    },
+    {
+      "id": "q02",
+      "domain": "quy_che",
+      "hop": 1,
+      "question": "Tối đa bao nhiêu phần trăm khối lượng chương trình chính quy được dạy bằng lớp học trực tuyến?",
+      "answers": ["tối đa 30%"],
+      "evidence": [{"doc": "08-2021-tt-bgddt", "dieu": 8, "khoan": 2, "diem": "b"}]
+    },
+    {
+      "id": "q03",
+      "domain": "quy_che",
+      "hop": 1,
+      "question": "Sinh viên bị cảnh báo học tập khi tổng số tín chỉ nợ đọng từ đầu khóa vượt quá bao nhiêu?",
+      "answers": ["nợ đọng từ đầu khóa học vượt quá 24"],
+      "evidence": [{"doc": "08-2021-tt-bgddt", "dieu": 11, "khoan": 1, "diem": "a"}]
+    },
+    {
+      "id": "q04",
+      "domain": "quy_che",
+      "hop": 1,
+      "question": "Điểm trung bình học kỳ đầu dưới mức nào thì sinh viên bị cảnh báo học tập?",
+      "answers": ["dưới 0,8 đối với học kỳ đầu"],
+      "evidence": [{"doc": "08-2021-tt-bgddt", "dieu": 11, "khoan": 1, "diem": "b"}]
+    },
+    {
+      "id": "q05",
+      "domain": "quy_che",
+      "hop": 1,
+      "question": "Cơ sở đào tạo được quy định tối đa bao nhiêu lần cảnh báo học tập liên tiếp?",
+      "answers": ["không vượt quá 2 lần cảnh báo liên tiếp"],
+      "evidence": [{"doc": "08-2021-tt-bgddt", "dieu": 11, "khoan": 3, "diem": "a"}]
+    },
+    {
+      "id": "q06",
+      "domain": "quy_che",
+      "hop": 1,
+      "question": "Theo niên chế, số tín chỉ nợ đọng tối đa để được học tiếp lên năm sau là bao nhiêu?",
+      "answers": ["nợ đọng từ đầu khóa không vượt quá 16"],
+      "evidence": [{"doc": "08-2021-tt-bgddt", "dieu": 12, "khoan": 1, "diem": "b"}]
+    },
+    {
+      "id": "q07",
+      "domain": "quy_che",
+      "hop": 1,
+      "question": "Khối lượng tối đa được công nhận, chuyển đổi tín chỉ là bao nhiêu phần trăm?",
+      "answers": ["không vượt quá 50%"],
+      "evidence": [{"doc": "08-2021-tt-bgddt", "dieu": 13, "khoan": 3}]
+    },
+    {
+      "id": "q08",
+      "domain": "quy_che",
+      "hop": 1,
+      "question": "Hạng tốt nghiệp xuất sắc hoặc giỏi bị giảm một mức khi khối lượng học lại vượt quá bao nhiêu phần trăm?",
+      "answers": ["học lại vượt quá 5%"],
+      "evidence": [{"doc": "08-2021-tt-bgddt", "dieu": 14, "khoan": 3, "diem": "a"}]
+    },
+    {
+      "id": "q09",
+      "domain": "quy_che",
+      "hop": 1,
+      "question": "Thời hạn hiệu trưởng cấp bằng tốt nghiệp là bao lâu kể từ khi sinh viên đủ điều kiện?",
+      "answers": ["trong thời hạn 03 tháng"],
+      "evidence": [{"doc": "08-2021-tt-bgddt", "dieu": 14, "khoan": 2}]
+    },
+    {
+      "id": "q10",
+      "domain": "quy_che",
+      "hop": 1,
+      "question": "Sinh viên trao đổi được tích lũy tối đa bao nhiêu phần trăm tín chỉ tại cơ sở đào tạo khác?",
+      "answers": ["không vượt quá 25%"],
+      "evidence": [{"doc": "08-2021-tt-bgddt", "dieu": 17, "khoan": 2}]
+    },
+    {
+      "id": "q11",
+      "domain": "quy_che",
+      "hop": 1,
+      "question": "Sinh viên thi hộ lần thứ nhất bị kỷ luật ở mức nào?",
+      "answers": ["đình chỉ học tập 01 năm"],
+      "evidence": [{"doc": "08-2021-tt-bgddt", "dieu": 20, "khoan": 2}]
+    },
+    {
+      "id": "q12",
+      "domain": "quy_che",
+      "hop": 2,
+      "question": "Nghỉ học tạm thời vì nhu cầu cá nhân có bị tính vào thời gian học tối đa không, và thời gian tối đa là bao nhiêu?",
+      "answers": ["tính vào thời gian học chính thức", "không vượt quá 02 lần"],
+      "evidence": [
+        {"doc": "08-2021-tt-bgddt", "dieu": 15, "khoan": 2},
+        {"doc": "08-2021-tt-bgddt", "dieu": 2, "khoan": 5}
+      ]
+    },
+    {
+      "id": "q13",
+      "domain": "quy_che",
+      "hop": 1,
+      "question": "Có được liên kết đào tạo đối với ngành sức khỏe có cấp chứng chỉ hành nghề không?",
+      "answers": ["Không thực hiện việc liên kết đào tạo đối với các ngành thuộc lĩnh vực sức khỏe"],
+      "evidence": [{"doc": "08-2021-tt-bgddt", "dieu": 5, "khoan": 1}]
+    },
+    {
+      "id": "q14",
+      "domain": "y_te",
+      "hop": 1,
+      "question": "Ai có thẩm quyền kê đơn thuốc hóa dược, sinh phẩm trong điều trị ngoại trú?",
+      "answers": ["bác sỹ, y sỹ"],
+      "evidence": [{"doc": "26-2025-tt-byt", "dieu": 2}]
+    },
+    {
+      "id": "q15",
+      "domain": "y_te",
+      "hop": 1,
+      "question": "Trẻ dưới bao nhiêu tháng tuổi thì đơn thuốc phải ghi số tháng tuổi và cân nặng?",
+      "answers": ["dưới 72 tháng tuổi"],
+      "evidence": [{"doc": "26-2025-tt-byt", "dieu": 6, "khoan": 4}]
+    },
+    {
+      "id": "q16",
+      "domain": "y_te",
+      "hop": 1,
+      "question": "Số ngày sử dụng tối đa của mỗi thuốc trong đơn thông thường là bao nhiêu?",
+      "answers": ["không quá ba mươi (30) ngày"],
+      "evidence": [{"doc": "26-2025-tt-byt", "dieu": 6, "khoan": 8, "diem": "a"}]
+    },
+    {
+      "id": "q17",
+      "domain": "y_te",
+      "hop": 1,
+      "question": "Người bệnh thuộc phụ lục VII được kê mỗi thuốc tối đa bao nhiêu ngày?",
+      "answers": ["không quá chín mươi (90) ngày"],
+      "evidence": [{"doc": "26-2025-tt-byt", "dieu": 6, "khoan": 8, "diem": "b"}]
+    },
+    {
+      "id": "q18",
+      "domain": "y_te",
+      "hop": 1,
+      "question": "Thuốc gây nghiện điều trị bệnh cấp tính được kê tối đa bao nhiêu ngày?",
+      "answers": ["không vượt quá bảy (07) ngày"],
+      "evidence": [{"doc": "26-2025-tt-byt", "dieu": 7, "khoan": 2}]
+    },
+    {
+      "id": "q19",
+      "domain": "y_te",
+      "hop": 1,
+      "question": "Mỗi đợt kê thuốc gây nghiện giảm đau cho người bệnh ung thư tối đa bao nhiêu ngày?",
+      "answers": ["mỗi đợt không vượt quá mười (10) ngày"],
+      "evidence": [{"doc": "26-2025-tt-byt", "dieu": 8, "khoan": 1}]
+    },
+    {
+      "id": "q20",
+      "domain": "y_te",
+      "hop": 1,
+      "question": "Bệnh viện phải kê đơn thuốc điện tử trước ngày nào?",
+      "answers": ["trước ngày 01 tháng 10 năm 2025"],
+      "evidence": [{"doc": "26-2025-tt-byt", "dieu": 13, "khoan": 3, "diem": "a"}]
+    },
+    {
+      "id": "q21",
+      "domain": "y_te",
+      "hop": 2,
+      "question": "Thông tư 52/2017/TT-BYT còn hiệu lực sau ngày 01/07/2025 không?",
+      "answers": ["52/2017/TT-BYT", "hết hiệu lực", "01 tháng 07 năm 2025"],
+      "evidence": [
+        {"doc": "26-2025-tt-byt", "dieu": 13, "khoan": 2, "diem": "a"},
+        {"doc": "26-2025-tt-byt", "dieu": 13, "khoan": 1}
+      ]
+    }
+  ]
+}

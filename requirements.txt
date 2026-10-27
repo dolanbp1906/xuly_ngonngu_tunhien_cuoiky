@@ -1,0 +1,2 @@
+# Thư viện chuẩn của Python 3.10 trở lên là đủ.
+# Không cần GPU, Neo4j, Ollama hay PhoBERT để chạy demo.

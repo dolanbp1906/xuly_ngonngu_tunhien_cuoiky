@@ -1,0 +1,850 @@
+{
+  "collected_on": "2026-10-27",
+  "n_chunks": 60,
+  "n_edges": 13,
+  "documents": [
+    {
+      "id": "08-2021-tt-bgddt",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "title": "Quy chế đào tạo trình độ đại học",
+      "agency": "Bộ Giáo dục và Đào tạo",
+      "issued": "2021-03-18",
+      "valid_from": "2021-05-03",
+      "valid_to": null,
+      "status": "con_hieu_luc",
+      "domain": "quy_che",
+      "source_url": "https://vbpl.moj.gov.vn/FileData/TW/Lists/vbpq/Attachments/147704/VanBanGoc_08-2021-TT-BGDĐT%20full.pdf"
+    },
+    {
+      "id": "26-2025-tt-byt",
+      "so_hieu": "26/2025/TT-BYT",
+      "title": "Quy định về đơn thuốc và việc kê đơn thuốc hóa dược, sinh phẩm trong điều trị ngoại trú",
+      "agency": "Bộ Y tế",
+      "issued": "2025-06-30",
+      "valid_from": "2025-07-01",
+      "valid_to": null,
+      "status": "con_hieu_luc",
+      "domain": "y_te",
+      "source_url": "https://vbpl.vn/boyte/Pages/vbpq-toanvan.aspx?ItemID=179735"
+    }
+  ],
+  "repealed": [
+    {
+      "id": "52-2017-tt-byt",
+      "so_hieu": "52/2017/TT-BYT",
+      "title": "Quy định về đơn thuốc và việc kê đơn thuốc hóa dược, sinh phẩm trong điều trị ngoại trú",
+      "valid_to": "2025-07-01",
+      "repealed_by": "26-2025-tt-byt"
+    },
+    {
+      "id": "18-2018-tt-byt",
+      "so_hieu": "18/2018/TT-BYT",
+      "title": "Sửa đổi, bổ sung một số điều của Thông tư 52/2017/TT-BYT",
+      "valid_to": "2025-07-01",
+      "repealed_by": "26-2025-tt-byt"
+    },
+    {
+      "id": "04-2022-tt-byt",
+      "so_hieu": "04/2022/TT-BYT",
+      "title": "Sửa đổi, bổ sung quy định kê đơn thuốc",
+      "valid_to": "2025-07-01",
+      "repealed_by": "26-2025-tt-byt"
+    },
+    {
+      "id": "27-2021-tt-byt",
+      "so_hieu": "27/2021/TT-BYT",
+      "title": "Quy định kê đơn thuốc bằng hình thức điện tử",
+      "valid_to": "2025-07-01",
+      "repealed_by": "26-2025-tt-byt"
+    }
+  ],
+  "chunks": [
+    {
+      "id": "08-2021-tt-bgddt:d2:k1:p-",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 2,
+      "khoan": 1,
+      "diem": null,
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 2 khoản 1, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Chương trình đào tạo được xây dựng theo đơn vị tín chỉ, cấu trúc từ các môn học hoặc học phần (sau đây gọi chung là học phần), trong đó phải có đủ các học phần bắt buộc và đáp ứng chuẩn chương trình đào tạo theo quy định hiện hành của Bộ Giáo dục và Đào tạo.",
+      "excerpt": false
+    },
+    {
+      "id": "08-2021-tt-bgddt:d2:k2:p-",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 2,
+      "khoan": 2,
+      "diem": null,
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 2 khoản 2, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Nội dung, chuẩn đầu ra của chương trình đào tạo áp dụng chung đối với các hình thức, phương thức tổ chức đào tạo và đối tượng người học khác nhau.",
+      "excerpt": false
+    },
+    {
+      "id": "08-2021-tt-bgddt:d2:k3:p-",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 2,
+      "khoan": 3,
+      "diem": null,
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 2 khoản 3, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Chương trình đào tạo phải được công khai đối với người học trước khi tuyển sinh và khi bắt đầu khóa học; những thay đổi, điều chỉnh liên quan đến chương trình đào tạo được thực hiện theo quy định hiện hành và công bố trước khi áp dụng, không gây tác động bất lợi cho sinh viên.",
+      "excerpt": false
+    },
+    {
+      "id": "08-2021-tt-bgddt:d2:k4:pa",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 2,
+      "khoan": 4,
+      "diem": "a",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 2 khoản 4 điểm a, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Đối với mỗi hình thức đào tạo, chương trình đào tạo cần cung cấp kế hoạch học tập chuẩn toàn khóa để định hướng cho sinh viên. Thời gian theo kế hoạch học tập chuẩn toàn khóa đối với hình thức đào tạo chính quy phải phù hợp với thời gian quy định trong khung cơ cấu hệ thống giáo dục quốc dân, đồng thời đảm bảo đa số sinh viên hoàn thành chương trình đào tạo;",
+      "excerpt": false
+    },
+    {
+      "id": "08-2021-tt-bgddt:d2:k4:pb",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 2,
+      "khoan": 4,
+      "diem": "b",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 2 khoản 4 điểm b, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Đối với mỗi hình thức đào tạo, chương trình đào tạo cần cung cấp kế hoạch học tập chuẩn toàn khóa để định hướng cho sinh viên. Thời gian theo kế hoạch học tập chuẩn toàn khóa đối với hình thức đào tạo vừa làm vừa học dài hơn tối thiểu 20% so với hình thức đào tạo chính quy của cùng chương trình đào tạo.",
+      "excerpt": false
+    },
+    {
+      "id": "08-2021-tt-bgddt:d2:k5:p-",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 2,
+      "khoan": 5,
+      "diem": null,
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 2 khoản 5, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Thời gian tối đa để sinh viên hoàn thành khóa học được quy định trong quy chế của cơ sở đào tạo, nhưng không vượt quá 02 lần thời gian theo kế hoạch học tập chuẩn toàn khóa đối với mỗi hình thức đào tạo. Đối với sinh viên học liên thông đã được miễn trừ khối lượng tín chỉ tích lũy, thời gian tối đa để sinh viên hoàn thành khóa học được xác định trên cơ sở thời gian theo kế hoạch học tập chuẩn toàn khóa giảm tương ứng với khối lượng được miễn trừ.",
+      "excerpt": false
+    },
+    {
+      "id": "08-2021-tt-bgddt:d5:k1:p-",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 5,
+      "khoan": 1,
+      "diem": null,
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 5 khoản 1, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Liên kết đào tạo chỉ thực hiện đối với hình thức vừa làm vừa học theo quy định tại khoản 22 Điều 1 Luật sửa đổi, bổ sung một số điều của Luật Giáo dục đại học và theo quy định tại khoản 2, khoản 3 Điều này. Không thực hiện việc liên kết đào tạo đối với các ngành thuộc lĩnh vực sức khỏe có cấp chứng chỉ hành nghề.",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d6:k2:p-",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 6,
+      "khoan": 2,
+      "diem": null,
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 6 khoản 2, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Kế hoạch năm học thể hiện những mốc thời gian chính của các hoạt động đào tạo trong năm học cho tất cả hình thức, chương trình đào tạo, được công bố kịp thời tới các bên liên quan trước khi bắt đầu năm học. Một năm học có 02 hoặc 03 học kỳ chính với tổng số tối thiểu 30 tuần lên lớp. Ngoài các học kỳ chính, cơ sở đào tạo có thể tổ chức thêm học kỳ phụ.",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d6:k4:p-",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 6,
+      "khoan": 4,
+      "diem": null,
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 6 khoản 4, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Thời khóa biểu thể hiện thời gian, địa điểm, hoạt động dạy và học của từng lớp thuộc các khóa, hình thức và chương trình đào tạo. Thời khóa biểu của các lớp học phần bình thường được bố trí đều trong các tuần của học kỳ. Trong trường hợp cần thiết phải xếp lịch học tập trung thời gian, số giờ giảng đối với một học phần bất kỳ không vượt quá 15 giờ/tuần và 4 giờ/ngày.",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d7:k4:pa",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 7,
+      "khoan": 4,
+      "diem": "a",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 7 khoản 4 điểm a, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Quy chế của cơ sở đào tạo quy định quy trình, thủ tục, tổ chức quản lý, lưu trữ việc đăng ký học tập của sinh viên ở mỗi học kỳ, việc rút bớt học phần đã đăng ký; quy định cụ thể giới hạn khối lượng học tập của sinh viên trong mỗi học kỳ nằm trong khung như sau: Khối lượng tối thiểu không ít hơn 2/3 khối lượng trung bình một học kỳ theo kế hoạch học tập chuẩn;",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d7:k4:pb",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 7,
+      "khoan": 4,
+      "diem": "b",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 7 khoản 4 điểm b, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Quy chế của cơ sở đào tạo quy định quy trình, thủ tục, tổ chức quản lý, lưu trữ việc đăng ký học tập của sinh viên ở mỗi học kỳ, việc rút bớt học phần đã đăng ký; quy định cụ thể giới hạn khối lượng học tập của sinh viên trong mỗi học kỳ nằm trong khung như sau: Khối lượng tối đa không vượt quá 3/2 khối lượng trung bình một học kỳ theo kế hoạch học tập chuẩn.",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d8:k2:pa",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 8,
+      "khoan": 2,
+      "diem": "a",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 8 khoản 2 điểm a, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Dạy và học trực tuyến: Cơ sở đào tạo được tổ chức các lớp học trực tuyến khi đáp ứng các quy định hiện hành về ứng dụng công nghệ thông tin trong quản lý và tổ chức đào tạo qua mạng; có các giải pháp bảo đảm chất lượng và minh chứng chất lượng lớp học trực tuyến không thấp hơn chất lượng lớp học trực tiếp;",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d8:k2:pb",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 8,
+      "khoan": 2,
+      "diem": "b",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 8 khoản 2 điểm b, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Dạy và học trực tuyến: Đối với đào tạo chính quy và vừa làm vừa học, tối đa 30% tổng khối lượng của chương trình đào tạo được thực hiện bằng lớp học trực tuyến. Trong trường hợp thiên tai, dịch bệnh phức tạp và các trường hợp bất khả kháng khác, cơ sở đào tạo thực hiện theo hướng dẫn của Bộ Giáo dục và Đào tạo.",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d11:k1:pa",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 11,
+      "khoan": 1,
+      "diem": "a",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 11 khoản 1 điểm a, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Cuối mỗi học kỳ chính, sinh viên được cảnh báo học tập dựa trên một số điều kiện như sau: Tổng số tín chỉ không đạt trong học kỳ vượt quá 50% khối lượng đã đăng ký học trong học kỳ, hoặc tổng số tín chỉ nợ đọng từ đầu khóa học vượt quá 24;",
+      "excerpt": false
+    },
+    {
+      "id": "08-2021-tt-bgddt:d11:k1:pb",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 11,
+      "khoan": 1,
+      "diem": "b",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 11 khoản 1 điểm b, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Cuối mỗi học kỳ chính, sinh viên được cảnh báo học tập dựa trên một số điều kiện như sau: Điểm trung bình học kỳ đạt dưới 0,8 đối với học kỳ đầu của khóa học, dưới 1,0 đối với các học kỳ tiếp theo;",
+      "excerpt": false
+    },
+    {
+      "id": "08-2021-tt-bgddt:d11:k1:pc",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 11,
+      "khoan": 1,
+      "diem": "c",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 11 khoản 1 điểm c, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Cuối mỗi học kỳ chính, sinh viên được cảnh báo học tập dựa trên một số điều kiện như sau: Điểm trung bình tích lũy đạt dưới 1,2 đối với sinh viên trình độ năm thứ nhất, dưới 1,4 đối với sinh viên trình độ năm thứ hai, dưới 1,6 đối với sinh viên trình độ năm thứ ba dưới 1,8 đối với sinh viên các năm tiếp theo.",
+      "excerpt": false
+    },
+    {
+      "id": "08-2021-tt-bgddt:d11:k2:pa",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 11,
+      "khoan": 2,
+      "diem": "a",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 11 khoản 2 điểm a, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Sinh viên bị buộc thôi học trong các trường hợp: Số lần cảnh báo học tập hoặc mức cảnh báo học tập vượt quá giới hạn theo quy định của cơ sở đào tạo;",
+      "excerpt": false
+    },
+    {
+      "id": "08-2021-tt-bgddt:d11:k2:pb",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 11,
+      "khoan": 2,
+      "diem": "b",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 11 khoản 2 điểm b, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Sinh viên bị buộc thôi học trong các trường hợp: Thời gian học tập vượt quá giới hạn theo quy định tại khoản 5 Điều 2 của Quy chế này.",
+      "excerpt": false
+    },
+    {
+      "id": "08-2021-tt-bgddt:d11:k3:pa",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 11,
+      "khoan": 3,
+      "diem": "a",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 11 khoản 3 điểm a, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Quy chế của cơ sở đào tạo quy định cụ thể: Việc lựa chọn áp dụng một số điều kiện cảnh báo học tập, giới hạn số lần hoặc mức cảnh báo học tập nhưng không vượt quá 2 lần cảnh báo liên tiếp;",
+      "excerpt": false
+    },
+    {
+      "id": "08-2021-tt-bgddt:d11:k3:pb",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 11,
+      "khoan": 3,
+      "diem": "b",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 11 khoản 3 điểm b, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Quy chế của cơ sở đào tạo quy định cụ thể: Quy trình, thủ tục cảnh báo học tập, buộc thôi học; việc thông báo hình thức áp dụng tới sinh viên;",
+      "excerpt": false
+    },
+    {
+      "id": "08-2021-tt-bgddt:d11:k3:pc",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 11,
+      "khoan": 3,
+      "diem": "c",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 11 khoản 3 điểm c, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Quy chế của cơ sở đào tạo quy định cụ thể: Việc bảo lưu kết quả học tập đã tích lũy trong trường hợp sinh viên bị buộc thôi học.",
+      "excerpt": false
+    },
+    {
+      "id": "08-2021-tt-bgddt:d12:k1:pa",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 12,
+      "khoan": 1,
+      "diem": "a",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 12 khoản 1 điểm a, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Cuối mỗi năm học, sinh viên được đánh giá đạt tiến độ học tập bình thường và được học tiếp lên năm học sau nếu đạt cả hai điều kiện: Điểm trung bình năm học đạt từ 1,0 trở lên đối với năm học thứ nhất, từ 1,2 trở lên đối với năm thứ hai và từ 1,4 đối với năm thứ ba trở đi;",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d12:k1:pb",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 12,
+      "khoan": 1,
+      "diem": "b",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 12 khoản 1 điểm b, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Cuối mỗi năm học, sinh viên được đánh giá đạt tiến độ học tập bình thường và được học tiếp lên năm học sau nếu đạt cả hai điều kiện: Số tín chỉ nợ đọng từ đầu khóa không vượt quá 16.",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d12:k2:pa",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 12,
+      "khoan": 2,
+      "diem": "a",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 12 khoản 2 điểm a, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Sinh viên bị buộc thôi học trong các trường hợp: Điểm trung bình năm học đạt dưới 0,8;",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d12:k2:pb",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 12,
+      "khoan": 2,
+      "diem": "b",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 12 khoản 2 điểm b, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Sinh viên bị buộc thôi học trong các trường hợp: Điểm trung bình tích lũy đạt dưới 1,2 sau 2 năm học, dưới 1,4 sau 3 năm học và dưới 1,6 từ sau 4 năm học trở đi;",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d12:k2:pc",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 12,
+      "khoan": 2,
+      "diem": "c",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 12 khoản 2 điểm c, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Sinh viên bị buộc thôi học trong các trường hợp: Thời gian học tập vượt quá giới hạn theo quy định tại khoản 5 Điều 2 của Quy chế này.",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d13:k3:p-",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 13,
+      "khoan": 3,
+      "diem": null,
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 13 khoản 3, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Cơ sở đào tạo công khai quy định việc công nhận kết quả học tập và chuyển đổi tín chỉ. Khối lượng tối đa được công nhận, chuyển đổi không vượt quá 50% khối lượng học tập tối thiểu của chương trình đào tạo; riêng đối với ngành đào tạo giáo viên thực hiện theo hướng dẫn của Bộ Giáo dục và Đào tạo.",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d14:k1:pa",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 14,
+      "khoan": 1,
+      "diem": "a",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 14 khoản 1 điểm a, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Sinh viên được xét và công nhận tốt nghiệp khi có đủ các điều kiện sau: Tích lũy đủ học phần, số tín chỉ và hoàn thành các nội dung bắt buộc khác theo yêu cầu của chương trình đào tạo, đạt chuẩn đầu ra của chương trình đào tạo;",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d14:k1:pb",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 14,
+      "khoan": 1,
+      "diem": "b",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 14 khoản 1 điểm b, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Sinh viên được xét và công nhận tốt nghiệp khi có đủ các điều kiện sau: Điểm trung bình tích lũy của toàn khóa học đạt từ trung bình trở lên;",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d14:k1:pc",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 14,
+      "khoan": 1,
+      "diem": "c",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 14 khoản 1 điểm c, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Sinh viên được xét và công nhận tốt nghiệp khi có đủ các điều kiện sau: Tại thời điểm xét tốt nghiệp không bị truy cứu trách nhiệm hình sự hoặc không đang trong thời gian bị kỷ luật ở mức đình chỉ học tập.",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d14:k2:p-",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 14,
+      "khoan": 2,
+      "diem": null,
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 14 khoản 2, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Những sinh viên đủ điều kiện tốt nghiệp được hiệu trưởng cơ sở đào tạo ra quyết định công nhận tốt nghiệp và cấp bằng tốt nghiệp trong thời hạn 03 tháng tính từ thời điểm sinh viên đáp ứng đầy đủ điều kiện tốt nghiệp và hoàn thành nghĩa vụ với nhà trường.",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d14:k3:pa",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 14,
+      "khoan": 3,
+      "diem": "a",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 14 khoản 3 điểm a, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Hạng tốt nghiệp được xác định căn cứ vào điểm trung bình tích lũy toàn khóa được quy định tại khoản 5 Điều 10 của Quy chế này, trong đó, hạng tốt nghiệp của sinh viên có điểm trung bình tích lũy loại xuất sắc và giỏi sẽ bị giảm đi một mức nếu thuộc một trong các trường hợp sau: Khối lượng của các học phần phải học lại vượt quá 5% so với tổng số tín chỉ quy định cho toàn chương trình;",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d14:k3:pb",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 14,
+      "khoan": 3,
+      "diem": "b",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 14 khoản 3 điểm b, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Hạng tốt nghiệp được xác định căn cứ vào điểm trung bình tích lũy toàn khóa được quy định tại khoản 5 Điều 10 của Quy chế này, trong đó, hạng tốt nghiệp của sinh viên có điểm trung bình tích lũy loại xuất sắc và giỏi sẽ bị giảm đi một mức nếu thuộc một trong các trường hợp sau: Sinh viên đã bị kỷ luật từ mức cảnh cáo trở lên trong thời gian học.",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d14:k4:p-",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 14,
+      "khoan": 4,
+      "diem": null,
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 14 khoản 4, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Sinh viên đã hết thời gian học tập tối đa theo quy định nhưng chưa đủ điều kiện tốt nghiệp do chưa hoàn thành những học phần Giáo dục quốc phòng - an ninh hoặc Giáo dục thể chất hoặc chưa đạt chuẩn đầu ra về ngoại ngữ, công nghệ thông tin, trong thời hạn 03 năm tính từ khi thôi học được hoàn thiện các điều kiện còn thiếu và đề nghị xét công nhận tốt nghiệp.",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d15:k2:p-",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 15,
+      "khoan": 2,
+      "diem": null,
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 15 khoản 2, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Thời gian nghỉ học tạm thời vì nhu cầu cá nhân phải được tính vào thời gian học chính thức quy định tại khoản 5 Điều 2 của Quy chế này.",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d16:k1:pa",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 16,
+      "khoan": 1,
+      "diem": "a",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 16 khoản 1 điểm a, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Sinh viên được xem xét chuyển sang học một chương trình, một ngành đào tạo khác khi có đủ các điều kiện sau: Không đang là sinh viên trình độ năm thứ nhất hoặc năm cuối khóa, không thuộc diện bị xem xét buộc thôi học và còn đủ thời gian học tập theo quy định tại khoản 5 Điều 2 của Quy chế này;",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d16:k2:pa",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 16,
+      "khoan": 2,
+      "diem": "a",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 16 khoản 2 điểm a, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Sinh viên được xem xét chuyển trường khi có đủ các điều kiện sau: Không đang là sinh viên trình độ năm thứ nhất hoặc năm cuối khóa, không thuộc diện bị xem xét buộc thôi học và còn đủ thời gian học tập theo quy định tại khoản 5 Điều 2 của Quy chế này;",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d17:k2:p-",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 17,
+      "khoan": 2,
+      "diem": null,
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 17 khoản 2, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Trên cơ sở đánh giá và công nhận lẫn nhau, sinh viên của cơ sở đào tạo này có thể đăng ký thực hiện học một số học phần tại cơ sở đào tạo khác, nếu được hiệu trưởng của hai cơ sở đào tạo đồng ý với số lượng tín chỉ mà sinh viên tích lũy tại cơ sở đào tạo khác (nếu có) không vượt quá 25% tổng khối lượng của chương trình đào tạo.",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d18:k2:pa",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 18,
+      "khoan": 2,
+      "diem": "a",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 18 khoản 2 điểm a, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Sinh viên được đăng ký học chương trình thứ hai sớm nhất khi đã được xếp trình độ năm thứ hai của chương trình thứ nhất. Tại thời điểm đăng ký, sinh viên phải đáp ứng 01 trong 02 điều kiện sau và các điều kiện khác của cơ sở đào tạo: Học lực tính theo điểm trung bình tích lũy xếp loại khá trở lên và đáp ứng ngưỡng bảo đảm chất lượng của chương trình thứ hai trong năm tuyển sinh;",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d18:k2:pb",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 18,
+      "khoan": 2,
+      "diem": "b",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 18 khoản 2 điểm b, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Sinh viên được đăng ký học chương trình thứ hai sớm nhất khi đã được xếp trình độ năm thứ hai của chương trình thứ nhất. Tại thời điểm đăng ký, sinh viên phải đáp ứng 01 trong 02 điều kiện sau và các điều kiện khác của cơ sở đào tạo: Học lực tính theo điểm trung bình tích lũy xếp loại trung bình và đáp ứng điều kiện trúng tuyển của chương trình thứ hai trong năm tuyển sinh.",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d18:k5:p-",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 18,
+      "khoan": 5,
+      "diem": null,
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 18 khoản 5, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Sinh viên chỉ được xét tốt nghiệp chương trình thứ hai, nếu có đủ điều kiện tốt nghiệp ở chương trình thứ nhất và đã đăng ký muộn nhất 02 năm trước thời điểm xét tốt nghiệp chương trình thứ hai.",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d20:k2:p-",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 20,
+      "khoan": 2,
+      "diem": null,
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 20 khoản 2, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Sinh viên thi hộ hoặc nhờ người thi hộ đều bị kỷ luật ở mức đình chỉ học tập 01 năm đối với trường hợp vi phạm lần thứ nhất và buộc thôi học đối với trường hợp vi phạm lần thứ hai.",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d22:k1:pa",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 22,
+      "khoan": 1,
+      "diem": "a",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 22 khoản 1 điểm a, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Trước ngày 31 tháng 12 hằng năm: Cơ sở đào tạo báo cáo Bộ Giáo dục và Đào tạo và cơ quan quản lý trực tiếp về số liệu sinh viên tuyển mới, tốt nghiệp, thôi học và đang học trong năm, dự kiến tốt nghiệp trong năm sau, tốt nghiệp đã có việc làm trong thời gian 12 tháng;",
+      "excerpt": true
+    },
+    {
+      "id": "08-2021-tt-bgddt:d22:k3:pa",
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "dieu": 22,
+      "khoan": 3,
+      "diem": "a",
+      "status": "con_hieu_luc",
+      "valid_from": "2021-05-03",
+      "cite": "Điều 22 khoản 3 điểm a, Thông tư 08/2021/TT-BGDĐT",
+      "context": "Cơ sở đào tạo công khai trên trang thông tin điện tử của mình chậm nhất 45 ngày trước khi tổ chức đào tạo: Quy chế của cơ sở đào tạo và các quy định quản lý đào tạo có liên quan;",
+      "excerpt": true
+    },
+    {
+      "id": "26-2025-tt-byt:d2:k0:p-",
+      "so_hieu": "26/2025/TT-BYT",
+      "dieu": 2,
+      "khoan": null,
+      "diem": null,
+      "status": "con_hieu_luc",
+      "valid_from": "2025-07-01",
+      "cite": "Điều 2, Thông tư 26/2025/TT-BYT",
+      "context": "Người hành nghề khám bệnh, chữa bệnh có chứng chỉ hành nghề hoặc giấy phép hành nghề khám bệnh, chữa bệnh với chức danh là bác sỹ, y sỹ có thẩm quyền kê đơn thuốc.",
+      "excerpt": false
+    },
+    {
+      "id": "26-2025-tt-byt:d4:k2:p-",
+      "so_hieu": "26/2025/TT-BYT",
+      "dieu": 4,
+      "khoan": 2,
+      "diem": null,
+      "status": "con_hieu_luc",
+      "valid_from": "2025-07-01",
+      "cite": "Điều 4 khoản 2, Thông tư 26/2025/TT-BYT",
+      "context": "Người bệnh khám bệnh nhiều chuyên khoa trong cùng một lần khám tại cơ sở khám bệnh, chữa bệnh thì được kê một (01) đơn thuốc bao gồm chỉ định thuốc của một hoặc nhiều chuyên khoa.",
+      "excerpt": true
+    },
+    {
+      "id": "26-2025-tt-byt:d6:k4:p-",
+      "so_hieu": "26/2025/TT-BYT",
+      "dieu": 6,
+      "khoan": 4,
+      "diem": null,
+      "status": "con_hieu_luc",
+      "valid_from": "2025-07-01",
+      "cite": "Điều 6 khoản 4, Thông tư 26/2025/TT-BYT",
+      "context": "Đối với trẻ dưới 72 tháng tuổi thì phải ghi số tháng tuổi, cân nặng của trẻ; họ và tên người đưa trẻ đến khám bệnh, chữa bệnh.",
+      "excerpt": true
+    },
+    {
+      "id": "26-2025-tt-byt:d6:k8:pa",
+      "so_hieu": "26/2025/TT-BYT",
+      "dieu": 6,
+      "khoan": 8,
+      "diem": "a",
+      "status": "con_hieu_luc",
+      "valid_from": "2025-07-01",
+      "cite": "Điều 6 khoản 8 điểm a, Thông tư 26/2025/TT-BYT",
+      "context": "Số ngày sử dụng của mỗi thuốc trong đơn thuốc: Kê đơn thuốc với số ngày sử dụng của mỗi thuốc tối đa không quá ba mươi (30) ngày, trừ trường hợp quy định tại điểm b khoản này và các điều 7, 8 và 9 Thông tư này.",
+      "excerpt": true
+    },
+    {
+      "id": "26-2025-tt-byt:d6:k8:pb",
+      "so_hieu": "26/2025/TT-BYT",
+      "dieu": 6,
+      "khoan": 8,
+      "diem": "b",
+      "status": "con_hieu_luc",
+      "valid_from": "2025-07-01",
+      "cite": "Điều 6 khoản 8 điểm b, Thông tư 26/2025/TT-BYT",
+      "context": "Số ngày sử dụng của mỗi thuốc trong đơn thuốc: Đối với bệnh thuộc Danh mục bệnh, nhóm bệnh được áp dụng kê đơn thuốc ngoại trú trên ba mươi (30) ngày quy định tại Phụ lục VII ban hành kèm theo Thông tư này: người kê đơn thuốc quyết định số ngày sử dụng của mỗi thuốc trong đơn thuốc căn cứ vào tình trạng lâm sàng, mức độ ổn định của người bệnh để kê đơn thuốc với số ngày sử dụng của mỗi thuốc tối đa không quá chín mươi (90) ngày.",
+      "excerpt": true
+    },
+    {
+      "id": "26-2025-tt-byt:d7:k2:p-",
+      "so_hieu": "26/2025/TT-BYT",
+      "dieu": 7,
+      "khoan": 2,
+      "diem": null,
+      "status": "con_hieu_luc",
+      "valid_from": "2025-07-01",
+      "cite": "Điều 7 khoản 2, Thông tư 26/2025/TT-BYT",
+      "context": "Kê đơn thuốc gây nghiện điều trị bệnh cấp tính số lượng thuốc sử dụng không vượt quá bảy (07) ngày.",
+      "excerpt": true
+    },
+    {
+      "id": "26-2025-tt-byt:d8:k1:p-",
+      "so_hieu": "26/2025/TT-BYT",
+      "dieu": 8,
+      "khoan": 1,
+      "diem": null,
+      "status": "con_hieu_luc",
+      "valid_from": "2025-07-01",
+      "cite": "Điều 8 khoản 1, Thông tư 26/2025/TT-BYT",
+      "context": "Cơ sở khám bệnh, chữa bệnh khi chẩn đoán xác định người bệnh ung thư thì làm hồ sơ bệnh án điều trị ngoại trú cho người bệnh. Người kê đơn hướng dẫn người bệnh hoặc người đại diện của người bệnh viết cam kết về sử dụng thuốc gây nghiện theo quy định tại khoản 3 Điều 7 Thông tư này. Mỗi lần kê đơn thuốc tối đa ba mươi (30) ngày, phải ghi cụ thể ba (03) đợt điều trị liên tiếp trên một (01) đơn, mỗi đợt không vượt quá mười (10) ngày.",
+      "excerpt": true
+    },
+    {
+      "id": "26-2025-tt-byt:d9:k2:p-",
+      "so_hieu": "26/2025/TT-BYT",
+      "dieu": 9,
+      "khoan": 2,
+      "diem": null,
+      "status": "con_hieu_luc",
+      "valid_from": "2025-07-01",
+      "cite": "Điều 9 khoản 2, Thông tư 26/2025/TT-BYT",
+      "context": "Đối với bệnh cấp tính, số lượng thuốc mỗi lần kê đơn đủ sử dụng không quá mười (10) ngày.",
+      "excerpt": true
+    },
+    {
+      "id": "26-2025-tt-byt:d9:k3:p-",
+      "so_hieu": "26/2025/TT-BYT",
+      "dieu": 9,
+      "khoan": 3,
+      "diem": null,
+      "status": "con_hieu_luc",
+      "valid_from": "2025-07-01",
+      "cite": "Điều 9 khoản 3, Thông tư 26/2025/TT-BYT",
+      "context": "Đối với bệnh cần chữa trị dài ngày, số lượng thuốc sử dụng không quá ba mươi (30) ngày.",
+      "excerpt": true
+    },
+    {
+      "id": "26-2025-tt-byt:d13:k1:p-",
+      "so_hieu": "26/2025/TT-BYT",
+      "dieu": 13,
+      "khoan": 1,
+      "diem": null,
+      "status": "con_hieu_luc",
+      "valid_from": "2025-07-01",
+      "cite": "Điều 13 khoản 1, Thông tư 26/2025/TT-BYT",
+      "context": "Thông tư này có hiệu lực từ ngày 01 tháng 07 năm 2025.",
+      "excerpt": false
+    },
+    {
+      "id": "26-2025-tt-byt:d13:k2:pa",
+      "so_hieu": "26/2025/TT-BYT",
+      "dieu": 13,
+      "khoan": 2,
+      "diem": "a",
+      "status": "con_hieu_luc",
+      "valid_from": "2025-07-01",
+      "cite": "Điều 13 khoản 2 điểm a, Thông tư 26/2025/TT-BYT",
+      "context": "Các Thông tư hết hiệu lực kể từ ngày Thông tư này có hiệu lực, bao gồm: Thông tư số 52/2017/TT-BYT ngày 29 tháng 12 năm 2017 của Bộ trưởng Bộ Y tế quy định về đơn thuốc và việc kê đơn thuốc hóa dược, sinh phẩm trong điều trị ngoại trú;",
+      "excerpt": false
+    },
+    {
+      "id": "26-2025-tt-byt:d13:k2:pb",
+      "so_hieu": "26/2025/TT-BYT",
+      "dieu": 13,
+      "khoan": 2,
+      "diem": "b",
+      "status": "con_hieu_luc",
+      "valid_from": "2025-07-01",
+      "cite": "Điều 13 khoản 2 điểm b, Thông tư 26/2025/TT-BYT",
+      "context": "Các Thông tư hết hiệu lực kể từ ngày Thông tư này có hiệu lực, bao gồm: Thông tư số 18/2018/TT-BYT ngày 22 tháng 8 năm 2018 sửa đổi, bổ sung một số điều của Thông tư số 52/2017/TT-BYT;",
+      "excerpt": false
+    },
+    {
+      "id": "26-2025-tt-byt:d13:k2:pc",
+      "so_hieu": "26/2025/TT-BYT",
+      "dieu": 13,
+      "khoan": 2,
+      "diem": "c",
+      "status": "con_hieu_luc",
+      "valid_from": "2025-07-01",
+      "cite": "Điều 13 khoản 2 điểm c, Thông tư 26/2025/TT-BYT",
+      "context": "Các Thông tư hết hiệu lực kể từ ngày Thông tư này có hiệu lực, bao gồm: Thông tư số 04/2022/TT-BYT ngày 12 tháng 7 năm 2022 sửa đổi, bổ sung một số điều của Thông tư số 52/2017/TT-BYT, Thông tư số 18/2018/TT-BYT và Thông tư số 27/2021/TT-BYT;",
+      "excerpt": false
+    },
+    {
+      "id": "26-2025-tt-byt:d13:k2:pd",
+      "so_hieu": "26/2025/TT-BYT",
+      "dieu": 13,
+      "khoan": 2,
+      "diem": "d",
+      "status": "con_hieu_luc",
+      "valid_from": "2025-07-01",
+      "cite": "Điều 13 khoản 2 điểm d, Thông tư 26/2025/TT-BYT",
+      "context": "Các Thông tư hết hiệu lực kể từ ngày Thông tư này có hiệu lực, bao gồm: Thông tư số 27/2021/TT-BYT ngày 20 tháng 12 năm 2021 của Bộ trưởng Bộ Y tế về việc quy định kê đơn thuốc bằng hình thức điện tử hết hiệu lực kể từ ngày Thông tư này có hiệu lực.",
+      "excerpt": false
+    },
+    {
+      "id": "26-2025-tt-byt:d13:k3:pa",
+      "so_hieu": "26/2025/TT-BYT",
+      "dieu": 13,
+      "khoan": 3,
+      "diem": "a",
+      "status": "con_hieu_luc",
+      "valid_from": "2025-07-01",
+      "cite": "Điều 13 khoản 3 điểm a, Thông tư 26/2025/TT-BYT",
+      "context": "Lộ trình thực hiện việc kê đơn thuốc bằng hình thức điện tử: Cơ sở khám bệnh, chữa bệnh có hình thức tổ chức là bệnh viện phải thực hiện việc kê đơn thuốc bằng hình thức điện tử trước ngày 01 tháng 10 năm 2025;",
+      "excerpt": false
+    },
+    {
+      "id": "26-2025-tt-byt:d13:k3:pb",
+      "so_hieu": "26/2025/TT-BYT",
+      "dieu": 13,
+      "khoan": 3,
+      "diem": "b",
+      "status": "con_hieu_luc",
+      "valid_from": "2025-07-01",
+      "cite": "Điều 13 khoản 3 điểm b, Thông tư 26/2025/TT-BYT",
+      "context": "Lộ trình thực hiện việc kê đơn thuốc bằng hình thức điện tử: Cơ sở khám bệnh, chữa bệnh khác phải thực hiện việc kê đơn thuốc bằng hình thức điện tử trước ngày 01 tháng 01 năm 2026.",
+      "excerpt": false
+    }
+  ],
+  "edges": [
+    {
+      "src": "08-2021-tt-bgddt:d11:k2:pb",
+      "dst": "08-2021-tt-bgddt:d2:k5:p-",
+      "rel": "REFERS_TO"
+    },
+    {
+      "src": "08-2021-tt-bgddt:d12:k2:pc",
+      "dst": "08-2021-tt-bgddt:d2:k5:p-",
+      "rel": "REFERS_TO"
+    },
+    {
+      "src": "08-2021-tt-bgddt:d15:k2:p-",
+      "dst": "08-2021-tt-bgddt:d2:k5:p-",
+      "rel": "REFERS_TO"
+    },
+    {
+      "src": "08-2021-tt-bgddt:d16:k1:pa",
+      "dst": "08-2021-tt-bgddt:d2:k5:p-",
+      "rel": "REFERS_TO"
+    },
+    {
+      "src": "08-2021-tt-bgddt:d16:k2:pa",
+      "dst": "08-2021-tt-bgddt:d2:k5:p-",
+      "rel": "REFERS_TO"
+    },
+    {
+      "src": "26-2025-tt-byt:d13:k2:pa",
+      "dst": "52-2017-tt-byt",
+      "rel": "REPEALS"
+    },
+    {
+      "src": "26-2025-tt-byt:d13:k2:pb",
+      "dst": "18-2018-tt-byt",
+      "rel": "REPEALS"
+    },
+    {
+      "src": "26-2025-tt-byt:d13:k2:pb",
+      "dst": "52-2017-tt-byt",
+      "rel": "REPEALS"
+    },
+    {
+      "src": "26-2025-tt-byt:d13:k2:pc",
+      "dst": "04-2022-tt-byt",
+      "rel": "REPEALS"
+    },
+    {
+      "src": "26-2025-tt-byt:d13:k2:pc",
+      "dst": "52-2017-tt-byt",
+      "rel": "REPEALS"
+    },
+    {
+      "src": "26-2025-tt-byt:d13:k2:pc",
+      "dst": "18-2018-tt-byt",
+      "rel": "REPEALS"
+    },
+    {
+      "src": "26-2025-tt-byt:d13:k2:pc",
+      "dst": "27-2021-tt-byt",
+      "rel": "REPEALS"
+    },
+    {
+      "src": "26-2025-tt-byt:d13:k2:pd",
+      "dst": "27-2021-tt-byt",
+      "rel": "REPEALS"
+    }
+  ]
+}

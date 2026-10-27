@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ViKAG-Faith</title>
+  <style>
+    :root {
+      --paper: #efe8dc;
+      --ink: #1c1915;
+      --muted: #5c564c;
+      --line: #d9cfc0;
+      --card: #fffdf8;
+      --green: #1b5c40;
+      --green-bg: #e5f2eb;
+      --red: #8e2f2a;
+      --red-bg: #f8e8e6;
+      --amber: #8a5a10;
+      --amber-bg: #f8f0dc;
+      --accent: #1f4b3a;
+    }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 400px at 10% -10%, #f7f1e6, transparent 50%),
+        var(--paper);
+      font: 17px/1.5 "Segoe UI", sans-serif;
+    }
+    header {
+      padding: 28px 7vw 8px;
+    }
+    .kicker {
+      margin: 0;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    h1 {
+      margin: 6px 0 4px;
+      font-size: 34px;
+      line-height: 1.15;
+      font-weight: 650;
+    }
+    .lede { margin: 0; color: var(--muted); max-width: 46rem; }
+    main {
+      display: grid;
+      grid-template-columns: minmax(320px, 440px) 1fr;
+      gap: 22px;
+      padding: 18px 7vw 48px;
+      align-items: start;
+    }
+    .panel, .result {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+    }
+    .panel { position: sticky; top: 16px; }
+    .modes, .systems { display: flex; gap: 8px; margin-bottom: 12px; }
+    .modes button, .systems button, .go, .chip {
+      font: inherit;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+    .modes button, .systems button {
+      border: 1px solid var(--line);
+      background: transparent;
+      padding: 8px 14px;
+      color: var(--ink);
+    }
+    .modes button.on, .systems button.on {
+      background: var(--accent);
+      color: #f7f3ea;
+      border-color: var(--accent);
+    }
+    label.field { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+    textarea {
+      width: 100%;
+      min-height: 140px;
+      resize: vertical;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 14px;
+      font: inherit;
+      color: var(--ink);
+      background: #fff;
+    }
+    textarea:focus { outline: 2px solid #c9ddd3; border-color: var(--accent); }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+    .chip {
+      border: 1px solid var(--line);
+      background: #faf7f1;
+      padding: 6px 10px;
+      font-size: 13px;
+      text-align: left;
+      color: var(--ink);
+    }
+    .row { display: flex; align-items: center; gap: 12px; margin-top: 8px; }
+    .go {
+      background: var(--accent);
+      color: #f7f3ea;
+      border: 0;
+      padding: 10px 18px;
+      font-weight: 650;
+    }
+    .go:disabled { opacity: 0.6; cursor: wait; }
+    .check { font-size: 14px; color: var(--muted); }
+    .hint { margin: 10px 0 0; font-size: 13px; color: var(--muted); }
+    .empty { color: var(--muted); padding: 12px 4px 4px; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px; }
+    .stat {
+      border-radius: 12px;
+      padding: 12px 14px;
+      background: #f7f3ea;
+    }
+    .stat b { display: block; font-size: 28px; line-height: 1.1; }
+    .stat span { font-size: 13px; color: var(--muted); }
+    .answer {
+      border-left: 4px solid var(--accent);
+      padding: 4px 0 4px 14px;
+      margin: 8px 0 14px;
+    }
+    .answer p { margin: 0; }
+    .cites { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 0; }
+    .cite {
+      font-size: 13px;
+      background: var(--green-bg);
+      color: var(--green);
+      border-radius: 999px;
+      padding: 3px 10px;
+    }
+    h2 { font-size: 18px; margin: 18px 0 8px; }
+    .claim {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin: 0 0 10px;
+      border-left-width: 6px;
+    }
+    .claim.supported { border-left-color: var(--green); background: #fbfffc; }
+    .claim.contradicted { border-left-color: var(--red); background: #fffafa; }
+    .claim.unsupported { border-left-color: var(--amber); background: #fffdf8; }
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      padding: 2px 8px;
+      margin-right: 6px;
+    }
+    .tag.supported { background: var(--green-bg); color: var(--green); }
+    .tag.contradicted { background: var(--red-bg); color: var(--red); }
+    .tag.unsupported { background: var(--amber-bg); color: var(--amber); }
+    .claim .text { margin: 8px 0; }
+    .reason, .span { margin: 0; color: var(--muted); font-size: 15px; }
+    .span { margin-top: 6px; }
+    .warn {
+      background: var(--amber-bg);
+      color: #5c3d0a;
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 14px;
+      margin: 0 0 10px;
+    }
+    .error { color: var(--red); margin: 8px 0 0; }
+    details { margin-top: 8px; }
+    summary { cursor: pointer; color: var(--accent); }
+    .ev {
+      border-top: 1px solid var(--line);
+      padding-top: 8px;
+      margin-top: 8px;
+    }
+    .ev h3 { margin: 0; font-size: 14px; }
+    .ev p { margin: 4px 0 10px; color: var(--muted); font-size: 15px; }
+    @media (max-width: 900px) {
+      main { grid-template-columns: 1fr; padding: 12px 16px 32px; }
+      header { padding: 20px 16px 0; }
+      h1 { font-size: 28px; }
+      .panel { position: static; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="kicker">ViKAG-Faith</p>
+    <h1>Nhập câu, xem điều khoản nào nâng đỡ.</h1>
+    <p class="lede">Đồ thị gồm quy chế đào tạo đại học (Thông tư 08/2021) và quy định kê đơn thuốc (Thông tư 26/2025). Câu bạn gõ được đối chiếu từng mệnh đề với khoản đã truy ra.</p>
+  </header>
+  <main>
+    <section class="panel">
+      <div class="modes">
+        <button type="button" id="mode-ask" class="on">Hỏi</button>
+        <button type="button" id="mode-check">Kiểm một câu nói</button>
+      </div>
+      <div class="systems" id="systems">
+        <button type="button" id="sys-graph" class="on">Graph</button>
+        <button type="button" id="sys-naive">Chỉ tìm đoạn</button>
+      </div>
+      <label class="field" id="field-label" for="box">Câu hỏi</label>
+      <textarea id="box" placeholder="Ví dụ: Sinh viên bị cảnh báo khi nợ quá bao nhiêu tín chỉ?"></textarea>
+      <div class="chips" id="chips"></div>
+      <div class="row">
+        <button type="button" class="go" id="go">Xem kết quả</button>
+        <label class="check" id="revise-wrap"><input type="checkbox" id="revise"> Sửa mệnh đề lệch</label>
+      </div>
+      <p class="hint" id="hint">Graph lấy khoản khớp câu hỏi, rồi kéo thêm khoản được dẫn chiếu. Mỗi câu trong câu trả lời được chấm supported, contradicted hoặc unsupported.</p>
+      <p class="error" id="error" hidden></p>
+    </section>
+    <section class="result" id="result">
+      <p class="empty" id="empty">Kết quả hiện ở đây sau khi bạn bấm Xem kết quả. Có thể gõ câu của mình hoặc chọn một câu mẫu.</p>
+      <div id="out" hidden></div>
+    </section>
+  </main>
+  <script>
+    const ASK = [
+      "Sinh viên bị cảnh báo học tập khi tổng số tín chỉ nợ đọng từ đầu khóa vượt quá bao nhiêu?",
+      "Thông tư 52/2017/TT-BYT còn hiệu lực sau ngày 01/07/2025 không?",
+      "Thuốc gây nghiện điều trị bệnh cấp tính được kê tối đa bao nhiêu ngày?"
+    ];
+    const CHECK = [
+      "Tổng số tín chỉ nợ đọng từ đầu khóa học vượt quá 24 thì sinh viên bị buộc thôi học.",
+      "Tổng số tín chỉ nợ đọng từ đầu khóa học vượt quá 30 thì sinh viên bị buộc thôi học.",
+      "Thời gian tối đa để sinh viên hoàn thành khóa học không vượt quá 03 lần thời gian theo kế hoạch học tập chuẩn.",
+      "Sinh viên xuất sắc được thưởng 3 triệu đồng mỗi học kỳ."
+    ];
+    const NAME = {
+      supported: "Được nâng đỡ",
+      contradicted: "Nói ngược nguồn",
+      unsupported: "Không có trong nguồn"
+    };
+    const box = document.getElementById("box");
+    const chips = document.getElementById("chips");
+    const out = document.getElementById("out");
+    const empty = document.getElementById("empty");
+    const error = document.getElementById("error");
+    const go = document.getElementById("go");
+    let mode = "ask";
+    let system = "graph";
+
+    function setMode(next) {
+      mode = next;
+      document.getElementById("mode-ask").classList.toggle("on", mode === "ask");
+      document.getElementById("mode-check").classList.toggle("on", mode === "check");
+      document.getElementById("systems").hidden = mode !== "ask";
+      document.getElementById("revise-wrap").hidden = mode !== "ask";
+      document.getElementById("field-label").textContent = mode === "ask" ? "Câu hỏi" : "Câu nói cần kiểm";
+      document.getElementById("hint").textContent = mode === "ask"
+        ? "Graph lấy khoản khớp câu hỏi, rồi kéo thêm khoản được dẫn chiếu."
+        : "Câu bạn dán được chấm trên khoản tìm được. Nếu gộp cả điều, nhãn có thể khác vì số và hệ quả nằm ở hai khoản.";
+      box.placeholder = mode === "ask"
+        ? "Ví dụ: Sinh viên bị cảnh báo khi nợ quá bao nhiêu tín chỉ?"
+        : "Dán một câu khẳng định, kể cả câu bạn nghi là sai.";
+      renderChips();
+    }
+
+    function renderChips() {
+      chips.innerHTML = "";
+      (mode === "ask" ? ASK : CHECK).forEach((text) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "chip";
+        button.textContent = text.length > 72 ? text.slice(0, 70) + "…" : text;
+        button.title = text;
+        button.addEventListener("click", () => { box.value = text; submit(); });
+        chips.appendChild(button);
+      });
+    }
+
+    function esc(value) {
+      return String(value || "").replace(/[&<>"]/g, (ch) => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"
+      }[ch]));
+    }
+
+    function tag(label) {
+      return `<span class="tag ${label}">${NAME[label] || label}</span>`;
+    }
+
+    function claimCard(row) {
+      const extra = row.chunk_label
+        ? `<p class="warn">Nếu gộp cả điều thành một đoạn, nhãn thành «${NAME[row.chunk_label]}». Từng khoản thì là «${NAME[row.label]}».</p>`
+        : "";
+      const span = row.span
+        ? `<p class="span">Khoản đối chiếu${row.cite ? " — " + esc(row.cite) : ""}: ${esc(row.span)}</p>`
+        : "";
+      return `<article class="claim ${row.label}">${tag(row.label)}<p class="text">${esc(row.claim)}</p><p class="reason">${esc(row.reason)}</p>${extra}${span}</article>`;
+    }
+
+    function stats(data) {
+      const pct = (value) => Math.round((value || 0) * 100) + "%";
+      return `<div class="stats">
+        <div class="stat"><b>${pct(data.ggf)}</b><span>GGF · được nâng đỡ</span></div>
+        <div class="stat"><b>${pct(data.contradicted)}</b><span>Nói ngược nguồn</span></div>
+        <div class="stat"><b>${pct(data.unsupported)}</b><span>Không có trong nguồn</span></div>
+      </div>`;
+    }
+
+    function render(data) {
+      empty.hidden = true;
+      out.hidden = false;
+      const cites = (data.citations || []).map((cite) => `<span class="cite">${esc(cite)}</span>`).join("");
+      const claims = (data.claims || []).map(claimCard).join("") || "<p class='empty'>Không tách được mệnh đề.</p>";
+      let revised = "";
+      if (data.revised_answer) {
+        const again = (data.revised_claims || []).map(claimCard).join("");
+        revised = `<h2>Sau khi sửa · GGF ${Math.round(data.revised_ggf * 100)}%</h2><div class="answer"><p>${esc(data.revised_answer)}</p></div>${again}`;
+      }
+      const evidence = (data.evidence || []).map((row) =>
+        `<div class="ev"><h3>${esc(row.cite)}</h3><p>${esc(row.text)}</p></div>`
+      ).join("");
+      const title = data.mode === "ask" ? "Câu trả lời từ đồ thị" : "Câu bạn đưa vào";
+      out.innerHTML = `${stats(data)}<h2>${title}</h2><div class="answer"><p>${esc(data.answer)}</p><div class="cites">${cites}</div></div><h2>Từng mệnh đề</h2>${claims}${revised}<details><summary>Khoản đã truy ra</summary>${evidence}</details>`;
+    }
+
+    async function submit() {
+      const text = box.value.trim();
+      error.hidden = true;
+      if (!text) {
+        error.hidden = false;
+        error.textContent = "Hãy nhập một câu trước.";
+        return;
+      }
+      go.disabled = true;
+      go.textContent = "Đang đối chiếu…";
+      try {
+        const path = mode === "ask" ? "/api/ask" : "/api/check";
+        const payload = { text };
+        if (mode === "ask") {
+          payload.system = system;
+          payload.revise = document.getElementById("revise").checked;
+        }
+        const response = await fetch(path, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || "Lỗi máy chủ");
+        render(data);
+      } catch (err) {
+        error.hidden = false;
+        error.textContent = err.message || "Không gọi được máy chủ.";
+      } finally {
+        go.disabled = false;
+        go.textContent = "Xem kết quả";
+      }
+    }
+
+    document.getElementById("mode-ask").addEventListener("click", () => setMode("ask"));
+    document.getElementById("mode-check").addEventListener("click", () => setMode("check"));
+    document.getElementById("sys-graph").addEventListener("click", () => {
+      system = "graph";
+      document.getElementById("sys-graph").classList.add("on");
+      document.getElementById("sys-naive").classList.remove("on");
+    });
+    document.getElementById("sys-naive").addEventListener("click", () => {
+      system = "naive";
+      document.getElementById("sys-naive").classList.add("on");
+      document.getElementById("sys-graph").classList.remove("on");
+    });
+    go.addEventListener("click", submit);
+    box.addEventListener("keydown", (event) => {
+      if ((event.ctrlKey || event.metaKey) && event.key === "Enter") submit();
+    });
+    setMode("ask");
+  </script>
+</body>
+</html>

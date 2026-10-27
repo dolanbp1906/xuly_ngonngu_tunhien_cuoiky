@@ -1,0 +1,34 @@
+{
+  "labeled_on": "2026-10-27",
+  "labeler": "một người đối chiếu Công báo và toàn văn Thông tư 26/2025/TT-BYT",
+  "note": "Bộ này dùng để đo verifier, chưa phải 3.000 claim và chưa có Cohen kappa vì chưa gán kép. answer_id gom claim thành một câu trả lời giả để tính tương quan mức câu.",
+  "claims": [
+    {"id": "h01", "answer_id": "tot", "label": "supported", "doc": "08-2021-tt-bgddt", "dieu": 2, "claim": "Thời gian tối đa để sinh viên hoàn thành khóa học không vượt quá 02 lần thời gian theo kế hoạch học tập chuẩn toàn khóa."},
+    {"id": "h02", "answer_id": "tot", "label": "supported", "doc": "08-2021-tt-bgddt", "dieu": 11, "claim": "Tổng số tín chỉ nợ đọng từ đầu khóa học vượt quá 24 thì sinh viên bị cảnh báo học tập."},
+    {"id": "h03", "answer_id": "tot", "label": "supported", "doc": "08-2021-tt-bgddt", "dieu": 8, "claim": "Đối với đào tạo chính quy, tối đa 30% tổng khối lượng của chương trình đào tạo được thực hiện bằng lớp học trực tuyến."},
+    {"id": "h04", "answer_id": "tot", "label": "supported", "doc": "08-2021-tt-bgddt", "dieu": 20, "claim": "Sinh viên thi hộ lần thứ nhất bị đình chỉ học tập 01 năm."},
+
+    {"id": "h05", "answer_id": "sai_so", "label": "contradicted", "doc": "08-2021-tt-bgddt", "dieu": 2, "claim": "Thời gian tối đa để sinh viên hoàn thành khóa học không vượt quá 03 lần thời gian theo kế hoạch học tập chuẩn toàn khóa."},
+    {"id": "h06", "answer_id": "sai_so", "label": "contradicted", "doc": "08-2021-tt-bgddt", "dieu": 8, "claim": "Đối với đào tạo chính quy, tối đa 50% tổng khối lượng của chương trình đào tạo được thực hiện bằng lớp học trực tuyến."},
+    {"id": "h07", "answer_id": "sai_so", "label": "contradicted", "doc": "26-2025-tt-byt", "dieu": 7, "claim": "Kê đơn thuốc gây nghiện điều trị bệnh cấp tính không vượt quá 14 ngày."},
+
+    {"id": "h08", "answer_id": "tron_khoan", "label": "contradicted", "doc": "08-2021-tt-bgddt", "dieu": 11, "claim": "Tổng số tín chỉ nợ đọng từ đầu khóa học vượt quá 24 thì sinh viên bị buộc thôi học."},
+    {"id": "h09", "answer_id": "tron_khoan", "label": "supported", "doc": "08-2021-tt-bgddt", "dieu": 11, "claim": "Điểm trung bình học kỳ đầu của khóa học đạt dưới 0,8 thì sinh viên bị cảnh báo học tập."},
+
+    {"id": "h10", "answer_id": "hieu_luc", "label": "contradicted", "doc": "26-2025-tt-byt", "dieu": 13, "claim": "Thông tư 52/2017/TT-BYT vẫn còn hiệu lực sau ngày 01 tháng 07 năm 2025."},
+    {"id": "h11", "answer_id": "hieu_luc", "label": "supported", "doc": "26-2025-tt-byt", "dieu": 13, "claim": "Thông tư số 52/2017/TT-BYT hết hiệu lực kể từ ngày 01 tháng 07 năm 2025."},
+
+    {"id": "h12", "answer_id": "ngay_benh_vien", "label": "contradicted", "doc": "26-2025-tt-byt", "dieu": 13, "claim": "Bệnh viện phải thực hiện kê đơn thuốc bằng hình thức điện tử trước ngày 01 tháng 01 năm 2026."},
+    {"id": "h13", "answer_id": "ngay_benh_vien", "label": "supported", "doc": "26-2025-tt-byt", "dieu": 13, "claim": "Bệnh viện phải thực hiện kê đơn thuốc bằng hình thức điện tử trước ngày 01 tháng 10 năm 2025."},
+
+    {"id": "h14", "answer_id": "bia", "label": "unsupported", "doc": "08-2021-tt-bgddt", "dieu": 15, "claim": "Sinh viên được nghỉ học tạm thời vì nhu cầu cá nhân tối đa 4 học kỳ."},
+    {"id": "h15", "answer_id": "bia", "label": "unsupported", "doc": "08-2021-tt-bgddt", "dieu": 14, "claim": "Sinh viên tốt nghiệp loại xuất sắc được thưởng 3 triệu đồng mỗi học kỳ."},
+    {"id": "h16", "answer_id": "bia", "label": "supported", "doc": "08-2021-tt-bgddt", "dieu": 17, "claim": "Số tín chỉ sinh viên tích lũy tại cơ sở đào tạo khác không vượt quá 25% tổng khối lượng của chương trình đào tạo."},
+
+    {"id": "h17", "answer_id": "cam", "label": "contradicted", "doc": "08-2021-tt-bgddt", "dieu": 5, "claim": "Được liên kết đào tạo đối với ngành thuộc lĩnh vực sức khỏe có cấp chứng chỉ hành nghề."},
+    {"id": "h18", "answer_id": "cam", "label": "supported", "doc": "08-2021-tt-bgddt", "dieu": 5, "claim": "Không thực hiện việc liên kết đào tạo đối với các ngành thuộc lĩnh vực sức khỏe có cấp chứng chỉ hành nghề."},
+
+    {"id": "h19", "answer_id": "diem", "label": "contradicted", "doc": "08-2021-tt-bgddt", "dieu": 11, "claim": "Điểm trung bình học kỳ đầu của khóa học đạt dưới 1,5 thì sinh viên bị cảnh báo học tập."},
+    {"id": "h20", "answer_id": "diem", "label": "supported", "doc": "26-2025-tt-byt", "dieu": 6, "claim": "Đối với trẻ dưới 72 tháng tuổi thì phải ghi số tháng tuổi và cân nặng của trẻ."}
+  ]
+}
