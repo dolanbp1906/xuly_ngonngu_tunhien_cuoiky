@@ -153,6 +153,8 @@ Bộ test gốc: 1.560 câu, mỗi mức 1–5 hop có 312 câu, có evidence v�
 
 Việc tuần 1: kiểm tra bản PDF/code/data tại [arXiv:2602.07361](https://arxiv.org/abs/2602.07361). Cổng này quyết định miền y tế dùng nguyên bộ hay dùng tập thay thế.
 
+Bản đang chạy đã mở được ViHERMES (1.561 câu, 998 đơn vị) và đã bỏ Thông tư 26/2025 về kê đơn. ViEduReg v1 nằm ở `data/viedureg`: Thông tư 56/2026 (có hiệu lực 07/07/2026, thay thế Thông tư 08/2021), 213 khoản/điểm, 87 câu chờ duyệt, khoảng một phần ba là câu cần hai khoản. Chưa đủ 500 câu và chưa có kappa vì chưa có người chấm thứ hai. Trích Thông tư 08/2021 (13 câu đã đối chiếu) chỉ còn cho khóa đã thông báo tuyển sinh trước 07/07/2026. ViNLI và 20.000 cặp tổng hợp chưa được nạp để huấn luyện verifier.
+
 ### 6.2. ViEduReg (miền quy chế)
 
 Khoảng 500 câu. Khoảng 40% là multi-hop (một câu cần từ hai điều, hoặc cần biết điều nào còn hiệu lực sau sửa đổi).
@@ -318,6 +320,8 @@ Phần mã để trống cho đến khi bước thu thập bắt đầu. Hợp �
 | --- | --- | --- |
 | 1 | Đọc KAG, RAGAS, ViHERMES, ViHallu, ViNLI, R2GQA/ViRHE4QA. Chốt cổng dữ liệu ViHERMES. Cài Neo4j, chạy Naive RAG trên một quy chế mẫu | Báo cáo 5–7 trang: sơ đồ pipeline, quyết định miền y tế, môi trường chạy được một câu |
 | 2 | Thu thập quy chế còn hiệu lực, parser điều/khoản, KG rule, 500 câu ViEduReg, duyệt câu | `ViEduReg` v1, graph xem được trên Neo4j, κ hoặc biên bản duyệt |
+
+Tháng 2 đã có bản chạy, chưa chốt mốc: `python run.py viedureg` tách Thông tư 56/2026, ghi `data/viedureg/questions.json`, `graph.json`, `load.cypher` và `bien_ban.json`. Câu ở trạng thái chờ duyệt. Điều 4 và Điều 10 thiếu trong bản tải nên chưa đưa vào. Máy này chưa cài Neo4j; đồ thị xem ở nút ViEduReg v1 trong demo, hoặc nạp file Cypher khi có Neo4j.
 | 3 | Chạy đủ hệ trên cùng LLM. Tách claim. Guideline. Gán 100 claim hiệu chỉnh, rồi gán chính | Đầu ra hệ thống đã cache; guideline đóng; ≥40% claim đã có nhãn kép hoặc nhãn đơn theo phương án nhân lực |
 | 4 | Gán nốt. Sinh 20.000 cặp tổng hợp từ passage ngoài test. Huấn luyện verifier. Chọn mô hình trên dev | `claims.jsonl` đủ split; macro-F1 dev của verifier tốt nhất; κ đã tính |
 | 5 | Meta-evaluation RQ1–RQ2. Verify-then-revise RQ3. Ablation | Bảng đầy đủ, kèm bootstrap và phân tích lỗi theo hop / số / hiệu lực |

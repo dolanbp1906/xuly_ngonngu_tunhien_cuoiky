@@ -1,6 +1,6 @@
 # Cuối kỳ — Project 4: ViKAG-Faith
 
-Đánh giá faithfulness mức mệnh đề cho hỏi đáp trên quy chế đào tạo và quy định kê đơn thuốc.
+Đánh giá faithfulness mức mệnh đề cho hỏi đáp trên quy chế đào tạo (ViEduReg) và quy định y tế (ViHERMES).
 
 Mở trang nhập câu (không cần GPU, không cần cài thêm thư viện):
 

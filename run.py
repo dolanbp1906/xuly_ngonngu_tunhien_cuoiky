@@ -6,6 +6,7 @@
     python run.py eval
     python run.py demo
     python run.py web
+    python run.py viedureg
 """
 
 from __future__ import annotations
@@ -57,6 +58,7 @@ def main() -> None:
     sub.add_parser("eval")
     sub.add_parser("demo")
     sub.add_parser("web")
+    sub.add_parser("viedureg")
     ask_cmd = sub.add_parser("ask")
     ask_cmd.add_argument("question")
     ask_cmd.add_argument("--system", choices=("graph", "naive", "unfaithful"), default="graph")
@@ -89,6 +91,17 @@ def main() -> None:
         from demo_server import main as serve
 
         serve()
+        return
+    if args.cmd == "viedureg":
+        from src.viedureg import build_viedureg
+
+        stats = build_viedureg()
+        print(
+            f"ViEduReg v1: {stats['chunks']} khoản/điểm, {stats['edges']} cạnh, "
+            f"{stats['questions']} câu (hop≥2: {stats['hop2']}), "
+            f"{stats['samples']} câu mẫu BM25 trúng."
+        )
+        print("Đã ghi data/viedureg/")
         return
     if args.cmd == "ask":
         store = get_store()

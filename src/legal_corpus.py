@@ -7,11 +7,13 @@ không viết lại số liệu.
 Nguồn:
 - Thông tư 08/2021/TT-BGDĐT, Công báo số 569+570 ngày 04/5/2021,
   PDF gốc: https://vbpl.moj.gov.vn/FileData/TW/Lists/vbpq/Attachments/147704/VanBanGoc_08-2021-TT-BGDĐT%20full.pdf
-  Còn hiệu lực. Công văn 2684/BGDĐT-GDĐH ngày 05/06/2024 chỉ đính chính
+  Từ 07/07/2026, Thông tư 56/2026/TT-BGDĐT thay thế thông tư này đối với
+  khóa tuyển sinh năm 2026. Khóa đã có thông báo tuyển sinh trước ngày đó
+  vẫn theo quy chế hiệu lực tại thời điểm thông báo (Điều 27 Thông tư 56/2026).
+  Công văn 2684/BGDĐT-GDĐH ngày 05/06/2024 chỉ đính chính
   số hiệu Quyết định 22/2001/QĐ-BGDĐT ở Điều 2 của Thông tư (phần ban hành),
   không đổi các điều của Quy chế dùng ở đây.
-- Thông tư 26/2025/TT-BYT, hiệu lực 01/07/2025, còn hiệu lực tại ngày thu thập.
-  https://vbpl.vn/boyte/Pages/vbpq-toanvan.aspx?ItemID=179735
+Miền y tế của đề là bộ ViHERMES, không nằm trong đồ thị này.
 """
 
 from __future__ import annotations
@@ -27,56 +29,14 @@ DOCUMENTS = [
         "issued": "2021-03-18",
         "valid_from": "2021-05-03",
         "valid_to": None,
-        "status": "con_hieu_luc",
+        "status": "ap_dung_khoa_cu",
+        "note": "Áp dụng với khóa đã thông báo tuyển sinh trước 07/07/2026. Khóa 2026 theo Thông tư 56/2026.",
         "domain": "quy_che",
         "source_url": "https://vbpl.moj.gov.vn/FileData/TW/Lists/vbpq/Attachments/147704/VanBanGoc_08-2021-TT-BGDĐT%20full.pdf",
     },
-    {
-        "id": "26-2025-tt-byt",
-        "so_hieu": "26/2025/TT-BYT",
-        "title": "Quy định về đơn thuốc và việc kê đơn thuốc hóa dược, sinh phẩm trong điều trị ngoại trú",
-        "agency": "Bộ Y tế",
-        "issued": "2025-06-30",
-        "valid_from": "2025-07-01",
-        "valid_to": None,
-        "status": "con_hieu_luc",
-        "domain": "y_te",
-        "source_url": "https://vbpl.vn/boyte/Pages/vbpq-toanvan.aspx?ItemID=179735",
-    },
 ]
 
-# Văn bản bị Điều 13 Thông tư 26/2025 tuyên hết hiệu lực từ 01/07/2025.
-# Không chép nội dung thông tư cũ. Mốc hết hiệu lực lấy từ khoản 1 Điều 13.
-REPEALED = [
-    {
-        "id": "52-2017-tt-byt",
-        "so_hieu": "52/2017/TT-BYT",
-        "title": "Quy định về đơn thuốc và việc kê đơn thuốc hóa dược, sinh phẩm trong điều trị ngoại trú",
-        "valid_to": "2025-07-01",
-        "repealed_by": "26-2025-tt-byt",
-    },
-    {
-        "id": "18-2018-tt-byt",
-        "so_hieu": "18/2018/TT-BYT",
-        "title": "Sửa đổi, bổ sung một số điều của Thông tư 52/2017/TT-BYT",
-        "valid_to": "2025-07-01",
-        "repealed_by": "26-2025-tt-byt",
-    },
-    {
-        "id": "04-2022-tt-byt",
-        "so_hieu": "04/2022/TT-BYT",
-        "title": "Sửa đổi, bổ sung quy định kê đơn thuốc",
-        "valid_to": "2025-07-01",
-        "repealed_by": "26-2025-tt-byt",
-    },
-    {
-        "id": "27-2021-tt-byt",
-        "so_hieu": "27/2021/TT-BYT",
-        "title": "Quy định kê đơn thuốc bằng hình thức điện tử",
-        "valid_to": "2025-07-01",
-        "repealed_by": "26-2025-tt-byt",
-    },
-]
+REPEALED: list[dict] = []
 
 ARTICLES = [
     {
@@ -241,74 +201,6 @@ b) Học lực tính theo điểm trung bình tích lũy xếp loại trung bìn
 a) Cơ sở đào tạo báo cáo Bộ Giáo dục và Đào tạo và cơ quan quản lý trực tiếp về số liệu sinh viên tuyển mới, tốt nghiệp, thôi học và đang học trong năm, dự kiến tốt nghiệp trong năm sau, tốt nghiệp đã có việc làm trong thời gian 12 tháng;
 3. Cơ sở đào tạo công khai trên trang thông tin điện tử của mình chậm nhất 45 ngày trước khi tổ chức đào tạo:
 a) Quy chế của cơ sở đào tạo và các quy định quản lý đào tạo có liên quan;
-""",
-    },
-    {
-        "doc_id": "26-2025-tt-byt",
-        "excerpt": False,
-        "raw": """
-Điều 2. Thẩm quyền kê đơn thuốc
-Người hành nghề khám bệnh, chữa bệnh có chứng chỉ hành nghề hoặc giấy phép hành nghề khám bệnh, chữa bệnh với chức danh là bác sỹ, y sỹ có thẩm quyền kê đơn thuốc.
-""",
-    },
-    {
-        "doc_id": "26-2025-tt-byt",
-        "excerpt": True,
-        "raw": """
-Điều 4. Nguyên tắc kê đơn thuốc
-2. Người bệnh khám bệnh nhiều chuyên khoa trong cùng một lần khám tại cơ sở khám bệnh, chữa bệnh thì được kê một (01) đơn thuốc bao gồm chỉ định thuốc của một hoặc nhiều chuyên khoa.
-""",
-    },
-    {
-        "doc_id": "26-2025-tt-byt",
-        "excerpt": True,
-        "raw": """
-Điều 6. Yêu cầu chung với nội dung kê đơn thuốc
-4. Đối với trẻ dưới 72 tháng tuổi thì phải ghi số tháng tuổi, cân nặng của trẻ; họ và tên người đưa trẻ đến khám bệnh, chữa bệnh.
-8. Số ngày sử dụng của mỗi thuốc trong đơn thuốc:
-a) Kê đơn thuốc với số ngày sử dụng của mỗi thuốc tối đa không quá ba mươi (30) ngày, trừ trường hợp quy định tại điểm b khoản này và các điều 7, 8 và 9 Thông tư này.
-b) Đối với bệnh thuộc Danh mục bệnh, nhóm bệnh được áp dụng kê đơn thuốc ngoại trú trên ba mươi (30) ngày quy định tại Phụ lục VII ban hành kèm theo Thông tư này: người kê đơn thuốc quyết định số ngày sử dụng của mỗi thuốc trong đơn thuốc căn cứ vào tình trạng lâm sàng, mức độ ổn định của người bệnh để kê đơn thuốc với số ngày sử dụng của mỗi thuốc tối đa không quá chín mươi (90) ngày.
-""",
-    },
-    {
-        "doc_id": "26-2025-tt-byt",
-        "excerpt": True,
-        "raw": """
-Điều 7. Kê đơn thuốc gây nghiện
-2. Kê đơn thuốc gây nghiện điều trị bệnh cấp tính số lượng thuốc sử dụng không vượt quá bảy (07) ngày.
-""",
-    },
-    {
-        "doc_id": "26-2025-tt-byt",
-        "excerpt": True,
-        "raw": """
-Điều 8. Kê đơn thuốc gây nghiện để giảm đau cho người bệnh ung thư
-1. Cơ sở khám bệnh, chữa bệnh khi chẩn đoán xác định người bệnh ung thư thì làm hồ sơ bệnh án điều trị ngoại trú cho người bệnh. Người kê đơn hướng dẫn người bệnh hoặc người đại diện của người bệnh viết cam kết về sử dụng thuốc gây nghiện theo quy định tại khoản 3 Điều 7 Thông tư này. Mỗi lần kê đơn thuốc tối đa ba mươi (30) ngày, phải ghi cụ thể ba (03) đợt điều trị liên tiếp trên một (01) đơn, mỗi đợt không vượt quá mười (10) ngày.
-""",
-    },
-    {
-        "doc_id": "26-2025-tt-byt",
-        "excerpt": True,
-        "raw": """
-Điều 9. Kê đơn thuốc hướng thần, thuốc tiền chất
-2. Đối với bệnh cấp tính, số lượng thuốc mỗi lần kê đơn đủ sử dụng không quá mười (10) ngày.
-3. Đối với bệnh cần chữa trị dài ngày, số lượng thuốc sử dụng không quá ba mươi (30) ngày.
-""",
-    },
-    {
-        "doc_id": "26-2025-tt-byt",
-        "excerpt": False,
-        "raw": """
-Điều 13. Hiệu lực thi hành
-1. Thông tư này có hiệu lực từ ngày 01 tháng 07 năm 2025.
-2. Các Thông tư hết hiệu lực kể từ ngày Thông tư này có hiệu lực, bao gồm:
-a) Thông tư số 52/2017/TT-BYT ngày 29 tháng 12 năm 2017 của Bộ trưởng Bộ Y tế quy định về đơn thuốc và việc kê đơn thuốc hóa dược, sinh phẩm trong điều trị ngoại trú;
-b) Thông tư số 18/2018/TT-BYT ngày 22 tháng 8 năm 2018 sửa đổi, bổ sung một số điều của Thông tư số 52/2017/TT-BYT;
-c) Thông tư số 04/2022/TT-BYT ngày 12 tháng 7 năm 2022 sửa đổi, bổ sung một số điều của Thông tư số 52/2017/TT-BYT, Thông tư số 18/2018/TT-BYT và Thông tư số 27/2021/TT-BYT;
-d) Thông tư số 27/2021/TT-BYT ngày 20 tháng 12 năm 2021 của Bộ trưởng Bộ Y tế về việc quy định kê đơn thuốc bằng hình thức điện tử hết hiệu lực kể từ ngày Thông tư này có hiệu lực.
-3. Lộ trình thực hiện việc kê đơn thuốc bằng hình thức điện tử:
-a) Cơ sở khám bệnh, chữa bệnh có hình thức tổ chức là bệnh viện phải thực hiện việc kê đơn thuốc bằng hình thức điện tử trước ngày 01 tháng 10 năm 2025;
-b) Cơ sở khám bệnh, chữa bệnh khác phải thực hiện việc kê đơn thuốc bằng hình thức điện tử trước ngày 01 tháng 01 năm 2026.
 """,
     },
 ]

@@ -57,11 +57,11 @@ def demo() -> None:
     print(verdict.reason)
     print(f"Căn cứ: {verdict.evidence_cite}")
     print()
-    print("--- 3. Câu hai bước: thông tư cũ còn hiệu lực không ---")
+    print("--- 3. Câu hai bước trên quy chế: nghỉ tạm thời và thời gian học tối đa ---")
     _print_answer(
         answer(
             store,
-            "Thông tư 52/2017/TT-BYT còn hiệu lực sau ngày 01/07/2025 không?",
+            "Nghỉ học tạm thời vì nhu cầu cá nhân có bị tính vào thời gian học tối đa không, và thời gian tối đa là bao nhiêu?",
             system="graph",
             do_revise=False,
         )

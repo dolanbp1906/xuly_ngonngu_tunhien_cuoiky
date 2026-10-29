@@ -1,14 +1,14 @@
 {
-  "n_questions": 21,
-  "n_claims": 20,
+  "n_questions": 13,
+  "n_claims": 14,
   "systems": {
     "naive": {
       "ggf": 1.0,
       "contradicted": 0.0,
-      "hit": 0.9603174603174603,
+      "hit": 0.9615384615384616,
       "recall": 1.0,
       "recall_hop2": 1.0,
-      "hit_hop2": 0.5833333333333333
+      "hit_hop2": 0.5
     },
     "graph": {
       "ggf": 1.0,
@@ -19,9 +19,9 @@
       "hit_hop2": 1.0
     },
     "unfaithful": {
-      "ggf": 0.246031746031746,
-      "contradicted": 0.7142857142857143,
-      "hit": 0.9523809523809523,
+      "ggf": 0.23076923076923078,
+      "contradicted": 0.7435897435897435,
+      "hit": 1.0,
       "recall": 1.0,
       "recall_hop2": 1.0,
       "hit_hop2": 1.0
@@ -40,23 +40,23 @@
       "macro": 1.0
     },
     "chunk": {
-      "supported": 0.9090909090909091,
-      "contradicted": 0.8571428571428571,
+      "supported": 0.9333333333333333,
+      "contradicted": 0.888888888888889,
       "unsupported": 1.0,
-      "macro": 0.9220779220779219
+      "macro": 0.9407407407407408
     },
     "no_number": {
-      "supported": 0.7407407407407407,
-      "contradicted": 0.5454545454545454,
+      "supported": 0.7368421052631579,
+      "contradicted": 0.5714285714285715,
       "unsupported": 0.0,
-      "macro": 0.4287317620650954
+      "macro": 0.4360902255639098
     }
   },
   "auroc_wrong": 1.0,
   "spearman": {
     "triple": 0.9999999999999998,
-    "chunk": 0.8316320352807863,
-    "lexical": 0.28124999999999994
+    "chunk": 0.9545454545454544,
+    "lexical": -0.052223296786709346
   },
   "groups": [
     {
@@ -69,7 +69,7 @@
     },
     {
       "answer_id": "sai_so",
-      "n": 3,
+      "n": 2,
       "human": 0.0,
       "triple": 0.0,
       "chunk": 0.0,
@@ -82,22 +82,6 @@
       "triple": 0.5,
       "chunk": 1.0,
       "lexical": 0.9411764705882353
-    },
-    {
-      "answer_id": "hieu_luc",
-      "n": 2,
-      "human": 0.5,
-      "triple": 0.5,
-      "chunk": 0.5,
-      "lexical": 0.9090909090909092
-    },
-    {
-      "answer_id": "ngay_benh_vien",
-      "n": 2,
-      "human": 0.5,
-      "triple": 0.5,
-      "chunk": 1.0,
-      "lexical": 1.0
     },
     {
       "answer_id": "bia",
@@ -117,10 +101,10 @@
     },
     {
       "answer_id": "diem",
-      "n": 2,
-      "human": 0.5,
-      "triple": 0.5,
-      "chunk": 0.5,
+      "n": 1,
+      "human": 0.0,
+      "triple": 0.0,
+      "chunk": 0.0,
       "lexical": 1.0
     }
   ],
@@ -132,14 +116,6 @@
       "chunk": "supported",
       "no_number": "contradicted",
       "claim": "Tổng số tín chỉ nợ đọng từ đầu khóa học vượt quá 24 thì sinh viên bị buộc thôi học."
-    },
-    {
-      "id": "h12",
-      "gold": "contradicted",
-      "triple": "contradicted",
-      "chunk": "supported",
-      "no_number": "supported",
-      "claim": "Bệnh viện phải thực hiện kê đơn thuốc bằng hình thức điện tử trước ngày 01 tháng 01 năm 2026."
     }
   ]
 }

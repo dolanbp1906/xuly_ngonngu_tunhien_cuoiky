@@ -27,7 +27,7 @@ Rồi mở trình duyệt:
 
     http://127.0.0.1:8766
 
-Trang có ô nhập. Bấm câu mẫu hoặc tự gõ, rồi bấm Xem kết quả.
+Trang là một khung chat. Bấm câu mẫu hoặc gõ rồi Enter. Câu của bạn nằm bên phải, câu trả lời nằm bên trái.
 Nếu cổng 8766 đã bị chiếm, tắt cửa sổ PowerShell cũ rồi chạy lại.
 
 Kịch bản in ra terminal, dùng khi không mở được trình duyệt:
@@ -38,7 +38,7 @@ Khi chữ Việt trong terminal bị ô vuông, mở Windows Terminal.
 
 Kỳ vọng đầu màn hình:
 
-    Đồ thị: 60 khoản/điểm, 13 cạnh.
+    Đồ thị: 44 khoản/điểm, 5 cạnh.
     GGF 1.00 ở câu nợ 24 tín chỉ
     Nhãn contradicted ở câu "vượt quá 30 thì buộc thôi học"
     Sau sửa, GGF 1.00 và số 02 lần (không còn 03 lần)
@@ -55,33 +55,33 @@ Không chứng minh lại việc tải mô hình.
 
 Trang http://127.0.0.1:8766 đã mở. Làm lần lượt:
 
-1. Ô đang ở chế độ Hỏi. Bấm câu mẫu nợ tín chỉ.
-   Kỳ vọng: GGF 100%, nhãn Được nâng đỡ, trích Điều 11 khoản 1 điểm a,
+1. Khung chat đang ở chế độ Hỏi. Bấm câu mẫu nợ tín chỉ. Câu đó được gửi ngay.
+   Kỳ vọng: GGF 100%, nhãn Nguồn kéo theo, trích Điều 11 khoản 1 điểm a,
    trong câu có "vượt quá 24".
-   Nói: câu này được khoản nâng đỡ, GGF là tỷ lệ mệnh đề như vậy.
+   Nói: khoản này kéo theo câu, GGF là tỷ lệ mệnh đề như vậy.
 
-2. Bấm Kiểm một câu nói. Nút Graph biến mất, vì bước này chấm câu bạn dán.
+2. Mở menu Chế độ, chọn Kiểm một câu nói. Menu Truy xuất biến mất, vì bước này chấm câu bạn dán.
    Bấm câu mẫu "vượt quá 24 thì ... buộc thôi học".
    Kỳ vọng: nhãn Nói ngược nguồn, và một dòng vàng:
-   nếu gộp cả điều thì nhãn thành Được nâng đỡ.
+   nếu gộp cả điều thì nhãn thành Nguồn kéo theo.
    Nói: 24 tín chỉ là mức cảnh báo, nằm ở khoản 1.
    Buộc thôi học nằm ở khoản 2. Chấm từng khoản thì thấy lệch.
    Gộp cả điều thì hai ý đứng cạnh nhau, dễ gán nhầm là đúng.
 
-3. Bấm câu "52/2017 còn hiệu lực" ở chế độ Hỏi (quay lại nút Hỏi rồi bấm mẫu).
-   Kỳ vọng: hai trích dẫn, Điều 13 khoản 2 điểm a và khoản 1, ngày 01/07/2025, GGF 100%.
-   Nói: graph đi từ thông tư bị bãi sang ngày thông tư mới có hiệu lực.
+3. Mở menu Chế độ, chọn Hỏi. Mở menu Kho, chọn ViHERMES, rồi chọn câu mẫu 1 bước.
+   Kỳ vọng: đáp án vàng của bộ, và đơn vị vàng nằm ở hạng 1 của bảng BM25.
+   Nói: miền y tế là ViHERMES, không dùng thông tư kê đơn tự chép.
 
 4. Vẫn ở Kiểm một câu nói. Dán:
    Thời gian tối đa để sinh viên hoàn thành khóa học không vượt quá 03 lần thời gian theo kế hoạch học tập chuẩn.
-   Bấm Xem kết quả.
+   Rồi Enter.
    Kỳ vọng: Nói ngược nguồn, dòng lý do ghi mốc 03 lệch với khoản ghi 02.
 
-5. Muốn so với chỉ tìm đoạn: chế độ Hỏi, bấm Chỉ tìm đoạn, hỏi
+5. Muốn so với chỉ tìm đoạn: chế độ Hỏi, kho Trích 08/2021, mở menu Truy xuất và chọn Chỉ tìm đoạn, hỏi
    "Nghỉ học tạm thời vì nhu cầu cá nhân có bị tính vào thời gian học tối đa không, và thời gian tối đa là bao nhiêu?"
-   Rồi bấm lại Graph. Graph thêm Điều 2 khoản 5 (02 lần). Chỉ tìm đoạn thường dừng ở Điều 15.
+   Rồi chọn lại Graph. Graph thêm Điều 2 khoản 5 (02 lần). Chỉ tìm đoạn thường dừng ở Điều 15.
 
-Ctrl+Enter cũng gửi ô nhập.
+Enter gửi ô nhập. Shift+Enter xuống dòng.
 
 Nếu trình duyệt không mở, dùng kịch bản terminal ở mục dưới. Cùng nội dung.
 
@@ -106,7 +106,7 @@ Thông tư 08/2021/TT-BGDĐT, và dòng:
     GGF 1.00
     [1] supported
 
-Nói: GGF là tỷ lệ mệnh đề được nguồn nâng đỡ.
+Nói: GGF là tỷ lệ mệnh đề được nguồn kéo theo.
 Câu này một mệnh đề, mệnh đề đó khớp khoản, nên GGF bằng 1.
 Hệ không bịa số. Nó đọc đúng câu trong quy chế.
 
@@ -126,21 +126,16 @@ của trường, hoặc khi quá thời gian học tối đa.
 Verifier nhìn từng khoản, nên không cộng hai khoản thành một câu.
 
 
---- Đoạn 3. Câu hai bước về hiệu lực (50 giây) ---
+--- Đoạn 3. Câu hai bước trên quy chế (50 giây) ---
 
-Màn hình trích cả hai chỗ:
+Màn hình câu nghỉ học tạm thời, trích cả hai chỗ:
 
-    Điều 13 khoản 2 điểm a
-    Điều 13 khoản 1
-    Thông tư số 52/2017/TT-BYT ... hết hiệu lực
-    có hiệu lực từ ngày 01 tháng 07 năm 2025
+    tính vào thời gian học chính thức
+    không vượt quá 02 lần
     GGF 1.00
 
-Nói: hỏi một thông tư cũ. Điểm a nói nó hết hiệu lực
-kể từ ngày thông tư mới có hiệu lực.
-Khoản 1 nói thông tư mới có hiệu lực ngày 01/07/2025.
-Graph đi từ điểm a sang khoản cùng điều.
-Hai mệnh đề đều supported.
+Nói: một câu cần Điều 15 khoản 2 và Điều 2 khoản 5.
+Graph đi cạnh dẫn chiếu. Naive thường chỉ lấy một khoản.
 
 
 --- Đoạn 4. Sửa câu sai số (40 giây) ---
@@ -163,33 +158,31 @@ GGF từ 0,50 lên 1,00. Đây là verify-then-revise, tối đa hai vòng.
 Cuộn tới bảng "Hệ". Đọc ba ô:
 
     graph       GGF 1,000    phủ đáp án hop-2  1,000
-    naive       GGF 1,000    phủ đáp án hop-2  0,583
-    unfaithful  GGF 0,246    contradicted      0,714
+    naive       GGF 1,000    phủ đáp án hop-2  0,500
+    unfaithful  GGF 0,231    contradicted      0,744
     revised     GGF 1,000
 
 Nói: naive và graph đều trích nguyên văn nên GGF đều bằng 1.
-Khác nhau ở câu hai bước: graph phủ hết đáp án, naive chỉ 0,583
+Khác nhau ở câu hai bước: graph phủ hết đáp án, naive chỉ 0,500
 vì chỉ lấy một khoản, bỏ khoản được dẫn chiếu.
 
-Câu bị đổi số có GGF 0,246. Sau khi sửa, GGF về 1.
+Câu bị đổi số có GGF 0,231. Sau khi sửa, GGF về 1.
 
-Rồi bảng verifier, 20 claim một người đã đối chiếu với Công báo:
+Rồi bảng verifier, 14 claim một người đã đối chiếu với Công báo:
 
     triple     macro-F1 1,000    Spearman với người 1,000
-    chunk      macro-F1 0,922    Spearman 0,832
-    no_number  macro-F1 0,429
-    lexical    Spearman 0,281
+    chunk      macro-F1 0,941    Spearman 0,955
+    no_number  macro-F1 0,436
+    lexical    Spearman -0,052
 
 Nói: lexical là độ phủ từ, kiểu RAGAS khi không gọi LLM.
 Nhóm sai_so có phủ từ 1,000 nhưng GGF người bằng 0,
-vì chỉ lệch số 02/03, 30%/50%, 07/14 ngày.
+vì chỉ lệch số 02/03 và 30%/50%.
 Chồng từ không thấy lệch đó. Rule số thì thấy.
 
 chunk gộp cả điều thành một đoạn nên gán supported nhầm
-hai câu: nợ 24 tín chỉ thì buộc thôi học,
-và bệnh viện phải kê đơn điện tử trước 01/01/2026
-(mốc 01/01/2026 là của cơ sở khác, bệnh viện là 01/10/2025).
-triple tách khoản nên gán contradicted đúng cả hai.
+câu nợ 24 tín chỉ thì buộc thôi học.
+triple tách khoản nên gán contradicted đúng câu đó.
 
 
 ============================================================
@@ -216,7 +209,7 @@ lần sau bỏ --system naive.
 
 Kỳ vọng: unsupported.
 
-Chấm lại bộ 21 câu và 20 claim:
+Chấm lại bộ 13 câu quy chế và 14 claim:
 
     python run.py eval
 
@@ -233,22 +226,20 @@ Kỳ vọng: chunks 60, có cả REFERS_TO và REPEALS.
 
 Văn bản lấy ngày 27/10/2026.
 
-Quy chế: Thông tư 08/2021/TT-BGDĐT, hiệu lực 03/05/2021, còn hiệu lực.
+Quy chế trích demo: Thông tư 08/2021/TT-BGDĐT, hiệu lực 03/05/2021.
+Từ 07/07/2026, Thông tư 56/2026 thay thế thông tư này với khóa tuyển sinh năm 2026.
+Khóa đã có thông báo tuyển sinh trước ngày đó vẫn theo quy chế lúc thông báo.
 Công văn 2684/BGDĐT-GDĐH ngày 05/06/2024 chỉ đính chính số hiệu
 Quyết định 22/2001/QĐ-BGDĐT ở phần ban hành, không đổi các điều
 đang dùng (cảnh báo, tốt nghiệp, thời gian học).
 PDF Công báo:
 https://vbpl.moj.gov.vn/FileData/TW/Lists/vbpq/Attachments/147704/VanBanGoc_08-2021-TT-BGDĐT%20full.pdf
 
-Y tế: Thông tư 26/2025/TT-BYT, hiệu lực 01/07/2025, còn hiệu lực.
-Thông tư này tuyên Thông tư 52/2017, 18/2018, 04/2022, 27/2021
-hết hiệu lực từ 01/07/2025.
-https://vbpl.vn/boyte/Pages/vbpq-toanvan.aspx?ItemID=179735
+Y tế: bộ ViHERMES trên Hugging Face, 1.561 câu và 998 đơn vị từ 490 văn bản Bộ Y tế.
+Trang demo có nút ViHERMES. Không còn dùng Thông tư 26/2025 về kê đơn làm tập thay thế.
 
-ViHERMES chưa được gắn vào bản chạy này. Miền y tế là thông tư kê đơn,
-cùng kiểu điều–khoản, để vẫn có câu hiệu lực và câu số ngày.
-
-Corpus là các điều phục vụ 21 câu hỏi, không phải toàn văn hai thông tư.
+Nút Trích 08/2021 phục vụ 13 câu đã đối chiếu. Nút ViEduReg v1 là Thông tư 56/2026:
+213 khoản, 87 câu chờ duyệt (chưa phải 500 câu, chưa có kappa). Lệnh dựng lại: python run.py viedureg.
 Trong đồ thị, điều nào chỉ trích một phần thì có cờ excerpt.
 
 Ba hệ cùng một chỉ mục:
@@ -258,11 +249,11 @@ Ba hệ cùng một chỉ mục:
 
 revised là unfaithful sau verify-then-revise.
 
-20 claim người gán nằm ở data/gold/human_claims.json.
+14 claim người gán nằm ở data/gold/human_claims.json.
 Một người đối chiếu, chưa gán kép, chưa có Cohen kappa.
-Macro-F1 triple bằng 1,000 là trên đúng bộ 20 claim này.
-Số dùng để so là chunk 0,922, no_number 0,429,
-và Spearman lexical 0,281 so với triple 1,000.
+Macro-F1 triple bằng 1,000 là trên đúng bộ 14 claim này.
+Số dùng để so là chunk 0,941, no_number 0,436,
+và Spearman lexical -0,052 so với triple 1,000.
 
 Bản này chưa fine-tune PhoBERT, chưa chạy LightRAG, HippoRAG 2
 hay KAG trong Docker. Những việc đó nằm trong KE_HOACH.md
@@ -275,7 +266,7 @@ cho đủ 6 tháng. Buổi nói dùng pipeline chạy được offline.
 
 GGF bằng 1 của naive và graph không có nghĩa mọi câu sinh bởi LLM
 đều trung thực. Hai hệ này trích nguyên văn điều khoản.
-Phần chỉ lỗi là unfaithful, bộ 20 claim, và chỗ chunk gộp điều.
+Phần chỉ lỗi là unfaithful, bộ 14 claim, và chỗ chunk gộp điều.
 
 Không nói đã chạy thực nghiệm KAG gốc hay HippoRAG 2.
 Không nói bộ 3.000 claim đã gán xong.

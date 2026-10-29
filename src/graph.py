@@ -37,6 +37,8 @@ class Chunk:
     tokens: list[str] = field(default_factory=list)
 
     def cite(self) -> str:
+        if self.domain == "vihermes":
+            return self.title
         parts = [f"Điều {self.dieu}"]
         if self.khoan:
             parts.append(f"khoản {self.khoan}")

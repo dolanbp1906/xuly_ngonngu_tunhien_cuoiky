@@ -291,7 +291,7 @@ def _write(result: dict) -> None:
     EVAL_DIR.mkdir(parents=True, exist_ok=True)
     lines = [
         "ViKAG-Faith — kết quả chạy offline",
-        "Corpus: Thông tư 08/2021/TT-BGDĐT (quy chế đại học) và Thông tư 26/2025/TT-BYT (kê đơn).",
+        "Corpus bảng này: trích Thông tư 08/2021, khóa đã tuyển trước 07/07/2026. ViEduReg v1 (Thông tư 56/2026) nằm ở data/viedureg và chưa đưa vào bảng vì còn chờ duyệt. Miền y tế là ViHERMES.",
         "Ngày đối chiếu hiệu lực trong đồ thị: 2026-10-27.",
         f"Số câu: {result['n_questions']}. Số claim người gán: {result['n_claims']}.",
         "",

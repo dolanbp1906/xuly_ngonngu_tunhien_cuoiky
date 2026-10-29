@@ -1,0 +1,1249 @@
+[
+  {
+    "id": "ve0001",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "hieu_luc",
+    "question": "Thông tư 56/2026/TT-BGDĐT có hiệu lực từ ngày nào và thay thế những thông tư nào?",
+    "gold_answer": "Thông tư này có hiệu lực thi hành từ ngày 07 tháng 7 năm 2026, thay thế Thông tư số 08/2021/TT-BGDĐT ngày 18 tháng 3 năm 2021 ban hành kèm Quy chế đào tạo trình độ đại học và Thông tư số 28/2023/TT-BGDĐT ngày 28 tháng 12 năm 2023 ban hành kèm Quy chế đào tạo từ xa trình độ đại học của Bộ trưởng Bộ Giáo dục và Đào tạo.",
+    "evidence": [
+      "56-2026-tt-bgddt:d2:k0:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0002",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "hieu_luc",
+    "question": "Khóa tuyển sinh năm 2026 áp dụng văn bản nào thay thế Thông tư 08/2021?",
+    "gold_answer": "Quy chế này áp dụng đối với khóa tuyển sinh năm 2026 và bắt đầu tổ chức đào tạo từ năm học 2026 - 2027 trở đi. Văn bản thay thế: Thông tư này có hiệu lực thi hành từ ngày 07 tháng 7 năm 2026, thay thế Thông tư số 08/2021/TT-BGDĐT ngày 18 tháng 3 năm 2021 ban hành kèm Quy chế đào tạo trình độ đại học và Thông tư số 28/2023/TT-BGDĐT ngày 28 tháng 12 năm 2023 ban hành kèm Quy chế đào tạo từ xa trình độ đại học của Bộ trưởng Bộ Giáo dục và Đào tạo.",
+    "evidence": [
+      "56-2026-qc-dh:d27:k1:p-",
+      "56-2026-tt-bgddt:d2:k0:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0003",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "hieu_luc",
+    "question": "Khóa đã có thông báo tuyển sinh trước ngày Thông tư 56/2026 có hiệu lực thì áp dụng quy chế nào?",
+    "gold_answer": "Đối với các khóa tuyển sinh đã có thông báo tuyển sinh trước ngày Thông tư này có hiệu lực và chưa nhập học hoặc chưa tổ chức đào tạo, các khóa đang đào tạo theo các hình thức chính quy, vừa làm vừa học, từ xa; chương trình đào tạo từ xa đã công bố, tuyển sinh hoặc đang triển khai; hoạt động liên kết đào tạo đã ký kết, đã tuyển sinh; kết quả học tập, tín chỉ, học phần, chứng chỉ đã được công nhận, chuyển đổi hoặc miễn trừ thì thực hiện theo các Quy chế đào tạo trình độ đại học có hiệu lực tại thời điểm thông báo tuyển sinh.",
+    "evidence": [
+      "56-2026-qc-dh:d27:k2:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0004",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 3 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "ít nhất một phần tư (1/4) so với thời gian đào tạo chuẩn của cùng chương trình",
+    "evidence": [
+      "56-2026-qc-dh:d3:k2:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0005",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 3 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối thiểu để hoàn thành chương trình đào tạo không ít hơn hai phần ba (2/3) thời",
+    "evidence": [
+      "56-2026-qc-dh:d3:k3:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0006",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 3 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối thiểu và thời gian tối đa theo quy định của cơ sở đào tạo và Quy chế này",
+    "evidence": [
+      "56-2026-qc-dh:d3:k4:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0007",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 3 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 2 Điều 16» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 16 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 16 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Chứng chỉ giáo dục đại học có thời hạn giá trị tối đa không vượt quá 2,0 lần thời gian đào tạo chuẩn của chương trình đào tạo kể từ ngày được thi kết thúc học phần hoặc công nhận chứng chỉ.",
+    "evidence": [
+      "56-2026-qc-dh:d3:k3:p-",
+      "56-2026-qc-dh:d16:k2:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0008",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 5 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 1 Điều 5» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 5 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 5 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Hình thức đào tạo chính quy được quy định như sau: Hoạt động giảng dạy có sự hiện diện đồng thời, tương tác trực tiếp giữa giảng viên và sinh viên, được tổ chức tập trung tại cơ sở đào tạo trong khung giờ ban ngày chiếm trên 50% tổng khối lượng của chương trình đào tạo; phần được thực hiện theo phương thức tổ chức đào tạo từ xa và phần thực hiện tại cơ sở ph",
+    "evidence": [
+      "56-2026-qc-dh:d5:k3:p-",
+      "56-2026-qc-dh:d5:k1:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0009",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 5 khoản 5, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối thiểu gồm: hình thức đào tạo",
+    "evidence": [
+      "56-2026-qc-dh:d5:k5:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0010",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 6 khoản 4 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối thiểu đối với cơ sở chủ trì đào tạo: Bảo đảm đội ngũ giảng viên cơ hữu giảng",
+    "evidence": [
+      "56-2026-qc-dh:d6:k4:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0011",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 6 khoản 4 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối thiểu đối với cơ sở chủ trì đào tạo: Đã ban hành quy định về liên kết và thẩ",
+    "evidence": [
+      "56-2026-qc-dh:d6:k4:pb"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0012",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "han_che",
+    "question": "Theo Điều 7 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "gold_answer": "u vào và đầu ra của chương trình liên kết đào tạo không được thấp hơn yêu cầu đầu vào và chuẩn của chương trình đào tạo tương ứng tại Việt Nam",
+    "evidence": [
+      "56-2026-qc-dh:d7:k4:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0013",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "han_che",
+    "question": "Theo Điều 7 khoản 5, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "gold_answer": "i học lên cao) với văn bằng cấp tại trụ sở chính, không được có sự phân biệt đối xử về địa điểm học",
+    "evidence": [
+      "56-2026-qc-dh:d7:k5:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0014",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 7 khoản 6, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "ít nhất 25% tổng khối lượng của chương trình liên kết đào tạo và có trình độ t",
+    "evidence": [
+      "56-2026-qc-dh:d7:k6:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0015",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 8 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối thiểu học trên lớp là 30 tuần học tập, giảng dạy và hoạt động đào tạo theo k",
+    "evidence": [
+      "56-2026-qc-dh:d8:k1:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0016",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 8 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối thiểu trước 04 tuần bắt đầu ngày học chính thức",
+    "evidence": [
+      "56-2026-qc-dh:d8:k2:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0017",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 9 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối thiểu của sinh viên trong mỗi học kỳ nằm trong khung như sau: Khối lượng tối",
+    "evidence": [
+      "56-2026-qc-dh:d9:k5:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0018",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 9 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 4 Điều 9» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 9 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 9 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Học sinh trung học phổ thông thuộc đối tượng được miễn thi tốt nghiệp theo quy định của Bộ Giáo dục và Đào tạo, đã hoàn thành và đạt kết quả học tập xếp loại tốt năm học lớp 10, 11 cấp học trung học phổ thông, được phép đăng ký học tích lũy tín chỉ giáo dục đại học của cơ sở giáo dục đại học. Kết quả học tập của học sinh tích lũy tại cơ sở giáo dục đại học đ",
+    "evidence": [
+      "56-2026-qc-dh:d9:k5:pa",
+      "56-2026-qc-dh:d9:k4:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0019",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 9 khoản 5 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối thiểu của sinh viên trong mỗi học kỳ nằm trong khung như sau: Khối lượng tối",
+    "evidence": [
+      "56-2026-qc-dh:d9:k5:pb"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0020",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 9 khoản 5 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 4 Điều 9» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 9 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 9 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Học sinh trung học phổ thông thuộc đối tượng được miễn thi tốt nghiệp theo quy định của Bộ Giáo dục và Đào tạo, đã hoàn thành và đạt kết quả học tập xếp loại tốt năm học lớp 10, 11 cấp học trung học phổ thông, được phép đăng ký học tích lũy tín chỉ giáo dục đại học của cơ sở giáo dục đại học. Kết quả học tập của học sinh tích lũy tại cơ sở giáo dục đại học đ",
+    "evidence": [
+      "56-2026-qc-dh:d9:k5:pb",
+      "56-2026-qc-dh:d9:k4:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0021",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 12 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối thiểu ba điểm thành phần trong đó điểm thi cuối kỳ có trọng số tối thiểu 50%",
+    "evidence": [
+      "56-2026-qc-dh:d12:k1:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0022",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 12 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "không quá 50% trọng số điểm học phần",
+    "evidence": [
+      "56-2026-qc-dh:d12:k2:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0023",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 12 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "không quá 50% trọng số điểm học phần",
+    "evidence": [
+      "56-2026-qc-dh:d12:k2:pb"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0024",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 12 khoản 2 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "không quá 50% trọng số điểm học phần",
+    "evidence": [
+      "56-2026-qc-dh:d12:k2:pc"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0025",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "han_che",
+    "question": "Theo Điều 12 khoản 4 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "gold_answer": "ân mức, áp dụng cho các học phần chỉ yêu cầu đạt, không tính vào điểm trung bình học tập: P: từ 5,00 trở lên",
+    "evidence": [
+      "56-2026-qc-dh:d12:k4:pb"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0026",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "han_che",
+    "question": "Theo Điều 12 khoản 4 điểm d, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "gold_answer": "rường hợp đặc biệt sử dụng các điểm chữ xếp loại, không được tính vào điểm trung bình học tập: I: Điểm chưa hoàn thiện do được phép hoãn thi, kiểm tra",
+    "evidence": [
+      "56-2026-qc-dh:d12:k4:pd"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0027",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 12 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 6 Điều 12» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 12 khoản 6 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 12 khoản 6 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Quy chế của cơ sở đào tạo quy định: Việc tổ chức đánh giá quá trình học tập, trải nghiệm của sinh viên, bao gồm cả các hoạt động thí nghiệm, thực hành, làm bài tập, trình bày báo cáo như một thành phần của học phần;",
+    "evidence": [
+      "56-2026-qc-dh:d12:k5:pa",
+      "56-2026-qc-dh:d12:k6:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0028",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 12 khoản 6 điểm đ, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 4 Điều 12» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 12 khoản 4 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 12 khoản 4 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Điểm học phần được tính từ tổng các điểm thành phần nhân với trọng số tương ứng, được làm tròn đến phần trăm và xếp loại điểm chữ như dưới đây, trừ các trường hợp được quy định tại điểm d khoản này. Loại đạt có phân mức, áp dụng cho các học phần được tính vào điểm trung bình học tập, bao gồm: A: từ 8,50 đến 10,0; B: từ 7,00 đến 8,49; C: từ 5,50 đến 6,99; D:",
+    "evidence": [
+      "56-2026-qc-dh:d12:k6:pđ",
+      "56-2026-qc-dh:d12:k4:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0029",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 13 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 4 Điều 13» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 13 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 13 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Cơ sở đào tạo tổ chức đào tạo theo niên chế và sử dụng thang điểm 10 thì tính các điểm trung bình dựa trên điểm học phần theo thang điểm 10. Trong trường hợp này, quy chế của cơ sở đào tạo quy định cụ thể các mức xử lý kết quả học tập để tương đương và thay thế cho các quy định tại Điều 15 của Quy chế này.",
+    "evidence": [
+      "56-2026-qc-dh:d13:k2:p-",
+      "56-2026-qc-dh:d13:k4:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0030",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "han_che",
+    "question": "Theo Điều 13 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "gold_answer": "Những điểm chữ không được quy định tại khoản 2 Điều này không được tính vào các điểm trung bình học kỳ, năm học hoặ",
+    "evidence": [
+      "56-2026-qc-dh:d13:k3:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0031",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 13 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 2 Điều 13» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 13 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 13 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Để tính điểm trung bình, điểm chữ của học phần được quy đổi về điểm số như dưới đây, trừ trường hợp quy định tại khoản 4 Điều này. Điểm chữ nhiều mức hơn do cơ sở đào tạo quy định (nếu có) cũng được quy đổi sang điểm số tương ứng theo thang từ 0 tới 4. A quy đổi thành 4; B quy đổi thành 3; C quy đổi thành 2; D quy đổi thành 1; F quy đổi thành 0.",
+    "evidence": [
+      "56-2026-qc-dh:d13:k3:p-",
+      "56-2026-qc-dh:d13:k2:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0032",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "han_che",
+    "question": "Theo Điều 14 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "gold_answer": "Sinh viên bị buộc thôi học khi vi phạm một trong các trường hợp sau: Số lần cảnh báo học tập hoặc mức cảnh báo học t",
+    "evidence": [
+      "56-2026-qc-dh:d14:k2:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0033",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 14 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối đa theo quy định tại khoản 3 Điều 3 của Quy chế này",
+    "evidence": [
+      "56-2026-qc-dh:d14:k2:pb"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0034",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 14 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 3 Điều 3» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 3 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 3 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Thời gian đào tạo tối thiểu để hoàn thành chương trình đào tạo không ít hơn hai phần ba (2/3) thời gian đào tạo chuẩn của chương trình đào tạo, và thời gian đào tạo tối đa không vượt quá 2,0 lần thời gian đào tạo chuẩn của chương trình đào tạo.",
+    "evidence": [
+      "56-2026-qc-dh:d14:k2:pb",
+      "56-2026-qc-dh:d3:k3:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0035",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 14 khoản 3 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "không vượt quá 3 lần cảnh báo liên tiếp",
+    "evidence": [
+      "56-2026-qc-dh:d14:k3:pb"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0036",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "han_che",
+    "question": "Theo Điều 14 khoản 3 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "gold_answer": "uy trình, hình thức, đối tượng, cảnh báo học tập, buộc thôi học",
+    "evidence": [
+      "56-2026-qc-dh:d14:k3:pc"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0037",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 15 khoản 1 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "không vượt quá 20% khối lượng học tập chuẩn của chương trình đào tạo",
+    "evidence": [
+      "56-2026-qc-dh:d15:k1:pb"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0038",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "han_che",
+    "question": "Theo Điều 15 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "gold_answer": "Sinh viên bị buộc thôi học khi vi phạm một trong các trường hợp sau: Điểm trung bình chung tích lũy các năm học khôn",
+    "evidence": [
+      "56-2026-qc-dh:d15:k2:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0039",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 15 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 1 Điều 15» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 15 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 15 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Cuối mỗi năm học, sinh viên được đánh giá đạt tiến độ học tập và được học tiếp lên năm học sau khi đáp ứng đủ các yêu cầu sau: Điểm trung bình năm học đạt từ 3,50 trở lên (theo thang điểm 10) đối với năm học thứ nhất, từ 4,00 trở lên đối với năm thứ hai và từ 4,50 đối với năm thứ ba trở đi;",
+    "evidence": [
+      "56-2026-qc-dh:d15:k2:pa",
+      "56-2026-qc-dh:d15:k1:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0040",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "han_che",
+    "question": "Theo Điều 15 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "gold_answer": "Sinh viên bị buộc thôi học khi vi phạm một trong các trường hợp sau: Điểm trung bình chung tích lũy đạt dưới 3,80 sa",
+    "evidence": [
+      "56-2026-qc-dh:d15:k2:pb"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0041",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 15 khoản 2 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối đa theo quy định tại khoản 3 Điều 3 của Quy chế này",
+    "evidence": [
+      "56-2026-qc-dh:d15:k2:pc"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0042",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 15 khoản 2 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 3 Điều 3» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 3 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 3 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Thời gian đào tạo tối thiểu để hoàn thành chương trình đào tạo không ít hơn hai phần ba (2/3) thời gian đào tạo chuẩn của chương trình đào tạo, và thời gian đào tạo tối đa không vượt quá 2,0 lần thời gian đào tạo chuẩn của chương trình đào tạo.",
+    "evidence": [
+      "56-2026-qc-dh:d15:k2:pc",
+      "56-2026-qc-dh:d3:k3:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0043",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 15 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 2 Điều 15» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 15 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 15 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Sinh viên bị buộc thôi học khi vi phạm một trong các trường hợp sau: Điểm trung bình chung tích lũy các năm học không đạt quy định tại khoản 1 Điều này;",
+    "evidence": [
+      "56-2026-qc-dh:d15:k3:p-",
+      "56-2026-qc-dh:d15:k2:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0044",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 15 khoản 4 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 1 Điều 14» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 14 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 14 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Cuối năm học, sinh viên được cảnh báo học tập dựa trên một số điều kiện như sau: Tổng số tín chỉ không đạt trong học kỳ vượt quá 50% khối lượng đã đăng ký học trong học kỳ, hoặc tổng số tín chỉ nợ đọng từ đầu khóa học vượt quá 24;",
+    "evidence": [
+      "56-2026-qc-dh:d15:k4:pa",
+      "56-2026-qc-dh:d14:k1:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0045",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "han_che",
+    "question": "Theo Điều 15 khoản 4 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "gold_answer": "uy trình, hình thức, đối tượng, cảnh báo học tập, buộc thôi học",
+    "evidence": [
+      "56-2026-qc-dh:d15:k4:pb"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0046",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "han_che",
+    "question": "Theo Điều 15 khoản 4 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "gold_answer": "học tập đã tích lũy trong trường hợp sinh viên bị buộc thôi học",
+    "evidence": [
+      "56-2026-qc-dh:d15:k4:pc"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0047",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 16 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối đa không vượt quá 2,0 lần thời gian đào tạo chuẩn của chương trình đào tạ",
+    "evidence": [
+      "56-2026-qc-dh:d16:k2:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0048",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 16 khoản 5, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối đa của chứng chỉ giáo dục đại học để công nhận, chuyển đổi với các học ph",
+    "evidence": [
+      "56-2026-qc-dh:d16:k5:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0049",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 16 khoản 5, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 2 Điều 16» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 16 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 16 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Chứng chỉ giáo dục đại học có thời hạn giá trị tối đa không vượt quá 2,0 lần thời gian đào tạo chuẩn của chương trình đào tạo kể từ ngày được thi kết thúc học phần hoặc công nhận chứng chỉ.",
+    "evidence": [
+      "56-2026-qc-dh:d16:k5:p-",
+      "56-2026-qc-dh:d16:k2:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0050",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 16 khoản 6, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối đa được công nhận, trường hợp phải đánh giá bổ sung, thẩm quyền quyết địn",
+    "evidence": [
+      "56-2026-qc-dh:d16:k6:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0051",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 17 khoản 3 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 5 Điều 13» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 13 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 13 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Sinh viên được xếp loại học lực theo điểm trung bình học kỳ, điểm trung bình năm học hoặc điểm trung bình chung tích lũy được làm tròn đến hàng phần trăm và quy định như sau: Theo thang điểm 4: Từ 3,60 đến 4,0: Xuất sắc; Từ 3,20 đến 3,59: Giỏi; Từ 2,50 đến 3,19: Khá; Từ 2,00 đến 2,49: Trung bình; Từ 1,00 đến 1,99: Yếu; Dưới 1,00: Kém.",
+    "evidence": [
+      "56-2026-qc-dh:d17:k3:pa",
+      "56-2026-qc-dh:d13:k5:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0052",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 17 khoản 3 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 5 Điều 13» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 13 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 13 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Sinh viên được xếp loại học lực theo điểm trung bình học kỳ, điểm trung bình năm học hoặc điểm trung bình chung tích lũy được làm tròn đến hàng phần trăm và quy định như sau: Theo thang điểm 4: Từ 3,60 đến 4,0: Xuất sắc; Từ 3,20 đến 3,59: Giỏi; Từ 2,50 đến 3,19: Khá; Từ 2,00 đến 2,49: Trung bình; Từ 1,00 đến 1,99: Yếu; Dưới 1,00: Kém.",
+    "evidence": [
+      "56-2026-qc-dh:d17:k3:pb",
+      "56-2026-qc-dh:d13:k5:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0053",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 17 khoản 3 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 5 Điều 13» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 13 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 13 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Sinh viên được xếp loại học lực theo điểm trung bình học kỳ, điểm trung bình năm học hoặc điểm trung bình chung tích lũy được làm tròn đến hàng phần trăm và quy định như sau: Theo thang điểm 4: Từ 3,60 đến 4,0: Xuất sắc; Từ 3,20 đến 3,59: Giỏi; Từ 2,50 đến 3,19: Khá; Từ 2,00 đến 2,49: Trung bình; Từ 1,00 đến 1,99: Yếu; Dưới 1,00: Kém.",
+    "evidence": [
+      "56-2026-qc-dh:d17:k3:pc",
+      "56-2026-qc-dh:d13:k5:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0054",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 18 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối đa của chương trình đào tạo: Được điều động vào lực lượng vũ trang",
+    "evidence": [
+      "56-2026-qc-dh:d18:k1:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0055",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 18 khoản 1 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối đa của chương trình đào tạo: Được điều động, đại diện quốc gia tham dự cá",
+    "evidence": [
+      "56-2026-qc-dh:d18:k1:pb"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0056",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 18 khoản 1 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối đa của chương trình đào tạo: Bị ốm, thai sản hoặc tai nạn phải điều trị t",
+    "evidence": [
+      "56-2026-qc-dh:d18:k1:pc"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0057",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 18 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối thiểu 01 học kỳ ở cơ sở đào tạo và không thuộc các trường hợp bị xem xét buộ",
+    "evidence": [
+      "56-2026-qc-dh:d18:k2:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0058",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 18 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 3 Điều 3» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 3 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 3 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Thời gian đào tạo tối thiểu để hoàn thành chương trình đào tạo không ít hơn hai phần ba (2/3) thời gian đào tạo chuẩn của chương trình đào tạo, và thời gian đào tạo tối đa không vượt quá 2,0 lần thời gian đào tạo chuẩn của chương trình đào tạo.",
+    "evidence": [
+      "56-2026-qc-dh:d18:k2:p-",
+      "56-2026-qc-dh:d3:k3:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0059",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 18 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 1 Điều 18» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 18 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 18 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Sinh viên được xem xét nghỉ học tạm thời và bảo lưu kết quả đã học trong các trường hợp sau và không tính vào thời gian đào tạo tối đa của chương trình đào tạo: Được điều động vào lực lượng vũ trang;",
+    "evidence": [
+      "56-2026-qc-dh:d18:k2:p-",
+      "56-2026-qc-dh:d18:k1:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0060",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "han_che",
+    "question": "Theo Điều 18 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "gold_answer": "Sinh viên bị buộc thôi học hoặc xin thôi học, nếu có nguyện vọng quay trở lại học, phải tham gia dự tuyển đầu vào nh",
+    "evidence": [
+      "56-2026-qc-dh:d18:k3:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0061",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "han_che",
+    "question": "Theo Điều 19 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "gold_answer": "h viên năm cuối khóa, không thuộc diện bị xem xét buộc thôi học và còn đủ thời gian học tập theo quy định tại khoản 3 Điều 3 của Quy chế này",
+    "evidence": [
+      "56-2026-qc-dh:d19:k1:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0062",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 19 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 3 Điều 3» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 3 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 3 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Thời gian đào tạo tối thiểu để hoàn thành chương trình đào tạo không ít hơn hai phần ba (2/3) thời gian đào tạo chuẩn của chương trình đào tạo, và thời gian đào tạo tối đa không vượt quá 2,0 lần thời gian đào tạo chuẩn của chương trình đào tạo.",
+    "evidence": [
+      "56-2026-qc-dh:d19:k1:pa",
+      "56-2026-qc-dh:d3:k3:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0063",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "han_che",
+    "question": "Theo Điều 19 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "gold_answer": "h viên năm cuối khóa, không thuộc diện bị xem xét buộc thôi học và còn đủ thời gian học tập theo quy định tại khoản 3 Điều 3 của Quy chế này",
+    "evidence": [
+      "56-2026-qc-dh:d19:k2:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0064",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 19 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 3 Điều 3» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 3 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 3 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Thời gian đào tạo tối thiểu để hoàn thành chương trình đào tạo không ít hơn hai phần ba (2/3) thời gian đào tạo chuẩn của chương trình đào tạo, và thời gian đào tạo tối đa không vượt quá 2,0 lần thời gian đào tạo chuẩn của chương trình đào tạo.",
+    "evidence": [
+      "56-2026-qc-dh:d19:k2:pa",
+      "56-2026-qc-dh:d3:k3:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0065",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 19 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 4 Điều 19» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 19 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 19 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Sinh viên của phân hiệu hoặc cơ sở đào tạo được sáp nhập, chia tách, giải thể theo quyết định của cấp có thẩm quyền thực hiện theo quyết định sáp nhập, chia tách, giải thể phân hiệu hoặc cơ sở đào tạo.",
+    "evidence": [
+      "56-2026-qc-dh:d19:k2:pa",
+      "56-2026-qc-dh:d19:k4:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0066",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 19 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 4 Điều 19» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 19 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 19 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Sinh viên của phân hiệu hoặc cơ sở đào tạo được sáp nhập, chia tách, giải thể theo quyết định của cấp có thẩm quyền thực hiện theo quyết định sáp nhập, chia tách, giải thể phân hiệu hoặc cơ sở đào tạo.",
+    "evidence": [
+      "56-2026-qc-dh:d19:k2:pb",
+      "56-2026-qc-dh:d19:k4:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0067",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 19 khoản 2 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 4 Điều 19» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 19 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 19 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Sinh viên của phân hiệu hoặc cơ sở đào tạo được sáp nhập, chia tách, giải thể theo quyết định của cấp có thẩm quyền thực hiện theo quyết định sáp nhập, chia tách, giải thể phân hiệu hoặc cơ sở đào tạo.",
+    "evidence": [
+      "56-2026-qc-dh:d19:k2:pc",
+      "56-2026-qc-dh:d19:k4:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0068",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 19 khoản 2 điểm d, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 4 Điều 19» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 19 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 19 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Sinh viên của phân hiệu hoặc cơ sở đào tạo được sáp nhập, chia tách, giải thể theo quyết định của cấp có thẩm quyền thực hiện theo quyết định sáp nhập, chia tách, giải thể phân hiệu hoặc cơ sở đào tạo.",
+    "evidence": [
+      "56-2026-qc-dh:d19:k2:pd",
+      "56-2026-qc-dh:d19:k4:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0069",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 21 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 2 Điều 21» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 21 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 21 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Sinh viên được đăng ký học chương trình thứ hai sớm nhất khi đã được xếp trình độ năm thứ hai của chương trình thứ nhất. Tại thời điểm đăng ký, sinh viên phải đáp ứng 01 trong 02 điều kiện sau và các điều kiện khác của cơ sở đào tạo: Đã tích lũy tối thiểu 25% khối lượng học tập chuẩn của chương trình đào tạo và đạt điểm trung bình tích lũy xếp loại khá trở l",
+    "evidence": [
+      "56-2026-qc-dh:d21:k1:p-",
+      "56-2026-qc-dh:d21:k2:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0070",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 21 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối thiểu 25% khối lượng học tập chuẩn của chương trình đào tạo và đạt điểm trun",
+    "evidence": [
+      "56-2026-qc-dh:d21:k2:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0071",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 21 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối thiểu 25% khối lượng học tập chuẩn của chương trình đào tạo và đạt điểm trun",
+    "evidence": [
+      "56-2026-qc-dh:d21:k2:pb"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0072",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 21 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối đa được phép học đối với sinh viên học cùng lúc hai chương trình là thời",
+    "evidence": [
+      "56-2026-qc-dh:d21:k3:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0073",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 21 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 3 Điều 3» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 3 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 3 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Thời gian đào tạo tối thiểu để hoàn thành chương trình đào tạo không ít hơn hai phần ba (2/3) thời gian đào tạo chuẩn của chương trình đào tạo, và thời gian đào tạo tối đa không vượt quá 2,0 lần thời gian đào tạo chuẩn của chương trình đào tạo.",
+    "evidence": [
+      "56-2026-qc-dh:d21:k3:p-",
+      "56-2026-qc-dh:d3:k3:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0074",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 22 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối đa của học phần trình độ thạc sĩ được sinh viên tích lũy trong giai đoạn",
+    "evidence": [
+      "56-2026-qc-dh:d22:k1:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0075",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 22 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "ít nhất 3/4 khối lượng học tập chuẩn của chương trình đào tạo trình độ đại học",
+    "evidence": [
+      "56-2026-qc-dh:d22:k3:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0076",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 23 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "tối thiểu 03 khóa theo chương trình, ngành đào tạo và hình thức đào tạo mà sinh",
+    "evidence": [
+      "56-2026-qc-dh:d23:k1:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0077",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 26 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "Trước ngày 31 tháng 12 hằng năm: Cơ sở đào tạo lưu trữ, cập nhật dữ liệu về hoạt",
+    "evidence": [
+      "56-2026-qc-dh:d26:k1:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0078",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 26 khoản 1 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "Trước ngày 31 tháng 12 hằng năm: Cơ sở đào tạo thông báo Ủy ban nhân dân cấp tỉnh",
+    "evidence": [
+      "56-2026-qc-dh:d26:k1:pb"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0079",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 26 khoản 3 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "chậm nhất 45 ngày trước khi tổ chức đào tạo: Quy chế của cơ sở đào tạo và các qu",
+    "evidence": [
+      "56-2026-qc-dh:d26:k3:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0080",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 26 khoản 3 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "chậm nhất 45 ngày trước khi tổ chức đào tạo: Quyết định ban hành chương trình đà",
+    "evidence": [
+      "56-2026-qc-dh:d26:k3:pb"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0081",
+    "domain": "quy_che",
+    "hop": 2,
+    "template": "vien_dan",
+    "question": "Tại Điều 26 khoản 3 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 1 Điều 26» dẫn tới nội dung gì?",
+    "gold_answer": "Viện dẫn Điều 26 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 26 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Trước ngày 31 tháng 12 hằng năm: Cơ sở đào tạo lưu trữ, cập nhật dữ liệu về hoạt động giáo dục đại học trên Cơ sở dữ liệu chuyên ngành về giáo dục đại học bao gồm: số liệu sinh viên tuyển mới, sinh viên tốt nghiệp, văn bằng tốt nghiệp, sinh viên thôi học và đang học trong năm, sinh viên tốt nghiệp đã có việc làm trong thời gian 12 tháng sau tốt nghiệp; phân",
+    "evidence": [
+      "56-2026-qc-dh:d26:k3:pb",
+      "56-2026-qc-dh:d26:k1:pa"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0082",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 26 khoản 3 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "chậm nhất 45 ngày trước khi tổ chức đào tạo: Các điều kiện bảo đảm chất lượng th",
+    "evidence": [
+      "56-2026-qc-dh:d26:k3:pc"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0083",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 26 khoản 3 điểm d, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "chậm nhất 45 ngày trước khi tổ chức đào tạo: Các minh chứng về việc các chương t",
+    "evidence": [
+      "56-2026-qc-dh:d26:k3:pd"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0084",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 26 khoản 3 điểm đ, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "chậm nhất 45 ngày trước khi tổ chức đào tạo: Thông báo tuyển sinh theo quy chế t",
+    "evidence": [
+      "56-2026-qc-dh:d26:k3:pđ"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0085",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 26 khoản 3 điểm e, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "chậm nhất 45 ngày trước khi tổ chức đào tạo: Các minh chứng về việc đáp ứng các",
+    "evidence": [
+      "56-2026-qc-dh:d26:k3:pe"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0086",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 27 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "trước ngày Thông tư này có hiệu lực và chưa nhập học hoặc chưa tổ chức đào tạo, c",
+    "evidence": [
+      "56-2026-qc-dh:d27:k2:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  },
+  {
+    "id": "ve0087",
+    "domain": "quy_che",
+    "hop": 1,
+    "template": "moc_muc",
+    "question": "Theo Điều 27 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "gold_answer": "trước ngày 31 tháng 12 năm 2026",
+    "evidence": [
+      "56-2026-qc-dh:d27:k4:p-"
+    ],
+    "as_of": "2026-10-28",
+    "review_status": "cho_duyet",
+    "source_note": "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang nhansu.vn (không phải file Công báo). Cần đối chiếu Công báo trước khi coi đáp án là gold đã duyệt."
+  }
+]
