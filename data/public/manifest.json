@@ -1,0 +1,59 @@
+{
+  "collected_on": "2026-10-30",
+  "documents": {
+    "08-2021-tt-bgddt": {
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "title": "Thông tư ban hành Quy chế đào tạo trình độ đại học",
+      "valid_from": "2021-05-03",
+      "valid_to": null,
+      "status": "chuyen_tiep_khoa_cu",
+      "source_url": "https://vbpl.moj.gov.vn/FileData/TW/Lists/vbpq/Attachments/147704/VanBanGoc_08-2021-TT-BGDĐT%20full.pdf",
+      "source_note": "Chữ trích từ PDF Công báo số 569+570. File nhị phân không tải được vì DNS vbpl.moj.gov.vn không phân giải trên máy này."
+    },
+    "08-2021-qc-dh": {
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "title": "Quy chế đào tạo trình độ đại học, ban hành kèm Thông tư 08/2021",
+      "valid_from": "2021-05-03",
+      "valid_to": null,
+      "status": "chuyen_tiep_khoa_cu",
+      "source_url": "https://vbpl.moj.gov.vn/FileData/TW/Lists/vbpq/Attachments/147704/VanBanGoc_08-2021-TT-BGDĐT%20full.pdf",
+      "source_note": "Cùng PDF Công báo với phần thông tư."
+    },
+    "23-2021-tt-bgddt": {
+      "so_hieu": "23/2021/TT-BGDĐT",
+      "title": "Thông tư ban hành Quy chế tuyển sinh và đào tạo trình độ thạc sĩ",
+      "valid_from": "2021-10-15",
+      "valid_to": "2026-06-30",
+      "status": "het_hieu_luc",
+      "source_url": "https://apolatlegal.com/wp-content/uploads/2025/05/Thong-tu-23_2021_TT-BGDDT.pdf",
+      "source_note": "PDF công khai. Trang thuộc tính: https://congbao.chinhphu.vn/van-ban/thong-tu-so-23-2021-tt-bgddt-34353.htm. Hết hiệu lực toàn bộ từ 30/06/2026 theo vbpl, được Thông tư 53/2026 thay thế; thông tư thay thế chưa nạp vào đồ thị."
+    },
+    "23-2021-qc-ths": {
+      "so_hieu": "23/2021/TT-BGDĐT",
+      "title": "Quy chế tuyển sinh và đào tạo trình độ thạc sĩ, ban hành kèm Thông tư 23/2021",
+      "valid_from": "2021-10-15",
+      "valid_to": "2026-06-30",
+      "status": "het_hieu_luc",
+      "source_url": "https://apolatlegal.com/wp-content/uploads/2025/05/Thong-tu-23_2021_TT-BGDDT.pdf",
+      "source_note": "Cùng PDF với phần thông tư."
+    },
+    "56-2026-tt-bgddt": {
+      "so_hieu": "56/2026/TT-BGDĐT",
+      "title": "Thông tư ban hành Quy chế đào tạo trình độ đại học",
+      "valid_from": "2026-07-07",
+      "valid_to": null,
+      "status": "con_hieu_luc",
+      "source_url": "https://nhansu.vn/van-ban-phap-luat/Thong-tu-56-2026-TT-BGDDT-Quy-che-dao-tao-trinh-do-dai-hoc-717414.html",
+      "source_note": "Toàn văn công khai. Thuộc tính trên cổng Chính phủ: https://chinhphu.vn/?classid=1&docid=219044&pageid=27160&typegroupid=6. Không phải file Công báo PDF."
+    },
+    "56-2026-qc-dh": {
+      "so_hieu": "56/2026/TT-BGDĐT",
+      "title": "Quy chế đào tạo trình độ đại học, ban hành kèm Thông tư 56/2026",
+      "valid_from": "2026-07-07",
+      "valid_to": null,
+      "status": "con_hieu_luc",
+      "source_url": "https://nhansu.vn/van-ban-phap-luat/Thong-tu-56-2026-TT-BGDDT-Quy-che-dao-tao-trinh-do-dai-hoc-717414.html",
+      "source_note": "Cùng trang toàn văn với phần thông tư."
+    }
+  }
+}

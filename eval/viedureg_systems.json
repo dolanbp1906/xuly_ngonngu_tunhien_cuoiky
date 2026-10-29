@@ -1,0 +1,67 @@
+{
+  "n_questions": 150,
+  "n_dev": 30,
+  "n_test": 120,
+  "n_outputs": 900,
+  "n_claims": 1166,
+  "n_unique": 127,
+  "n_claims_extractive": 1016,
+  "n_claims_distort": 150,
+  "systems": [
+    {
+      "system": "naive",
+      "recall_pool": 0.44,
+      "recall_chosen": 0.2,
+      "recall_pool_hop1": 0.078,
+      "recall_pool_hop2": 0.983,
+      "recall_chosen_hop2": 0.45,
+      "full_pool": 0.433
+    },
+    {
+      "system": "graph",
+      "recall_pool": 0.4,
+      "recall_chosen": 0.257,
+      "recall_pool_hop1": 0.144,
+      "recall_pool_hop2": 0.783,
+      "recall_chosen_hop2": 0.525,
+      "full_pool": 0.333
+    },
+    {
+      "system": "lightrag",
+      "recall_pool": 0.413,
+      "recall_chosen": 0.26,
+      "recall_pool_hop1": 0.078,
+      "recall_pool_hop2": 0.917,
+      "recall_chosen_hop2": 0.6,
+      "full_pool": 0.38
+    },
+    {
+      "system": "hipporag",
+      "recall_pool": 0.633,
+      "recall_chosen": 0.27,
+      "recall_pool_hop1": 0.422,
+      "recall_pool_hop2": 0.95,
+      "recall_chosen_hop2": 0.592,
+      "full_pool": 0.613
+    },
+    {
+      "system": "kag_style",
+      "recall_pool": 0.46,
+      "recall_chosen": 0.213,
+      "recall_pool_hop1": 0.111,
+      "recall_pool_hop2": 0.983,
+      "recall_chosen_hop2": 0.5,
+      "full_pool": 0.453
+    },
+    {
+      "system": "unfaithful",
+      "recall_pool": 0.4,
+      "recall_chosen": 0.257,
+      "recall_pool_hop1": 0.144,
+      "recall_pool_hop2": 0.783,
+      "recall_chosen_hop2": 0.525,
+      "full_pool": 0.333
+    }
+  ],
+  "note": "Câu trả lời chép khoản truy hồi, chưa phải LLM viết lại. unfaithful đổi mốc bằng distort. Nhãn người điền ở claims_unique.jsonl."
+}

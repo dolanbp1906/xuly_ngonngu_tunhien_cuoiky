@@ -7,10 +7,13 @@
     python run.py demo
     python run.py web
     python run.py viedureg
+    python run.py freeze-questions
+    python run.py outputs
     python run.py claims
     python run.py train-verifier
     python run.py kappa --a data/gold/human_claims.json --b data/gold/human_claims_r2.json
     python run.py pack
+    python run.py public
 """
 
 from __future__ import annotations
@@ -64,10 +67,13 @@ def main() -> None:
     sub.add_parser("demo")
     sub.add_parser("web")
     sub.add_parser("viedureg")
+    sub.add_parser("freeze-questions")
+    sub.add_parser("outputs")
     sub.add_parser("claims")
     sub.add_parser("train-verifier")
     sub.add_parser("train-phobert")
     sub.add_parser("pack")
+    sub.add_parser("public")
     kappa_cmd = sub.add_parser("kappa")
     kappa_cmd.add_argument("--a", required=True)
     kappa_cmd.add_argument("--b", required=True)
@@ -119,6 +125,20 @@ def main() -> None:
         )
         print("Đã ghi data/viedureg/")
         return
+    if args.cmd == "freeze-questions":
+        from src.freeze_questions import freeze_questions
+
+        print(json.dumps(freeze_questions(), ensure_ascii=False, indent=2))
+        return
+    if args.cmd == "outputs":
+        from src.collect_outputs import collect
+
+        stats = collect()
+        print(json.dumps(stats, ensure_ascii=False, indent=2))
+        from src.collect_outputs import REPORT_TXT
+
+        print(REPORT_TXT.read_text(encoding="utf-8"))
+        return
     if args.cmd == "claims":
         from src.synthetic_claims import build_claims
 
@@ -139,6 +159,18 @@ def main() -> None:
         from src.kappa_stats import compare_files
 
         print(json.dumps(compare_files(args.a, args.b), ensure_ascii=False, indent=2))
+        return
+    if args.cmd == "public":
+        from src.public_corpus import run_public
+
+        report = run_public()
+        from src.paths import EVAL_DIR
+
+        print((EVAL_DIR / "public_report.txt").read_text(encoding="utf-8"))
+        print(
+            f"chunks {report['chunks']} | câu {report['questions']} | "
+            f"verifier triple macro {report['verifier_on_synthetic']['accuracy']['triple']['macro']}"
+        )
         return
     if args.cmd == "pack":
         from src.pack_deliverables import pack

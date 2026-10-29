@@ -1,0 +1,248 @@
+{
+  "run_on": "2026-10-30",
+  "command": "python run.py ask \"Thời gian tối đa để sinh viên hoàn thành khóa học là bao lâu?\" --system naive",
+  "corpus": "Thông tư 08/2021/TT-BGDĐT, trích trong src/legal_corpus.py, thu thập 2026-10-27",
+  "retriever": "BM25, top-1 khoản đưa vào câu trả lời. Chưa có dense embedding.",
+  "n_chunks": 44,
+  "n_edges": 5,
+  "n_questions": 13,
+  "n_gold_hit": 13,
+  "n_gold_complete": 12,
+  "rows": [
+    {
+      "question_id": "q01",
+      "hop": 1,
+      "question": "Thời gian tối đa để sinh viên hoàn thành khóa học là bao lâu?",
+      "system": "naive",
+      "answer": "Thời gian tối đa để sinh viên hoàn thành khóa học được quy định trong quy chế của cơ sở đào tạo, nhưng không vượt quá 02 lần thời gian theo kế hoạch học tập chuẩn toàn khóa đối với mỗi hình thức đào tạo. Đối với sinh viên học liên thông đã được miễn trừ khối lượng tín chỉ tích lũy, thời gian tối đa để sinh viên hoàn thành khóa học được xác định trên cơ sở thời gian theo kế hoạch học tập chuẩn toàn khóa giảm tương ứng với khối lượng được miễn trừ.",
+      "evidence_chunk_ids": [
+        "08-2021-tt-bgddt:d2:k5:p-"
+      ],
+      "gold_chunk_ids": [
+        "08-2021-tt-bgddt:d2:k5:p-"
+      ],
+      "gold_hit": true,
+      "gold_complete": true,
+      "n_claims": 2,
+      "ggf_rule": 1.0,
+      "citation": "Điều 2 khoản 5, Thông tư 08/2021/TT-BGDĐT"
+    },
+    {
+      "question_id": "q02",
+      "hop": 1,
+      "question": "Tối đa bao nhiêu phần trăm khối lượng chương trình chính quy được dạy bằng lớp học trực tuyến?",
+      "system": "naive",
+      "answer": "Dạy và học trực tuyến: Đối với đào tạo chính quy và vừa làm vừa học, tối đa 30% tổng khối lượng của chương trình đào tạo được thực hiện bằng lớp học trực tuyến. Trong trường hợp thiên tai, dịch bệnh phức tạp và các trường hợp bất khả kháng khác, cơ sở đào tạo thực hiện theo hướng dẫn của Bộ Giáo dục và Đào tạo.",
+      "evidence_chunk_ids": [
+        "08-2021-tt-bgddt:d8:k2:pb"
+      ],
+      "gold_chunk_ids": [
+        "08-2021-tt-bgddt:d8:k2:pb"
+      ],
+      "gold_hit": true,
+      "gold_complete": true,
+      "n_claims": 2,
+      "ggf_rule": 1.0,
+      "citation": "Điều 8 khoản 2 điểm b, Thông tư 08/2021/TT-BGDĐT"
+    },
+    {
+      "question_id": "q03",
+      "hop": 1,
+      "question": "Sinh viên bị cảnh báo học tập khi tổng số tín chỉ nợ đọng từ đầu khóa vượt quá bao nhiêu?",
+      "system": "naive",
+      "answer": "Cuối mỗi học kỳ chính, sinh viên được cảnh báo học tập dựa trên một số điều kiện như sau: Tổng số tín chỉ không đạt trong học kỳ vượt quá 50% khối lượng đã đăng ký học trong học kỳ, hoặc tổng số tín chỉ nợ đọng từ đầu khóa học vượt quá 24.",
+      "evidence_chunk_ids": [
+        "08-2021-tt-bgddt:d11:k1:pa"
+      ],
+      "gold_chunk_ids": [
+        "08-2021-tt-bgddt:d11:k1:pa"
+      ],
+      "gold_hit": true,
+      "gold_complete": true,
+      "n_claims": 1,
+      "ggf_rule": 1.0,
+      "citation": "Điều 11 khoản 1 điểm a, Thông tư 08/2021/TT-BGDĐT"
+    },
+    {
+      "question_id": "q04",
+      "hop": 1,
+      "question": "Điểm trung bình học kỳ đầu dưới mức nào thì sinh viên bị cảnh báo học tập?",
+      "system": "naive",
+      "answer": "Cuối mỗi học kỳ chính, sinh viên được cảnh báo học tập dựa trên một số điều kiện như sau: Điểm trung bình học kỳ đạt dưới 0,8 đối với học kỳ đầu của khóa học, dưới 1,0 đối với các học kỳ tiếp theo.",
+      "evidence_chunk_ids": [
+        "08-2021-tt-bgddt:d11:k1:pb"
+      ],
+      "gold_chunk_ids": [
+        "08-2021-tt-bgddt:d11:k1:pb"
+      ],
+      "gold_hit": true,
+      "gold_complete": true,
+      "n_claims": 1,
+      "ggf_rule": 1.0,
+      "citation": "Điều 11 khoản 1 điểm b, Thông tư 08/2021/TT-BGDĐT"
+    },
+    {
+      "question_id": "q05",
+      "hop": 1,
+      "question": "Cơ sở đào tạo được quy định tối đa bao nhiêu lần cảnh báo học tập liên tiếp?",
+      "system": "naive",
+      "answer": "Quy chế của cơ sở đào tạo quy định cụ thể: Việc lựa chọn áp dụng một số điều kiện cảnh báo học tập, giới hạn số lần hoặc mức cảnh báo học tập nhưng không vượt quá 2 lần cảnh báo liên tiếp.",
+      "evidence_chunk_ids": [
+        "08-2021-tt-bgddt:d11:k3:pa"
+      ],
+      "gold_chunk_ids": [
+        "08-2021-tt-bgddt:d11:k3:pa"
+      ],
+      "gold_hit": true,
+      "gold_complete": true,
+      "n_claims": 1,
+      "ggf_rule": 1.0,
+      "citation": "Điều 11 khoản 3 điểm a, Thông tư 08/2021/TT-BGDĐT"
+    },
+    {
+      "question_id": "q06",
+      "hop": 1,
+      "question": "Theo niên chế, số tín chỉ nợ đọng tối đa để được học tiếp lên năm sau là bao nhiêu?",
+      "system": "naive",
+      "answer": "Cuối mỗi năm học, sinh viên được đánh giá đạt tiến độ học tập bình thường và được học tiếp lên năm học sau nếu đạt cả hai điều kiện: Số tín chỉ nợ đọng từ đầu khóa không vượt quá 16.",
+      "evidence_chunk_ids": [
+        "08-2021-tt-bgddt:d12:k1:pb"
+      ],
+      "gold_chunk_ids": [
+        "08-2021-tt-bgddt:d12:k1:pb"
+      ],
+      "gold_hit": true,
+      "gold_complete": true,
+      "n_claims": 1,
+      "ggf_rule": 1.0,
+      "citation": "Điều 12 khoản 1 điểm b, Thông tư 08/2021/TT-BGDĐT"
+    },
+    {
+      "question_id": "q07",
+      "hop": 1,
+      "question": "Khối lượng tối đa được công nhận, chuyển đổi tín chỉ là bao nhiêu phần trăm?",
+      "system": "naive",
+      "answer": "Cơ sở đào tạo công khai quy định việc công nhận kết quả học tập và chuyển đổi tín chỉ. Khối lượng tối đa được công nhận, chuyển đổi không vượt quá 50% khối lượng học tập tối thiểu của chương trình đào tạo; riêng đối với ngành đào tạo giáo viên thực hiện theo hướng dẫn của Bộ Giáo dục và Đào tạo.",
+      "evidence_chunk_ids": [
+        "08-2021-tt-bgddt:d13:k3:p-"
+      ],
+      "gold_chunk_ids": [
+        "08-2021-tt-bgddt:d13:k3:p-"
+      ],
+      "gold_hit": true,
+      "gold_complete": true,
+      "n_claims": 3,
+      "ggf_rule": 1.0,
+      "citation": "Điều 13 khoản 3, Thông tư 08/2021/TT-BGDĐT"
+    },
+    {
+      "question_id": "q08",
+      "hop": 1,
+      "question": "Hạng tốt nghiệp xuất sắc hoặc giỏi bị giảm một mức khi khối lượng học lại vượt quá bao nhiêu phần trăm?",
+      "system": "naive",
+      "answer": "Hạng tốt nghiệp được xác định căn cứ vào điểm trung bình tích lũy toàn khóa được quy định tại khoản 5 Điều 10 của Quy chế này, trong đó, hạng tốt nghiệp của sinh viên có điểm trung bình tích lũy loại xuất sắc và giỏi sẽ bị giảm đi một mức nếu thuộc một trong các trường hợp sau: Khối lượng của các học phần phải học lại vượt quá 5% so với tổng số tín chỉ quy định cho toàn chương trình.",
+      "evidence_chunk_ids": [
+        "08-2021-tt-bgddt:d14:k3:pa"
+      ],
+      "gold_chunk_ids": [
+        "08-2021-tt-bgddt:d14:k3:pa"
+      ],
+      "gold_hit": true,
+      "gold_complete": true,
+      "n_claims": 1,
+      "ggf_rule": 1.0,
+      "citation": "Điều 14 khoản 3 điểm a, Thông tư 08/2021/TT-BGDĐT"
+    },
+    {
+      "question_id": "q09",
+      "hop": 1,
+      "question": "Thời hạn hiệu trưởng cấp bằng tốt nghiệp là bao lâu kể từ khi sinh viên đủ điều kiện?",
+      "system": "naive",
+      "answer": "Những sinh viên đủ điều kiện tốt nghiệp được hiệu trưởng cơ sở đào tạo ra quyết định công nhận tốt nghiệp và cấp bằng tốt nghiệp trong thời hạn 03 tháng tính từ thời điểm sinh viên đáp ứng đầy đủ điều kiện tốt nghiệp và hoàn thành nghĩa vụ với nhà trường.",
+      "evidence_chunk_ids": [
+        "08-2021-tt-bgddt:d14:k2:p-"
+      ],
+      "gold_chunk_ids": [
+        "08-2021-tt-bgddt:d14:k2:p-"
+      ],
+      "gold_hit": true,
+      "gold_complete": true,
+      "n_claims": 1,
+      "ggf_rule": 1.0,
+      "citation": "Điều 14 khoản 2, Thông tư 08/2021/TT-BGDĐT"
+    },
+    {
+      "question_id": "q10",
+      "hop": 1,
+      "question": "Sinh viên trao đổi được tích lũy tối đa bao nhiêu phần trăm tín chỉ tại cơ sở đào tạo khác?",
+      "system": "naive",
+      "answer": "Trên cơ sở đánh giá và công nhận lẫn nhau, sinh viên của cơ sở đào tạo này có thể đăng ký thực hiện học một số học phần tại cơ sở đào tạo khác, nếu được hiệu trưởng của hai cơ sở đào tạo đồng ý với số lượng tín chỉ mà sinh viên tích lũy tại cơ sở đào tạo khác (nếu có) không vượt quá 25% tổng khối lượng của chương trình đào tạo.",
+      "evidence_chunk_ids": [
+        "08-2021-tt-bgddt:d17:k2:p-"
+      ],
+      "gold_chunk_ids": [
+        "08-2021-tt-bgddt:d17:k2:p-"
+      ],
+      "gold_hit": true,
+      "gold_complete": true,
+      "n_claims": 1,
+      "ggf_rule": 1.0,
+      "citation": "Điều 17 khoản 2, Thông tư 08/2021/TT-BGDĐT"
+    },
+    {
+      "question_id": "q11",
+      "hop": 1,
+      "question": "Sinh viên thi hộ lần thứ nhất bị kỷ luật ở mức nào?",
+      "system": "naive",
+      "answer": "Sinh viên thi hộ hoặc nhờ người thi hộ đều bị kỷ luật ở mức đình chỉ học tập 01 năm đối với trường hợp vi phạm lần thứ nhất và buộc thôi học đối với trường hợp vi phạm lần thứ hai.",
+      "evidence_chunk_ids": [
+        "08-2021-tt-bgddt:d20:k2:p-"
+      ],
+      "gold_chunk_ids": [
+        "08-2021-tt-bgddt:d20:k2:p-"
+      ],
+      "gold_hit": true,
+      "gold_complete": true,
+      "n_claims": 1,
+      "ggf_rule": 1.0,
+      "citation": "Điều 20 khoản 2, Thông tư 08/2021/TT-BGDĐT"
+    },
+    {
+      "question_id": "q12",
+      "hop": 2,
+      "question": "Nghỉ học tạm thời vì nhu cầu cá nhân có bị tính vào thời gian học tối đa không, và thời gian tối đa là bao nhiêu?",
+      "system": "naive",
+      "answer": "Thời gian nghỉ học tạm thời vì nhu cầu cá nhân phải được tính vào thời gian học chính thức quy định tại khoản 5 Điều 2 của Quy chế này.",
+      "evidence_chunk_ids": [
+        "08-2021-tt-bgddt:d15:k2:p-"
+      ],
+      "gold_chunk_ids": [
+        "08-2021-tt-bgddt:d15:k2:p-",
+        "08-2021-tt-bgddt:d2:k5:p-"
+      ],
+      "gold_hit": true,
+      "gold_complete": false,
+      "n_claims": 1,
+      "ggf_rule": 1.0,
+      "citation": "Điều 15 khoản 2, Thông tư 08/2021/TT-BGDĐT"
+    },
+    {
+      "question_id": "q13",
+      "hop": 1,
+      "question": "Có được liên kết đào tạo đối với ngành sức khỏe có cấp chứng chỉ hành nghề không?",
+      "system": "naive",
+      "answer": "Liên kết đào tạo chỉ thực hiện đối với hình thức vừa làm vừa học theo quy định tại khoản 22 Điều 1 Luật sửa đổi, bổ sung một số điều của Luật Giáo dục đại học và theo quy định tại khoản 2, khoản 3 Điều này. Không thực hiện việc liên kết đào tạo đối với các ngành thuộc lĩnh vực sức khỏe có cấp chứng chỉ hành nghề.",
+      "evidence_chunk_ids": [
+        "08-2021-tt-bgddt:d5:k1:p-"
+      ],
+      "gold_chunk_ids": [
+        "08-2021-tt-bgddt:d5:k1:p-"
+      ],
+      "gold_hit": true,
+      "gold_complete": true,
+      "n_claims": 2,
+      "ggf_rule": 1.0,
+      "citation": "Điều 5 khoản 1, Thông tư 08/2021/TT-BGDĐT"
+    }
+  ]
+}

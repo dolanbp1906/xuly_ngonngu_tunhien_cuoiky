@@ -12,9 +12,14 @@ python3 run.py web     # demo http://127.0.0.1:8766
 
 Kịch bản nói: [Huong-dan-chay-demo.txt](Huong-dan-chay-demo.txt).  
 Kế hoạch: [KE_HOACH.md](KE_HOACH.md).  
+Báo cáo tháng 1: [BAO_CAO_THANG_1.md](BAO_CAO_THANG_1.md).  
 Trạng thái gói nộp: [TRANG_THAI_NOP.md](TRANG_THAI_NOP.md) (sau `pack`).  
 Khung bài: [BAN_THAO.md](BAN_THAO.md).  
 Guideline nhãn: [data/guideline_nhan.md](data/guideline_nhan.md).
+
+## Văn bản công khai
+
+`python run.py public` dựng đồ thị từ Thông tư 08/2021 (PDF Công báo), 23/2021 (PDF) và 56/2026 (toàn văn công khai), rồi chấm Recall@5 của năm hệ và verifier trên claim sinh từ chính các khoản. Kết quả: `eval/public_report.txt`. Nguồn và hạn chế ghi ở `data/public/manifest.json`.
 
 ## Lệnh chính
 

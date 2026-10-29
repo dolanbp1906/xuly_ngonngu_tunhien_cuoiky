@@ -1,0 +1,46 @@
+{
+  "note": "Một câu Naive RAG (BM25) chạy ngày 2026-10-30. Schema theo mục 6.5 của KE_HOACH.md. Khoản và chunk trùng id vì mutual index tháng 1 là chính node điều/khoản. Câu này không có triple đi ra.",
+  "question_id": "q01",
+  "domain": "quy_che",
+  "system": "naive",
+  "hop": 1,
+  "question": "Thời gian tối đa để sinh viên hoàn thành khóa học là bao lâu?",
+  "answer": "Thời gian tối đa để sinh viên hoàn thành khóa học được quy định trong quy chế của cơ sở đào tạo, nhưng không vượt quá 02 lần thời gian theo kế hoạch học tập chuẩn toàn khóa đối với mỗi hình thức đào tạo. Đối với sinh viên học liên thông đã được miễn trừ khối lượng tín chỉ tích lũy, thời gian tối đa để sinh viên hoàn thành khóa học được xác định trên cơ sở thời gian theo kế hoạch học tập chuẩn toàn khóa giảm tương ứng với khối lượng được miễn trừ.",
+  "evidence_chunk_ids": ["08-2021-tt-bgddt:d2:k5:p-"],
+  "evidence_triple_ids": [],
+  "citation": "Điều 2 khoản 5, Thông tư 08/2021/TT-BGDĐT",
+  "claims": [
+    {
+      "claim_id": "q01-naive-01",
+      "question_id": "q01",
+      "domain": "quy_che",
+      "system": "naive",
+      "hop": 1,
+      "answer": "Thời gian tối đa để sinh viên hoàn thành khóa học được quy định trong quy chế của cơ sở đào tạo, nhưng không vượt quá 02 lần thời gian theo kế hoạch học tập chuẩn toàn khóa đối với mỗi hình thức đào tạo. Đối với sinh viên học liên thông đã được miễn trừ khối lượng tín chỉ tích lũy, thời gian tối đa để sinh viên hoàn thành khóa học được xác định trên cơ sở thời gian theo kế hoạch học tập chuẩn toàn khóa giảm tương ứng với khối lượng được miễn trừ.",
+      "claim_text": "Thời gian tối đa để sinh viên hoàn thành khóa học được quy định trong quy chế của cơ sở đào tạo, nhưng không vượt quá 02 lần thời gian theo kế hoạch học tập chuẩn toàn khóa đối với mỗi hình thức đào tạo",
+      "label": "supported",
+      "evidence_span": "không vượt quá 02 lần thời gian theo kế hoạch học tập chuẩn toàn khóa đối với mỗi hình thức đào tạo",
+      "evidence_triple_ids": [],
+      "evidence_chunk_ids": ["08-2021-tt-bgddt:d2:k5:p-"],
+      "split": "pilot",
+      "annotators": ["nguoi_1"],
+      "adjudicated_label": null
+    },
+    {
+      "claim_id": "q01-naive-02",
+      "question_id": "q01",
+      "domain": "quy_che",
+      "system": "naive",
+      "hop": 1,
+      "answer": "Thời gian tối đa để sinh viên hoàn thành khóa học được quy định trong quy chế của cơ sở đào tạo, nhưng không vượt quá 02 lần thời gian theo kế hoạch học tập chuẩn toàn khóa đối với mỗi hình thức đào tạo. Đối với sinh viên học liên thông đã được miễn trừ khối lượng tín chỉ tích lũy, thời gian tối đa để sinh viên hoàn thành khóa học được xác định trên cơ sở thời gian theo kế hoạch học tập chuẩn toàn khóa giảm tương ứng với khối lượng được miễn trừ.",
+      "claim_text": "Đối với sinh viên học liên thông đã được miễn trừ khối lượng tín chỉ tích lũy, thời gian tối đa để sinh viên hoàn thành khóa học được xác định trên cơ sở thời gian theo kế hoạch học tập chuẩn toàn khóa giảm tương ứng với khối lượng được miễn trừ",
+      "label": "supported",
+      "evidence_span": "Đối với sinh viên học liên thông đã được miễn trừ khối lượng tín chỉ tích lũy, thời gian tối đa để sinh viên hoàn thành khóa học được xác định trên cơ sở thời gian theo kế hoạch học tập chuẩn toàn khóa giảm tương ứng với khối lượng được miễn trừ",
+      "evidence_triple_ids": [],
+      "evidence_chunk_ids": ["08-2021-tt-bgddt:d2:k5:p-"],
+      "split": "pilot",
+      "annotators": ["nguoi_1"],
+      "adjudicated_label": null
+    }
+  ]
+}

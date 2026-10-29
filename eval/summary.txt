@@ -42,9 +42,6 @@ diem          1 0.000 0.000 0.000 1.000
 Verifier học được (TF-IDF+LogReg CPU) trên claim người:
   macro-F1 0.578  supported 0.667  contradicted 0.400  unsupported 0.667
 
-Verifier PhoBERT-base fine-tune trên claim người (test):
-  macro-F1 0.419  supported 0.533  contradicted 0.222  unsupported 0.500
-
 RQ1 bổ sung — Spearman GGF người vs RAGAS-style / LLM-judge / GGF rule:
   ragas_faithfulness 0.750
   llm_judge          0.763
