@@ -206,13 +206,58 @@ def evidence_pool(store: Store, query: str, mode: str, k: int = 8) -> list[Chunk
         return []
     if mode == "naive":
         return [chunk for _, chunk in ranked[:k]]
-    seed = ranked[0][1]
+
     ordered: list[Chunk] = []
 
     def add(chunk: Chunk) -> None:
         if all(chunk.cid != old.cid for old in ordered):
             ordered.append(chunk)
 
+    # lightrag_style: trộn BM25 nội dung với BM25 trên tiêu đề điều (dual-level tối giản).
+    if mode == "lightrag_style":
+        title_hits = sorted(
+            (
+                (
+                    sum(tok in (chunk.dieu_title or "").lower() for tok in query.lower().split()),
+                    chunk,
+                )
+                for chunk in store.chunks
+            ),
+            key=lambda item: item[0],
+            reverse=True,
+        )
+        for _, chunk in ranked[: max(3, k // 2)]:
+            add(chunk)
+        for score, chunk in title_hits:
+            if score <= 0:
+                break
+            add(chunk)
+            if len(ordered) >= k:
+                break
+        for _, chunk in ranked:
+            add(chunk)
+            if len(ordered) >= k:
+                break
+        return ordered[:k]
+
+    # hipporag_style: hạt giống BM25 rồi lan theo REFERS_TO (PPR một lớp cạnh).
+    if mode == "hipporag_style":
+        for _, chunk in ranked[:3]:
+            add(chunk)
+            for neighbor in store.neighbors(chunk.cid, "REFERS_TO"):
+                add(neighbor)
+            for other in store.chunks:
+                if other.doc_id == chunk.doc_id and other.dieu == chunk.dieu:
+                    add(other)
+            if len(ordered) >= k:
+                break
+        for _, chunk in ranked:
+            add(chunk)
+            if len(ordered) >= k:
+                break
+        return ordered[:k]
+
+    seed = ranked[0][1]
     add(seed)
     for target in store.neighbors(seed.cid, "REFERS_TO"):
         add(target)
@@ -235,6 +280,16 @@ def answer_chunks(store: Store, query: str, mode: str) -> list[Chunk]:
         return []
     if mode == "naive":
         return pool[:1]
+    if mode in {"lightrag_style", "hipporag_style"}:
+        chosen = [pool[0]]
+        for chunk in pool[1:]:
+            if chunk.doc_id == pool[0].doc_id and chunk.dieu == pool[0].dieu:
+                chosen.append(chunk)
+            elif any(edge.src == pool[0].cid and edge.dst == chunk.cid for edge in store.edges):
+                chosen.append(chunk)
+            if len(chosen) >= 2:
+                break
+        return chosen
     chosen = [pool[0]]
     for chunk in pool[1:]:
         if any(edge.src == pool[0].cid and edge.dst == chunk.cid for edge in store.edges):

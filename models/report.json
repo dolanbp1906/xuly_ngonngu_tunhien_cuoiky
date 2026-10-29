@@ -1,0 +1,19 @@
+{
+  "model": "/Users/dothilan.vn/Downloads/Lanaaaa/Source Code/MyCH/xuly_ngonngu_tunhien_cuoiky/models/tfidf_logreg.pkl",
+  "train": {
+    "n": 2000,
+    "acc": 0.993,
+    "macro_f1": 0.993
+  },
+  "dev": {
+    "n": 298,
+    "acc": 0.966,
+    "macro_f1": 0.967
+  },
+  "test_human": {
+    "n": 14,
+    "acc": 0.571,
+    "macro_f1": 0.578
+  },
+  "note": "CPU TF-IDF+LogReg. PhoBERT-large là mục tiêu khi có GPU (KE_HOACH)."
+}

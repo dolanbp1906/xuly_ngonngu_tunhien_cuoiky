@@ -111,6 +111,50 @@
     .pick-menu button[aria-selected="true"] { background: var(--green-bg); }
     .pick.up .pick-menu { top: auto; bottom: calc(100% + 6px); }
     .ghost { padding: 6px 12px; background: transparent; }
+    .icon-btn {
+      width: 34px;
+      height: 34px;
+      padding: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      position: relative;
+      background: #fff;
+    }
+    .icon-btn:hover { background: var(--green-bg); color: var(--accent); }
+    .icon-btn.tip:hover::after,
+    .icon-btn.tip:focus-visible::after {
+      content: attr(data-tip);
+      position: absolute;
+      z-index: 7;
+      top: calc(100% + 8px);
+      right: 0;
+      white-space: nowrap;
+      background: var(--ink);
+      color: #f7f3ea;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+      line-height: 1.3;
+      padding: 5px 8px;
+      border-radius: 8px;
+      pointer-events: none;
+    }
+    .pick:has(.pick-menu:not([hidden])) .icon-btn.tip:hover::after { content: none; }
+    .history-menu {
+      left: auto;
+      right: 0;
+      width: 280px;
+      max-height: 320px;
+      overflow: auto;
+    }
+    .history-menu button {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .history-empty { margin: 0; padding: 8px 10px; color: var(--muted); font-size: 14px; }
     .check { font-size: 14px; color: var(--muted); }
     .thread, .store-pane {
       flex: 1;
@@ -143,6 +187,13 @@
       color: var(--green);
     }
     .msg.user .avatar { background: var(--accent); color: #f7f3ea; }
+    .stack {
+      max-width: calc(100% - 40px);
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
     .bubble {
       max-width: calc(100% - 40px);
       border-radius: 18px;
@@ -151,6 +202,44 @@
       border: 1px solid var(--line);
       border-bottom-left-radius: 6px;
     }
+    .stack .bubble { max-width: none; }
+    .lead { margin: 0; }
+    .reply-foot {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .reply-foot .cites { flex: 1; margin-top: 0; }
+    .detail-btn {
+      flex: none;
+      width: 28px;
+      height: 28px;
+      margin-left: auto;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--accent);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      padding: 0;
+    }
+    .detail-btn:hover { background: var(--green-bg); }
+    .detail-btn[aria-expanded="true"] {
+      background: var(--accent);
+      color: #f7f3ea;
+      border-color: var(--accent);
+    }
+    .detail {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px 14px 8px;
+    }
+    .detail .stats { margin-top: 0; }
+    .detail > h2:first-child { margin-top: 0; }
     .msg.user .bubble {
       background: var(--accent);
       color: #f7f3ea;
@@ -296,7 +385,15 @@
           </div>
         </div>
         <label class="check" id="revise-wrap"><input type="checkbox" id="revise"> Sửa mệnh đề lệch</label>
-        <button type="button" class="ghost" id="clear">Cuộc mới</button>
+        <div class="pick" id="history-pick">
+          <button type="button" class="pick-btn icon-btn tip" id="history" aria-haspopup="listbox" aria-expanded="false" aria-label="Các cuộc trước" data-tip="Các cuộc trước">
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.6V8l2.2 1.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="pick-menu history-menu" id="history-menu" role="listbox" hidden></div>
+        </div>
+        <button type="button" class="ghost icon-btn tip" id="clear" aria-label="Mở cuộc trò chuyện mới" data-tip="Mở cuộc trò chuyện mới">
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3.2v9.6M3.2 8h9.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
       </div>
     </header>
     <div class="thread" id="thread" aria-live="polite"></div>
@@ -377,6 +474,20 @@
     let storeView = "demo";
     let storeData = null;
     let sending = false;
+    let composing = false;
+    let wipeBox = false;
+
+    function clearBox() {
+      box.value = "";
+      wipeBox = true;
+      requestAnimationFrame(() => {
+        box.value = "";
+        setTimeout(() => {
+          if (wipeBox) box.value = "";
+          wipeBox = false;
+        }, 0);
+      });
+    }
 
     function esc(value) {
       return String(value || "").replace(/[&<>"]/g, (ch) => ({
@@ -396,7 +507,7 @@
       } else if (role === "user") {
         row.innerHTML = `<span class="avatar">Bạn</span><div class="bubble">${esc(html)}</div>`;
       } else {
-        row.innerHTML = `<span class="avatar">K</span><div class="bubble">${html}</div>`;
+        row.innerHTML = `<span class="avatar">K</span><div class="stack"><div class="bubble">${html}</div></div>`;
       }
       thread.appendChild(row);
       scrollThread();
@@ -404,7 +515,124 @@
     }
 
     function welcome() {
-      push("bot", "<p>Chào bạn. Hỏi một câu về quy chế, hoặc chọn câu mẫu phía dưới.</p><p class=\"reason\">Câu trả lời đi kèm điều khoản đã dùng. Mỗi mệnh đề được gắn nhãn Nguồn kéo theo, Nói ngược nguồn, hoặc Không có trong nguồn.</p>");
+      push("bot", "<p class=\"lead\">Chào bạn. Hỏi một câu về quy chế, hoặc chọn câu mẫu phía dưới.</p><p class=\"reason\">Câu trả lời kèm điều khoản. Bấm icon cạnh câu trả lời để xem điểm khớp nguồn, từng mệnh đề và khoản đã truy ra.</p>");
+    }
+
+    const CHAT_KEY = "vikag-faith-chats";
+    const boundDetails = new WeakSet();
+    let chats = [];
+    let currentId = null;
+
+    function loadChats() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(CHAT_KEY) || "{}");
+        chats = Array.isArray(saved.chats) ? saved.chats : [];
+        currentId = saved.currentId || null;
+      } catch (err) {
+        chats = [];
+        currentId = null;
+      }
+    }
+
+    function persistChats() {
+      try {
+        localStorage.setItem(CHAT_KEY, JSON.stringify({ chats: chats.slice(0, 20), currentId }));
+      } catch (err) {
+        chats = chats.slice(0, 10);
+        try {
+          localStorage.setItem(CHAT_KEY, JSON.stringify({ chats, currentId }));
+        } catch (again) {}
+      }
+    }
+
+    function renderHistory() {
+      const menu = document.getElementById("history-menu");
+      if (!chats.length) {
+        menu.innerHTML = `<p class="history-empty">Chưa có cuộc nào trước.</p>`;
+        return;
+      }
+      menu.innerHTML = chats.map((chat) =>
+        `<button type="button" data-id="${esc(chat.id)}" title="${esc(chat.title)}" aria-selected="${chat.id === currentId ? "true" : "false"}">${esc(chat.title)}</button>`
+      ).join("");
+    }
+
+    function snapshot() {
+      const first = thread.querySelector(".msg.user .bubble");
+      if (!first) return;
+      const title = first.textContent.trim().replace(/\s+/g, " ");
+      const record = {
+        id: currentId || ("c" + Date.now()),
+        title: title.length > 72 ? title.slice(0, 70) + "…" : title,
+        html: thread.innerHTML,
+        at: Date.now()
+      };
+      currentId = record.id;
+      chats = [record, ...chats.filter((chat) => chat.id !== record.id)].slice(0, 20);
+      persistChats();
+      renderHistory();
+    }
+
+    function bindDetails(root) {
+      root.querySelectorAll(".detail").forEach((panel) => {
+        const n = Number(String(panel.id || "").replace(/\D/g, ""));
+        if (n > detailSeq) detailSeq = n;
+      });
+      root.querySelectorAll(".detail-btn").forEach((btn) => {
+        if (boundDetails.has(btn)) return;
+        boundDetails.add(btn);
+        btn.addEventListener("click", () => {
+          const panel = document.getElementById(btn.getAttribute("aria-controls"));
+          if (!panel) return;
+          const open = panel.hidden;
+          panel.hidden = !open;
+          btn.setAttribute("aria-expanded", String(open));
+          const label = open ? "Đóng chi tiết" : "Xem chi tiết";
+          btn.title = label;
+          btn.setAttribute("aria-label", label);
+        });
+      });
+    }
+
+    function newChat() {
+      if (sending) return;
+      snapshot();
+      currentId = null;
+      persistChats();
+      thread.innerHTML = "";
+      welcome();
+      renderHistory();
+      syncAsk();
+      box.focus();
+    }
+
+    function openChat(id) {
+      if (sending || id === currentId) {
+        closePicks();
+        return;
+      }
+      snapshot();
+      const chat = chats.find((item) => item.id === id);
+      if (!chat) return;
+      currentId = id;
+      thread.innerHTML = chat.html;
+      bindDetails(thread);
+      persistChats();
+      renderHistory();
+      scrollThread();
+      closePicks();
+    }
+
+    function restoreChat() {
+      loadChats();
+      const chat = chats.find((item) => item.id === currentId);
+      if (!chat) {
+        currentId = null;
+        welcome();
+      } else {
+        thread.innerHTML = chat.html;
+        bindDetails(thread);
+      }
+      renderHistory();
     }
 
     function closePicks() {
@@ -455,6 +683,7 @@
       document.getElementById("store-tools").hidden = !store;
       document.getElementById("corpora").hidden = mode !== "ask";
       document.getElementById("clear").hidden = store;
+      document.getElementById("history-pick").hidden = store;
       if (!store) {
         syncAsk();
         return;
@@ -473,10 +702,10 @@
         document.getElementById("hint").textContent = "Dán một câu khẳng định. Enter để gửi. Nếu gộp cả điều, nhãn có thể khác vì số và hệ quả nằm ở hai khoản.";
         box.placeholder = "Dán một câu khẳng định, kể cả câu bạn nghi là sai.";
       } else if (vi) {
-        document.getElementById("hint").textContent = "Đang hỏi ViHERMES. Dòng nền xanh là đơn vị nằm trong đáp án vàng.";
+        document.getElementById("hint").textContent = "Đang hỏi ViHERMES. Gõ tự do; câu trả lời ghép từ đoạn BM25. Nếu trùng câu test, chi tiết có đáp án vàng.";
         box.placeholder = "Hỏi một câu về quy định y tế…";
       } else if (ve) {
-        document.getElementById("hint").textContent = "Đang hỏi ViEduReg v1, Thông tư 56/2026. Đáp án đang chờ duyệt.";
+        document.getElementById("hint").textContent = "Đang hỏi ViEduReg v1. Gõ tự do; câu trả lời ghép từ khoản BM25 và cạnh dẫn chiếu.";
         box.placeholder = "Hỏi mốc số hoặc điều khoản trong quy chế 2026…";
       } else {
         document.getElementById("hint").textContent = "Enter để gửi. Shift+Enter để xuống dòng. Graph kéo thêm khoản được dẫn chiếu.";
@@ -515,6 +744,9 @@
       return `<article class="claim ${row.label}">${tag(row.label)}<p class="text">${esc(row.claim)}</p><p class="reason">${esc(row.reason)}</p>${extra}${span}</article>`;
     }
 
+    const DETAIL_ICON = `<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 7.15V11.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="8" cy="5.05" r="0.85" fill="currentColor"/></svg>`;
+    let detailSeq = 0;
+
     function stats(data) {
       const pct = (value) => Math.round((value || 0) * 100) + "%";
       return `<div class="stats">
@@ -524,70 +756,133 @@
       </div>`;
     }
 
+    function ratesOf(claims) {
+      const rows = claims || [];
+      const n = rows.length;
+      const share = (label) => (n ? rows.filter((row) => row.label === label).length / n : 0);
+      return { ggf: share("supported"), contradicted: share("contradicted"), unsupported: share("unsupported") };
+    }
+
+    function verdictLine(data) {
+      const claims = data.claims || [];
+      if (!claims.length) return "Không tách được mệnh đề để chấm.";
+      const supported = claims.some((row) => row.label === "supported");
+      const contradicted = claims.some((row) => row.label === "contradicted");
+      const unsupported = claims.some((row) => row.label === "unsupported");
+      const parts = [];
+      if (supported) parts.push("một phần được nguồn kéo theo");
+      if (contradicted) parts.push("một phần nói ngược nguồn");
+      if (unsupported) parts.push("một phần không có trong nguồn");
+      if (parts.length > 1) {
+        return parts[0].charAt(0).toUpperCase() + parts[0].slice(1) + ", " + parts.slice(1).join(", ") + ".";
+      }
+      if (contradicted) return "Câu này nói ngược nguồn.";
+      if (unsupported) return "Câu này không có trong nguồn.";
+      return "Nguồn kéo theo câu này.";
+    }
+
+    function faceBlock(text, citesHtml) {
+      return `<p class="lead">${esc(text)}</p><div class="reply-foot">${citesHtml ? `<div class="cites">${citesHtml}</div>` : ""}<button type="button" class="detail-btn" aria-expanded="false" aria-label="Xem chi tiết" title="Xem chi tiết">${DETAIL_ICON}</button></div>`;
+    }
+
+    function showAnswer(row, face, detail) {
+      const stack = row.querySelector(".stack");
+      stack.querySelector(".bubble").innerHTML = face;
+      if (!detail) return;
+      const panel = document.createElement("div");
+      panel.className = "detail";
+      panel.id = "detail-" + (++detailSeq);
+      panel.hidden = true;
+      panel.innerHTML = detail;
+      stack.appendChild(panel);
+      const btn = stack.querySelector(".detail-btn");
+      btn.setAttribute("aria-controls", panel.id);
+      bindDetails(stack);
+    }
+
     function render(data) {
       if (data.corpus === "vihermes") return renderHermes(data);
       if (data.corpus === "viedureg") return renderViedureg(data);
       const cites = (data.citations || []).map((cite) => `<span class="cite">${esc(cite)}</span>`).join("");
       const claims = (data.claims || []).map(claimCard).join("") || "<p class='reason'>Không tách được mệnh đề.</p>";
-      let revised = "";
-      if (data.revised_answer) {
-        const again = (data.revised_claims || []).map(claimCard).join("");
-        revised = `<h2>Sau khi sửa · GGF ${Math.round(data.revised_ggf * 100)}%</h2><div class="answer"><p>${esc(data.revised_answer)}</p></div>${again}`;
-      }
       const evidence = (data.evidence || []).map((row) =>
         `<div class="ev"><h3>${esc(row.cite)}</h3><p>${esc(row.text)}</p></div>`
       ).join("");
-      const title = data.mode === "ask" ? "Câu trả lời" : "Kết quả chấm câu này";
       const trace = data.mode === "ask" ? traceTable(data.trace) : "";
-      return `${stats(data)}<h2>${title}</h2><div class="answer"><p>${esc(data.answer)}</p><div class="cites">${cites}</div></div>${trace}<h2>Từng mệnh đề</h2>${claims}${revised}<details><summary>Khoản đã truy ra</summary>${evidence}</details>`;
+      const evidenceBlock = evidence ? `<h2>Khoản đã truy ra</h2>${evidence}` : "";
+      let detail = "";
+      let shown = data.answer;
+      if (data.mode === "check") shown = verdictLine(data);
+      if (data.revised_answer) {
+        const again = (data.revised_claims || []).map(claimCard).join("") || "<p class='reason'>Không tách được mệnh đề.</p>";
+        shown = data.revised_answer;
+        detail = `<h2>Câu đang hiện · sau khi sửa</h2>${stats(ratesOf(data.revised_claims))}<h2>Từng mệnh đề sau khi sửa</h2>${again}<h2>Trước khi sửa</h2><div class="answer"><p>${esc(data.answer)}</p></div>${stats(data)}<h2>Từng mệnh đề ban đầu</h2>${claims}${trace}${evidenceBlock}`;
+      } else {
+        detail = `${stats(data)}<h2>Từng mệnh đề</h2>${claims}${trace}${evidenceBlock}`;
+      }
+      return { face: faceBlock(shown, cites), detail };
     }
 
     function renderHermes(data) {
+      const cites = (data.citations || []).map((cite) => `<span class="cite">${esc(cite)}</span>`).join("");
+      const claims = (data.claims || []).map(claimCard).join("") || "<p class='reason'>Không tách được mệnh đề.</p>";
+      const evidence = (data.evidence || []).map((row) =>
+        `<div class="ev"><h3>${esc(row.cite)}</h3><p>${esc(row.text)}</p></div>`
+      ).join("");
       const goldNote = data.gold
         ? `<div class="stats">
-            <div class="stat"><b>${data.hop}</b><span>Số bước của câu</span></div>
+            <div class="stat"><b>${data.hop}</b><span>Số bước của câu test</span></div>
             <div class="stat"><b>${data.hits}/${data.gold_n}</b><span>Đơn vị vàng trong top</span></div>
             <div class="stat"><b>998</b><span>Đơn vị trong kho</span></div>
           </div>
-          <div class="answer"><p>${esc(data.answer)}</p></div>
-          <p class="board-note">Đây là đáp án ghi sẵn trong ViHERMES, không phải câu do đồ thị quy chế sinh ra.</p>`
-        : `<p class="board-note">Câu này không nằm trong 1.561 câu test. Bảng dưới là các đơn vị BM25 thấy khớp nhất.</p>`;
-      const body = (data.trace || []).map((row) => `<tr class="${row.in_gold ? "picked" : ""}">
+          <p class="board-note">Trùng nguyên văn một câu test ViHERMES. Đáp án vàng: ${esc(data.gold_answer || "")}</p>`
+        : `<p class="board-note">Câu hỏi không trùng nguyên văn bộ test. Câu trả lời ghép từ đoạn BM25 khớp nhất.</p>`;
+      const body = (data.trace || []).map((row) => `<tr class="${row.role === "Lấy vào câu trả lời" || row.in_gold ? "picked" : ""}">
         <td class="num">${row.rank}</td>
         <td class="num">${Number(row.score).toFixed(3)}</td>
-        <td>${row.in_gold ? "Có trong đáp án vàng" : "BM25 thấy khớp"}</td>
+        <td>${esc(row.role || "")}</td>
+        <td>${row.in_gold ? "Có trong đáp án vàng" : (data.gold ? "Không nằm trong vàng" : "—")}</td>
         <td><code>${esc(row.id)}</code><p class="cell-span">${esc(row.cite)}</p></td>
         <td>${esc(row.text)}</td>
       </tr>`).join("");
-      return `${goldNote}
+      const detail = `${stats(data)}${goldNote}<h2>Từng mệnh đề</h2>${claims}
         <h2>Truy xuất BM25</h2>
         <div class="table-wrap"><table class="data"><thead><tr>
-          <th class="num">#</th><th class="num">BM25</th><th>So với đáp án vàng</th><th>Văn bản</th><th>Nội dung</th>
-        </tr></thead><tbody>${body || "<tr><td colspan='5'>Không thấy đơn vị khớp.</td></tr>"}</tbody></table></div>`;
+          <th class="num">#</th><th class="num">BM25</th><th>Dùng làm</th><th>So với đáp án vàng</th><th>Văn bản</th><th>Nội dung</th>
+        </tr></thead><tbody>${body || "<tr><td colspan='6'>Không thấy đơn vị khớp.</td></tr>"}</tbody></table></div>
+        ${evidence ? `<h2>Đoạn đã dùng</h2>${evidence}` : ""}`;
+      return { face: faceBlock(data.answer || "Không tìm thấy đoạn liên quan trong kho ViHERMES.", cites), detail };
     }
 
     function renderViedureg(data) {
+      const cites = (data.citations || []).map((cite) => `<span class="cite">${esc(cite)}</span>`).join("");
+      const claims = (data.claims || []).map(claimCard).join("") || "<p class='reason'>Không tách được mệnh đề.</p>";
+      const evidence = (data.evidence || []).map((row) =>
+        `<div class="ev"><h3>${esc(row.cite)}</h3><p>${esc(row.text)}</p></div>`
+      ).join("");
       const goldNote = data.gold
         ? `<div class="stats">
-            <div class="stat"><b>${data.hop}</b><span>Số bước của câu</span></div>
+            <div class="stat"><b>${data.hop}</b><span>Số bước của câu chờ duyệt</span></div>
             <div class="stat"><b>${data.hits}/${data.gold_n}</b><span>Khoản vàng trong top</span></div>
             <div class="stat"><b>${data.n_questions}</b><span>Câu chờ duyệt</span></div>
           </div>
-          <div class="answer"><p>${esc(data.answer)}</p></div>
-          <p class="board-note">Câu này do khuôn sinh từ Thông tư 56/2026, trạng thái chờ duyệt. Chưa có người chấm thứ hai nên chưa có kappa.</p>`
-        : `<p class="board-note">Câu này không nằm trong bộ chờ duyệt. Bảng dưới là khoản khớp nhất, kèm khoản được dẫn chiếu.</p>`;
-      const body = (data.trace || []).map((row) => `<tr class="${row.in_gold ? "picked" : ""}">
+          <p class="board-note">Trùng một câu chờ duyệt. Đáp án khuôn: ${esc(data.gold_answer || "")}</p>`
+        : `<p class="board-note">Câu hỏi không trùng bộ chờ duyệt. Câu trả lời ghép từ khoản BM25 và cạnh dẫn chiếu.</p>`;
+      const body = (data.trace || []).map((row) => `<tr class="${row.role === "Lấy vào câu trả lời" || row.in_gold ? "picked" : ""}">
         <td class="num">${row.rank}</td>
         <td class="num">${Number(row.score).toFixed(3)}</td>
-        <td>${row.in_gold ? "Có trong căn cứ câu" : "BM25 thấy khớp"}</td>
+        <td>${esc(row.role || "")}</td>
+        <td>${row.in_gold ? "Có trong căn cứ câu" : (data.gold ? "Không nằm trong căn cứ" : "—")}</td>
         <td><code>${esc(row.id)}</code><p class="cell-span">${esc(row.cite)}</p></td>
         <td>${esc(row.text)}</td>
       </tr>`).join("");
-      return `${goldNote}
+      const detail = `${stats(data)}${goldNote}<h2>Từng mệnh đề</h2>${claims}
         <h2>Truy xuất: BM25 rồi đi cạnh dẫn chiếu</h2>
         <div class="table-wrap"><table class="data"><thead><tr>
-          <th class="num">#</th><th class="num">BM25</th><th>So với căn cứ</th><th>Khoản</th><th>Nội dung</th>
-        </tr></thead><tbody>${body || "<tr><td colspan='5'>Không thấy khoản khớp.</td></tr>"}</tbody></table></div>`;
+          <th class="num">#</th><th class="num">BM25</th><th>Dùng làm</th><th>So với căn cứ</th><th>Khoản</th><th>Nội dung</th>
+        </tr></thead><tbody>${body || "<tr><td colspan='6'>Không thấy khoản khớp.</td></tr>"}</tbody></table></div>
+        ${evidence ? `<h2>Khoản đã dùng</h2>${evidence}` : ""}`;
+      return { face: faceBlock(data.answer || "Không tìm thấy khoản liên quan trong ViEduReg.", cites), detail };
     }
 
     function traceTable(rows) {
@@ -777,7 +1072,7 @@
         return;
       }
       sending = true;
-      box.value = "";
+      clearBox();
       go.disabled = true;
       go.textContent = "…";
       push("user", text);
@@ -797,7 +1092,8 @@
         });
         const data = await response.json();
         if (!response.ok) throw new Error(data.error || "Lỗi máy chủ");
-        pending.querySelector(".bubble").innerHTML = render(data);
+        const view = render(data);
+        showAnswer(pending, view.face, view.detail);
       } catch (err) {
         pending.querySelector(".bubble").innerHTML = `<p class="error">${esc(err.message || "Không gọi được máy chủ.")}</p>`;
       } finally {
@@ -806,6 +1102,7 @@
         go.textContent = "Gửi";
         scrollThread();
         box.focus();
+        snapshot();
       }
     }
 
@@ -843,22 +1140,43 @@
     document.addEventListener("click", closePicks);
     document.getElementById("doc-filter").addEventListener("change", renderStore);
     document.getElementById("q-filter").addEventListener("input", renderStore);
-    document.getElementById("clear").addEventListener("click", () => {
-      thread.innerHTML = "";
-      welcome();
-      syncAsk();
+    document.getElementById("history").addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const menu = document.getElementById("history-menu");
+      const willOpen = menu.hidden;
+      closePicks();
+      menu.hidden = !willOpen;
+      event.currentTarget.setAttribute("aria-expanded", String(willOpen));
     });
+    document.getElementById("history-menu").addEventListener("click", (event) => {
+      const button = event.target.closest("button[data-id]");
+      if (!button) return;
+      event.preventDefault();
+      event.stopPropagation();
+      openChat(button.dataset.id);
+    });
+    document.getElementById("clear").addEventListener("click", newChat);
     document.getElementById("composer").addEventListener("submit", (event) => {
       event.preventDefault();
       submit();
     });
-    box.addEventListener("keydown", (event) => {
-      if (event.key === "Enter" && !event.shiftKey) {
-        event.preventDefault();
-        submit();
+    box.addEventListener("compositionstart", () => { composing = true; });
+    box.addEventListener("compositionend", () => {
+      composing = false;
+      if (wipeBox || sending) {
+        box.value = "";
+        wipeBox = false;
       }
     });
-    welcome();
+    box.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" || event.shiftKey) return;
+      // Bộ gõ Telex/VNI: Enter lúc đang ghép sẽ chèn chữ sau khi ô đã xóa.
+      if (event.isComposing || event.keyCode === 229 || composing) return;
+      event.preventDefault();
+      submit();
+    });
+    restoreChat();
     setMode("ask");
     fetchStore().then(renderChips).catch(() => {});
   </script>

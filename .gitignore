@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+venv/
+
+# PhoBERT weights quá lớn cho git; train lại bằng: python3 run.py train-phobert
+models/phobert_verifier/model.safetensors
+models/phobert_verifier/pytorch_model.bin
+models/phobert_verifier/optimizer.pt
+models/phobert_verifier/scheduler.pt
+models/phobert_verifier/training_args.bin

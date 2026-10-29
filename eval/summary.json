@@ -18,6 +18,30 @@
       "recall_hop2": 1.0,
       "hit_hop2": 1.0
     },
+    "lightrag": {
+      "ggf": 1.0,
+      "contradicted": 0.0,
+      "hit": 0.9615384615384616,
+      "recall": 1.0,
+      "recall_hop2": 1.0,
+      "hit_hop2": 0.5
+    },
+    "hipporag": {
+      "ggf": 1.0,
+      "contradicted": 0.0,
+      "hit": 0.9615384615384616,
+      "recall": 1.0,
+      "recall_hop2": 1.0,
+      "hit_hop2": 0.5
+    },
+    "kag_style": {
+      "ggf": 1.0,
+      "contradicted": 0.0,
+      "hit": 0.9615384615384616,
+      "recall": 1.0,
+      "recall_hop2": 1.0,
+      "hit_hop2": 0.5
+    },
     "unfaithful": {
       "ggf": 0.23076923076923078,
       "contradicted": 0.7435897435897435,
@@ -27,6 +51,11 @@
       "hit_hop2": 1.0
     },
     "revised": {
+      "ggf": 1.0,
+      "contradicted": 0.0,
+      "hit": 1.0
+    },
+    "revised_r2": {
       "ggf": 1.0,
       "contradicted": 0.0,
       "hit": 1.0
@@ -52,11 +81,50 @@
       "macro": 0.4360902255639098
     }
   },
+  "f1_learned": {
+    "supported": 0.6666666666666666,
+    "contradicted": 0.4000000000000001,
+    "unsupported": 0.6666666666666666,
+    "macro": 0.5777777777777778
+  },
+  "f1_phobert": {
+    "supported": 0.5333333333333333,
+    "contradicted": 0.22222222222222224,
+    "unsupported": 0.5,
+    "macro": 0.4185185185185185
+  },
   "auroc_wrong": 1.0,
   "spearman": {
     "triple": 0.9999999999999998,
     "chunk": 0.9545454545454544,
     "lexical": -0.052223296786709346
+  },
+  "kendall": {
+    "triple": 1.0,
+    "chunk": 1.0,
+    "lexical": 0.0
+  },
+  "spearman_bootstrap": {
+    "triple": {
+      "point": 0.9999999999999998,
+      "low": 0.9999999999999998,
+      "high": 1.0000000000000002
+    },
+    "chunk": {
+      "point": 0.9545454545454544,
+      "low": 0.7071067811865475,
+      "high": 1.0
+    },
+    "lexical": {
+      "point": -0.052223296786709346,
+      "low": -1.0,
+      "high": 0.9486832980505138
+    }
+  },
+  "judge_corr": {
+    "ragas": 0.7503664793768668,
+    "llm_judge": 0.7627700713964738,
+    "ggf_rule": 0.7627700713964738
   },
   "groups": [
     {

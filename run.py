@@ -7,11 +7,16 @@
     python run.py demo
     python run.py web
     python run.py viedureg
+    python run.py claims
+    python run.py train-verifier
+    python run.py kappa --a data/gold/human_claims.json --b data/gold/human_claims_r2.json
+    python run.py pack
 """
 
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 
 from src.demo import demo
@@ -59,9 +64,20 @@ def main() -> None:
     sub.add_parser("demo")
     sub.add_parser("web")
     sub.add_parser("viedureg")
+    sub.add_parser("claims")
+    sub.add_parser("train-verifier")
+    sub.add_parser("train-phobert")
+    sub.add_parser("pack")
+    kappa_cmd = sub.add_parser("kappa")
+    kappa_cmd.add_argument("--a", required=True)
+    kappa_cmd.add_argument("--b", required=True)
     ask_cmd = sub.add_parser("ask")
     ask_cmd.add_argument("question")
-    ask_cmd.add_argument("--system", choices=("graph", "naive", "unfaithful"), default="graph")
+    ask_cmd.add_argument(
+        "--system",
+        choices=("graph", "naive", "unfaithful", "lightrag", "hipporag", "kag_style"),
+        default="graph",
+    )
     ask_cmd.add_argument("--revise", action="store_true")
     verify_cmd = sub.add_parser("verify")
     verify_cmd.add_argument("claim")
@@ -102,6 +118,43 @@ def main() -> None:
             f"{stats['samples']} câu mẫu BM25 trúng."
         )
         print("Đã ghi data/viedureg/")
+        return
+    if args.cmd == "claims":
+        from src.synthetic_claims import build_claims
+
+        stats = build_claims()
+        print(json.dumps(stats, ensure_ascii=False, indent=2))
+        return
+    if args.cmd == "train-verifier":
+        from src.learned_verifier import train_and_save
+
+        print(json.dumps(train_and_save(), ensure_ascii=False, indent=2))
+        return
+    if args.cmd == "train-phobert":
+        from src.phobert_verifier import train_phobert
+
+        print(json.dumps(train_phobert(), ensure_ascii=False, indent=2))
+        return
+    if args.cmd == "kappa":
+        from src.kappa_stats import compare_files
+
+        print(json.dumps(compare_files(args.a, args.b), ensure_ascii=False, indent=2))
+        return
+    if args.cmd == "pack":
+        from src.pack_deliverables import pack
+
+        report = pack()
+        phobert = report.get("phobert") or {}
+        phobert_f1 = (phobert.get("test_human") or {}).get("macro")
+        print(
+            f"ViEduReg {report['viedureg']['questions']} câu | "
+            f"claims train/dev/test "
+            f"{report['claims']['train']}/{report['claims']['dev']}/{report['claims']['test']} | "
+            f"TF-IDF F1 {report['verifier']['test_human']['macro_f1']} | "
+            f"PhoBERT F1 {phobert_f1} | "
+            f"eval {report['eval']['n_questions']} câu"
+        )
+        print("Xem TRANG_THAI_NOP.md và eval/summary.txt")
         return
     if args.cmd == "ask":
         store = get_store()

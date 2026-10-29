@@ -1,0 +1,134 @@
+{
+  "viedureg": {
+    "chunks": 213,
+    "edges": 54,
+    "questions": 303,
+    "hop2": 55,
+    "samples": 6
+  },
+  "claims": {
+    "n": 1538,
+    "train": 1372,
+    "dev": 152,
+    "test": 14,
+    "rule_agree_train200": 0.864,
+    "paths": {
+      "synthetic": "/Users/dothilan.vn/Downloads/Lanaaaa/Source Code/MyCH/xuly_ngonngu_tunhien_cuoiky/data/synthetic/pairs.jsonl",
+      "train": "/Users/dothilan.vn/Downloads/Lanaaaa/Source Code/MyCH/xuly_ngonngu_tunhien_cuoiky/data/claims/train.jsonl",
+      "dev": "/Users/dothilan.vn/Downloads/Lanaaaa/Source Code/MyCH/xuly_ngonngu_tunhien_cuoiky/data/claims/dev.jsonl",
+      "test": "/Users/dothilan.vn/Downloads/Lanaaaa/Source Code/MyCH/xuly_ngonngu_tunhien_cuoiky/data/claims/test.jsonl"
+    }
+  },
+  "verifier": {
+    "model": "/Users/dothilan.vn/Downloads/Lanaaaa/Source Code/MyCH/xuly_ngonngu_tunhien_cuoiky/models/tfidf_logreg.pkl",
+    "train": {
+      "n": 1372,
+      "acc": 0.95,
+      "macro_f1": 0.951
+    },
+    "dev": {
+      "n": 152,
+      "acc": 0.914,
+      "macro_f1": 0.917
+    },
+    "test_human": {
+      "n": 14,
+      "acc": 0.5,
+      "macro_f1": 0.534
+    },
+    "note": "CPU TF-IDF+LogReg. PhoBERT-large là mục tiêu khi có GPU (KE_HOACH)."
+  },
+  "eval": {
+    "n_questions": 13,
+    "n_claims": 14,
+    "systems": {
+      "naive": {
+        "ggf": 1.0,
+        "contradicted": 0.0,
+        "hit": 0.9615384615384616,
+        "recall": 1.0,
+        "recall_hop2": 1.0,
+        "hit_hop2": 0.5
+      },
+      "graph": {
+        "ggf": 1.0,
+        "contradicted": 0.0,
+        "hit": 1.0,
+        "recall": 1.0,
+        "recall_hop2": 1.0,
+        "hit_hop2": 1.0
+      },
+      "lightrag_style": {
+        "ggf": 1.0,
+        "contradicted": 0.0,
+        "hit": 1.0,
+        "recall": 1.0,
+        "recall_hop2": 1.0,
+        "hit_hop2": 1.0
+      },
+      "hipporag_style": {
+        "ggf": 1.0,
+        "contradicted": 0.0,
+        "hit": 1.0,
+        "recall": 1.0,
+        "recall_hop2": 1.0,
+        "hit_hop2": 1.0
+      },
+      "unfaithful": {
+        "ggf": 0.23076923076923078,
+        "contradicted": 0.7435897435897435,
+        "hit": 1.0,
+        "recall": 1.0,
+        "recall_hop2": 1.0,
+        "hit_hop2": 1.0
+      },
+      "revised": {
+        "ggf": 1.0,
+        "contradicted": 0.0,
+        "hit": 1.0
+      },
+      "revised_r2": {
+        "ggf": 1.0,
+        "contradicted": 0.0,
+        "hit": 1.0
+      }
+    },
+    "f1": {
+      "triple": {
+        "supported": 1.0,
+        "contradicted": 1.0,
+        "unsupported": 1.0,
+        "macro": 1.0
+      },
+      "chunk": {
+        "supported": 0.9333333333333333,
+        "contradicted": 0.888888888888889,
+        "unsupported": 1.0,
+        "macro": 0.9407407407407408
+      },
+      "no_number": {
+        "supported": 0.7368421052631579,
+        "contradicted": 0.5714285714285715,
+        "unsupported": 0.0,
+        "macro": 0.4360902255639098
+      }
+    },
+    "f1_learned": {
+      "supported": 0.5714285714285714,
+      "contradicted": 0.3636363636363636,
+      "unsupported": 0.6666666666666666,
+      "macro": 0.5339105339105339
+    },
+    "spearman": {
+      "triple": 0.9999999999999998,
+      "chunk": 0.9545454545454544,
+      "lexical": -0.052223296786709346
+    },
+    "kendall": {
+      "triple": 1.0,
+      "chunk": 1.0,
+      "lexical": 0.0
+    }
+  },
+  "hand20": "/Users/dothilan.vn/Downloads/Lanaaaa/Source Code/MyCH/xuly_ngonngu_tunhien_cuoiky/data/demo/hand20.json"
+}

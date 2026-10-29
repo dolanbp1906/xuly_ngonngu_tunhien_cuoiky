@@ -1,0 +1,183 @@
+[
+  {
+    "id": "q01",
+    "corpus": "08-2021",
+    "question": "Thời gian tối đa để sinh viên hoàn thành khóa học là bao lâu?",
+    "answers": [
+      "không vượt quá 02 lần thời gian theo kế hoạch học tập chuẩn toàn khóa"
+    ],
+    "hop": 1
+  },
+  {
+    "id": "q02",
+    "corpus": "08-2021",
+    "question": "Tối đa bao nhiêu phần trăm khối lượng chương trình chính quy được dạy bằng lớp học trực tuyến?",
+    "answers": [
+      "tối đa 30%"
+    ],
+    "hop": 1
+  },
+  {
+    "id": "q03",
+    "corpus": "08-2021",
+    "question": "Sinh viên bị cảnh báo học tập khi tổng số tín chỉ nợ đọng từ đầu khóa vượt quá bao nhiêu?",
+    "answers": [
+      "nợ đọng từ đầu khóa học vượt quá 24"
+    ],
+    "hop": 1
+  },
+  {
+    "id": "q04",
+    "corpus": "08-2021",
+    "question": "Điểm trung bình học kỳ đầu dưới mức nào thì sinh viên bị cảnh báo học tập?",
+    "answers": [
+      "dưới 0,8 đối với học kỳ đầu"
+    ],
+    "hop": 1
+  },
+  {
+    "id": "q05",
+    "corpus": "08-2021",
+    "question": "Cơ sở đào tạo được quy định tối đa bao nhiêu lần cảnh báo học tập liên tiếp?",
+    "answers": [
+      "không vượt quá 2 lần cảnh báo liên tiếp"
+    ],
+    "hop": 1
+  },
+  {
+    "id": "q06",
+    "corpus": "08-2021",
+    "question": "Theo niên chế, số tín chỉ nợ đọng tối đa để được học tiếp lên năm sau là bao nhiêu?",
+    "answers": [
+      "nợ đọng từ đầu khóa không vượt quá 16"
+    ],
+    "hop": 1
+  },
+  {
+    "id": "q07",
+    "corpus": "08-2021",
+    "question": "Khối lượng tối đa được công nhận, chuyển đổi tín chỉ là bao nhiêu phần trăm?",
+    "answers": [
+      "không vượt quá 50%"
+    ],
+    "hop": 1
+  },
+  {
+    "id": "q08",
+    "corpus": "08-2021",
+    "question": "Hạng tốt nghiệp xuất sắc hoặc giỏi bị giảm một mức khi khối lượng học lại vượt quá bao nhiêu phần trăm?",
+    "answers": [
+      "học lại vượt quá 5%"
+    ],
+    "hop": 1
+  },
+  {
+    "id": "q09",
+    "corpus": "08-2021",
+    "question": "Thời hạn hiệu trưởng cấp bằng tốt nghiệp là bao lâu kể từ khi sinh viên đủ điều kiện?",
+    "answers": [
+      "trong thời hạn 03 tháng"
+    ],
+    "hop": 1
+  },
+  {
+    "id": "q10",
+    "corpus": "08-2021",
+    "question": "Sinh viên trao đổi được tích lũy tối đa bao nhiêu phần trăm tín chỉ tại cơ sở đào tạo khác?",
+    "answers": [
+      "không vượt quá 25%"
+    ],
+    "hop": 1
+  },
+  {
+    "id": "q11",
+    "corpus": "08-2021",
+    "question": "Sinh viên thi hộ lần thứ nhất bị kỷ luật ở mức nào?",
+    "answers": [
+      "đình chỉ học tập 01 năm"
+    ],
+    "hop": 1
+  },
+  {
+    "id": "q12",
+    "corpus": "08-2021",
+    "question": "Nghỉ học tạm thời vì nhu cầu cá nhân có bị tính vào thời gian học tối đa không, và thời gian tối đa là bao nhiêu?",
+    "answers": [
+      "tính vào thời gian học chính thức",
+      "không vượt quá 02 lần"
+    ],
+    "hop": 2
+  },
+  {
+    "id": "q13",
+    "corpus": "08-2021",
+    "question": "Có được liên kết đào tạo đối với ngành sức khỏe có cấp chứng chỉ hành nghề không?",
+    "answers": [
+      "Không thực hiện việc liên kết đào tạo đối với các ngành thuộc lĩnh vực sức khỏe"
+    ],
+    "hop": 1
+  },
+  {
+    "id": "ve0001",
+    "corpus": "viedureg",
+    "question": "Thông tư 56/2026/TT-BGDĐT có hiệu lực từ ngày nào và thay thế những thông tư nào?",
+    "answers": [
+      "Thông tư này có hiệu lực thi hành từ ngày 07 tháng 7 năm 2026, thay thế Thông tư số 08/2021/TT-BGDĐT ngày 18 tháng 3 năm 2021 ban hành kèm Quy chế đào tạo trình độ đại học và Thông tư số 28/2023/TT-BGDĐT ngày 28 tháng 12 năm 2023 ban hành kèm Quy chế đào tạo từ xa trình độ đại học của Bộ trưởng Bộ Giáo dục và Đào tạo."
+    ],
+    "hop": 1
+  },
+  {
+    "id": "ve0002",
+    "corpus": "viedureg",
+    "question": "Khóa tuyển sinh năm 2026 áp dụng văn bản nào thay thế Thông tư 08/2021?",
+    "answers": [
+      "Quy chế này áp dụng đối với khóa tuyển sinh năm 2026 và bắt đầu tổ chức đào tạo từ năm học 2026 - 2027 trở đi. Văn bản thay thế: Thông tư này có hiệu lực thi hành từ ngày 07 tháng 7 năm 2026, thay thế Thông tư số 08/2021/TT-BGDĐT ngày 18 tháng 3 năm 2021 ban hành kèm Quy chế đào tạo trình độ đại học và Thông tư số 28/2023/TT-BGDĐT ngày 28 tháng 12 năm 2023 ban hành kèm Quy chế đào tạo từ xa trình độ đại học của Bộ trưởng Bộ Giáo dục và Đào tạo."
+    ],
+    "hop": 2
+  },
+  {
+    "id": "ve0003",
+    "corpus": "viedureg",
+    "question": "Khóa đã có thông báo tuyển sinh trước ngày Thông tư 56/2026 có hiệu lực thì áp dụng quy chế nào?",
+    "answers": [
+      "Đối với các khóa tuyển sinh đã có thông báo tuyển sinh trước ngày Thông tư này có hiệu lực và chưa nhập học hoặc chưa tổ chức đào tạo, các khóa đang đào tạo theo các hình thức chính quy, vừa làm vừa học, từ xa; chương trình đào tạo từ xa đã công bố, tuyển sinh hoặc đang triển khai; hoạt động liên kết đào tạo đã ký kết, đã tuyển sinh; kết quả học tập, tín chỉ, học phần, chứng chỉ đã được công nhận, chuyển đổi hoặc miễn trừ thì thực hiện theo các Quy chế đào tạo trình độ đại học có hiệu lực tại thời điểm thông báo tuyển sinh."
+    ],
+    "hop": 1
+  },
+  {
+    "id": "ve0006",
+    "corpus": "viedureg",
+    "question": "Theo Điều 3 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "answers": [
+      "ít nhất một phần tư (1/4) so với thời gian đào tạo chuẩn của cùng chương trình"
+    ],
+    "hop": 1
+  },
+  {
+    "id": "ve0009",
+    "corpus": "viedureg",
+    "question": "Theo Điều 3 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "answers": [
+      "tối thiểu để hoàn thành chương trình đào tạo không ít hơn hai phần ba (2/3) thời"
+    ],
+    "hop": 1
+  },
+  {
+    "id": "ve0013",
+    "corpus": "viedureg",
+    "question": "Theo Điều 3 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "answers": [
+      "tối thiểu và thời gian tối đa theo quy định của cơ sở đào tạo và Quy chế này"
+    ],
+    "hop": 1
+  },
+  {
+    "id": "ve0019",
+    "corpus": "viedureg",
+    "question": "Tại Điều 4 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 2 Điều 16» dẫn tới nội dung gì?",
+    "answers": [
+      "Viện dẫn Điều 16 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT. Điều 16 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định: Chứng chỉ giáo dục đại học có thời hạn giá trị tối đa không vượt quá 2,0 lần thời gian đào tạo chuẩn của chương trình đào tạo kể từ ngày được thi kết thúc học phần hoặc công nhận chứng chỉ."
+    ],
+    "hop": 2
+  }
+]

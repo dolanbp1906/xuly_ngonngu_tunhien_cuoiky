@@ -1,0 +1,25 @@
+{
+  "model": "vinai/phobert-base",
+  "device": "cpu",
+  "max_train": 800,
+  "epochs": 1,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.3936
+    }
+  ],
+  "dev": {
+    "supported": 0.894,
+    "contradicted": 0.88,
+    "unsupported": 1.0,
+    "macro": 0.925
+  },
+  "test_human": {
+    "supported": 0.533,
+    "contradicted": 0.222,
+    "unsupported": 0.5,
+    "macro": 0.419
+  },
+  "path": "/Users/dothilan.vn/Downloads/Lanaaaa/Source Code/MyCH/xuly_ngonngu_tunhien_cuoiky/models/phobert_verifier"
+}

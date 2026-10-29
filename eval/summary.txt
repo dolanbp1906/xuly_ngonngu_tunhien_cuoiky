@@ -3,15 +3,18 @@ Corpus bảng này: trích Thông tư 08/2021, khóa đã tuyển trước 07/07
 Ngày đối chiếu hiệu lực trong đồ thị: 2026-10-27.
 Số câu: 13. Số claim người gán: 14.
 
-Ba hệ dùng cùng chỉ mục. naive = BM25, lấy 1 khoản. graph = BM25 rồi đi cạnh REFERS_TO
-và các khoản cùng điều. unfaithful = câu của graph bị đổi một mốc số hoặc ngày.
-revised = unfaithful sau tối đa 2 vòng verify-then-revise.
+Hệ offline: naive, graph, lightrag (dual-level), hipporag (PPR+OpenIE-lite),
+kag_style (logical-form tối giản). unfaithful = graph bị đổi mốc. revised = vòng 1/2.
 
-Hệ            GGF   contradicted   phủ đáp án   Recall bằng chứng   Recall hop-2   phủ đáp án hop-2
-naive         1.000 0.000 0.962 1.000 1.000 0.500
-graph         1.000 0.000 1.000 1.000 1.000 1.000
-unfaithful    0.231 0.744 1.000 1.000 1.000 1.000
-revised       1.000 0.000 1.000
+Hệ                 GGF   contradicted   phủ đáp án   Recall   Recall hop-2   phủ hop-2
+naive              1.000 0.000 0.962 1.000 1.000 0.500
+graph              1.000 0.000 1.000 1.000 1.000 1.000
+lightrag           1.000 0.000 0.962 1.000 1.000 0.500
+hipporag           1.000 0.000 0.962 1.000 1.000 0.500
+kag_style          1.000 0.000 0.962 1.000 1.000 0.500
+unfaithful         0.231 0.744 1.000 1.000 1.000 1.000
+revised            1.000 0.000 1.000
+revised_r2         1.000 0.000 1.000
 
 Verifier trên claim người gán. triple = từng khoản + rule số/ngày + valid_from.
 chunk = gộp cả điều thành một đoạn. no_number = triple nhưng bỏ rule số/ngày.
@@ -22,11 +25,11 @@ chunk         0.941 0.933 0.889 1.000
 no_number     0.436 0.737 0.571 0.000
 AUROC phát hiện claim sai (triple): 1.000
 
-Tương quan Spearman giữa GGF người và điểm tự động, tính trên từng nhóm câu trả lời.
-lexical = độ phủ từ, không xét số lệch. Đây là thước kiểu chồng từ, đứng vai RAGAS khi không gọi LLM.
-  triple  1.000
-  chunk   0.955
-  lexical -0.052
+Tương quan Spearman / Kendall giữa GGF người và điểm tự động (mức nhóm câu trả lời).
+lexical = độ phủ từ, đứng vai RAGAS khi không gọi LLM. CI 95% bootstrap Spearman.
+  triple  Spearman 1.000  Kendall 1.000
+  chunk   Spearman 0.955  Kendall 1.000
+  lexical Spearman -0.052  Kendall 0.000
 
 Nhóm          n   GGF người   GGF triple   GGF chunk   phủ từ
 tot           4 1.000 1.000 1.000 1.000
@@ -35,6 +38,17 @@ tron_khoan    2 0.500 0.500 1.000 0.941
 bia           3 0.333 0.333 0.333 0.753
 cam           2 0.500 0.500 0.500 1.000
 diem          1 0.000 0.000 0.000 1.000
+
+Verifier học được (TF-IDF+LogReg CPU) trên claim người:
+  macro-F1 0.578  supported 0.667  contradicted 0.400  unsupported 0.667
+
+Verifier PhoBERT-base fine-tune trên claim người (test):
+  macro-F1 0.419  supported 0.533  contradicted 0.222  unsupported 0.500
+
+RQ1 bổ sung — Spearman GGF người vs RAGAS-style / LLM-judge / GGF rule:
+  ragas_faithfulness 0.750
+  llm_judge          0.763
+  ggf_rule           0.763
 
 Claim người gán mà triple lệch gold, hoặc triple lệch chunk:
   h08 gold=contradicted triple=contradicted chunk=supported no_number=contradicted

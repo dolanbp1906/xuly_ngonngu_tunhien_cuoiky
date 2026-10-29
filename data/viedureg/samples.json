@@ -10,9 +10,9 @@
     "question": "Khóa đã có thông báo tuyển sinh trước ngày Thông tư 56/2026 có hiệu lực thì áp dụng quy chế nào?"
   },
   {
-    "id": "ve0005",
+    "id": "ve0008",
     "hop": 1,
-    "question": "Theo Điều 3 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?"
+    "question": "Trong Điều 3 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «ít nhất một phần tư (1/4) so với thời gian đào tạo chuẩn của cùng chương trình» nằm trong điều kiện nào?"
   },
   {
     "id": "ve0002",
@@ -20,13 +20,13 @@
     "question": "Khóa tuyển sinh năm 2026 áp dụng văn bản nào thay thế Thông tư 08/2021?"
   },
   {
-    "id": "ve0027",
+    "id": "ve0088",
     "hop": 2,
-    "question": "Tại Điều 12 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 6 Điều 12» dẫn tới nội dung gì?"
+    "question": "Tại Điều 12 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 2 Điều 4» dẫn tới nội dung gì?"
   },
   {
-    "id": "ve0028",
+    "id": "ve0090",
     "hop": 2,
-    "question": "Tại Điều 12 khoản 6 điểm đ, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 4 Điều 12» dẫn tới nội dung gì?"
+    "question": "Tại Điều 12 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 6 Điều 12» dẫn tới nội dung gì?"
   }
 ]

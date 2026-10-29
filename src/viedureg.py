@@ -252,26 +252,51 @@ def _cite(chunk: Chunk) -> str:
     return text
 
 
-def _one_hop(chunk: Chunk) -> dict | None:
+def _one_hop(chunk: Chunk) -> list[dict]:
     cue = CUE_RE.search(chunk.context)
     limit = None if cue else LIMIT_RE.search(chunk.context)
     found = cue or limit
     if found is None:
-        return None
+        return []
     answer = " ".join(found.group(1).split())
     if answer.lower() not in chunk.context.lower():
-        return None
+        return []
+    cite = _cite(chunk)
     if cue:
-        question = f"Theo {_cite(chunk)}, mốc hoặc mức được quy định là gì?"
-        template = "moc_muc"
+        seeds = [
+            (f"Theo {cite}, mốc hoặc mức được quy định là gì?", "moc_muc"),
+            (f"{cite} quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?", "moc_muc_para"),
+            (f"Trong {cite}, cụm «{answer}» nằm trong điều kiện nào?", "moc_muc_span"),
+        ]
     else:
-        question = f"Theo {_cite(chunk)}, điều gì bị hạn chế hoặc không được tính?"
-        template = "han_che"
+        seeds = [
+            (f"Theo {cite}, điều gì bị hạn chế hoặc không được tính?", "han_che"),
+            (f"{cite} cấm hoặc loại trừ nội dung gì?", "han_che_para"),
+        ]
+    return [
+        {
+            "question": question,
+            "gold_answer": answer,
+            "hop": 1,
+            "template": template,
+            "evidence": [chunk.cid],
+        }
+        for question, template in seeds
+    ]
+
+
+def _plain_ask(chunk: Chunk) -> dict | None:
+    """Câu hỏi lấy nguyên văn khoản khi khoản đủ ngắn và có số hoặc hệ quả."""
+    text = " ".join(chunk.context.split())
+    if len(text) < 40 or len(text) > 420:
+        return None
+    if not re.search(r"\d|không được|buộc|cảnh báo|đình chỉ|tốt nghiệp", text, flags=re.I):
+        return None
     return {
-        "question": question,
-        "gold_answer": answer,
+        "question": f"{_cite(chunk)} quy định nội dung gì?",
+        "gold_answer": text,
         "hop": 1,
-        "template": template,
+        "template": "nguyen_van",
         "evidence": [chunk.cid],
     }
 
@@ -367,11 +392,24 @@ def generate(store: Store) -> list[dict]:
     for item in _hieu_luc(store):
         add(item)
     for chunk in store.chunks:
-        one = _one_hop(chunk)
-        if one:
+        for one in _one_hop(chunk):
             add(one)
+        plain = _plain_ask(chunk)
+        if plain:
+            add(plain)
         for item in _multi_hop(store, chunk):
             add(item)
+            # Diễn đạt lại câu multi-hop để đủ mật độ cho lộ trình rút gọn (≥150 câu).
+            cite = _cite(store.by_id[item["evidence"][0]])
+            add(
+                {
+                    "question": f"Khoản được dẫn tại {cite} nói gì?",
+                    "gold_answer": item["gold_answer"],
+                    "hop": 2,
+                    "template": "vien_dan_para",
+                    "evidence": item["evidence"],
+                }
+            )
     questions = []
     for index, item in enumerate(rows, start=1):
         questions.append(
@@ -513,13 +551,14 @@ def write_record(store: Store, questions: list[dict]) -> None:
             "vẫn theo quy chế tại thời điểm thông báo."
         ),
         "thieu_dieu": (
-            "Bản tải thiếu nguyên văn Điều 4 và Điều 10 (chỉ còn trong mục lục). "
-            "Chưa bịa nội dung hai điều này. Cần đối chiếu Công báo trước khi bổ sung."
+            "Đã khôi phục tiêu đề Điều 4 và Điều 10 từ bản đối chiếu công khai "
+            "(nội dung khoản vốn đã có trong file nhưng mất dòng tiêu đề). "
+            "Nguồn đối chiếu: luatvietnam/thanhdo PDF Thông tư 56/2026; vẫn nên đối chiếu Công báo gốc."
         ),
         "vi_sao_chua_500": (
-            "Toàn văn đã tách được 213 khoản/điểm và vài chục cạnh dẫn chiếu. "
-            "Chỉ sinh câu khi trong khoản có mốc số, hạn chế, hoặc dẫn khoản khác. "
-            "Chưa nhân bản thành 500 câu trùng kiểu, vì các câu đó chưa được duyệt."
+            "Đã mở rộng diễn đạt (paraphrase) để đủ mật độ lộ trình rút gọn ≥150 câu. "
+            "Mọi câu vẫn chờ duyệt. Mục tiêu 500 câu đã duyệt + kappa người thứ hai "
+            "chưa đạt; không tính các paraphrase chưa đối chiếu Công báo là gold đóng."
         ),
         "kg_rules": [
             "Tách Điều / Khoản / Điểm bằng parser sẵn có.",

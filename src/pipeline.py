@@ -14,12 +14,18 @@ def build() -> Store:
 
 def retrieve(store: Store, question: str, system: str) -> tuple[list, list]:
     """Trả về (đoạn đưa vào câu trả lời, pool bằng chứng đưa vào verifier)."""
+    if system in {"lightrag", "lightrag_style", "hipporag", "hipporag_style", "kag", "kag_style"}:
+        from src.systems_extra import answer_from
+
+        _text, chosen, pool = answer_from(store, question, system)
+        return chosen, pool
     if system == "unfaithful":
         base = answer_chunks(store, question, "graph")
         pool = evidence_pool(store, question, "graph")
         return base, pool
-    pool = evidence_pool(store, question, system)
-    chosen = answer_chunks(store, question, system)
+    mode = system if system in {"naive", "graph"} else "graph"
+    pool = evidence_pool(store, question, mode)
+    chosen = answer_chunks(store, question, mode)
     return chosen, pool
 
 

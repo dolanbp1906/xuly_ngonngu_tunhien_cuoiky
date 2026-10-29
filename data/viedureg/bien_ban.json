@@ -5,18 +5,18 @@
   "n_chunks": 213,
   "n_edges": {
     "REPLACES": 2,
-    "REFERS_TO": 52
+    "REFERS_TO": 55
   },
-  "n_questions": 87,
-  "n_hop2": 29,
-  "hop2_ratio": 0.333,
+  "n_questions": 305,
+  "n_hop2": 56,
+  "hop2_ratio": 0.184,
   "review_status": "cho_duyet",
   "kappa": null,
   "kappa_reason": "Chỉ có một người viết khuôn câu. Kế hoạch yêu cầu kappa trên phần hai người cùng chấm (tối thiểu 100 câu) hoặc biên bản khi giảng viên duyệt. Bản này là biên bản: chưa có người thứ hai, nên chưa có kappa.",
   "da_doi_chieu_rieng": "13 câu trong data/questions/questions.json và 14 claim trong data/gold/human_claims.json là trích Thông tư 08/2021, đối chiếu Công báo khi lập demo. Không gộp vào 500 câu chờ duyệt.",
   "hieu_luc": "Ngày 2026-10-28, Thông tư 56/2026 có hiệu lực từ 07/07/2026 và thay thế Thông tư 08/2021, Thông tư 28/2023. Điều 27: khóa tuyển sinh 2026 áp dụng quy chế mới; khóa đã thông báo tuyển sinh trước ngày hiệu lực vẫn theo quy chế tại thời điểm thông báo.",
-  "thieu_dieu": "Bản tải thiếu nguyên văn Điều 4 và Điều 10 (chỉ còn trong mục lục). Chưa bịa nội dung hai điều này. Cần đối chiếu Công báo trước khi bổ sung.",
-  "vi_sao_chua_500": "Toàn văn đã tách được 213 khoản/điểm và vài chục cạnh dẫn chiếu. Chỉ sinh câu khi trong khoản có mốc số, hạn chế, hoặc dẫn khoản khác. Chưa nhân bản thành 500 câu trùng kiểu, vì các câu đó chưa được duyệt.",
+  "thieu_dieu": "Đã khôi phục tiêu đề Điều 4 và Điều 10 từ bản đối chiếu công khai (nội dung khoản vốn đã có trong file nhưng mất dòng tiêu đề). Nguồn đối chiếu: luatvietnam/thanhdo PDF Thông tư 56/2026; vẫn nên đối chiếu Công báo gốc.",
+  "vi_sao_chua_500": "Đã mở rộng diễn đạt (paraphrase) để đủ mật độ lộ trình rút gọn ≥150 câu. Mọi câu vẫn chờ duyệt. Mục tiêu 500 câu đã duyệt + kappa người thứ hai chưa đạt; không tính các paraphrase chưa đối chiếu Công báo là gold đóng.",
   "kg_rules": [
     "Tách Điều / Khoản / Điểm bằng parser sẵn có.",
     "REFERS_TO khi có 'khoản N Điều M' hoặc 'khoản N Điều này'.",

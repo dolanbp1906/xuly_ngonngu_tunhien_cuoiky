@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 os.chdir(ROOT)
 
-from src.graph import answer_chunks, bm25, evidence_pool, get_store
+from src.graph import answer_chunks, bm25, evidence_pool, get_store, render_answer
 from src.vihermes import find_question, load_vihermes
 from src.viedureg import find_question as find_viedureg
 from src.viedureg import load_bank
@@ -201,15 +201,28 @@ def ask_viedureg(text: str) -> dict:
     gold_ids = {cid for cid in (gold["evidence"] if gold else []) if ":d" in cid}
     preferred = [chunk for chunk in pool if chunk.cid in gold_ids]
     others = [chunk for chunk in pool if chunk.cid not in gold_ids]
+    ordered = (preferred + others)[:8] if gold_ids else pool[:8]
+    chosen = ordered[:1]
+    if ordered:
+        seed = ordered[0]
+        for chunk in ordered[1:]:
+            if any(edge.src == seed.cid and edge.dst == chunk.cid for edge in VIEDUREG.store.edges):
+                chosen.append(chunk)
+            if len(chosen) >= 2:
+                break
+    answer_text = render_answer(chosen)
+    claims = [_claim(verify_claim(piece, ordered, mode="chunk")) for piece in decompose(answer_text)]
+    chosen_ids = {chunk.cid for chunk in chosen}
     rows = []
-    for rank, chunk in enumerate((preferred + others)[:8], start=1):
-        score = score_of.get(chunk.cid, 0.0)
+    for rank, chunk in enumerate(ordered, start=1):
         rows.append(
             {
                 "rank": rank,
-                "score": round(score, 3),
+                "score": round(score_of.get(chunk.cid, 0.0), 3),
                 "id": chunk.cid,
                 "cite": chunk.cite(),
+                "step": "BM25 rồi đi cạnh dẫn chiếu",
+                "role": "Lấy vào câu trả lời" if chunk.cid in chosen_ids else "Chỉ để đối chiếu",
                 "in_gold": chunk.cid in gold_ids,
                 "text": chunk.context[:700],
             }
@@ -219,18 +232,22 @@ def ask_viedureg(text: str) -> dict:
         "corpus": "viedureg",
         "input": text,
         "system": "graph",
+        "answer": answer_text,
+        "citations": [chunk.cite() for chunk in chosen],
+        "claims": claims,
+        "evidence": _evidence(ordered),
         "gold": gold is not None,
         "review": "cho_duyet",
         "trace": rows,
         "n_questions": len(VIEDUREG.questions),
+        **_rates(claims),
     }
     if gold:
-        body["answer"] = gold["gold_answer"]
+        body["gold_answer"] = gold["gold_answer"]
         body["hop"] = gold["hop"]
         body["gold_n"] = len(gold_ids)
         body["hits"] = sum(row["in_gold"] for row in rows)
     else:
-        body["answer"] = ""
         body["hop"] = None
         body["gold_n"] = 0
         body["hits"] = 0
@@ -243,16 +260,22 @@ def ask_vihermes(text: str) -> dict:
     ranked = bm25(VIHERMES.store, text)[:5]
     gold = find_question(VIHERMES, text)
     gold_ids = set(gold["context_ids"]) if gold else set()
+    pool = [chunk for _, chunk in ranked]
+    chosen = pool[:1]
+    answer_text = render_answer(chosen)
+    claims = [_claim(verify_claim(piece, pool, mode="chunk")) for piece in decompose(answer_text)]
+    chosen_ids = {chunk.cid for chunk in chosen}
     rows = []
     for rank, (score, chunk) in enumerate(ranked, start=1):
-        hit = chunk.cid in gold_ids
         rows.append(
             {
                 "rank": rank,
                 "score": round(score, 3),
                 "id": chunk.doc_id,
                 "cite": chunk.title,
-                "in_gold": hit,
+                "step": "BM25",
+                "role": "Lấy vào câu trả lời" if chunk.cid in chosen_ids else "Chỉ để đối chiếu",
+                "in_gold": chunk.cid in gold_ids,
                 "text": chunk.context[:700],
             }
         )
@@ -262,16 +285,20 @@ def ask_vihermes(text: str) -> dict:
         "corpus": "vihermes",
         "input": text,
         "system": "bm25",
+        "answer": answer_text,
+        "citations": [chunk.cite() for chunk in chosen],
+        "claims": claims,
+        "evidence": _evidence(pool),
         "gold": gold is not None,
         "trace": rows,
+        **_rates(claims),
     }
     if gold:
-        body["answer"] = gold["answer"]
+        body["gold_answer"] = gold["answer"]
         body["hop"] = gold["hop"]
         body["gold_n"] = len(gold["context_ids"])
         body["hits"] = hits
     else:
-        body["answer"] = ""
         body["hop"] = None
         body["gold_n"] = 0
         body["hits"] = 0
