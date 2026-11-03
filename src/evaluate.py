@@ -9,8 +9,8 @@ from collections import Counter, defaultdict
 from src.graph import Store, evidence_pool, get_store
 from src.paths import EVAL_DIR, HUMAN_PATH, QUESTIONS_PATH
 from src.pipeline import compose
-from src.text_norm import normalize
-from src.verify import check_answer, revise, verify_claim
+from src.text_norm import normalize, phrase_em, phrases_f1
+from src.verify import audit_decomposition, check_answer, revise, verify_claim
 
 LABELS = ("supported", "contradicted", "unsupported")
 
@@ -218,9 +218,19 @@ def run_eval(store: Store | None = None) -> dict:
                 "ggf": checked.ggf,
                 "contradicted": checked.contradicted_rate,
                 "hit": answer_hit(texts[system], question["answers"]),
+                "em": phrase_em(texts[system], question["answers"]),
+                "f1": phrases_f1(texts[system], question["answers"]),
                 "recall": evidence_recall(pools[system], question["evidence"]),
+                "decomposition": audit_decomposition(texts[system]),
                 "claims": [
-                    {"claim": item.claim, "label": item.label, "reason": item.reason, "cite": item.evidence_cite}
+                    {
+                        "claim": item.claim,
+                        "label": item.label,
+                        "reason": item.reason,
+                        "cite": item.evidence_cite,
+                        "triple_id": item.triple_id,
+                        "chunk_id": item.evidence_id,
+                    }
                     for item in checked.claims
                 ],
             }
@@ -230,12 +240,18 @@ def run_eval(store: Store | None = None) -> dict:
             "ggf": r1.ggf,
             "contradicted": r1.contradicted_rate,
             "hit": answer_hit(r1.answer, question["answers"]),
+            "em": phrase_em(r1.answer, question["answers"]),
+            "f1": phrases_f1(r1.answer, question["answers"]),
+            "decomposition": audit_decomposition(r1.answer),
             "rounds": min(2, len(history)),
         }
         row["revised_r2"] = {
             "ggf": r2.ggf,
             "contradicted": r2.contradicted_rate,
             "hit": answer_hit(r2.answer, question["answers"]),
+            "em": phrase_em(r2.answer, question["answers"]),
+            "f1": phrases_f1(r2.answer, question["answers"]),
+            "decomposition": audit_decomposition(r2.answer),
             "rounds": len(history),
         }
         per_question.append(row)
@@ -253,6 +269,8 @@ def run_eval(store: Store | None = None) -> dict:
             "ggf": mean(system, "ggf"),
             "contradicted": mean(system, "contradicted"),
             "hit": mean(system, "hit"),
+            "em": mean(system, "em"),
+            "f1": mean(system, "f1"),
             "recall": mean(system, "recall"),
             "recall_hop2": mean(system, "recall", hop=2),
             "hit_hop2": mean(system, "hit", hop=2),
@@ -262,7 +280,15 @@ def run_eval(store: Store | None = None) -> dict:
             "ggf": mean(key, "ggf"),
             "contradicted": mean(key, "contradicted"),
             "hit": mean(key, "hit"),
+            "em": mean(key, "em"),
+            "f1": mean(key, "f1"),
         }
+    audits = [row["graph"]["decomposition"] for row in per_question]
+    decomposition = {
+        "atomicity": sum(item["atomicity"] for item in audits) / len(audits) if audits else 0.0,
+        "coverage": sum(item["coverage"] for item in audits) / len(audits) if audits else 0.0,
+        "multi_predicate": sum(item["multi_predicate"] for item in audits),
+    }
 
     human_rows = []
     by_mode: dict[str, list[str]] = {mode: [] for mode in ("triple", "chunk", "no_number")}
@@ -391,6 +417,7 @@ def run_eval(store: Store | None = None) -> dict:
     result = {
         "n_questions": len(per_question),
         "n_claims": len(human_rows),
+        "decomposition": decomposition,
         "systems": summary_systems,
         "f1": f1,
         "f1_learned": learned,
@@ -440,6 +467,23 @@ def _write(result: dict) -> None:
         lines.append(
             f"{name:<18}{_fmt(row['ggf'])}{_fmt(row['contradicted'])}{_fmt(row['hit'])}"
         )
+    lines += [
+        "",
+        "RQ3 — EM cụm đáp án và F1 token so với cụm vàng (câu trả lời vẫn là đoạn trích).",
+        "EM = cụm vàng nằm nguyên trong câu sau chuẩn hoá. F1 token thấp vì câu là cả khoản, cụm vàng thì ngắn.",
+        "",
+        "Hệ                 EM cụm    F1 token",
+    ]
+    for name in ("graph", "unfaithful", "revised", "revised_r2"):
+        row = result["systems"][name]
+        lines.append(f"{name:<18}{_fmt(row['em'])}{_fmt(row['f1'])}")
+    audit = result.get("decomposition") or {}
+    lines += [
+        "",
+        "Tách claim trên câu graph: atomicity "
+        f"{_fmt(audit.get('atomicity')).strip()} | coverage {_fmt(audit.get('coverage')).strip()} | "
+        f"claim còn hai hệ quả {audit.get('multi_predicate', 0)}",
+    ]
     lines += [
         "",
         "Verifier trên claim người gán. triple = từng khoản + rule số/ngày + valid_from.",
@@ -510,6 +554,7 @@ def _write(result: dict) -> None:
                 for key in (
                     "n_questions",
                     "n_claims",
+                    "decomposition",
                     "systems",
                     "f1",
                     "f1_learned",

@@ -12,8 +12,8 @@ Cập nhật tự động bởi `python run.py pack`.
 | Bộ câu đã đối chiếu | 150 câu (90 một khoản, 60 từ hai khoản) trong `data/viedureg/questions_reviewed.json`; giảng viên chưa duyệt |
 | Đầu ra 6 hệ | 900 câu trả lời trên 150 câu; recall pool cao nhất là hipporag 0.633. `eval/viedureg_systems.txt` |
 | Nhãn claim | 127 claim không trùng đã có nhãn một người đối chiếu khoản (supported 72, contradicted 26, unsupported 29). Chưa có người thứ hai, kappa claim còn trống. `data/viedureg/claims_unique.jsonl` |
-| Claim splits | train 2688 / dev 298 / test 14 (tổng ≥3000) |
-| Verifier TF-IDF | test macro-F1 0.578 |
+| Claim splits | train 3018 / dev 335 / test 14. Claim tổng hợp lấy từ đồ thị công khai, bỏ các điều đã có trong 14 claim người. Loại lỗi: span, đổi số, đảo trần/sàn, đổi hệ quả, bỏ phủ định, thưởng, thêm điều kiện. Không nhân bản thêm tiền tố. |
+| Verifier TF-IDF | test macro-F1 0.642 (train lại trên claim mới; contradicted F1 0.545) |
 | Verifier PhoBERT | {'model': 'vinai/phobert-base', 'device': 'cpu', 'max_train': 800, 'epochs': 1, 'history': [{'epoch': 1, 'train_loss': 0.3936}], 'dev': {'supported': 0.894, 'contradicted': 0.88, 'unsupported': 1.0, 'macro': 0.925}, 'test_human': {'supported': 0.533, 'contradicted': 0.222, 'unsupported': 0.5, 'macro': 0.419}, 'path': '/Users/dothilan.vn/Downloads/Lanaaaa/Source Code/MyCH/xuly_ngonngu_tunhien_cuoiky/models/phobert_verifier'} |
 | Hệ truy hồi | naive, graph, lightrag, hipporag, kag_style |
 | RQ1 bổ sung | RAGAS-style + LLM-judge trong `eval/summary.txt` |

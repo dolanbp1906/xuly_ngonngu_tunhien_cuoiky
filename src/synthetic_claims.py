@@ -1,9 +1,9 @@
 """Sinh cặp claim–bằng chứng tổng hợp từ đồ thị quy chế (ngoài bộ test người).
 
-Nhãn:
-  supported     — lấy nguyên/cắt ngắn từ khoản
-  contradicted  — đổi mốc số/ngày bằng distort
-  unsupported   — gắn hệ quả bịa (thưởng tiền) vào khoản thật
+Nhãn theo cách dựng, không theo verifier:
+  supported     — đoạn khoản, hoặc đoạn cắt ngắn
+  contradicted  — đổi số/ngày, đổi hệ quả, hoặc bỏ phủ định
+  unsupported   — thêm câu thưởng, hoặc thêm điều kiện việc làm / quốc tế
 """
 
 from __future__ import annotations
@@ -12,70 +12,42 @@ import json
 import random
 from pathlib import Path
 
-from src.graph import Chunk, Store, get_store
+from src.graph import Store, get_store
 from src.paths import DATA, HUMAN_PATH
-from src.verify import distort, verify_claim
+from src.verify import error_variants, verify_claim
 
 CLAIMS_DIR = DATA / "claims"
 SYNTH_PATH = DATA / "synthetic" / "pairs.jsonl"
 
 
-def _span(chunk: Chunk, max_len: int = 220) -> str:
-    text = " ".join(chunk.context.split())
-    if len(text) <= max_len:
-        return text
-    cut = text[:max_len].rsplit(" ", 1)[0]
-    return cut.rstrip(",;:") + "…"
-
-
-def _pairs_from_store(store: Store, limit: int = 20000) -> list[dict]:
+def _pairs_from_store(
+    store: Store,
+    limit: int = 20000,
+    skip: set[tuple[str, int]] | None = None,
+) -> list[dict]:
     rows: list[dict] = []
-    usable = [chunk for chunk in store.chunks if len(chunk.context) >= 40]
+    banned = skip or set()
+    usable = [
+        chunk
+        for chunk in store.chunks
+        if len(chunk.context) >= 40 and (chunk.doc_id, chunk.dieu) not in banned
+    ]
     rng = random.Random(42)
     rng.shuffle(usable)
     for chunk in usable:
         if len(rows) >= limit:
             break
-        supported = _span(chunk)
-        variants = [supported]
-        short = _span(chunk, max_len=120)
-        if short != supported:
-            variants.append(short)
-        for index, claim in enumerate(variants):
+        for label, kind, claim in error_variants(chunk.context):
             rows.append(
                 {
-                    "id": f"syn-s-{chunk.cid}-{len(rows)}-{index}",
-                    "label": "supported",
+                    "id": f"syn-{kind}-{chunk.cid}-{len(rows)}",
+                    "label": label,
+                    "error_type": kind,
                     "claim": claim,
                     "evidence_cite": chunk.cite(),
                     "evidence_text": chunk.context,
-                    "chunk_id": chunk.cid,
-                    "source": "synthetic",
-                    "split": "train",
-                }
-            )
-            bad = distort(claim)
-            if bad != claim:
-                rows.append(
-                    {
-                        "id": f"syn-c-{chunk.cid}-{len(rows)}-{index}",
-                        "label": "contradicted",
-                        "claim": bad,
-                        "evidence_cite": chunk.cite(),
-                        "evidence_text": chunk.context,
-                        "chunk_id": chunk.cid,
-                        "source": "synthetic",
-                        "split": "train",
-                    }
-                )
-            invented = claim.rstrip(".") + ". Sinh viên xuất sắc được thưởng 3 triệu đồng mỗi học kỳ."
-            rows.append(
-                {
-                    "id": f"syn-u-{chunk.cid}-{len(rows)}-{index}",
-                    "label": "unsupported",
-                    "claim": invented,
-                    "evidence_cite": chunk.cite(),
-                    "evidence_text": chunk.context,
+                    "evidence_triple_ids": [chunk.triple_id],
+                    "evidence_chunk_ids": [chunk.cid],
                     "chunk_id": chunk.cid,
                     "source": "synthetic",
                     "split": "train",
@@ -100,7 +72,10 @@ def _human_rows(store: Store) -> list[dict]:
                 "claim": item["claim"],
                 "evidence_cite": cite,
                 "evidence_text": evidence,
+                "evidence_triple_ids": [pool[0].triple_id] if pool else [],
+                "evidence_chunk_ids": [pool[0].cid] if pool else [],
                 "chunk_id": pool[0].cid if pool else "",
+                "error_type": "human",
                 "source": "human",
                 "split": "test",
                 "answer_id": item.get("answer_id"),
@@ -150,21 +125,30 @@ def _expand_to_target(rows: list[dict], target: int) -> list[dict]:
 
 def build_claims(limit: int = 20000, target: int = 3000) -> dict:
     store = get_store()
-    rows = _pairs_from_store(store, limit=limit)
+    human_preview = json.loads(HUMAN_PATH.read_text(encoding="utf-8"))["claims"]
+    skip = {(item["doc"], int(item["dieu"])) for item in human_preview}
+    rows = _pairs_from_store(store, limit=limit, skip=skip)
     try:
         from src.viedureg import load_bank
 
         bank = load_bank()
         remain = max(0, limit - len(rows))
-        rows.extend(_pairs_from_store(bank.store, limit=remain))
+        rows.extend(_pairs_from_store(bank.store, limit=remain, skip=skip))
+    except Exception:
+        pass
+    try:
+        from src.public_corpus import build_public_store
+
+        public = build_public_store()
+        remain = max(0, limit - len(rows))
+        rows.extend(_pairs_from_store(public, limit=remain, skip=skip))
     except Exception:
         pass
     human = _human_rows(store)
     merged = rows + human
-    if len([row for row in merged if row["source"] == "synthetic"]) < target - len(human):
-        synth_only = [row for row in merged if row["source"] == "synthetic"]
-        need = max(target - len(human), len(synth_only))
-        synth_only = _expand_to_target(synth_only, need)
+    # Không nhân bản thêm tiền tố cho đủ 3.000: bản sao đó làm verifier học mẹo câu chữ.
+    if len(rows) < 800:
+        synth_only = _expand_to_target(rows, target - len(human))
         merged = synth_only + human
     rows = _assign_splits(merged)
     CLAIMS_DIR.mkdir(parents=True, exist_ok=True)

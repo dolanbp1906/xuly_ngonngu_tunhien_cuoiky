@@ -1,11 +1,18 @@
 {
   "n_questions": 13,
   "n_claims": 14,
+  "decomposition": {
+    "atomicity": 1.0,
+    "coverage": 1.0,
+    "multi_predicate": 0
+  },
   "systems": {
     "naive": {
       "ggf": 1.0,
       "contradicted": 0.0,
       "hit": 0.9615384615384616,
+      "em": 0.9615384615384616,
+      "f1": 0.22516953277896806,
       "recall": 1.0,
       "recall_hop2": 1.0,
       "hit_hop2": 0.5
@@ -14,6 +21,8 @@
       "ggf": 1.0,
       "contradicted": 0.0,
       "hit": 1.0,
+      "em": 1.0,
+      "f1": 0.21782903237553158,
       "recall": 1.0,
       "recall_hop2": 1.0,
       "hit_hop2": 1.0
@@ -22,6 +31,8 @@
       "ggf": 1.0,
       "contradicted": 0.0,
       "hit": 0.9615384615384616,
+      "em": 0.9615384615384616,
+      "f1": 0.18962832973223728,
       "recall": 1.0,
       "recall_hop2": 1.0,
       "hit_hop2": 0.5
@@ -30,6 +41,8 @@
       "ggf": 1.0,
       "contradicted": 0.0,
       "hit": 0.9615384615384616,
+      "em": 0.9615384615384616,
+      "f1": 0.156398845680972,
       "recall": 1.0,
       "recall_hop2": 1.0,
       "hit_hop2": 0.5
@@ -38,14 +51,18 @@
       "ggf": 1.0,
       "contradicted": 0.0,
       "hit": 0.9615384615384616,
+      "em": 0.9615384615384616,
+      "f1": 0.18962832973223728,
       "recall": 1.0,
       "recall_hop2": 1.0,
       "hit_hop2": 0.5
     },
     "unfaithful": {
-      "ggf": 0.23076923076923078,
-      "contradicted": 0.7435897435897435,
+      "ggf": 0.2692307692307692,
+      "contradicted": 0.7051282051282051,
       "hit": 1.0,
+      "em": 0.19230769230769232,
+      "f1": 0.19206837063783677,
       "recall": 1.0,
       "recall_hop2": 1.0,
       "hit_hop2": 1.0
@@ -53,12 +70,16 @@
     "revised": {
       "ggf": 1.0,
       "contradicted": 0.0,
-      "hit": 1.0
+      "hit": 1.0,
+      "em": 1.0,
+      "f1": 0.21782903237553158
     },
     "revised_r2": {
       "ggf": 1.0,
       "contradicted": 0.0,
-      "hit": 1.0
+      "hit": 1.0,
+      "em": 1.0,
+      "f1": 0.21782903237553158
     }
   },
   "f1": {
@@ -82,10 +103,10 @@
     }
   },
   "f1_learned": {
-    "supported": 0.6666666666666666,
-    "contradicted": 0.4000000000000001,
+    "supported": 0.7142857142857143,
+    "contradicted": 0.5454545454545454,
     "unsupported": 0.6666666666666666,
-    "macro": 0.5777777777777778
+    "macro": 0.6421356421356421
   },
   "f1_phobert": null,
   "auroc_wrong": 1.0,

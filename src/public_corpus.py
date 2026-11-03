@@ -22,7 +22,8 @@ from src.graph import Chunk, Edge, Store, _tokens, bm25, evidence_pool
 from src.parse_legal import DIEU_RE, cited_circulars, parse_article
 from src.paths import DATA, EVAL_DIR
 from src.systems_extra import retrieve
-from src.verify import check_answer, distort, revise, verify_claim
+from src.text_norm import overlap_f1, phrase_em
+from src.verify import check_answer, distort, error_variants, revise, verify_claim
 
 RAW = DATA / "public" / "raw"
 OUT = DATA / "public"
@@ -425,19 +426,18 @@ def _verifier_probe(store: Store) -> dict:
     labels = ("supported", "contradicted", "unsupported")
     hit = {mode: {label: 0 for label in labels} for mode in ("triple", "chunk")}
     total = {label: 0 for label in labels}
+    by_kind: dict[str, dict[str, int]] = {}
     for chunk in usable:
-        claim = _span(chunk)
-        bad = distort(claim)
-        invented = claim.rstrip(".") + ". Sinh viên xuất sắc được thưởng 3 triệu đồng mỗi học kỳ."
-        cases = (("supported", claim), ("contradicted", bad), ("unsupported", invented))
         pool = store.of_dieu(chunk.doc_id, chunk.dieu) or [chunk]
-        for label, text in cases:
-            if label == "contradicted" and text == claim:
-                continue
+        for label, kind, text in error_variants(chunk.context):
             total[label] += 1
+            bucket = by_kind.setdefault(kind, {"n": 0, "triple": 0, "chunk": 0})
+            bucket["n"] += 1
             for mode in ("triple", "chunk"):
                 verdict = verify_claim(text, pool, mode=mode)
-                hit[mode][label] += int(verdict.label == label)
+                ok = int(verdict.label == label)
+                hit[mode][label] += ok
+                bucket[mode] += ok
     acc = {}
     for mode in ("triple", "chunk"):
         acc[mode] = {
@@ -446,7 +446,15 @@ def _verifier_probe(store: Store) -> dict:
         }
         scored = [hit[mode][label] / total[label] for label in labels if total[label]]
         acc[mode]["macro"] = round(sum(scored) / len(scored), 3) if scored else None
-    return {"n": total, "accuracy": acc}
+    kinds = {
+        kind: {
+            "n": bucket["n"],
+            "triple": round(bucket["triple"] / bucket["n"], 3) if bucket["n"] else None,
+            "chunk": round(bucket["chunk"] / bucket["n"], 3) if bucket["n"] else None,
+        }
+        for kind, bucket in sorted(by_kind.items())
+    }
+    return {"n": total, "accuracy": acc, "by_error": kinds}
 
 
 def _revise_probe(store: Store) -> dict:
@@ -456,6 +464,10 @@ def _revise_probe(store: Store) -> dict:
     after = []
     contra_before = []
     contra_after = []
+    em_before = []
+    em_after = []
+    f1_before = []
+    f1_after = []
     for chunk in chunks:
         original = _span(chunk, 360)
         poisoned = distort(original)
@@ -465,6 +477,11 @@ def _revise_probe(store: Store) -> dict:
         after.append(history[-1].ggf)
         contra_before.append(history[0].contradicted_rate)
         contra_after.append(history[-1].contradicted_rate)
+        em_before.append(phrase_em(history[0].answer, [original]))
+        em_after.append(phrase_em(history[-1].answer, [original]))
+        f1_before.append(overlap_f1(history[0].answer, original))
+        f1_after.append(overlap_f1(history[-1].answer, original))
+
     def mean(values: list[float]) -> float:
         return round(sum(values) / len(values), 3) if values else 0.0
 
@@ -474,6 +491,11 @@ def _revise_probe(store: Store) -> dict:
         "ggf_after": mean(after),
         "contradicted_before": mean(contra_before),
         "contradicted_after": mean(contra_after),
+        "em_before": mean(em_before),
+        "em_after": mean(em_after),
+        "f1_before": mean(f1_before),
+        "f1_after": mean(f1_after),
+        "note": "EM/F1 so với đoạn khoản gốc. Câu trước sửa là đoạn đã đổi số, không phải câu LLM viết.",
     }
 
 
@@ -532,16 +554,28 @@ def run_public() -> dict:
         bits = " ".join(f"{kind}={value}" for kind, value in scores.items())
         lines.append(f"  {system}: {bits}")
     acc = report["verifier_on_synthetic"]["accuracy"]
+    revise_row = report["verify_then_revise"]
     lines.extend(
         [
             "",
-            "Verifier trên claim sinh từ chính các khoản (không phải nhãn người):",
+            "Verifier trên claim sinh từ chính các khoản (span, đổi số, đổi hệ quả, bỏ phủ định, thưởng, thêm điều kiện):",
             f"  triple macro={acc['triple']['macro']} supported={acc['triple']['supported']} contradicted={acc['triple']['contradicted']} unsupported={acc['triple']['unsupported']}",
             f"  chunk  macro={acc['chunk']['macro']} supported={acc['chunk']['supported']} contradicted={acc['chunk']['contradicted']} unsupported={acc['chunk']['unsupported']}",
+            "Độ đúng theo loại lỗi (triple / chunk):",
+        ]
+    )
+    for kind, scores in report["verifier_on_synthetic"]["by_error"].items():
+        lines.append(
+            f"  {kind}: n={scores['n']} triple={scores['triple']} chunk={scores['chunk']}"
+        )
+    lines.extend(
+        [
             "",
             "Verify-then-revise trên câu cố ý sai số (thay claim lệch bằng đúng khoản, không gọi LLM):",
-            f"  n={report['verify_then_revise']['n']} GGF {report['verify_then_revise']['ggf_before']} -> {report['verify_then_revise']['ggf_after']}",
-            f"  contradicted {report['verify_then_revise']['contradicted_before']} -> {report['verify_then_revise']['contradicted_after']}",
+            f"  n={revise_row['n']} GGF {revise_row['ggf_before']} -> {revise_row['ggf_after']}",
+            f"  contradicted {revise_row['contradicted_before']} -> {revise_row['contradicted_after']}",
+            f"  EM cụm gốc {revise_row['em_before']} -> {revise_row['em_after']}",
+            f"  F1 token {revise_row['f1_before']} -> {revise_row['f1_after']}",
             "",
             "ViHERMES chưa nạp: dataset gated, cần token Hugging Face.",
         ]

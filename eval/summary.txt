@@ -12,9 +12,20 @@ graph              1.000 0.000 1.000 1.000 1.000 1.000
 lightrag           1.000 0.000 0.962 1.000 1.000 0.500
 hipporag           1.000 0.000 0.962 1.000 1.000 0.500
 kag_style          1.000 0.000 0.962 1.000 1.000 0.500
-unfaithful         0.231 0.744 1.000 1.000 1.000 1.000
+unfaithful         0.269 0.705 1.000 1.000 1.000 1.000
 revised            1.000 0.000 1.000
 revised_r2         1.000 0.000 1.000
+
+RQ3 — EM cụm đáp án và F1 token so với cụm vàng (câu trả lời vẫn là đoạn trích).
+EM = cụm vàng nằm nguyên trong câu sau chuẩn hoá. F1 token thấp vì câu là cả khoản, cụm vàng thì ngắn.
+
+Hệ                 EM cụm    F1 token
+graph              1.000 0.218
+unfaithful         0.192 0.192
+revised            1.000 0.218
+revised_r2         1.000 0.218
+
+Tách claim trên câu graph: atomicity 1.000 | coverage 1.000 | claim còn hai hệ quả 0
 
 Verifier trên claim người gán. triple = từng khoản + rule số/ngày + valid_from.
 chunk = gộp cả điều thành một đoạn. no_number = triple nhưng bỏ rule số/ngày.
@@ -40,7 +51,7 @@ cam           2 0.500 0.500 0.500 1.000
 diem          1 0.000 0.000 0.000 1.000
 
 Verifier học được (TF-IDF+LogReg CPU) trên claim người:
-  macro-F1 0.578  supported 0.667  contradicted 0.400  unsupported 0.667
+  macro-F1 0.642  supported 0.714  contradicted 0.545  unsupported 0.667
 
 RQ1 bổ sung — Spearman GGF người vs RAGAS-style / LLM-judge / GGF rule:
   ragas_faithfulness 0.750

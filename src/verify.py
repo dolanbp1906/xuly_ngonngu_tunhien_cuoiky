@@ -97,6 +97,7 @@ class Verdict:
     evidence_span: str
     coverage: float
     mode: str
+    triple_id: str = ""
 
 
 @dataclass
@@ -123,10 +124,61 @@ class CheckedAnswer:
         return sum(item.label == "unsupported" for item in self.claims) / len(self.claims)
 
 
+def _split_two_predicates(text: str) -> list[str]:
+    """Tách khi hai vế nối bởi 'và' / 'đồng thời' mang hai hệ quả khác nhau."""
+    lowered = text.lower()
+    for sep in (" và ", " đồng thời "):
+        start = 0
+        while True:
+            index = lowered.find(sep, start)
+            if index < 0:
+                break
+            left = text[:index].strip(" ,;")
+            right = text[index + len(sep):].strip(" ,;")
+            left_acts = _actions(left)
+            right_acts = _actions(right)
+            if (
+                left_acts
+                and right_acts
+                and left_acts != right_acts
+                and len(left) >= 8
+                and len(right) >= 8
+            ):
+                return _split_two_predicates(left) + _split_two_predicates(right)
+            start = index + len(sep)
+    cleaned = text.strip(" ;.")
+    return [cleaned] if len(cleaned) >= 8 else []
+
+
 def decompose(answer: str) -> list[str]:
     parts = [part.strip(" ;.") for part in _SPLIT.split(answer or "")]
-    claims = [part for part in parts if len(part) >= 8]
-    return claims or ([answer.strip()] if answer.strip() else [])
+    claims: list[str] = []
+    for part in parts:
+        if len(part) < 8:
+            continue
+        claims.extend(_split_two_predicates(part))
+    if claims:
+        return claims
+    cleaned = (answer or "").strip()
+    return [cleaned] if cleaned else []
+
+
+def audit_decomposition(answer: str) -> dict:
+    """Atomicity: claim không còn hai hệ quả. Coverage: token nội dung của câu còn trong các claim."""
+    claims = decompose(answer)
+    multi = sum(1 for claim in claims if len(_actions(claim)) >= 2)
+    answer_tokens = set(content_tokens(answer))
+    covered: set[str] = set()
+    for claim in claims:
+        covered.update(content_tokens(claim))
+    coverage = len(answer_tokens & covered) / len(answer_tokens) if answer_tokens else 1.0
+    atomicity = 1.0 - (multi / len(claims) if claims else 0.0)
+    return {
+        "n_claims": len(claims),
+        "multi_predicate": multi,
+        "atomicity": round(atomicity, 3),
+        "coverage": round(coverage, 3),
+    }
 
 
 def _occupied(spans: list[tuple[int, int]], start: int, end: int) -> bool:
@@ -246,9 +298,63 @@ def _relevant(span: str, claim: str, measures: list[Measure]) -> list[Measure]:
     return kept
 
 
+def _loose_numbers(text: str) -> list[tuple[str, float]]:
+    """Số không thuộc ngày, số điều/khoản, hay số hiệu thông tư."""
+    taken: list[tuple[int, int]] = [(match.start(), match.end()) for match in _DATE.finditer(text)]
+    found: list[tuple[str, float]] = []
+    for match in _BARE.finditer(text):
+        if _occupied(taken, match.start(), match.end()) or _skip_structural(text, match.start()):
+            continue
+        before = text[max(0, match.start() - 8):match.start()]
+        after = text[match.end():match.end() + 6]
+        if re.search(r"\d\s*/\s*$", before) or re.match(r"^\s*/\s*\d{4}", after):
+            continue
+        found.append((match.group(1), _num(match.group(1))))
+    return found
+
+
+def _missing_numbers(claim: str, span: str) -> list[str]:
+    span_values = [value for _, value in _loose_numbers(span)]
+    missing: list[str] = []
+    for raw, value in _loose_numbers(claim):
+        if any(abs(value - other) < 1e-6 for other in span_values):
+            continue
+        if raw not in missing:
+            missing.append(raw)
+    return missing
+
+
+def _negation_removed(span: str, claim: str) -> bool:
+    """Một cụm 'không được/không thực hiện' trong khoản bị bỏ, dù câu còn chữ 'không' chỗ khác."""
+    claim_n = normalize(claim)
+    span_l = span.lower()
+    for marker in ("không thực hiện", "không được"):
+        start = 0
+        while True:
+            index = span_l.find(marker, start)
+            if index < 0:
+                break
+            tail = normalize(span[index + len(marker):index + len(marker) + 48])
+            piece = " ".join(tail.split()[:6])
+            if len(piece) >= 12 and piece in claim_n:
+                pos = claim_n.find(piece)
+                prefix = claim_n[max(0, pos - 20):pos]
+                if "không" not in prefix:
+                    return True
+            start = index + len(marker)
+    return False
+
+
 def _invented_quantity(claim: str, span: str) -> bool:
     missing = set(content_tokens(claim)) - set(content_tokens(span))
-    return any(token in missing for token in ("thưởng", "triệu", "tiền", "đồng"))
+    if any(token in missing for token in ("thưởng", "triệu", "tiền", "đồng")):
+        return True
+    folded_claim = normalize(claim)
+    folded_span = normalize(span)
+    return any(
+        phrase in folded_claim and phrase not in folded_span
+        for phrase in ("việc làm", "quốc tế", "học bổng")
+    )
 
 
 def _date_linked(span: str, measure: Measure, chunk: Chunk) -> bool:
@@ -273,12 +379,31 @@ def _judge_span(
     span_acts = _actions(span)
     folded_claim = normalize(claim)
     folded_span = normalize(span)
-    if "không thực hiện" in folded_span and "không" not in folded_claim:
-        tail = folded_span.split("không thực hiện", 1)[-1]
-        if _coverage(claim, tail) >= 0.45:
+    if _negation_removed(span, claim) and cov >= 0.35:
+        return (
+            "contradicted",
+            "Một cụm phủ định trong khoản bị bỏ ở đúng vế đó của câu.",
+            cov,
+        )
+    for marker in ("không thực hiện", "không được"):
+        if marker in folded_span and "không" not in folded_claim:
+            tail = folded_span.split(marker, 1)[-1][:180]
+            if _coverage(claim, tail) >= 0.45:
+                return (
+                    "contradicted",
+                    f"Điều khoản phủ định ('{marker}') nhưng câu bỏ phủ định.",
+                    cov,
+                )
+    for source, target in (
+        ("tối đa", "tối thiểu"),
+        ("tối thiểu", "tối đa"),
+        ("không vượt quá", "được vượt quá"),
+        ("không vượt quá", "phải vượt quá"),
+    ):
+        if source in folded_span and target in folded_claim and source not in folded_claim:
             return (
                 "contradicted",
-                "Điều khoản cấm ('không thực hiện') nhưng câu nói theo hướng được phép.",
+                f"Câu đảo điều kiện '{source}' thành '{target}'.",
                 cov,
             )
     if not _actions_ok(claim_acts, span_acts) and cov >= 0.35:
@@ -325,6 +450,21 @@ def _judge_span(
                 f"Mốc '{measure.raw}' lệch với khoản đang đối chiếu (khoản ghi {shown}).",
                 cov,
             )
+    if use_numbers:
+        missing = _missing_numbers(claim, span)
+        if missing and cov >= 0.35:
+            shown = ", ".join(missing[:3])
+            if _loose_numbers(span):
+                return (
+                    "contradicted",
+                    f"Số {shown} không có trong khoản đang đối chiếu.",
+                    cov,
+                )
+            return (
+                "unsupported",
+                f"Câu đưa thêm số {shown} mà khoản không ghi.",
+                cov,
+            )
     if cov >= 0.42:
         return "supported", "Khớp nội dung và các mốc số/ngày với khoản đối chiếu.", cov
     return "unsupported", "Không đủ từ khóa của câu trong khoản đối chiếu.", cov
@@ -332,14 +472,16 @@ def _judge_span(
 
 def verify_claim(claim: str, chunks: list[Chunk], mode: str = "triple") -> Verdict:
     if not chunks:
-        return Verdict(claim, "unsupported", "Không có đoạn bằng chứng.", "", "", "", 0.0, mode)
+        return Verdict(claim, "unsupported", "Không có đoạn bằng chứng.", "", "", "", 0.0, mode, "")
     if mode == "chunk":
         blob = " ".join(chunk.context for chunk in chunks)
         host = chunks[0]
         label, reason, cov = _judge_span(claim, blob, host, use_numbers=True)
         # Chế độ chunk gộp cả điều thành một túi từ: hệ quả và mốc số chỉ cần xuất hiện đâu đó.
         label, reason = _loosen_bag(claim, blob, label, reason, cov)
-        return Verdict(claim, label, reason, "chunk:" + host.cid, host.cite(), blob[:500], cov, mode)
+        return Verdict(
+            claim, label, reason, "chunk:" + host.cid, host.cite(), blob[:500], cov, mode, host.triple_id
+        )
 
     ranked = sorted(
         chunks,
@@ -349,7 +491,7 @@ def verify_claim(claim: str, chunks: list[Chunk], mode: str = "triple") -> Verdi
     best = ranked[0]
     use_numbers = mode != "no_number"
     label, reason, cov = _judge_span(claim, best.context, best, use_numbers=use_numbers)
-    return Verdict(claim, label, reason, best.cid, best.cite(), best.context, cov, mode)
+    return Verdict(claim, label, reason, best.cid, best.cite(), best.context, cov, mode, best.triple_id)
 
 
 def _loosen_bag(claim: str, blob: str, label: str, reason: str, cov: float) -> tuple[str, str]:
@@ -374,6 +516,13 @@ def _loosen_bag(claim: str, blob: str, label: str, reason: str, cov: float) -> t
             return "contradicted", f"Mốc '{measure.raw}' không có trong cả điều (điều ghi {shown})."
         if not same_unit and cov >= 0.4:
             return "unsupported", f"Câu đưa thêm mốc '{measure.raw}' mà cả điều không ghi."
+    if _negation_removed(blob, claim):
+        return "contradicted", "Một cụm phủ định trong điều bị bỏ ở đúng vế đó của câu."
+    missing = _missing_numbers(claim, blob)
+    if missing and _loose_numbers(blob):
+        return "contradicted", f"Số {', '.join(missing[:3])} không có trong cả điều."
+    if missing and cov >= 0.4:
+        return "unsupported", f"Câu đưa thêm số {', '.join(missing[:3])} mà cả điều không ghi."
     if cov >= 0.42:
         return "supported", "Các mốc và hệ quả xuất hiện đâu đó trong điều đã gộp (không buộc cùng một khoản)."
     return label, reason
@@ -384,6 +533,90 @@ def check_answer(answer: str, chunks: list[Chunk], mode: str = "triple") -> Chec
     for claim in decompose(answer):
         checked.claims.append(verify_claim(claim, chunks, mode=mode))
     return checked
+
+
+def _replace_once(text: str, source: str, target: str) -> str | None:
+    index = text.lower().find(source)
+    if index < 0:
+        return None
+    if source == "còn hiệu lực" and text.lower()[max(0, index - 6):index].endswith("không "):
+        return None
+    return text[:index] + target + text[index + len(source):]
+
+
+def flip_consequence(text: str) -> str | None:
+    """Đổi hệ quả hoặc trạng thái hiệu lực, giữ nguyên phần còn lại của câu."""
+    for source, target in (
+        ("cảnh báo học tập", "buộc thôi học"),
+        ("buộc thôi học", "cảnh báo học tập"),
+        ("đình chỉ học tập", "cảnh báo học tập"),
+        ("hết hiệu lực", "còn hiệu lực"),
+        ("còn hiệu lực", "hết hiệu lực"),
+    ):
+        flipped = _replace_once(text, source, target)
+        if flipped and flipped != text:
+            return flipped
+    return None
+
+
+def flip_bound(text: str) -> str | None:
+    """Đảo trần/sàn hoặc bỏ chặn 'không vượt quá'."""
+    for source, target in (
+        ("không vượt quá", "được vượt quá"),
+        ("tối thiểu", "tối đa"),
+        ("tối đa", "tối thiểu"),
+    ):
+        flipped = _replace_once(text, source, target)
+        if flipped and flipped != text:
+            return flipped
+    return None
+
+
+def flip_polarity(text: str) -> str | None:
+    """Bỏ phủ định của điều cấm, hoặc đảo còn/hết hiệu lực nếu chưa bị flip_consequence xử lý."""
+    for source, target in (
+        ("không thực hiện", "được thực hiện"),
+        ("không được", "được"),
+    ):
+        flipped = _replace_once(text, source, target)
+        if flipped and flipped != text:
+            return flipped
+    return None
+
+
+def extra_condition(text: str) -> str:
+    return text.rstrip(".") + ", áp dụng thêm cho sinh viên quốc tế đã có việc làm toàn thời gian."
+
+
+def extra_reward(text: str) -> str:
+    return text.rstrip(".") + ". Sinh viên xuất sắc được thưởng 3 triệu đồng mỗi học kỳ."
+
+
+def error_variants(span: str) -> list[tuple[str, str, str]]:
+    """(nhãn, loại lỗi, claim) dựng từ một khoản. Nhãn theo cách dựng, không theo verifier."""
+    text = " ".join(span.split())
+    if len(text) < 40:
+        return []
+    rows: list[tuple[str, str, str]] = [("supported", "span", text)]
+    short = text[:120].rsplit(" ", 1)[0] if len(text) > 140 else ""
+    if short and len(short) >= 40 and short != text:
+        rows.append(("supported", "span_short", short.rstrip(",;:") + "…"))
+    changed = distort(text)
+    if changed != text and "thưởng" not in changed:
+        kind = "date" if "2099" in changed else "number"
+        rows.append(("contradicted", kind, changed))
+    consequence = flip_consequence(text)
+    if consequence:
+        rows.append(("contradicted", "consequence", consequence))
+    polarity = flip_polarity(text)
+    if polarity:
+        rows.append(("contradicted", "polarity", polarity))
+    bound = flip_bound(text)
+    if bound:
+        rows.append(("contradicted", "bound", bound))
+    rows.append(("unsupported", "reward", extra_reward(text)))
+    rows.append(("unsupported", "extra_condition", extra_condition(text)))
+    return rows
 
 
 def distort(answer: str) -> str:

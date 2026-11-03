@@ -36,6 +36,12 @@ class Chunk:
     refers: list[tuple[int, int]] = field(default_factory=list)
     tokens: list[str] = field(default_factory=list)
 
+    @property
+    def triple_id(self) -> str:
+        khoan = self.khoan if self.khoan is not None else 0
+        diem = self.diem or "-"
+        return f"dieu-{self.dieu}-khoan-{khoan}-diem-{diem}"
+
     def cite(self) -> str:
         if self.domain == "vihermes":
             return self.title
