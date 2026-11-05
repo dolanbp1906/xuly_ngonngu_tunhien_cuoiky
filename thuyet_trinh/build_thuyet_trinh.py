@@ -230,7 +230,7 @@ def slide_01(prs):
     items = [
         ("01", TEAL, MINT, "Vì sao một câu xuôi vẫn sai", "Đổi số, đổi hệ quả, bịa thêm."),
         ("02", SKY, SKY_BG, "Cách chấm trên đồ thị điều–khoản", "Ba nhãn và thước GGF."),
-        ("03", GRAPE, GRAPE_BG, "Số đã chạy trên CPU", "Truy hồi, verifier, vòng sửa."),
+        ("03", GRAPE, GRAPE_BG, "Số đã chạy trên CPU", "Truy hồi, kiểm tra từng ý, sửa câu."),
         ("04", CORAL, PEACH, "Demo ba câu quy chế", "Đúng, nói ngược, rồi sửa."),
     ]
     y = 0.95
@@ -293,7 +293,7 @@ def slide_02(prs):
                 "Người đọc không thấy mệnh đề nào được khoản kéo theo, mệnh đề nào nói ngược, mệnh đề nào bịa.",
                 16, INK, leading=1.05, after=4,
             ),
-            P("Lỗi đổi hệ quả nguy hiểm hơn lỗi thiếu chi tiết, nên contradicted đứng riêng, không gộp với unsupported.", 14, MUTED, leading=1.02),
+            P("Lỗi đổi hệ quả nguy hiểm hơn lỗi thiếu chi tiết, nên nói ngược nguồn đứng riêng, không gộp với thêm ngoài nguồn.", 14, MUTED, leading=1.02),
         ],
         ml=0.28, mr=0.24, mt=0.16, mb=0.1,
     )
@@ -327,9 +327,9 @@ def slide_03(prs):
         ("RQ1", TEAL, MINT, "Thước tự động khớp người tới đâu?",
          "Thước có xét số và hệ quả bám nhãn người hơn thước đếm từ. Tập người còn quá nhỏ để kết luận tương quan ổn định."),
         ("RQ2", SKY, SKY_BG, "Từng khoản và rule số có hơn gộp cả điều?",
-         "Có, trên 14 mệnh đề đã biết: macro-F1 1,000, bỏ rule số còn 0,436. Trên toàn văn, lớp contradicted chỉ đúng khoảng 0,15."),
+         "Có, trên 14 mệnh đề đã biết: macro-F1 1,000, bỏ rule số còn 0,436. Trên toàn văn, lớp nói ngược nguồn chỉ đúng khoảng 0,15."),
         ("RQ3", CORAL, PEACH, "Vòng sửa có giảm câu nói ngược?",
-         "Có, khi thay mảnh lệch bằng đúng khoản: contradicted về 0. Chưa phải mô hình sinh viết lại, chưa đo F1 câu viết."),
+         "Có: thay phần sai bằng trích đúng khoản thì hết ý nói ngược. Chưa nhờ AI viết lại câu, chưa đo F1 câu viết."),
     ]
     y = 1.22
     for code, accent, bg, q, a in rows:
@@ -353,8 +353,8 @@ def slide_03(prs):
             "nhưng tập người còn quá nhỏ. "
             "RQ2 hỏi đối chiếu từng khoản, kèm rule số, có đúng hơn gộp cả điều hay không. "
             "Trên 14 mệnh đề đã biết thì có. Trên toàn văn, lớp nói ngược chỉ đúng khoảng 0,15. "
-            "RQ3 hỏi vòng sửa có giảm contradicted hay không. Có, khi thay lại đúng khoản. "
-            "Vòng này chưa phải mô hình viết lại câu. "
+            "RQ3 hỏi bước sửa có làm hết ý nói ngược nguồn hay không. Có, khi thay phần sai bằng trích đúng khoản. "
+            "Máy chỉ dán lại khoản theo luật, chưa nhờ AI viết lại cả câu. "
             "Các slide sau là bằng chứng cho ba câu vừa rồi, không phải kết quả bất ngờ."
         ),
         "point": "Dòng 0,15 ở RQ2.",
@@ -368,7 +368,7 @@ def slide_04(prs):
     header(s, "Đóng góp", "Bốn thứ đã chạy được trong mã")
     items = [
         ("01", TEAL, MINT, "Đồ thị và bộ câu", "Ba thông tư công khai, đồ thị điều–khoản, và ViEduReg trên Thông tư 56/2026."),
-        ("02", SKY, SKY_BG, "GGF và ba nhãn", "Supported, contradicted, unsupported, kèm guideline gán nhãn."),
+        ("02", SKY, SKY_BG, "GGF và ba nhãn", "Khớp nguồn, nói ngược nguồn, thêm ngoài nguồn, kèm guideline gán nhãn."),
         ("03", GRAPE, GRAPE_BG, "Năm cổng, một chỉ mục", "Cùng BM25, để so cách đi trên đồ thị khi phần tìm từ giống nhau."),
         ("04", CORAL, PEACH, "Chỗ thước chưa đứng", "Điểm gần tuyệt đối trên 14 mệnh đề không giữ được khi dựng mệnh đề từ toàn văn."),
     ]
@@ -410,7 +410,7 @@ def slide_05(prs):
         ("4", "Tách mệnh đề", SKY),
         ("5", "Ba nhãn", GRAPE),
         ("6", "Điểm GGF", CORAL),
-        ("7", "Sửa ≤ 2 vòng", CORAL),
+        ("7", "Sửa tối đa 2 lần", CORAL),
     ]
     x = 0.42
     for i, (num, label, color) in enumerate(steps):
@@ -423,8 +423,8 @@ def slide_05(prs):
         x += 1.84
     notes_cards = [
         (MINT, "Câu trả lời là đoạn trích", "Không gọi mô hình viết lại. Đo việc chọn đúng khoản và bắt số bị đổi."),
-        (SKY_BG, "Rule số không bị phủ quyết", "Lệch số hoặc lệch hệ quả thì bộ học được không được gán supported."),
-        (PEACH, "Sửa là thay đúng khoản", "Mệnh đề lệch được thay bằng đoạn đang đối chiếu. Tối đa hai vòng."),
+        (SKY_BG, "Rule số không bị phủ quyết", "Lệch số hoặc lệch hệ quả thì bộ học được không được gán khớp nguồn."),
+        (PEACH, "Sửa là dán lại khoản", "Ý sai được thay bằng đoạn trích khoản đúng. Tối đa hai lần."),
     ]
     x = 0.48
     for bg, title, body in notes_cards:
@@ -446,8 +446,8 @@ def slide_05(prs):
             "Em cố ý làm vậy để đo hai việc: có chọn đúng khoản không, và có bắt số bị đổi không. "
             "Đoạn trích được cắt thành mệnh đề, mỗi mệnh đề nhận một trong ba nhãn. "
             "GGF là tỉ lệ mệnh đề được nguồn kéo theo. "
-            "Mệnh đề lệch được sửa tối đa hai vòng bằng cách thay lại đúng khoản. "
-            "Nếu lệch số hoặc lệch hệ quả, bộ học được không được phủ quyết thành supported. "
+            "Ý sai được sửa tối đa hai lần bằng cách dán lại trích khoản đúng. "
+            "Nếu lệch số hoặc lệch hệ quả, bộ học được không được phủ quyết thành khớp nguồn. "
             "Máy chạy Python trên CPU. File Cypher để nạp Neo4j đã có, buổi này không cần mở Neo4j."
         ),
         "point": "Ba thẻ dưới: đoạn trích, rule không bị phủ quyết, sửa là thay khoản.",
@@ -476,9 +476,9 @@ def slide_06(prs):
         [P("Toàn văn: 545 đơn vị · 125 dẫn chiếu · 2 thay thế.\n23/2021 hết hiệu lực 30.06.2026. 56/2026 có hiệu lực 07.07.2026.", 13, MUTED, leading=1.05)],
     )
     labels = [
-        (TEAL_DEEP, MINT, "Supported", "Khoản kéo theo mệnh đề. Số, ngày và điều kiện khớp nguồn."),
-        (CORAL_DEEP, PEACH, "Contradicted", "Nguồn nói ngược. Khác số, khác ngày, hoặc đổi hệ quả. 24 tín chỉ mà nói buộc thôi học vẫn là contradicted."),
-        (AMBER_INK, SUN, "Unsupported", "Thêm điều không có trong khoản, và nguồn cũng không nói ngược."),
+        (TEAL_DEEP, MINT, "Khớp nguồn", "Khoản kéo theo mệnh đề. Số, ngày và điều kiện khớp nguồn."),
+        (CORAL_DEEP, PEACH, "Nói ngược nguồn", "Khác số, khác ngày, hoặc đổi hệ quả. 24 tín chỉ mà nói buộc thôi học vẫn là nói ngược nguồn."),
+        (AMBER_INK, SUN, "Thêm ngoài nguồn", "Thêm điều không có trong khoản, và nguồn cũng không nói ngược."),
     ]
     y = 1.2
     for accent, bg, name, body in labels:
@@ -490,8 +490,8 @@ def slide_06(prs):
     fill_tf(
         formula,
         [
-            P("GGF  =  số mệnh đề supported  /  tổng số mệnh đề", 20, WHITE, True, "center", after=2),
-            P("Tỉ lệ contradicted báo cáo riêng. Không gộp vào một chữ “sai” chung với unsupported.", 13, "E7FFF9", align="center"),
+            P("GGF  =  số mệnh đề khớp nguồn  /  tổng số mệnh đề", 20, WHITE, True, "center", after=2),
+            P("Tỉ lệ nói ngược nguồn báo cáo riêng. Không gộp vào một chữ “sai” chung với thêm ngoài nguồn.", 13, "E7FFF9", align="center"),
         ],
         anchor="middle", ml=0.2, mr=0.2, mt=0.08, mb=0.06,
     )
@@ -511,13 +511,13 @@ def slide_06(prs):
             "Thông tư 23 hết hiệu lực từ 30 tháng 6 năm 2026. Thông tư 56 có hiệu lực 7 tháng 7 năm 2026, "
             "cho khóa tuyển từ năm 2026. Khóa đã có thông báo tuyển sinh trước ngày đó vẫn theo quy chế cũ. "
             "Ba nhãn dùng chung cho người và cho rule. "
-            "Supported là khoản kéo theo mệnh đề. "
-            "Contradicted là nguồn nói ngược. Câu vượt quá 24 thì buộc thôi học vẫn là contradicted, "
+            "Khớp nguồn là khoản kéo theo mệnh đề. "
+            "Nói ngược nguồn là mệnh đề trái với khoản đang đối chiếu. Câu vượt quá 24 thì buộc thôi học vẫn là nói ngược nguồn, "
             "dù số 24 đúng, vì khoản đang đối chiếu chỉ nói cảnh báo. "
-            "Unsupported là thêm điều không có trong nguồn. "
-            "GGF bằng số mệnh đề supported chia cho tổng số mệnh đề. Contradicted em báo cáo riêng."
+            "Thêm ngoài nguồn là thêm điều không có trong nguồn. "
+            "GGF bằng số mệnh đề khớp nguồn chia cho tổng số mệnh đề. Nói ngược nguồn em báo cáo riêng."
         ),
-        "point": "Công thức ở dải xanh, rồi ví dụ 24 tín chỉ trên thẻ contradicted.",
+        "point": "Công thức ở dải xanh, rồi ví dụ 24 tín chỉ trên thẻ nói ngược nguồn.",
         "bridge": "Năm cổng truy hồi cùng đọc đồ thị này, nhưng không phải mã gốc của các bài em dẫn.",
     }
 
@@ -579,7 +579,7 @@ def slide_08(prs):
         x += 4.16
     rrect(s, 0.48, 4.55, 12.38, 2.3, WHITE, 0.1)
     tb(s, 0.74, 4.72, 8, 0.4, [P("127 mệnh đề không trùng, một lượt đối chiếu", 16, INK, True)])
-    chips = [("72", "supported", TEAL_DEEP, MINT), ("26", "contradicted", CORAL_DEEP, PEACH), ("29", "unsupported", AMBER_INK, SUN)]
+    chips = [("72", "khớp nguồn", TEAL_DEEP, MINT), ("26", "nói ngược", CORAL_DEEP, PEACH), ("29", "thêm ngoài nguồn", AMBER_INK, SUN)]
     x = 0.74
     for num, name, accent, bg in chips:
         rrect(s, x, 5.25, 2.5, 1.25, bg, 0.12)
@@ -603,14 +603,14 @@ def slide_08(prs):
             "Tầng rộng là 545 đơn vị trên ba thông tư, thu ngày 30 tháng 10. "
             "Thông tư 08 lấy từ PDF Công báo. Thông tư 56 là toàn văn công khai, không phải file Công báo gốc. "
             "Tầng câu hỏi là 150 câu ViEduReg đã đối chiếu nguồn. "
-            "Từ đầu ra các hệ, em gom 127 mệnh đề không trùng. Một lượt đối chiếu cho 72 supported, 26 contradicted, 29 unsupported. "
+            "Từ đầu ra các hệ, em gom 127 mệnh đề không trùng. Một lượt đối chiếu cho 72 khớp nguồn, 26 nói ngược nguồn, 29 thêm ngoài nguồn. "
             "Chưa có người thứ hai, nên chưa có kappa. Các số macro-F1 ở sau không tính trên 127 mệnh đề này. "
             "Tầng test người là 14 mệnh đề trên đồ thị trích của Thông tư 08. "
             "Tập này đủ để kiểm lỗi đã viết trong guideline, và quá nhỏ để ước lượng tương quan. "
-            "Huấn luyện verifier chủ yếu là mệnh đề tổng hợp, 2.688 train và 298 dev. Tập người không trộn vào huấn luyện."
+            "Huấn luyện bộ kiểm tra chủ yếu là mệnh đề tổng hợp, 2.688 train và 298 dev. Tập người không trộn vào huấn luyện."
         ),
         "point": "Ba số lớn 545, 150, 14, rồi dòng chưa có kappa.",
-        "bridge": "Slide truy hồi dùng 150 câu. Slide verifier dùng 14 mệnh đề và mệnh đề dựng từ toàn văn.",
+        "bridge": "Slide truy hồi dùng 150 câu. Slide kiểm tra từng ý dùng 14 mệnh đề và mệnh đề dựng từ toàn văn.",
     }
 
 
@@ -705,7 +705,7 @@ def slide_10(prs):
         card,
         [
             P("0,15", 48, WHITE, True, "center", after=0),
-            P("độ đúng lớp contradicted\ntrên mệnh đề dựng từ toàn văn", 13, "FFF6F4", align="center", leading=1.02),
+            P("độ đúng lớp nói ngược nguồn\ntrên mệnh đề dựng từ toàn văn", 13, "FFF6F4", align="center", leading=1.02),
         ],
         anchor="middle", ml=0.16, mr=0.14, mt=0.08, mb=0.08,
     )
@@ -721,7 +721,7 @@ def slide_10(prs):
         [P(
             "Điểm 1,000 là kiểm tra trên lỗi guideline đã viết rule để bắt. "
             "Một mệnh đề chỉ đúng khi nhìn từng khoản: nợ 24 tín chỉ thì buộc thôi học. "
-            "Gộp cả điều thì số và hệ quả cùng nằm trong túi từ, nên bị gán supported.",
+            "Gộp cả điều thì số và hệ quả cùng nằm trong túi từ, nên bị gán khớp nguồn.",
             13, INK, leading=1.05,
         )],
         ml=0.18, mr=0.16, mt=0.12, mb=0.08,
@@ -733,22 +733,22 @@ def slide_10(prs):
         "title": "Điểm 1,000 không sống được trên toàn văn",
         "seconds": 80,
         "cut": "ngắn",
-        "goal": "Macro-F1 1,000 là cận trên. Contradicted toàn văn 0,15 là kết quả chính. PhoBERT không vượt TF-IDF.",
+        "goal": "Macro-F1 1,000 là cận trên. Nói ngược trên toàn văn 0,15 là kết quả chính. PhoBERT không vượt TF-IDF.",
         "say": (
             "Đây là slide em muốn thầy cô nhìn kỹ. "
             "Trên 14 mệnh đề người, rule từng khoản đạt macro-F1 bằng 1. Gộp cả điều còn 0,941. Bỏ rule số thì còn 0,436. "
             "Có một mệnh đề chỉ đúng khi nhìn từng khoản: nợ vượt quá 24 thì bị buộc thôi học. "
             "Số 24 nằm ở điểm cảnh báo. Chữ buộc thôi học nằm ở khoản khác cùng điều. "
-            "Gộp cả điều thì cả số lẫn hệ quả đều có trong túi từ, nên bị gán supported. "
+            "Gộp cả điều thì cả số lẫn hệ quả đều có trong túi từ, nên bị gán khớp nguồn. "
             "Điểm 1,000 là cận trên trên các lỗi đã viết trong guideline. "
-            "Khi dựng mệnh đề từ khoảng 80 khoản của toàn văn, supported và unsupported vẫn gần đúng, "
-            "nhưng contradicted chỉ đúng 0,15. Nhiều số bị đổi không nằm trong đơn vị rule biết so. "
-            "Độ phủ từ còn cao nên rule gán supported. "
+            "Khi dựng mệnh đề từ khoảng 80 khoản của toàn văn, khớp nguồn và thêm ngoài nguồn vẫn gần đúng, "
+            "nhưng nói ngược nguồn chỉ đúng 0,15. Nhiều số bị đổi không nằm trong đơn vị rule biết so. "
+            "Độ phủ từ còn cao nên rule gán khớp nguồn. "
             "TF-IDF đạt 0,578 trên 14 mệnh đề người. PhoBERT-base, một epoch, đạt 0,925 trên dev tổng hợp "
-            "nhưng chỉ 0,419 trên người, thấp hơn TF-IDF. F1 contradicted của PhoBERT là 0,222."
+            "nhưng chỉ 0,419 trên người, thấp hơn TF-IDF. F1 nói ngược nguồn của PhoBERT là 0,222."
         ),
         "point": "Số 0,15 trên thẻ đỏ, rồi mũi tên 0,925 sang 0,419.",
-        "bridge": "RQ2 là vậy. Em gộp RQ1 và vòng sửa ở slide kế, vì cả hai cần đọc cùng hạn chế của tập nhỏ.",
+        "bridge": "RQ2 là vậy. Em gộp RQ1 và bước sửa câu ở slide kế, vì cả hai cần đọc cùng hạn chế của tập nhỏ.",
     }
 
 
@@ -770,10 +770,10 @@ def slide_11(prs):
         tb(s, 0.75, y + 0.36, 5.45, 0.3, [P(note, 12, MUTED)])
         y += 0.86
     rrect(s, 6.85, 1.2, 6.0, 4.55, WHITE, 0.1)
-    tb(s, 7.08, 1.38, 5.55, 0.4, [P("RQ3  ·  vòng sửa tất định", 16, CORAL_DEEP, True)])
+    tb(s, 7.08, 1.38, 5.55, 0.4, [P("RQ3  ·  sửa theo luật (dán khoản)", 16, CORAL_DEEP, True)])
     blocks = [
-        (PEACH, "13 câu cố ý đổi mốc", "GGF  0,231  →  1", "Contradicted  0,744  →  0"),
-        (SUN, "20 câu đổi số, toàn văn", "GGF  0,45  →  1", "Contradicted  0,36  →  0"),
+        (PEACH, "13 câu cố ý đổi mốc", "GGF  0,231  →  1", "Nói ngược  0,744  →  0"),
+        (SUN, "20 câu đổi số, toàn văn", "GGF  0,45  →  1", "Nói ngược  0,36  →  0"),
     ]
     y = 1.95
     for bg, title, a, b in blocks:
@@ -782,11 +782,11 @@ def slide_11(prs):
         tb(s, 7.25, y + 0.42, 5.2, 0.4, [P(a, 18, INK, True)])
         tb(s, 7.25, y + 0.9, 5.2, 0.38, [P(b, 14, CORAL_DEEP, True)])
         y += 1.58
-    tb(s, 7.08, 5.15, 5.55, 0.45, [P("Cơ chế: thay mảnh lệch bằng đúng khoản. Không gọi mô hình viết lại.", 13, MUTED)])
+    tb(s, 7.08, 5.15, 5.55, 0.45, [P("Cách làm: thay phần sai bằng trích khoản. Không nhờ AI viết lại câu.", 13, MUTED)])
     foot = rrect(s, 0.48, 5.9, 12.38, 1.0, MINT, 0.1)
     fill_tf(
         foot,
-        [P("Chưa kết luận tương quan ổn định. Vòng sửa chứng minh: khi verifier chỉ đúng khoản, thay lại đoạn thì contradicted hết. Chưa đo F1 của câu do mô hình viết.", 15, TEAL_DEEP, leading=1.05)],
+        [P("Tập người còn nhỏ, chưa kết luận tương quan chắc chắn. Bước sửa cho thấy: biết đúng khoản thì dán lại trích khoản là hết ý nói ngược. Chưa đo chất lượng câu do AI viết lại.", 15, TEAL_DEEP, leading=1.05)],
         anchor="middle", ml=0.24, mr=0.2, mt=0.08, mb=0.06,
     )
     footer(s, 11)
@@ -803,14 +803,14 @@ def slide_11(prs):
             "RAGAS-style trong bài là 0,75. Giám khảo trong bài là 0,76, và giám khảo đó chính là GGF của rule, không phải mô hình lớn. "
             "Em không gọi RAGAS gốc. Với vài nhóm, em chưa kết luận tương quan ổn định. "
             "Điều hữu ích là thước có xét số bám người hơn thước đếm từ. "
-            "Bên phải là RQ3. Trên 13 câu cố ý đổi mốc, GGF từ 0,231 lên 1, contradicted từ 0,744 về 0. "
+            "Bên phải là RQ3. Trên 13 câu cố ý đổi mốc, GGF từ 0,231 lên 1, nói ngược nguồn từ 0,744 về 0. "
             "Trên 20 câu đổi số của toàn văn, GGF từ 0,45 lên 1. "
-            "Cơ chế là thay mảnh lệch bằng đoạn khoản đang đối chiếu. "
-            "Vòng này chứng minh khi verifier chỉ đúng khoản thì sửa tất định xóa được contradicted. "
-            "Chưa chứng minh một mô hình sinh viết lại câu cho đúng."
+            "Cách làm là thay phần sai bằng đoạn trích khoản đang đối chiếu. "
+            "Bước này chứng minh: khi đã biết khoản đúng, sửa theo luật cố định thì hết mệnh đề nói ngược nguồn. "
+            "Chưa chứng minh AI viết lại cả câu cho đúng."
         ),
         "point": "Cột phải, hai mũi tên về 1. Rồi dải xanh dưới: chưa kết luận tương quan.",
-        "bridge": "Em mở demo ba nhịp cho đúng ba ý vừa nói: câu đúng, câu nói ngược, và vòng sửa.",
+        "bridge": "Em mở demo ba nhịp cho đúng ba ý vừa nói: câu đúng, câu nói ngược, và sửa bằng dán khoản.",
     }
 
 
@@ -819,9 +819,9 @@ def slide_12(prs):
     header(s, "Demo", "Ba nhịp trên trang local")
     cards = [
         (TEAL, MINT, "1", "Câu đúng", "Hỏi nợ bao nhiêu tín chỉ thì bị cảnh báo.",
-         "Điều 11 khoản 1 điểm a. Có cụm vượt quá 24. Nhãn supported. GGF bằng 1."),
+         "Điều 11 khoản 1 điểm a. Có cụm vượt quá 24. Nhãn khớp nguồn. GGF bằng 1."),
         (CORAL, PEACH, "2", "Nói ngược", "Đưa câu: vượt quá 24 thì bị buộc thôi học.",
-         "Nhãn contradicted. Gộp cả điều có thể thành supported, vì hai ý đứng cạnh nhau."),
+         "Nhãn nói ngược nguồn. Gộp cả điều có thể thành khớp nguồn, vì hai ý đứng cạnh nhau."),
         (AMBER, SUN, "3", "Sửa số", "Đổi thời gian tối đa thành 03 lần.",
          "Khoản ghi 02 lần. Sau một vòng, câu về 02 và GGF về 1."),
     ]
@@ -853,10 +853,10 @@ def slide_12(prs):
         "goal": "Không đọc slide. Làm trên web. Slide này là phao nếu quên câu.",
         "say": (
             "Em chuyển sang trang local, cổng 8766. Slide này chỉ là phao. "
-            "Nhịp một, hỏi nợ bao nhiêu tín chỉ thì bị cảnh báo. Kỳ vọng trích Điều 11, có vượt quá 24, nhãn supported, GGF bằng 1. "
-            "Nhịp hai, đưa câu vượt quá 24 thì bị buộc thôi học. Kỳ vọng contradicted. "
-            "Nếu gộp cả điều, nhãn có thể thành supported. Đó là lý do phải chấm từng khoản. "
-            "Nhịp ba, câu thời gian tối đa bị đổi thành 03 lần, trong khi khoản ghi 02. Sau một vòng sửa, GGF về 1. "
+            "Nhịp một, hỏi nợ bao nhiêu tín chỉ thì bị cảnh báo. Kỳ vọng trích Điều 11, có vượt quá 24, nhãn khớp nguồn, GGF bằng 1. "
+            "Nhịp hai, đưa câu vượt quá 24 thì bị buộc thôi học. Kỳ vọng nói ngược nguồn. "
+            "Nếu gộp cả điều, nhãn có thể thành khớp nguồn. Đó là lý do phải chấm từng khoản. "
+            "Nhịp ba, câu thời gian tối đa bị đổi thành 03 lần, trong khi khoản ghi 02. Sau một lần sửa, GGF về 1. "
             "Nếu trình duyệt không mở, em chạy python run.py demo, cùng ba ý này."
         ),
         "point": "Làm trên trình duyệt, liếc slide khi cần câu mẫu.",
@@ -873,7 +873,7 @@ def slide_13(prs):
         ("ViHERMES chưa vào bảng", "Có trong demo. Bộ trên Hugging Face cần tài khoản."),
         ("Không phải mã gốc", "Năm cổng là thuật toán trên cùng BM25, không phải Docker của bài được dẫn."),
         ("56/2026 không phải Công báo", "Toàn văn công khai. Thuộc tính cổng Chính phủ xác nhận số hiệu và ngày."),
-        ("Sửa chưa có mô hình sinh", "Chưa đo F1 của câu do mô hình viết sau khi sửa."),
+        ("Sửa chưa dùng AI viết câu", "Chưa đo F1 của câu do AI viết lại sau khi sửa."),
     ]
     positions = []
     for r in range(2):
@@ -900,7 +900,7 @@ def slide_13(prs):
             "Năm hệ là cổng trên cùng BM25, không phải mã gốc. "
             "Thông tư 56 không phải file Công báo. "
             "Câu hỏi toàn văn phần lớn sinh từ chính đoạn vàng, nên Recall không đo câu người dùng hỏi tự do. "
-            "Vòng sửa chưa có mô hình sinh."
+            "Bước sửa chưa nhờ AI viết lại câu."
         ),
         "point": "Thẻ chưa có kappa và thẻ 14 mệnh đề.",
         "bridge": "Trong giới hạn vừa nói, em giữ lại ba điều.",
@@ -913,7 +913,7 @@ def slide_14(prs):
     cards = [
         (TEAL, "0,27", "Đưa vào câu", "Pool cao nhất 0,633.\nCâu trả lời chỉ khoảng\n0,20 đến 0,27."),
         (CORAL, "0,15", "Nói ngược, toàn văn", "Rule đạt 1,000 trên 14 mệnh đề.\nBỏ rule số còn 0,436.\nToàn văn chỉ đúng khoảng 0,15."),
-        (SKY, "→ 1", "Sửa khi chỉ đúng khoản", "Contradicted về 0\nkhi thay lại đúng đoạn.\nChưa phải câu mô hình viết."),
+        (SKY, "→ 1", "Sửa khi biết đúng khoản", "Hết ý nói ngược\nkhi dán lại trích khoản.\nChưa phải câu AI viết."),
     ]
     x = 0.48
     for accent, big, title, body in cards:
@@ -928,7 +928,7 @@ def slide_14(prs):
         foot,
         [
             P("Việc còn lại, trước khi kết luận độ khớp với người", 14, "D7FFF6", align="center", after=2),
-            P("Người chấm thứ hai  ·  miền y tế trong bảng  ·  vòng sửa có mô hình sinh", 16, WHITE, True, "center"),
+            P("Người chấm thứ hai  ·  miền y tế trong bảng  ·  sửa có AI viết lại câu", 16, WHITE, True, "center"),
         ],
         anchor="middle", ml=0.2, mr=0.2, mt=0.1, mb=0.08,
     )
@@ -944,9 +944,9 @@ def slide_14(prs):
             "Em giữ lại ba điều. "
             "Một, tìm được khoản trong pool chưa có nghĩa khoản đã vào câu. Pool cao nhất 0,633, câu trả lời chỉ khoảng 0,20 đến 0,27. "
             "Hai, rule số và hệ quả rất mạnh trên lỗi đã khai báo, macro-F1 bằng 1, và còn 0,436 nếu bỏ rule số. "
-            "Trên mệnh đề dựng từ toàn văn, cùng rule chỉ đúng khoảng 0,15 mệnh đề contradicted. PhoBERT tinh chỉnh ngắn không vượt TF-IDF. "
-            "Ba, vòng sửa tất định đưa contradicted về 0 khi đã chỉ đúng khoản. Đây là thay đoạn, chưa phải mô hình viết lại. "
-            "Trước khi kết luận độ khớp với người, cần người chấm thứ hai, đưa miền y tế vào bảng, và một vòng sửa có mô hình sinh."
+            "Trên mệnh đề dựng từ toàn văn, cùng rule chỉ đúng khoảng 0,15 mệnh đề nói ngược nguồn. PhoBERT tinh chỉnh ngắn không vượt TF-IDF. "
+            "Ba, sửa theo luật — dán lại trích khoản — làm hết ý nói ngược khi đã biết khoản đúng. Đây không phải AI viết lại cả câu. "
+            "Trước khi kết luận độ khớp với người, cần người chấm thứ hai, đưa miền y tế vào bảng, và thử sửa có AI viết lại câu."
         ),
         "point": "Ba số 0,27 · 0,15 · mũi tên về 1, rồi dải xanh việc còn lại.",
         "bridge": "Em dừng ở đây và mời câu hỏi. Demo vẫn mở nếu thầy cô muốn xem một câu.",
@@ -968,7 +968,7 @@ def slide_15(prs):
     chips = [
         ("0,633 và 0,27", "pool và câu trả lời"),
         ("1,000 → 0,436", "bỏ rule số"),
-        ("0,15", "contradicted toàn văn"),
+        ("0,15", "nói ngược nguồn toàn văn"),
     ]
     x = 1.15
     for big, small in chips:
@@ -989,7 +989,7 @@ def slide_15(prs):
             "Nếu thầy cô muốn xem một số cụ thể, em ưu tiên ba chỗ: "
             "Recall pool 0,633 so với câu trả lời khoảng 0,27, "
             "macro-F1 từ 1,000 xuống 0,436 khi bỏ rule số, "
-            "và độ đúng 0,15 của lớp contradicted trên toàn văn."
+            "và độ đúng 0,15 của lớp nói ngược nguồn trên toàn văn."
         ),
         "point": "Ba thẻ số ở dưới.",
         "bridge": "",
@@ -1113,7 +1113,7 @@ def set_doc_defaults(doc):
     header.is_linked_to_previous = False
     hp = header.paragraphs[0]
     hp.paragraph_format.space_after = DPt(2)
-    drun(hp, "Kịch bản thuyết trình  ·  ViKAG-Faith  ·  Xử lý ngôn ngữ tự nhiên", 10, False, "5C6B7A")
+    drun(hp, "Kịch bản thuyết trình  ·  ViKAG-Faith  ·  phần trên: chỉ đọc khung ▶ ĐỌC KHI NÓI", 10, False, "5C6B7A")
     footer = section.footer
     footer.is_linked_to_previous = False
     fp = footer.paragraphs[0]
@@ -1163,6 +1163,8 @@ def add_timing_table(doc, sections):
 
 
 def build_docx(sections):
+    from build_tu_dien_giai_thich import append_glossary_appendix
+
     doc = Document()
     set_doc_defaults(doc)
     dpara(doc, "KỊCH BẢN THUYẾT TRÌNH", 12, True, "0E9A86", space_after=2)
@@ -1174,40 +1176,56 @@ def build_docx(sections):
     )
     dpara(
         doc,
-        "Môn Xử lý ngôn ngữ tự nhiên  ·  30 tháng 10 năm 2026  ·  đi kèm file ViKAG-Faith_bao_cao.pptx.",
+        "Môn Xử lý ngôn ngữ tự nhiên  ·  30 tháng 10 năm 2026  ·  đi kèm ViKAG-Faith_bao_cao.pptx.",
         12, False, "1C2430", space_after=10,
     )
 
     callout(
-        doc, "Cách dùng.",
-        "Mỗi mục là một slide. Đọc mục Lời thoại, không đọc chữ trên slide. "
-        "Mục Chỉ vào là chỗ tay hoặc con trỏ nên dừng. Ghi chú của PowerPoint cũng chứa lời thoại này.",
+        doc, "Chỉ đọc khi nói.",
+        "PHẦN I: chỉ đọc khung ▶ ĐỌC KHI NÓI (và ▶ NÓI ở demo). "
+        "Dòng “không đọc”, bảng thời gian, PHỤ LỤC từ điển và câu hỏi ở cuối file — không đọc thành tiếng.",
         "E7F7F3",
     )
     callout(
-        doc, "Trước buổi nói.",
-        "Mở sẵn terminal trong thư mục project và chạy python run.py web. "
-        "Mở trình duyệt http://127.0.0.1:8766. Nếu cổng bận, tắt cửa sổ cũ rồi chạy lại. "
-        "Phương án dự phòng khi không có trình duyệt: python run.py demo. "
-        "Slide không in họ tên. Nếu cần, thêm tên vào câu chào đầu.",
+        doc, "Trước buổi nói (không đọc).",
+        "python run.py web → http://127.0.0.1:8766. Dự phòng: python run.py demo.",
         "FFF6E4", "8A5A00",
     )
 
     total = sum(s["seconds"] for s in sections)
     short = sum(s["seconds"] for s in sections if s["cut"] == "ngắn")
-    dpara(doc, "Hai nhịp thời gian", 16, True, "0B6E62", space_before=8, space_after=4)
+    dpara(doc, "PHẦN I  ·  TRÌNH BÀY", 18, True, "0B6E62", space_before=10, space_after=6)
+    dpara(doc, "Mạch buổi nói", 14, True, "1C2430", space_after=4)
+    mach = (
+        "Chào, khóa ý chấm từng mệnh đề (01). Ba kiểu sai quy chế (02). Ba RQ, trả lời ngắn (03). "
+        "Bốn đóng góp trong mã (04). Luồng bảy bước, trích khoản (05). Ba nhãn và GGF (06). "
+        "Tuỳ chọn: năm cổng BM25 (07). Ba tầng dữ liệu (08). Truy hồi pool vs câu (09). "
+        "Verifier, 1,000 vs 0,15 (10). RQ1 và sửa theo luật (11). Demo (12). Hạn chế (13). "
+        "Kết luận ba điều (14). Cảm ơn (15)."
+    )
+    dpara(doc, mach, 12, space_after=6)
     dpara(
         doc,
-        f"Nói hết 15 slide: khoảng {total // 60} phút {total % 60} giây, chưa kể demo. "
-        f"Nhịp 12 phút chỉ nói các slide đánh dấu Có trong bảng: khoảng {short // 60} phút {short % 60} giây, "
-        "rồi demo nhịp 2 khoảng 1 phút. Slide Nếu còn giờ bỏ qua, không tóm tắt từng slide bỏ.",
-        12, space_after=8,
+        f"Nhịp gọn ~12 phút + demo: bỏ slide cột “Nếu còn giờ” trong bảng. "
+        f"Đủ 15 slide ≈ {total // 60} phút {total % 60} giây (chưa demo). "
+        f"Gọn ≈ {short // 60} phút {short % 60} giây + demo 2–3 phút.",
+        11, False, "5C6B7A", space_after=6,
     )
+    dpara(doc, "Bảng thời gian (không đọc)", 11, True, "5C6B7A", space_after=4)
     add_timing_table(doc, sections)
 
-    dpara(doc, "Lời thoại theo slide", 16, True, "0B6E62", space_before=12, space_after=6)
+    cut_hint = {
+        "ngắn": "NHỊP GỌN — NÓI",
+        "đủ giờ": "NÓI NẾU CÒN GIỜ",
+        "demo": "DEMO",
+    }
+
+    dpara(doc, "Lời thoại từng slide", 14, True, "1C2430", space_before=10, space_after=6)
 
     for sec in sections:
+        if sec["cut"] == "demo":
+            continue
+        label = cut_hint.get(sec["cut"], "NÓI")
         table = doc.add_table(rows=1, cols=1)
         no_table_borders(table)
         cell = table.cell(0, 0)
@@ -1215,75 +1233,86 @@ def build_docx(sections):
         set_cell_margins(cell, 80, 80, 140, 140)
         p = cell.paragraphs[0]
         p.paragraph_format.space_after = DPt(0)
-        drun(p, f"SLIDE {sec['n']:02d}   ·   {sec['seconds']} GIÂY   ·   {sec['kicker'].upper()}", 11, True, "8EE0D2")
+        drun(p, f"SLIDE {sec['n']:02d}   ·   {sec['seconds']}s   ·   {label}", 11, True, "8EE0D2")
         p2 = cell.add_paragraph()
         p2.paragraph_format.space_before = DPt(2)
-        p2.paragraph_format.space_after = DPt(0)
         drun(p2, sec["title"], 16, True, "FFFFFF")
         doc.add_paragraph().paragraph_format.space_after = DPt(2)
-        dpara(doc, "Mục tiêu  ·  " + sec["goal"], 12, False, "5C6B7A", space_after=6)
-        callout(doc, "Lời thoại.", sec["say"], "E7F7F3")
+        dpara(doc, f"Nhớ (không đọc): {sec['goal']}", 10, False, "5C6B7A", italic=True, space_after=4)
+        callout(doc, "▶ ĐỌC KHI NÓI:", sec["say"], "E7F7F3", "0B6E62")
         if sec.get("point"):
-            dpara(doc, "Chỉ vào  ·  " + sec["point"], 12, False, "1C2430", space_after=4)
+            dpara(doc, f"Tay / mắt (không đọc): {sec['point']}", 11, False, "5C6B7A", space_after=2)
         if sec.get("bridge"):
-            dpara(doc, "Câu chuyển  ·  " + sec["bridge"], 12, italic=True, color="5C6B7A", space_after=4)
-        if sec.get("if_asked"):
-            callout(doc, "Nếu bị hỏi ngay.", sec["if_asked"], "FFF6E4", "8A5A00")
-        dpara(doc, "", 6, space_after=2)
+            dpara(doc, f"Sang slide sau (không đọc): {sec['bridge']}", 11, False, "5C6B7A", italic=True, space_after=6)
+        else:
+            dpara(doc, "", 6, space_after=4)
 
-    dpara(doc, "Demo trực tiếp, khoảng 2–3 phút", 16, True, "0B6E62", space_before=8, space_after=6)
-    dpara(
-        doc,
-        "Không chứng minh lại việc cài đặt. Trang đã mở. Mỗi nhịp: bấm hoặc dán câu, đợi kết quả, nói một câu, rồi chuyển.",
-        12, space_after=6,
-    )
+    dpara(doc, "Demo trực tiếp (2–3 phút)", 14, True, "E24B3C", space_before=12, space_after=4)
+    dpara(doc, "Không đọc slide 12. Chỉ đọc khung ▶ NÓI từng nhịp.", 11, False, "5C6B7A", space_after=6)
     demo_steps = [
-        ("Nhịp 1 · câu đúng · khoảng 40 giây",
+        ("Nhịp 1 · câu đúng · ~40 giây",
          "Chế độ Hỏi, kho trích Thông tư 08. Bấm câu mẫu nợ tín chỉ.",
-         "Kỳ vọng: GGF 100%, nhãn nguồn kéo theo, trích Điều 11 khoản 1 điểm a, trong câu có vượt quá 24.",
-         "Nói: khoản này kéo theo câu. GGF là tỉ lệ mệnh đề như vậy. Câu này một mệnh đề, mệnh đề khớp khoản, nên GGF bằng 1."),
-        ("Nhịp 2 · nói ngược · khoảng 50 giây",
-         "Chuyển chế độ Kiểm một câu nói. Bấm câu mẫu vượt quá 24 thì buộc thôi học.",
-         "Kỳ vọng: nhãn nói ngược nguồn. Có dòng cho biết nếu gộp cả điều thì nhãn thành nguồn kéo theo.",
-         "Nói: 24 tín chỉ là mức cảnh báo, nằm ở khoản 1. Buộc thôi học nằm ở khoản khác. Chấm từng khoản thì thấy lệch. Gộp cả điều thì hai ý đứng cạnh nhau, dễ gán nhầm là đúng."),
-        ("Nhịp 3 · sửa số · khoảng 40 giây",
-         "Vẫn ở Kiểm một câu nói. Dán: Thời gian tối đa để sinh viên hoàn thành khóa học không vượt quá 03 lần thời gian theo kế hoạch học tập chuẩn.",
-         "Kỳ vọng: nói ngược nguồn, vì khoản ghi 02 lần. Sau một vòng sửa, câu về 02 lần và GGF về 1.",
-         "Nói: hệ cố ý đổi 02 thành 03 để đo thước. Verifier bắt lệch. Vòng sửa thay lại đúng khoản. Đây là verify-then-revise, không phải mô hình viết lại."),
+         "GGF 100%, khớp nguồn, trích Điều 11 k1a, có vượt quá 24.",
+         "Khoản này kéo theo câu. GGF là tỉ lệ mệnh đề khớp nguồn. Một mệnh đề khớp nên GGF bằng 1."),
+        ("Nhịp 2 · nói ngược · ~50 giây",
+         "Kiểm một câu nói. Câu mẫu: vượt quá 24 thì buộc thôi học.",
+         "Nhãn nói ngược nguồn; gộp cả điều có thể thành khớp nguồn.",
+         "24 là cảnh báo ở khoản 1; buộc thôi học ở khoản khác. Chấm từng khoản mới thấy lệch."),
+        ("Nhịp 3 · sửa số · ~40 giây",
+         "Kiểm một câu nói. Dán câu đổi 03 lần thay 02 lần (thời gian tối đa khóa học).",
+         "Nói ngược; sau một lần sửa về 02 lần, GGF về 1.",
+         "Em đổi 02 thành 03 để thử thước. Máy dán trích khoản — sửa theo luật, không AI viết lại câu."),
     ]
     for title, do, expect, say in demo_steps:
         dpara(doc, title, 13, True, "1C2430", space_before=6, space_after=3)
-        dpara(doc, "Làm  ·  " + do, 12, space_after=2)
-        dpara(doc, "Kỳ vọng  ·  " + expect, 12, space_after=2)
-        callout(doc, "Nói.", say, "FFECEA", "E24B3C")
+        dpara(doc, "Làm (không đọc)  ·  " + do, 11, False, "5C6B7A", space_after=2)
+        dpara(doc, "Màn hình (không đọc)  ·  " + expect, 11, False, "5C6B7A", space_after=2)
+        callout(doc, "▶ NÓI:", say, "FFECEA", "E24B3C")
 
     dpara(
         doc,
-        "Nếu còn hơn một phút: chế độ Hỏi, câu nghỉ học tạm thời. Graph lấy cả Điều 15 và Điều 2 khoản 5, có cụm không vượt quá 02 lần. Naive thường dừng ở một khoản. Nói: câu hai bước là chỗ cạnh dẫn chiếu có việc để làm, khớp với Recall viện dẫn trên slide truy hồi.",
-        12, space_after=8,
+        "Tuỳ chọn (không đọc slide): Hỏi — câu nghỉ học tạm thời; Graph Điều 15 + Điều 2 k5. "
+        "▶ NÓI một câu: câu hai bước cần cạnh dẫn chiếu, khớp slide truy hồi.",
+        11,
+        space_after=6,
     )
-    callout(
-        doc, "Khi trình duyệt không mở.",
-        "Chạy python run.py demo. Đọc theo đúng ba nhịp trên. Không gõ thêm. Các số GGF 1,00 và nhãn contradicted nằm trong đầu ra terminal.",
-        "FFF6E4", "8A5A00",
-    )
+    callout(doc, "Trình duyệt lỗi (không đọc).", "python run.py demo.", "FFF6E4", "8A5A00")
 
-    dpara(doc, "Câu hỏi có thể gặp", 16, True, "0B6E62", space_before=10, space_after=6)
+    slide_asked = [(s["n"], s["if_asked"]) for s in sections if s.get("if_asked")]
+
+    doc.add_page_break()
+    append_glossary_appendix(doc, dpara, callout)
+
+    doc.add_page_break()
+    dpara(doc, "PHỤ LỤC B", 12, True, "0E9A86", space_after=2)
+    dpara(doc, "Câu hỏi có thể gặp", 20, True, "1C2430", space_after=4)
+    dpara(
+        doc,
+        "Không đọc khi trình bày. Dùng lúc hỏi đáp.",
+        12,
+        False,
+        "5C6B7A",
+        space_after=8,
+    )
+    if slide_asked:
+        dpara(doc, "Gợi ý theo slide", 14, True, "0B6E62", space_after=4)
+        for n, text in slide_asked:
+            dpara(doc, f"Slide {n:02d}  ·  {text}", 11, space_after=4)
     qa = [
         ("Vì sao không dùng mô hình sinh câu trả lời?",
          "Máy buổi này không có GPU. Câu trả lời cố ý là đoạn trích, để đo hai việc tách bạch: có chọn đúng khoản không, và rule có bắt số bị đổi không. Viết lại bằng mô hình là việc còn lại, khi đó mới đo F1 của câu sau sửa."),
         ("HippoRAG 0,633 có phải hơn bài HippoRAG 2 không?",
          "Không so được. Cổng trong bài lan một lớp cạnh trên cùng chỉ mục BM25, không chạy OpenIE và không chạy mã gốc. 0,633 là Recall pool trên 150 câu ViEduReg, không phải F1 của bài được dẫn."),
         ("Macro-F1 bằng 1 có đáng tin không?",
-         "Chỉ trên 14 mệnh đề người, đúng các lỗi guideline đã viết rule để bắt. Bỏ rule số thì còn 0,436. Trên mệnh đề dựng từ toàn văn, độ đúng lớp contradicted khoảng 0,15. Em coi 1,000 là kiểm tra rule, không phải kết quả trên câu hỏi tự do."),
+         "Chỉ trên 14 mệnh đề người, đúng các lỗi guideline đã viết rule để bắt. Bỏ rule số thì còn 0,436. Trên mệnh đề dựng từ toàn văn, độ đúng lớp nói ngược nguồn khoảng 0,15. Em coi 1,000 là kiểm tra rule, không phải kết quả trên câu hỏi tự do."),
         ("Vì sao PhoBERT thấp hơn TF-IDF?",
-         "PhoBERT-base tinh chỉnh một epoch, tối đa 800 mẫu tổng hợp. Dev tổng hợp đạt 0,925, nhưng 14 mệnh đề người chỉ 0,419, F1 contradicted 0,222. Mệnh đề tổng hợp là đoạn cắt hoặc đổi số cục bộ. Mệnh đề người còn có lỗi trộn hệ quả. Vài trăm cặp chưa thay được rule."),
+         "PhoBERT-base tinh chỉnh một epoch, tối đa 800 mẫu tổng hợp. Dev tổng hợp đạt 0,925, nhưng 14 mệnh đề người chỉ 0,419, F1 nói ngược nguồn 0,222. Mệnh đề tổng hợp là đoạn cắt hoặc đổi số cục bộ. Mệnh đề người còn có lỗi trộn hệ quả. Vài trăm cặp chưa thay được rule."),
         ("GGF tăng sau sửa có nghĩa là câu được viết lại hay hơn không?",
-         "Không. Vòng sửa thay mảnh lệch bằng đoạn khoản đang đối chiếu, và bỏ mảnh unsupported. Đoạn thay vào trùng nguồn nên rule gán supported. Em chưa có F1 của câu do mô hình viết."),
+         "Không. Bước sửa thay phần sai bằng trích khoản đang đối chiếu, và bỏ ý không có nguồn. Đoạn dán vào trùng khoản nên được gán đúng nguồn. Em chưa đo F1 của câu do AI viết lại."),
         ("RAGAS 0,75 và giám khảo 0,76 là mô hình lớn chấm à?",
-         "Không. RAGAS-style trong bài là tỉ lệ mệnh đề được chế độ gộp điều gán supported. Giám khảo trong lần chạy này trùng GGF của rule, hệ số 0,763. Em không gọi RAGAS gốc và không gọi mô hình lớn. Thước đếm từ thuần gần như không tương quan, khoảng âm 0,05."),
+         "Không. RAGAS-style trong bài là tỉ lệ mệnh đề được chế độ gộp điều gán khớp nguồn. Giám khảo trong lần chạy này trùng GGF của rule, hệ số 0,763. Em không gọi RAGAS gốc và không gọi mô hình lớn. Thước đếm từ thuần gần như không tương quan, khoảng âm 0,05."),
         ("Đã có Cohen kappa chưa?",
-         "Chưa. 150 câu chờ giảng viên duyệt kép. 127 mệnh đề là một lượt đối chiếu khoản, 72 supported, 26 contradicted, 29 unsupported. 14 mệnh đề test cũng chưa có người thứ hai. Chưa có kappa thì chưa kết luận độ khớp với người nói chung."),
+         "Chưa. 150 câu chờ giảng viên duyệt kép. 127 mệnh đề là một lượt đối chiếu khoản, 72 khớp nguồn, 26 nói ngược nguồn, 29 thêm ngoài nguồn. 14 mệnh đề test cũng chưa có người thứ hai. Chưa có kappa thì chưa kết luận độ khớp với người nói chung."),
         ("ViHERMES nằm ở đâu trong kết quả?",
          "Demo có kho ViHERMES. Bảng Recall và macro-F1 trong buổi nói lấy trên quy chế đào tạo. Bộ ViHERMES trên Hugging Face cần tài khoản, nên chưa đưa vào bảng. Số F1 trong các bài gốc là mốc tài liệu, không phải baseline của lần chạy này."),
         ("Thông tư 56/2026 đã đối chiếu Công báo chưa?",
@@ -1295,8 +1324,7 @@ def build_docx(sections):
         dpara(doc, f"{i}. {q}", 13, True, "1C2430", space_before=6, space_after=3)
         dpara(doc, a, 12, space_after=4)
 
-    dpara(doc, "Thẻ số, một trang", 16, True, "0B6E62", space_before=12, space_after=6)
-    dpara(doc, "Chỉ đọc khi bị hỏi một ô. Không đọc cả thẻ trong phần nói.", 12, False, "5C6B7A", space_after=6)
+    dpara(doc, "PHỤ LỤC C  ·  Thẻ số (không đọc khi nói)", 16, True, "0B6E62", space_before=12, space_after=6)
     facts = [
         ("Đồ thị toàn văn", "545 khoản/điểm, 125 REFERS_TO, 2 REPLACES. 08/2021, 23/2021, 56/2026."),
         ("ViEduReg", "213 khoản/điểm trên 56/2026. Pool sinh 305 câu. Còn 150 câu đã đối chiếu: 90 một khoản, 60 nhiều khoản."),
@@ -1305,11 +1333,11 @@ def build_docx(sections):
         ("Recall@5, 63 câu", "HippoRAG 0,563. Naive 0,421. Graph 0,333. LightRAG-style 0,317. KAG-style 0,405."),
         ("Viện dẫn", "HippoRAG 0,625 so với Naive 0,458. Trích khoản: HippoRAG 0,500, Naive 0,361, Graph 0,250."),
         ("14 mệnh đề", "Triple macro-F1 1,000. Chunk 0,941. Bỏ số 0,436. TF-IDF 0,578. PhoBERT 0,419. AUROC triple trên tập này 1,000."),
-        ("PhoBERT", "Dev tổng hợp macro-F1 0,925. Test người 0,419. F1 contradicted trên người 0,222."),
-        ("Toàn văn, claim dựng", "Triple: supported 1,00, contradicted 0,15, unsupported 1,00, trung bình 0,717."),
+        ("PhoBERT", "Dev tổng hợp macro-F1 0,925. Test người 0,419. F1 nói ngược nguồn trên người 0,222."),
+        ("Toàn văn, claim dựng", "Triple: khớp nguồn 1,00, nói ngược nguồn 0,15, thêm ngoài nguồn 1,00, trung bình 0,717."),
         ("Tương quan", "GGF rule Spearman 1,000. Phủ từ −0,052. RAGAS-style 0,750. Giám khảo = GGF rule 0,763. Không phải RAGAS gốc, không phải mô hình lớn."),
-        ("Vòng sửa", "13 câu: GGF 0,231 → 1, contradicted 0,744 → 0. 20 câu toàn văn: GGF 0,45 → 1, contradicted 0,36 → 0."),
-        ("127 mệnh đề", "72 supported, 26 contradicted, 29 unsupported. Một lượt. Chưa kappa. Không dùng làm macro-F1 headline."),
+        ("Sửa theo luật (dán khoản)", "13 câu: GGF 0,231 → 1, ý nói ngược 0,744 → 0. 20 câu toàn văn: GGF 0,45 → 1, ý nói ngược 0,36 → 0."),
+        ("127 mệnh đề", "72 khớp nguồn, 26 nói ngược nguồn, 29 thêm ngoài nguồn. Một lượt. Chưa kappa. Không dùng làm macro-F1 headline."),
         ("Tách huấn luyện", "Train 2.688, dev 298, test 14. Test trùng 14 mệnh đề người. Tập người không trộn vào train."),
         ("Demo", "python run.py web rồi mở http://127.0.0.1:8766. Dự phòng: python run.py demo."),
     ]
@@ -1401,6 +1429,9 @@ def main():
     sections = build_pptx()
     assert len(sections) == TOTAL
     build_docx(sections)
+    from build_tu_dien_giai_thich import build_glossary_docx
+
+    glossary_path = build_glossary_docx()
     warnings = audit(PPTX_PATH)
     if warnings:
         print(f"AUDIT {len(warnings)}")
@@ -1412,6 +1443,7 @@ def main():
     short = sum(s["seconds"] for s in sections if s["cut"] == "ngắn")
     print(f"pptx {PPTX_PATH}")
     print(f"docx {DOCX_PATH}")
+    print(f"glossary {glossary_path}")
     print(f"slides {len(sections)}  talk {talk}s  short {short}s")
 
 
