@@ -61,7 +61,8 @@ Trang http://127.0.0.1:8766 đã mở. Làm lần lượt:
    Nói: khoản này kéo theo câu, GGF là tỷ lệ mệnh đề như vậy.
 
 2. Mở menu Chế độ, chọn Kiểm một câu nói. Menu Truy xuất biến mất, vì bước này chấm câu bạn dán.
-   Bấm câu mẫu "vượt quá 24 thì ... buộc thôi học".
+   Bấm chip đầu tiên (câu đủ: «Tổng số tín chỉ nợ đọng… vượt quá 24 … buộc thôi học»).
+   Không dùng chế độ Hỏi với câu ngắn «vượt quá 24 …» — sẽ trả lời đúng quy chế, GGF 100%.
    Kỳ vọng: nhãn Nói ngược nguồn, và một dòng vàng:
    nếu gộp cả điều thì nhãn thành Nguồn kéo theo.
    Nói: 24 tín chỉ là mức cảnh báo, nằm ở khoản 1.

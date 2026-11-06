@@ -50,6 +50,18 @@ W = 13.333333
 H = 7.5
 TOTAL = 15
 
+# Đồng bộ với data/demo/test_cases.json và demo.docx
+DEMO_ASK_Q = (
+    "Sinh viên bị cảnh báo học tập khi tổng số tín chỉ nợ đọng từ đầu khóa vượt quá bao nhiêu?"
+)
+DEMO_CHECK_24 = (
+    "Tổng số tín chỉ nợ đọng từ đầu khóa học vượt quá 24 thì sinh viên bị buộc thôi học."
+)
+DEMO_CHECK_03 = (
+    "Thời gian tối đa để sinh viên hoàn thành khóa học không vượt quá 03 lần "
+    "thời gian theo kế hoạch học tập chuẩn."
+)
+
 
 def rgb(h: str) -> PptRGB:
     return PptRGB.from_string(h)
@@ -231,7 +243,7 @@ def slide_01(prs):
         ("01", TEAL, MINT, "Vì sao một câu xuôi vẫn sai", "Đổi số, đổi hệ quả, bịa thêm."),
         ("02", SKY, SKY_BG, "Cách chấm trên đồ thị điều–khoản", "Ba nhãn và thước GGF."),
         ("03", GRAPE, GRAPE_BG, "Số đã chạy trên CPU", "Truy hồi, kiểm tra từng ý, sửa câu."),
-        ("04", CORAL, PEACH, "Demo ba câu quy chế", "Đúng, nói ngược, rồi sửa."),
+        ("04", CORAL, PEACH, "Demo 3 nhịp trên web", "Đúng · Kiểm nói ngược · sửa số. Tuỳ chọn: demo.docx."),
     ]
     y = 0.95
     for num, accent, bg, title, sub in items:
@@ -244,7 +256,7 @@ def slide_01(prs):
         y += 1.36
     tb(
         s, 7.05, 6.5, 5.8, 0.45,
-        [P("Khoảng 12 phút nói  ·  rồi demo trực tiếp", 13, MUTED)],
+        [P("~12 phút slide  ·  3 nhịp demo (~3 phút)  ·  nguyên văn: demo.docx", 12, MUTED)],
     )
     return {
         "n": 1,
@@ -259,7 +271,8 @@ def slide_01(prs):
             "Điểm khác là em không chấm cả câu bằng một số. Em chấm từng mệnh đề: "
             "mệnh đề nào được khoản kéo theo, mệnh đề nào nói ngược khoản, "
             "và mệnh đề nào thêm thông tin không có trong nguồn. "
-            "Phần sau em đi từ ví dụ, cách làm, rồi các số đã chạy trên máy CPU."
+            "Phần sau em đi từ ví dụ, cách làm, rồi các số đã chạy trên máy CPU. "
+            "Cuối buổi em demo ba nhịp trên web; nếu còn giờ, thêm ViHERMES và so naive với graph theo file demo.docx."
         ),
         "point": "Câu trên tấm nền xanh: Không chấm cả câu. Chấm từng mệnh đề.",
         "bridge": "Em bắt đầu bằng một ví dụ sinh viên gặp thật.",
@@ -816,50 +829,86 @@ def slide_11(prs):
 
 def slide_12(prs):
     s = blank(prs)
-    header(s, "Demo", "Ba nhịp trên trang local")
+    header(s, "Demo", "Ba nhịp bắt buộc trên web")
     cards = [
-        (TEAL, MINT, "1", "Câu đúng", "Hỏi nợ bao nhiêu tín chỉ thì bị cảnh báo.",
-         "Điều 11 khoản 1 điểm a. Có cụm vượt quá 24. Nhãn khớp nguồn. GGF bằng 1."),
-        (CORAL, PEACH, "2", "Nói ngược", "Đưa câu: vượt quá 24 thì bị buộc thôi học.",
-         "Nhãn nói ngược nguồn. Gộp cả điều có thể thành khớp nguồn, vì hai ý đứng cạnh nhau."),
-        (AMBER, SUN, "3", "Sửa số", "Đổi thời gian tối đa thành 03 lần.",
-         "Khoản ghi 02 lần. Sau một vòng, câu về 02 và GGF về 1."),
+        (
+            TEAL,
+            MINT,
+            "1",
+            "Câu đúng",
+            "Chế độ Hỏi · Graph · chip nợ tín chỉ.",
+            "Điều 11 k1a, «vượt quá 24». Khớp nguồn, GGF = 1.",
+        ),
+        (
+            CORAL,
+            PEACH,
+            "2",
+            "Nói ngược",
+            "Chế độ Kiểm một câu nói — không Hỏi. Chip đầu tiên.",
+            "Câu đủ dài → nói ngược nguồn. Gộp cả điều dễ thành khớp nguồn.",
+        ),
+        (
+            AMBER,
+            SUN,
+            "3",
+            "Sửa số",
+            "Kiểm một câu nói · dán câu 03 lần.",
+            "Khoản ghi 02. Nói ngược → sửa → GGF về 1.",
+        ),
     ]
     x = 0.48
     for accent, bg, num, title, a, b in cards:
-        rrect(s, x, 1.22, 4.0, 4.35, bg, 0.1)
+        rrect(s, x, 1.22, 4.0, 3.75, bg, 0.1)
         oval(s, x + 0.24, 1.44, 0.55, 0.55, accent)
         tb(s, x + 0.24, 1.54, 0.55, 0.38, [P(num, 16, WHITE, True, "center")], anchor="middle")
         tb(s, x + 0.95, 1.5, 2.8, 0.48, [P(title, 20, INK, True)])
         tb(s, x + 0.24, 2.25, 3.52, 1.15, [P(a, 15, INK, leading=1.05)])
-        tb(s, x + 0.24, 3.5, 3.52, 1.75, [P(b, 14, MUTED, leading=1.05)])
+        tb(s, x + 0.24, 3.15, 3.52, 1.55, [P(b, 14, MUTED, leading=1.05)])
         x += 4.16
-    bar_ = rrect(s, 0.48, 5.75, 12.38, 1.15, INK, 0.1)
+    note = rrect(s, 0.48, 5.08, 12.38, 0.82, SUN, 0.08)
+    fill_tf(
+        note,
+        [
+            P("Tuỳ chọn sau 3 nhịp (ViHERMES, naive vs Graph): mở demo.docx ở thư mục gốc repo.", 12, AMBER_INK, leading=1.02),
+            P("Nguyên văn copy/dán: data/demo/test_cases.json", 11, MUTED, leading=1.02),
+        ],
+        ml=0.22,
+        mr=0.2,
+        mt=0.1,
+        mb=0.08,
+    )
+    bar_ = rrect(s, 0.48, 5.96, 12.38, 0.48, INK, 0.1)
     fill_tf(
         bar_,
         [
-            P("python run.py web", 18, WHITE, True, "center", after=1),
-            P("http://127.0.0.1:8766     ·     nếu không mở được trình duyệt: python run.py demo", 13, "F6E7DF", align="center"),
+            P("python3 run.py web  →  127.0.0.1:8766  ·  dự phòng: run.py demo", 13, WHITE, True, "center"),
         ],
-        anchor="middle", ml=0.2, mr=0.2, mt=0.08, mb=0.06,
+        anchor="middle",
+        ml=0.2,
+        mr=0.2,
+        mt=0.06,
+        mb=0.06,
     )
     footer(s, 12)
     return {
         "n": 12,
         "kicker": "Demo",
-        "title": "Ba nhịp trên trang local",
+        "title": "Ba nhịp bắt buộc trên web",
         "seconds": 30,
         "cut": "demo",
-        "goal": "Không đọc slide. Làm trên web. Slide này là phao nếu quên câu.",
+        "goal": "Không đọc slide. Ba nhịp bắt buộc; nhịp 2 phải Kiểm + câu đủ dài. Chi tiết: demo.docx.",
         "say": (
-            "Em chuyển sang trang local, cổng 8766. Slide này chỉ là phao. "
-            "Nhịp một, hỏi nợ bao nhiêu tín chỉ thì bị cảnh báo. Kỳ vọng trích Điều 11, có vượt quá 24, nhãn khớp nguồn, GGF bằng 1. "
-            "Nhịp hai, đưa câu vượt quá 24 thì bị buộc thôi học. Kỳ vọng nói ngược nguồn. "
-            "Nếu gộp cả điều, nhãn có thể thành khớp nguồn. Đó là lý do phải chấm từng khoản. "
-            "Nhịp ba, câu thời gian tối đa bị đổi thành 03 lần, trong khi khoản ghi 02. Sau một lần sửa, GGF về 1. "
-            "Nếu trình duyệt không mở, em chạy python run.py demo, cùng ba ý này."
+            "Em chuyển sang trang local, cổng 8766. Slide và file demo.docx là phao — em làm trên web. "
+            "Nhịp một: chế độ Hỏi, truy xuất Graph, bấm chip câu nợ tín chỉ. "
+            "Kỳ vọng trích Điều 11, có vượt quá 24, khớp nguồn, GGF bằng 1. "
+            "Nhịp hai: chuyển sang Kiểm một câu nói — không để chế độ Hỏi, vì Hỏi sẽ trả lời đúng quy chế và GGF vẫn bằng 1. "
+            "Bấm chip đầu tiên, hoặc dán nguyên câu: tổng số tín chỉ nợ đọng vượt quá 24 thì sinh viên bị buộc thôi học. "
+            "Kỳ vọng nói ngược nguồn. Gộp cả điều có thể thành khớp nguồn — đó là lý do chấm từng khoản. "
+            "Nhịp ba: vẫn Kiểm, dán câu thời gian tối đa không vượt quá 03 lần; khoản ghi 02. Nói ngược, rồi sửa, GGF về 1. "
+            "Nếu còn giờ, em làm thêm ViHERMES và so naive với graph theo demo.docx. "
+            "Nếu trình duyệt lỗi: python3 run.py demo."
         ),
-        "point": "Làm trên trình duyệt, liếc slide khi cần câu mẫu.",
+        "point": "Nhịp 2: menu Chế độ → Kiểm một câu nói, chip đầu tiên.",
         "bridge": "Sau demo, em nói chỗ chưa được kết luận, rồi mới kết.",
     }
 
@@ -1188,7 +1237,8 @@ def build_docx(sections):
     )
     callout(
         doc, "Trước buổi nói (không đọc).",
-        "python run.py web → http://127.0.0.1:8766. Dự phòng: python run.py demo.",
+        "python3 run.py web → http://127.0.0.1:8766. Mở demo.docx cạnh trình duyệt (nguyên văn + lời thoại). "
+        "Dự phòng: python3 run.py demo.",
         "FFF6E4", "8A5A00",
     )
 
@@ -1247,36 +1297,63 @@ def build_docx(sections):
         else:
             dpara(doc, "", 6, space_after=4)
 
-    dpara(doc, "Demo trực tiếp (2–3 phút)", 14, True, "E24B3C", space_before=12, space_after=4)
-    dpara(doc, "Không đọc slide 12. Chỉ đọc khung ▶ NÓI từng nhịp.", 11, False, "5C6B7A", space_after=6)
+    dpara(doc, "Demo trực tiếp (2–3 phút bắt buộc)", 14, True, "E24B3C", space_before=12, space_after=4)
+    dpara(
+        doc,
+        "Không đọc slide 12. Ba nhịp dưới là bắt buộc. Nguyên văn đầy đủ và bước tuỳ chọn (ViHERMES, naive vs Graph): "
+        "file demo.docx hoặc data/demo/test_cases.json.",
+        11,
+        False,
+        "5C6B7A",
+        space_after=4,
+    )
     demo_steps = [
-        ("Nhịp 1 · câu đúng · ~40 giây",
-         "Chế độ Hỏi, kho trích Thông tư 08. Bấm câu mẫu nợ tín chỉ.",
-         "GGF 100%, khớp nguồn, trích Điều 11 k1a, có vượt quá 24.",
-         "Khoản này kéo theo câu. GGF là tỉ lệ mệnh đề khớp nguồn. Một mệnh đề khớp nên GGF bằng 1."),
-        ("Nhịp 2 · nói ngược · ~50 giây",
-         "Kiểm một câu nói. Câu mẫu: vượt quá 24 thì buộc thôi học.",
-         "Nhãn nói ngược nguồn; gộp cả điều có thể thành khớp nguồn.",
-         "24 là cảnh báo ở khoản 1; buộc thôi học ở khoản khác. Chấm từng khoản mới thấy lệch."),
-        ("Nhịp 3 · sửa số · ~40 giây",
-         "Kiểm một câu nói. Dán câu đổi 03 lần thay 02 lần (thời gian tối đa khóa học).",
-         "Nói ngược; sau một lần sửa về 02 lần, GGF về 1.",
-         "Em đổi 02 thành 03 để thử thước. Máy dán trích khoản — sửa theo luật, không AI viết lại câu."),
+        (
+            "Nhịp 1 · câu đúng · ~40 giây",
+            "Chế độ Hỏi · kho Trích 08/2021 · truy xuất Graph. Bấm chip nợ tín chỉ.",
+            f"Nguyên văn (không đọc): {DEMO_ASK_Q}",
+            "GGF 100%, khớp nguồn, trích Điều 11 k1a, có vượt quá 24.",
+            "Khoản này kéo theo câu. GGF là tỉ lệ mệnh đề khớp nguồn. Một mệnh đề khớp nên GGF bằng 1.",
+        ),
+        (
+            "Nhịp 2 · nói ngược · ~50 giây",
+            "Chế độ Kiểm một câu nói — không Hỏi. Bấm chip đầu tiên (check) hoặc dán nguyên văn bên dưới.",
+            f"Nguyên văn (không đọc): {DEMO_CHECK_24}",
+            "100% nói ngược nguồn; gộp cả điều có thể thành khớp nguồn (dòng vàng).",
+            "24 là cảnh báo ở khoản 1; buộc thôi học ở khoản khác. Ở chế độ Hỏi, hệ trả lời đúng quy chế — đó là lỗi demo hay gặp.",
+        ),
+        (
+            "Nhịp 3 · sửa số · ~40 giây",
+            "Vẫn Kiểm một câu nói. Dán nguyên văn câu 03 lần (chip thứ ba hoặc copy).",
+            f"Nguyên văn (không đọc): {DEMO_CHECK_03}",
+            "Nói ngược nguồn; sau một lần sửa về 02 lần, GGF về 1.",
+            "Em đổi 02 thành 03 để thử thước. Máy dán trích khoản — sửa theo luật, không AI viết lại câu.",
+        ),
     ]
-    for title, do, expect, say in demo_steps:
+    for title, do, verbatim, expect, say in demo_steps:
         dpara(doc, title, 13, True, "1C2430", space_before=6, space_after=3)
         dpara(doc, "Làm (không đọc)  ·  " + do, 11, False, "5C6B7A", space_after=2)
+        dpara(doc, verbatim, 10, False, "1C2430", space_after=2)
         dpara(doc, "Màn hình (không đọc)  ·  " + expect, 11, False, "5C6B7A", space_after=2)
         callout(doc, "▶ NÓI:", say, "FFECEA", "E24B3C")
 
-    dpara(
+    dpara(doc, "Tuỳ chọn sau 3 nhịp (xem demo.docx bước 3–5)", 13, True, "0B6E62", space_before=8, space_after=4)
+    callout(
         doc,
-        "Tuỳ chọn (không đọc slide): Hỏi — câu nghỉ học tạm thời; Graph Điều 15 + Điều 2 k5. "
-        "▶ NÓI một câu: câu hai bước cần cạnh dẫn chiếu, khớp slide truy hồi.",
-        11,
-        space_after=6,
+        "Không đọc slide.",
+        "ViHERMES: Hỏi + kho ViHERMES + chip hop=1. "
+        "Naive vs Graph: cùng câu nghỉ học tạm thời — lần 1 Chỉ tìm đoạn, lần 2 Graph (Điều 15 + Điều 2 k5).",
+        "E7F7F3",
+        "0B6E62",
     )
-    callout(doc, "Trình duyệt lỗi (không đọc).", "python run.py demo.", "FFF6E4", "8A5A00")
+    callout(
+        doc,
+        "▶ NÓI (tuỳ chọn).",
+        "Quy chế và y tế là hai corpus. Câu hai bước cần cạnh dẫn chiếu — naive hay thiếu một nửa đáp án.",
+        "FFF6E4",
+        "8A5A00",
+    )
+    callout(doc, "Trình duyệt lỗi (không đọc).", "python3 run.py demo.", "FFF6E4", "8A5A00")
 
     slide_asked = [(s["n"], s["if_asked"]) for s in sections if s.get("if_asked")]
 
@@ -1299,6 +1376,9 @@ def build_docx(sections):
         for n, text in slide_asked:
             dpara(doc, f"Slide {n:02d}  ·  {text}", 11, space_after=4)
     qa = [
+        ("Demo GGF 100% dù câu nghe sai?",
+         "Thường do nhầm chế độ Hỏi thay vì Kiểm một câu nói. Hỏi trả lời đúng quy chế, không chấm câu khẳng định sai. "
+         "Nhịp 2: Kiểm + chip đầu tiên hoặc câu đủ: tổng số tín chỉ nợ đọng vượt quá 24 thì buộc thôi học."),
         ("Vì sao không dùng mô hình sinh câu trả lời?",
          "Máy buổi này không có GPU. Câu trả lời cố ý là đoạn trích, để đo hai việc tách bạch: có chọn đúng khoản không, và rule có bắt số bị đổi không. Viết lại bằng mô hình là việc còn lại, khi đó mới đo F1 của câu sau sửa."),
         ("HippoRAG 0,633 có phải hơn bài HippoRAG 2 không?",
@@ -1339,7 +1419,7 @@ def build_docx(sections):
         ("Sửa theo luật (dán khoản)", "13 câu: GGF 0,231 → 1, ý nói ngược 0,744 → 0. 20 câu toàn văn: GGF 0,45 → 1, ý nói ngược 0,36 → 0."),
         ("127 mệnh đề", "72 khớp nguồn, 26 nói ngược nguồn, 29 thêm ngoài nguồn. Một lượt. Chưa kappa. Không dùng làm macro-F1 headline."),
         ("Tách huấn luyện", "Train 2.688, dev 298, test 14. Test trùng 14 mệnh đề người. Tập người không trộn vào train."),
-        ("Demo", "python run.py web rồi mở http://127.0.0.1:8766. Dự phòng: python run.py demo."),
+        ("Demo", "python3 run.py web → http://127.0.0.1:8766. demo.docx cạnh trình duyệt. Dự phòng: python3 run.py demo."),
     ]
     table = doc.add_table(rows=1, cols=2)
     for i, text in enumerate(["Chỗ", "Số cần nhớ"]):

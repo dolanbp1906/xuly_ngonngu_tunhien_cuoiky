@@ -439,14 +439,32 @@
     const ASK = [
       "Sinh viên bị cảnh báo học tập khi tổng số tín chỉ nợ đọng từ đầu khóa vượt quá bao nhiêu?",
       "Nghỉ học tạm thời vì nhu cầu cá nhân có bị tính vào thời gian học tối đa không, và thời gian tối đa là bao nhiêu?",
-      "Sinh viên thi hộ lần thứ nhất bị kỷ luật ở mức nào?"
+      "Sinh viên thi hộ lần thứ nhất bị kỷ luật ở mức nào?",
     ];
     const CHECK = [
       "Tổng số tín chỉ nợ đọng từ đầu khóa học vượt quá 24 thì sinh viên bị buộc thôi học.",
       "Tổng số tín chỉ nợ đọng từ đầu khóa học vượt quá 30 thì sinh viên bị buộc thôi học.",
       "Thời gian tối đa để sinh viên hoàn thành khóa học không vượt quá 03 lần thời gian theo kế hoạch học tập chuẩn.",
-      "Sinh viên xuất sắc được thưởng 3 triệu đồng mỗi học kỳ."
+      "Sinh viên xuất sắc được thưởng 3 triệu đồng mỗi học kỳ.",
     ];
+    const CHECK_SHORT = [
+      [/vượt\s*quá\s*24\s*tín\s*chỉ\s*thì\s*buộc\s*thôi\s*học/i, CHECK[0]],
+      [/vượt\s*quá\s*24.*buộc\s*thôi\s*học/i, CHECK[0]]
+    ];
+    function normalizeCheckText(text) {
+      const trimmed = text.trim();
+      for (const [pattern, canonical] of CHECK_SHORT) {
+        if (pattern.test(trimmed)) return canonical;
+      }
+      return trimmed;
+    }
+    function looksLikeCheckStatement(text) {
+      const t = text.trim();
+      if (!t || /\?\s*$/.test(t)) return false;
+      if (/^(ai|gì|bao nhiêu|mấy|khi nào|ở đâu|như thế nào)\b/iu.test(t)) return false;
+      if (/^(có|được|bị)\s+(phải|được|bị)\s+/iu.test(t)) return false;
+      return /buộc thôi học|vượt quá|không vượt quá|được thưởng|triệu đồng|đình chỉ học/i.test(t);
+    }
     const NAME = {
       supported: "Nguồn kéo theo",
       contradicted: "Nói ngược nguồn",
@@ -675,6 +693,14 @@
       mode = next;
       const store = mode === "store";
       selectPick(document.getElementById("pick-mode"), next);
+      const headline = document.querySelector("header h1");
+      if (headline) {
+        headline.textContent = mode === "check"
+          ? "Kiểm câu khẳng định — chấm nói ngược nguồn (không trả lời thay bạn)."
+          : mode === "store"
+            ? "Xem kho chunk, câu hỏi và biên bản."
+            : "Hỏi quy chế, xem điều khoản nào kéo theo câu trả lời.";
+      }
       thread.hidden = store;
       pane.hidden = !store;
       document.getElementById("input-row").hidden = store;
@@ -1064,12 +1090,24 @@
 
     async function submit() {
       if (mode === "store" || sending) return;
-      const text = box.value.trim();
+      let text = box.value.trim();
       error.hidden = true;
       if (!text) {
         error.hidden = false;
         error.textContent = "Hãy nhập một câu trước.";
         return;
+      }
+      let effectiveMode = mode;
+      if (mode === "ask" && corpus === "demo" && looksLikeCheckStatement(text)) {
+        effectiveMode = "check";
+        text = normalizeCheckText(text);
+        push(
+          "system",
+          "Câu này là khẳng định, không phải câu hỏi — đã chấm ở chế độ «Kiểm một câu nói». "
+          + "Ở chế độ Hỏi, hệ chỉ trả lời đúng quy chế nên GGF luôn cao."
+        );
+      } else if (mode === "check") {
+        text = normalizeCheckText(text);
       }
       sending = true;
       clearBox();
@@ -1078,9 +1116,9 @@
       push("user", text);
       const pending = push("bot", "<span class='dots' aria-hidden='true'><i></i><i></i><i></i></span>");
       try {
-        const path = mode === "ask" ? "/api/ask" : "/api/check";
+        const path = effectiveMode === "ask" ? "/api/ask" : "/api/check";
         const payload = { text };
-        if (mode === "ask") {
+        if (effectiveMode === "ask") {
           payload.system = system;
           payload.revise = document.getElementById("revise").checked;
           payload.corpus = corpus;

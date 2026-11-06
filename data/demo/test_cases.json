@@ -1,0 +1,217 @@
+{
+  "presentation": {
+    "intro": [
+      "[~30 giây — trước khi chạm web] Em xin demo ViKAG-Faith: đánh giá faithfulness mức mệnh đề trên hỏi đáp quy chế đào tạo và corpus y tế ViHERMES. Hệ không gọi LLM sinh tự do — câu trả lời trích điều khoản đã truy hồi; verifier đối chiếu từng mệnh đề với nguồn.",
+      "[Chuyển sang trình duyệt] Slide và lời thoại slide: thuyet_trinh/Kich_ban_thuyet_trinh.docx. Buổi này demo 3 nhịp bắt buộc (file này); bước 3–5 tuỳ chọn nếu còn giờ."
+    ],
+    "closing": [
+      "[~30 giây — kết] Tóm lại: graph giúp câu nhiều bước; verifier triple bắt lệch số và hệ quả mà chỉ đo phủ từ thì bỏ sót. Hướng mở rộng: ViEduReg 56/2026, verifier học PhoBERT, và baseline KAG — nằm trong kế hoạch đề tài, chưa trình bày hôm nay."
+    ],
+    "eval_table": [
+      "[Mở eval/summary.txt hoặc cuộn terminal sau run.py demo]",
+      "Bảng hệ: graph và naive cùng GGF cao trên câu trích văn, nhưng phủ đáp án hop-2 của graph cao hơn naive.",
+      "Bảng verifier: triple macro-F1 trên 14 claim người gán cao hơn chunk — vì chunk gộp cả điều dễ gán nhầm supported.",
+      "Lexical / RAGAS-style không gọi LLM: Spearman thấp với nhãn người trên nhóm chỉ lệch số — đó là động lực của verifier rule và học được."
+    ]
+  },
+  "web_steps": [
+    {
+      "id": "step1",
+      "title": "Bước 1 — Câu đúng, GGF = 1",
+      "mode": "Hỏi",
+      "corpus": "Trích 08/2021",
+      "system": "Graph",
+      "text": "Sinh viên bị cảnh báo học tập khi tổng số tín chỉ nợ đọng từ đầu khóa vượt quá bao nhiêu?",
+      "expect": "GGF 100%; Nguồn kéo theo; trích Điều 11 khoản 1 điểm a; câu trả lời có «vượt quá 24».",
+      "script": [
+        "[Trước — ~10 giây] Ở chế độ Hỏi, kho Trích 08/2021, truy xuất Graph. Em hỏi một câu mốc số trong quy chế.",
+        "[Thao tác] Bấm chip câu mẫu nợ tín chỉ — hoặc dán nguyên văn bên dưới rồi Enter.",
+        "[Khi màn hình hiện — ~25 giây] Các thầy cô thấy câu trả lời trích nguyên Điều 11, có «vượt quá 24», và GGF 100% — tức mọi mệnh đề đều được nguồn kéo theo.",
+        "[Giải thích] GGF là tỷ lệ mệnh đề supported trên câu trả lời. Ở đây hệ không bịa số; nó đọc đúng khoản quy chế. Điều này chưa chứng minh mọi LLM đều trung thực — vì pipeline này cố ý trích văn bản."
+      ]
+    },
+    {
+      "id": "step2",
+      "title": "Bước 2 — Câu sai (gộp hai khoản)",
+      "mode": "Kiểm một câu nói",
+      "corpus": "—",
+      "system": "Graph (mặc định)",
+      "text": "Tổng số tín chỉ nợ đọng từ đầu khóa học vượt quá 24 thì sinh viên bị buộc thôi học.",
+      "expect": "100% Nói ngược nguồn (contradicted); có thể có dòng vàng về gộp cả điều (chunk → supported).",
+      "script": [
+        "[Trước — ~10 giây] Em chuyển sang Kiểm một câu nói — không phải Hỏi. Bước này chấm chính câu khẳng định của người dùng, không trả lời thay.",
+        "[Thao tác] Bấm chip đầu tiên ở chế độ Kiểm — nguyên văn câu «24 tín chỉ … buộc thôi học».",
+        "[Khi màn hình hiện — ~30 giây] Nhãn Nói ngược nguồn. 24 tín chỉ là mức cảnh báo ở khoản 1 Điều 11; buộc thôi học là hệ quả khác, ở khoản 2 hoặc điều kiện khác.",
+        "[Chỉ dòng vàng nếu có] Nếu gộp cả điều thành một đoạn, verifier chunk có thể gán Nguồn kéo theo — đó là lý do em chấm triple, tách từng khoản."
+      ]
+    },
+    {
+      "id": "step2_trap",
+      "title": "Bước 2 — CẤN TRÁNH (nhầm chế độ Hỏi)",
+      "mode": "Hỏi (sai cho mục đích bước 2)",
+      "corpus": "Trích 08/2021",
+      "system": "Graph",
+      "text": "vượt quá 24 tín chỉ thì buộc thôi học",
+      "expect": "GGF 100% — hệ trả lời đúng quy chế (cảnh báo 24 tín chỉ), không chấm câu sai của bạn.",
+      "script": [
+        "[Chỉ dùng khi giải thích lỗi thường gặp — không demo trên lớp trừ khi hội đồng hỏi]",
+        "Nếu để chế độ Hỏi và gõ câu nghe như khẳng định sai, hệ vẫn trả lời đúng quy chế và GGF 100% — vì nó truy hồi, không phải vì câu khẳng định đúng.",
+        "Trang web hiện tự chuyển sang Kiểm khi phát hiện câu khẳng định; nếu không, hãy đổi menu Chế độ thủ công."
+      ]
+    },
+    {
+      "id": "step3",
+      "title": "Bước 3 — ViHERMES",
+      "mode": "Hỏi",
+      "corpus": "ViHERMES",
+      "system": "BM25 trên bộ y tế",
+      "text": "Bấm chip câu mẫu hop=1 đầu tiên (câu ngắn do máy chọn từ bộ test ViHERMES khi nạp dataset).",
+      "text_fallback": "Nếu ViHERMES chưa nạp: nói corpus y tế cần dataset Hugging Face; bỏ qua bước hoặc dùng terminal.",
+      "expect": "Đáp án vàng (gold) của bộ; đơn vị BM25 hạng 1 trùng nguồn.",
+      "script": [
+        "[Trước — ~10 giây] Em chuyển lại Hỏi, chọn kho ViHERMES — miền y tế tách khỏi quy chế đào tạo.",
+        "[Thao tác] Bấm chip câu mẫu một bước — câu ngắn nhất do bộ test chọn.",
+        "[Khi màn hình hiện — ~25 giây] Đáp án tham chiếu vàng của ViHERMES; đơn vị xếp hạng 1 BM25 trùng nguồn vàng.",
+        "[Giải thích] Đây là bộ 1.561 câu từ văn bản Bộ Y tế, không phải thông tư kê đơn tự chép. Cùng pipeline faithfulness, khác corpus."
+      ]
+    },
+    {
+      "id": "step4",
+      "title": "Bước 4 — Lệch số 02 vs 03",
+      "mode": "Kiểm một câu nói",
+      "corpus": "—",
+      "system": "Graph (mặc định)",
+      "text": "Thời gian tối đa để sinh viên hoàn thành khóa học không vượt quá 03 lần thời gian theo kế hoạch học tập chuẩn.",
+      "expect": "Nói ngược nguồn; lý do: mốc 03 lệch với khoản ghi 02.",
+      "script": [
+        "[Trước — ~5 giây] Vẫn ở Kiểm một câu nói — em đưa một câu đúng ngữ pháp nhưng sai một mốc số.",
+        "[Thao tác] Dán nguyên văn bên dưới, Enter.",
+        "[Khi màn hình hiện — ~25 giây] Nói ngược nguồn: quy chế ghi không vượt quá 02 lần, không phải 03.",
+        "[Giải thích] Verifier so sánh số và hệ quả bằng rule — không cần LLM. Nhóm lỗi kiểu này nằm trong 14 claim người đã gán nhãn trên Công báo."
+      ]
+    },
+    {
+      "id": "step5",
+      "title": "Bước 5 — Naive vs Graph (cùng câu hỏi)",
+      "mode": "Hỏi",
+      "corpus": "Trích 08/2021",
+      "system": "Lần 1: Chỉ tìm đoạn (naive); lần 2: Graph",
+      "text": "Nghỉ học tạm thời vì nhu cầu cá nhân có bị tính vào thời gian học tối đa không, và thời gian tối đa là bao nhiêu?",
+      "expect": "Naive: thường chỉ Điều 15 khoản 2. Graph: thêm Điều 2 khoản 5 (02 lần).",
+      "script": [
+        "[Trước — ~10 giây] Cùng một câu hỏi hai bước — cần hai chỗ trong quy chế. Lần một em chọn truy xuất Chỉ tìm đoạn.",
+        "[Thao tác lần 1] Dán câu hỏi hop-2, gửi; quan sát trích dẫn — thường dừng ở Điều 15.",
+        "[Thao tác lần 2 — ~15 giây] Đổi truy xuất sang Graph, gửi lại cùng câu.",
+        "[Khi màn hình lần 2] Graph thêm Điều 2 khoản 5 — «02 lần» thời gian chuẩn.",
+        "[Giải thích] Cùng BM25, graph đi cạnh REFERS_TO và khoản cùng điều. Naive hay thiếu nửa đáp án dù GGF vẫn có thể bằng 1 trên phần đã trích."
+      ]
+    }
+  ],
+  "check_extra": [
+    {
+      "id": "check30",
+      "title": "Claim sai số 30 (chip thứ 2)",
+      "mode": "Kiểm một câu nói",
+      "text": "Tổng số tín chỉ nợ đọng từ đầu khóa học vượt quá 30 thì sinh viên bị buộc thôi học.",
+      "expect": "Nói ngược nguồn (30 không phải mốc cảnh báo; buộc thôi học sai hệ quả).",
+      "script": [
+        "[Tùy chọn — terminal hoặc chip 2] Cùng logic bước 2 nhưng sai số 30 và sai hệ quả — contradicted rõ hơn.",
+        "[Giải thích] Dùng trong run.py demo đoạn 2 nếu không có trình duyệt."
+      ]
+    },
+    {
+      "id": "check_money",
+      "title": "Claim không có trong nguồn",
+      "mode": "Kiểm một câu nói",
+      "text": "Sinh viên xuất sắc được thưởng 3 triệu đồng mỗi học kỳ.",
+      "expect": "Không có trong nguồn (unsupported).",
+      "script": [
+        "[Khi hội đồng hỏi «có bắt được bịa không?»]",
+        "[Thao tác] Kiểm một câu nói, chip thưởng 3 triệu.",
+        "[Giải thích] Unsupported — quy chế demo không có khoản thưởng tiền như vậy; verifier không khẳng định đúng."
+      ]
+    }
+  ],
+  "terminal_demo": [
+    {
+      "id": "t1",
+      "title": "Terminal — Câu đúng (graph)",
+      "text": "Sinh viên bị cảnh báo học tập khi tổng số tín chỉ nợ đọng từ đầu khóa vượt quá bao nhiêu?",
+      "expect": "GGF 1.00; supported; trích Điều 11.",
+      "script": [
+        "[Đoạn 1 — ~40 giây] «GGF là tỷ lệ mệnh đề được nguồn kéo theo. Một mệnh đề khớp khoản nên GGF bằng 1. Hệ không bịa số.»"
+      ]
+    },
+    {
+      "id": "t2",
+      "title": "Terminal — Claim sai (verify Điều 11)",
+      "text": "Tổng số tín chỉ nợ đọng từ đầu khóa học vượt quá 30 thì sinh viên bị buộc thôi học.",
+      "expect": "contradicted.",
+      "script": [
+        "[Đoạn 2 — ~40 giây] «24 tín chỉ là cảnh báo, không phải buộc thôi học. Verifier nhìn từng khoản, không gộp hai khoản thành một câu đúng.»"
+      ]
+    },
+    {
+      "id": "t3",
+      "title": "Terminal — Câu hop-2",
+      "text": "Nghỉ học tạm thời vì nhu cầu cá nhân có bị tính vào thời gian học tối đa không, và thời gian tối đa là bao nhiêu?",
+      "expect": "GGF 1.00; trích Điều 15 và Điều 2.",
+      "script": [
+        "[Đoạn 3 — ~50 giây] «Một câu cần Điều 15 và Điều 2. Graph đi cạnh dẫn chiếu; naive thường chỉ một khoản.»"
+      ]
+    },
+    {
+      "id": "t4_ask",
+      "title": "Terminal — Unfaithful (câu hỏi gốc)",
+      "text": "Thời gian tối đa để sinh viên hoàn thành khóa học là bao lâu?",
+      "system": "unfaithful + revise",
+      "expect": "Câu trả lời đổi 02→03; contradicted rồi sửa về 02; GGF lên 1.",
+      "script": [
+        "[Đoạn 4 — ~40 giây] «Hệ unfaithful cố ý đổi 02 thành 03. Verifier bắt lệch; vòng sửa trả lại đúng khoản — verify-then-revise, tối đa hai vòng.»"
+      ]
+    }
+  ],
+  "cli": [
+    {
+      "id": "cli_ask",
+      "title": "Hỏi thử — thi hộ",
+      "command": "python3 run.py ask \"Sinh viên thi hộ lần thứ nhất bị kỷ luật ở mức nào?\"",
+      "text": "Sinh viên thi hộ lần thứ nhất bị kỷ luật ở mức nào?",
+      "expect": "Đình chỉ học tập 01 năm; Điều 20 khoản 2; GGF 1.00.",
+      "script": [
+        "[Khi được yêu cầu hỏi câu khác] Chạy lệnh CLI; đọc to Điều 20 và mức đình chỉ 01 năm."
+      ]
+    },
+    {
+      "id": "cli_naive",
+      "title": "So naive — câu hop-2",
+      "command": "python3 run.py ask \"Nghỉ học tạm thời vì nhu cầu cá nhân có bị tính vào thời gian học tối đa không, và thời gian tối đa là bao nhiêu?\" --system naive",
+      "text": "Nghỉ học tạm thời vì nhu cầu cá nhân có bị tính vào thời gian học tối đa không, và thời gian tối đa là bao nhiêu?",
+      "expect": "Thường chỉ Điều 15 khoản 2.",
+      "script": [
+        "[So sánh] Chạy naive rồi graph cùng câu — chỉ ra thiếu Điều 2 khoản 5."
+      ]
+    },
+    {
+      "id": "cli_verify",
+      "title": "Verify mệnh đề lạ",
+      "command": "python3 run.py verify \"Sinh viên xuất sắc được thưởng 3 triệu đồng mỗi học kỳ.\"",
+      "text": "Sinh viên xuất sắc được thưởng 3 triệu đồng mỗi học kỳ.",
+      "expect": "unsupported.",
+      "script": [
+        "[Trả lời nhanh] In nhãn unsupported — không có trong Điều 11 mặc định."
+      ]
+    }
+  ],
+  "ask_chips": [
+    "Sinh viên bị cảnh báo học tập khi tổng số tín chỉ nợ đọng từ đầu khóa vượt quá bao nhiêu?",
+    "Nghỉ học tạm thời vì nhu cầu cá nhân có bị tính vào thời gian học tối đa không, và thời gian tối đa là bao nhiêu?",
+    "Sinh viên thi hộ lần thứ nhất bị kỷ luật ở mức nào?"
+  ],
+  "check_chips": [
+    "Tổng số tín chỉ nợ đọng từ đầu khóa học vượt quá 24 thì sinh viên bị buộc thôi học.",
+    "Tổng số tín chỉ nợ đọng từ đầu khóa học vượt quá 30 thì sinh viên bị buộc thôi học.",
+    "Thời gian tối đa để sinh viên hoàn thành khóa học không vượt quá 03 lần thời gian theo kế hoạch học tập chuẩn.",
+    "Sinh viên xuất sắc được thưởng 3 triệu đồng mỗi học kỳ."
+  ]
+}
