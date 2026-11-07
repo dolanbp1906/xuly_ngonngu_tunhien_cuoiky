@@ -87,12 +87,7 @@
     "unsupported": 0.6666666666666666,
     "macro": 0.5777777777777778
   },
-  "f1_phobert": {
-    "supported": 0.5333333333333333,
-    "contradicted": 0.22222222222222224,
-    "unsupported": 0.5,
-    "macro": 0.4185185185185185
-  },
+  "f1_phobert": null,
   "auroc_wrong": 1.0,
   "spearman": {
     "triple": 0.9999999999999998,

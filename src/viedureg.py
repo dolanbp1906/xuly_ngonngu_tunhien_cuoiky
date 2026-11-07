@@ -4,8 +4,9 @@ Thông tư 56/2026/TT-BGDĐT có hiệu lực 07/07/2026 và thay thế Thông t
 08/2021 cùng Thông tư 28/2023. Khóa đã có thông báo tuyển sinh trước
 ngày đó vẫn theo quy chế hiệu lực tại thời điểm thông báo (Điều 27).
 
-Câu hỏi sinh bằng khuôn từ điều khoản đã tách. Mọi câu ở trạng thái
-chờ duyệt. Không tính kappa vì chưa có người chấm thứ hai.
+Câu hỏi pool sinh bằng khuôn từ điều khoản đã tách. Bộ đã đối chiếu
+nằm ở data/viedureg/questions_reviewed.json. Chưa có kappa vì chưa có
+giảng viên duyệt kép.
 """
 
 from __future__ import annotations
@@ -25,6 +26,8 @@ QUESTIONS_PATH = VIEDUREG / "questions.json"
 GRAPH_PATH = VIEDUREG / "graph.json"
 CYPHER_PATH = VIEDUREG / "load.cypher"
 RECORD_PATH = VIEDUREG / "bien_ban.json"
+REVIEW_LOG_PATH = VIEDUREG / "review_log.json"
+REVIEWED_PATH = VIEDUREG / "questions_reviewed.json"
 AS_OF = "2026-10-28"
 SOURCE_NOTE = (
     "Toàn văn Thông tư 56/2026/TT-BGDĐT tải ngày 2026-10-28 từ trang "
@@ -570,7 +573,92 @@ def write_record(store: Store, questions: list[dict]) -> None:
             "demo và nạp được bằng data/viedureg/load.cypher."
         ),
     }
+    _attach_reviewed(record)
     RECORD_PATH.write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def apply_review_log(questions: list[dict]) -> list[dict]:
+    """Gắn lại trạng thái đối chiếu sau mỗi lần sinh lại pool 305 câu."""
+    if not REVIEW_LOG_PATH.exists():
+        return questions
+    log = json.loads(REVIEW_LOG_PATH.read_text(encoding="utf-8"))
+    by_question = {item["question"]: item for item in log}
+    for question in questions:
+        mark = by_question.get(question["question"])
+        if mark is None:
+            continue
+        question["review_status"] = mark["review_status"]
+        if mark.get("review_reason"):
+            question["review_reason"] = mark["review_reason"]
+    return questions
+
+
+def _claim_gold_status() -> dict:
+    path = VIEDUREG / "claims_unique.jsonl"
+    if not path.exists():
+        return {"n": 0, "kappa": None, "note": "Chưa có claims_unique.jsonl."}
+    rows = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+    labels = [row.get("label") for row in rows]
+    filled = all(label in {"supported", "contradicted", "unsupported"} for label in labels) and bool(rows)
+    counts = {label: labels.count(label) for label in ("supported", "contradicted", "unsupported")}
+    return {
+        "path": "data/viedureg/claims_unique.jsonl",
+        "n": len(rows),
+        "filled": filled,
+        "supported": counts["supported"] if filled else None,
+        "contradicted": counts["contradicted"] if filled else None,
+        "unsupported": counts["unsupported"] if filled else None,
+        "annotators": ["doi_chieu_khoan"] if filled else [],
+        "kappa": None,
+        "note": (
+            "Một lượt đối chiếu claim với khoản được dẫn trong evidence_chunk_ids. "
+            "Verifier không gán nhãn này. Chưa có người thứ hai, nên chưa có kappa."
+            if filled
+            else "Còn claim chưa có label."
+        ),
+    }
+
+
+def _attach_reviewed(record: dict) -> None:
+    if not REVIEWED_PATH.exists():
+        return
+    reviewed = json.loads(REVIEWED_PATH.read_text(encoding="utf-8"))
+    multi = sum(item["hop"] >= 2 for item in reviewed)
+    reasons: dict[str, int] = {}
+    if REVIEW_LOG_PATH.exists():
+        for item in json.loads(REVIEW_LOG_PATH.read_text(encoding="utf-8")):
+            if item.get("review_status") != "loai":
+                continue
+            key = item.get("review_reason") or "khong_ro"
+            reasons[key] = reasons.get(key, 0) + 1
+    record["nhan_claim"] = _claim_gold_status()
+    record["bo_da_chot"] = {
+        "path": "data/viedureg/questions_reviewed.json",
+        "n": len(reviewed),
+        "n_hop1": sum(item["hop"] == 1 for item in reviewed),
+        "n_multi": multi,
+        "review_status": "da_doi_chieu_nguon",
+        "giang_vien_duyet": None,
+        "kappa": None,
+        "phieu_giang_vien": "data/viedureg/giang_vien_100.json",
+        "loai_trong_pool": reasons,
+        "note": (
+            "150 câu đã đối chiếu với data/viedureg/56-2026.txt: mỗi đáp án là "
+            "đoạn nguyên văn nằm trong evidence. Chưa phải duyệt kép của giảng viên "
+            "và chưa có kappa. Phiếu 100 câu để giảng viên điền nằm ở giang_vien_100.json."
+        ),
+    }
+    record["review_status"] = "da_doi_chieu_nguon_chua_giang_vien"
+    record["kappa"] = None
+    record["kappa_reason"] = (
+        "Bộ 150 câu đã đối chiếu nguồn Thông tư 56/2026 trong repo. "
+        "Chưa có giảng viên duyệt kép, nên chưa có kappa."
+    )
+    record["vi_sao_chua_500"] = (
+        "Pool tự sinh vẫn là 305 câu ở data/viedureg/questions.json. "
+        "Bộ đã chốt là 150 câu trong questions_reviewed.json. "
+        "Paraphrase trùng và câu lệch đáp án đã loại, không tính là gold."
+    )
 
 
 def _covers(store: Store, question: str, gold: list[str]) -> bool:
@@ -606,7 +694,7 @@ def _samples(store: Store, questions: list[dict]) -> list[dict]:
 def build_viedureg() -> dict:
     text = ensure_source()
     store = build_store(text)
-    questions = generate(store)
+    questions = apply_review_log(generate(store))
     QUESTIONS_PATH.write_text(
         json.dumps(questions, ensure_ascii=False, indent=2), encoding="utf-8"
     )

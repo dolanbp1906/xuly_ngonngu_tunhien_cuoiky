@@ -1,0 +1,2442 @@
+[
+  {
+    "id": "ve0001",
+    "question": "Thông tư 56/2026/TT-BGDĐT có hiệu lực từ ngày nào và thay thế những thông tư nào?",
+    "template": "hieu_luc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0002",
+    "question": "Khóa tuyển sinh năm 2026 áp dụng văn bản nào thay thế Thông tư 08/2021?",
+    "template": "hieu_luc",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "dap_an_them_loi_dan_khong_co_trong_van_ban"
+  },
+  {
+    "id": "ve0003",
+    "question": "Khóa đã có thông báo tuyển sinh trước ngày Thông tư 56/2026 có hiệu lực thì áp dụng quy chế nào?",
+    "template": "hieu_luc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0004",
+    "question": "Điều 2, Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0005",
+    "question": "Điều 3 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0006",
+    "question": "Theo Điều 3 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0007",
+    "question": "Điều 3 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0008",
+    "question": "Trong Điều 3 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «ít nhất một phần tư (1/4) so với thời gian đào tạo chuẩn của cùng chương trình» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0009",
+    "question": "Theo Điều 3 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0010",
+    "question": "Điều 3 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0011",
+    "question": "Trong Điều 3 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối thiểu để hoàn thành chương trình đào tạo không ít hơn hai phần ba (2/3) thời» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0012",
+    "question": "Điều 3 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0013",
+    "question": "Theo Điều 3 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "moc_khong_co_so"
+  },
+  {
+    "id": "ve0014",
+    "question": "Điều 3 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0015",
+    "question": "Trong Điều 3 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối thiểu và thời gian tối đa theo quy định của cơ sở đào tạo và Quy chế này» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0016",
+    "question": "Điều 4 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0017",
+    "question": "Điều 4 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0018",
+    "question": "Điều 4 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0019",
+    "question": "Tại Điều 4 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 2 Điều 16» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0020",
+    "question": "Khoản được dẫn tại Điều 4 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0021",
+    "question": "Điều 5 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0022",
+    "question": "Tại Điều 5 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 1 Điều 5» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0023",
+    "question": "Khoản được dẫn tại Điều 5 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0024",
+    "question": "Theo Điều 5 khoản 5, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "moc_khong_co_so"
+  },
+  {
+    "id": "ve0025",
+    "question": "Điều 5 khoản 5, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0026",
+    "question": "Trong Điều 5 khoản 5, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối thiểu gồm: hình thức đào tạo» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0027",
+    "question": "Theo Điều 6 khoản 4 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "moc_khong_co_so"
+  },
+  {
+    "id": "ve0028",
+    "question": "Điều 6 khoản 4 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0029",
+    "question": "Trong Điều 6 khoản 4 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối thiểu đối với cơ sở chủ trì đào tạo: Bảo đảm đội ngũ giảng viên cơ hữu giảng» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0030",
+    "question": "Điều 6 khoản 4 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0031",
+    "question": "Theo Điều 6 khoản 4 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "moc_khong_co_so"
+  },
+  {
+    "id": "ve0032",
+    "question": "Điều 6 khoản 4 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0033",
+    "question": "Trong Điều 6 khoản 4 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối thiểu đối với cơ sở chủ trì đào tạo: Đã ban hành quy định về liên kết và thẩ» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0034",
+    "question": "Điều 6 khoản 5 điểm d, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0035",
+    "question": "Theo Điều 7 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "template": "han_che",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0036",
+    "question": "Điều 7 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT cấm hoặc loại trừ nội dung gì?",
+    "template": "han_che_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0037",
+    "question": "Điều 7 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0038",
+    "question": "Theo Điều 7 khoản 5, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "template": "han_che",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0039",
+    "question": "Điều 7 khoản 5, Quy chế kèm Thông tư 56/2026/TT-BGDĐT cấm hoặc loại trừ nội dung gì?",
+    "template": "han_che_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0040",
+    "question": "Điều 7 khoản 5, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0041",
+    "question": "Theo Điều 7 khoản 6, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0042",
+    "question": "Điều 7 khoản 6, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0043",
+    "question": "Trong Điều 7 khoản 6, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «ít nhất 25% tổng khối lượng của chương trình liên kết đào tạo và có trình độ t» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0044",
+    "question": "Điều 7 khoản 6, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0045",
+    "question": "Theo Điều 8 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0046",
+    "question": "Điều 8 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0047",
+    "question": "Trong Điều 8 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối thiểu học trên lớp là 30 tuần học tập, giảng dạy và hoạt động đào tạo theo k» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0048",
+    "question": "Điều 8 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0049",
+    "question": "Theo Điều 8 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0050",
+    "question": "Điều 8 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0051",
+    "question": "Trong Điều 8 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối thiểu trước 04 tuần bắt đầu ngày học chính thức» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0052",
+    "question": "Điều 8 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0053",
+    "question": "Theo Điều 9 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "moc_khong_co_so"
+  },
+  {
+    "id": "ve0054",
+    "question": "Điều 9 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0055",
+    "question": "Trong Điều 9 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối thiểu của sinh viên trong mỗi học kỳ nằm trong khung như sau: Khối lượng tối» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0056",
+    "question": "Tại Điều 9 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 4 Điều 9» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0057",
+    "question": "Khoản được dẫn tại Điều 9 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0058",
+    "question": "Theo Điều 9 khoản 5 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "moc_khong_co_so"
+  },
+  {
+    "id": "ve0059",
+    "question": "Điều 9 khoản 5 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0060",
+    "question": "Trong Điều 9 khoản 5 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối thiểu của sinh viên trong mỗi học kỳ nằm trong khung như sau: Khối lượng tối» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0061",
+    "question": "Tại Điều 9 khoản 5 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 4 Điều 9» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0062",
+    "question": "Khoản được dẫn tại Điều 9 khoản 5 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0063",
+    "question": "Điều 11 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0064",
+    "question": "Theo Điều 12 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0065",
+    "question": "Điều 12 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0066",
+    "question": "Trong Điều 12 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối thiểu ba điểm thành phần trong đó điểm thi cuối kỳ có trọng số tối thiểu 50%» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0067",
+    "question": "Theo Điều 12 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0068",
+    "question": "Điều 12 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0069",
+    "question": "Trong Điều 12 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «không quá 50% trọng số điểm học phần» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0070",
+    "question": "Điều 12 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0071",
+    "question": "Theo Điều 12 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0072",
+    "question": "Điều 12 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0073",
+    "question": "Trong Điều 12 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «không quá 50% trọng số điểm học phần» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0074",
+    "question": "Điều 12 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0075",
+    "question": "Theo Điều 12 khoản 2 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0076",
+    "question": "Điều 12 khoản 2 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0077",
+    "question": "Trong Điều 12 khoản 2 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «không quá 50% trọng số điểm học phần» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0078",
+    "question": "Điều 12 khoản 2 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0079",
+    "question": "Điều 12 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0080",
+    "question": "Điều 12 khoản 4 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0081",
+    "question": "Theo Điều 12 khoản 4 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "template": "han_che",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0082",
+    "question": "Điều 12 khoản 4 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT cấm hoặc loại trừ nội dung gì?",
+    "template": "han_che_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0083",
+    "question": "Điều 12 khoản 4 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0084",
+    "question": "Điều 12 khoản 4 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0085",
+    "question": "Theo Điều 12 khoản 4 điểm d, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "template": "han_che",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0086",
+    "question": "Điều 12 khoản 4 điểm d, Quy chế kèm Thông tư 56/2026/TT-BGDĐT cấm hoặc loại trừ nội dung gì?",
+    "template": "han_che_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0087",
+    "question": "Điều 12 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0088",
+    "question": "Tại Điều 12 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 2 Điều 4» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0089",
+    "question": "Khoản được dẫn tại Điều 12 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0090",
+    "question": "Tại Điều 12 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 6 Điều 12» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0091",
+    "question": "Điều 12 khoản 6 điểm đ, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0092",
+    "question": "Tại Điều 12 khoản 6 điểm đ, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 4 Điều 12» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0093",
+    "question": "Khoản được dẫn tại Điều 12 khoản 6 điểm đ, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0094",
+    "question": "Điều 13 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0095",
+    "question": "Tại Điều 13 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 4 Điều 13» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0096",
+    "question": "Khoản được dẫn tại Điều 13 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0097",
+    "question": "Theo Điều 13 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "template": "han_che",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0098",
+    "question": "Điều 13 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT cấm hoặc loại trừ nội dung gì?",
+    "template": "han_che_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0099",
+    "question": "Điều 13 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0100",
+    "question": "Tại Điều 13 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 2 Điều 13» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0101",
+    "question": "Khoản được dẫn tại Điều 13 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0102",
+    "question": "Điều 13 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0103",
+    "question": "Điều 13 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0104",
+    "question": "Điều 13 khoản 5 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0105",
+    "question": "Điều 13 khoản 6 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0106",
+    "question": "Điều 13 khoản 6 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0107",
+    "question": "Điều 13 khoản 6 điểm d, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0108",
+    "question": "Điều 13 khoản 6 điểm đ, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0109",
+    "question": "Điều 13 khoản 6 điểm e, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0110",
+    "question": "Điều 14 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0111",
+    "question": "Điều 14 khoản 1 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0112",
+    "question": "Điều 14 khoản 1 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0113",
+    "question": "Theo Điều 14 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "template": "han_che",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0114",
+    "question": "Điều 14 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT cấm hoặc loại trừ nội dung gì?",
+    "template": "han_che_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0115",
+    "question": "Điều 14 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0116",
+    "question": "Theo Điều 14 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0117",
+    "question": "Điều 14 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0118",
+    "question": "Trong Điều 14 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối đa theo quy định tại khoản 3 Điều 3 của Quy chế này» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0119",
+    "question": "Điều 14 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0120",
+    "question": "Tại Điều 14 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 3 Điều 3» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0121",
+    "question": "Khoản được dẫn tại Điều 14 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0122",
+    "question": "Điều 14 khoản 3 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0123",
+    "question": "Theo Điều 14 khoản 3 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0124",
+    "question": "Điều 14 khoản 3 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0125",
+    "question": "Trong Điều 14 khoản 3 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «không vượt quá 3 lần cảnh báo liên tiếp» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0126",
+    "question": "Điều 14 khoản 3 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0127",
+    "question": "Theo Điều 14 khoản 3 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "template": "han_che",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0128",
+    "question": "Điều 14 khoản 3 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT cấm hoặc loại trừ nội dung gì?",
+    "template": "han_che_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0129",
+    "question": "Điều 14 khoản 3 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0130",
+    "question": "Điều 14 khoản 3 điểm d, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0131",
+    "question": "Điều 15 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0132",
+    "question": "Theo Điều 15 khoản 1 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0133",
+    "question": "Điều 15 khoản 1 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0134",
+    "question": "Trong Điều 15 khoản 1 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «không vượt quá 20% khối lượng học tập chuẩn của chương trình đào tạo» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0135",
+    "question": "Điều 15 khoản 1 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0136",
+    "question": "Theo Điều 15 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "template": "han_che",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0137",
+    "question": "Điều 15 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT cấm hoặc loại trừ nội dung gì?",
+    "template": "han_che_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0138",
+    "question": "Điều 15 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0139",
+    "question": "Tại Điều 15 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 1 Điều 15» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0140",
+    "question": "Khoản được dẫn tại Điều 15 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0141",
+    "question": "Theo Điều 15 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "template": "han_che",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0142",
+    "question": "Điều 15 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT cấm hoặc loại trừ nội dung gì?",
+    "template": "han_che_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0143",
+    "question": "Điều 15 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0144",
+    "question": "Theo Điều 15 khoản 2 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0145",
+    "question": "Điều 15 khoản 2 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0146",
+    "question": "Trong Điều 15 khoản 2 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối đa theo quy định tại khoản 3 Điều 3 của Quy chế này» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0147",
+    "question": "Điều 15 khoản 2 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0148",
+    "question": "Tại Điều 15 khoản 2 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 3 Điều 3» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0149",
+    "question": "Khoản được dẫn tại Điều 15 khoản 2 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0150",
+    "question": "Điều 15 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0151",
+    "question": "Tại Điều 15 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 2 Điều 15» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0152",
+    "question": "Khoản được dẫn tại Điều 15 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0153",
+    "question": "Điều 15 khoản 4 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0154",
+    "question": "Tại Điều 15 khoản 4 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 1 Điều 14» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0155",
+    "question": "Khoản được dẫn tại Điều 15 khoản 4 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0156",
+    "question": "Theo Điều 15 khoản 4 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "template": "han_che",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0157",
+    "question": "Điều 15 khoản 4 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT cấm hoặc loại trừ nội dung gì?",
+    "template": "han_che_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0158",
+    "question": "Điều 15 khoản 4 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0159",
+    "question": "Theo Điều 15 khoản 4 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "template": "han_che",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0160",
+    "question": "Điều 15 khoản 4 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT cấm hoặc loại trừ nội dung gì?",
+    "template": "han_che_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0161",
+    "question": "Điều 15 khoản 4 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0162",
+    "question": "Theo Điều 16 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0163",
+    "question": "Điều 16 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0164",
+    "question": "Trong Điều 16 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối đa không vượt quá 2,0 lần thời gian đào tạo chuẩn của chương trình đào tạ» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0165",
+    "question": "Điều 16 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0166",
+    "question": "Theo Điều 16 khoản 5, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "moc_khong_co_so"
+  },
+  {
+    "id": "ve0167",
+    "question": "Điều 16 khoản 5, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0168",
+    "question": "Trong Điều 16 khoản 5, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối đa của chứng chỉ giáo dục đại học để công nhận, chuyển đổi với các học ph» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0169",
+    "question": "Điều 16 khoản 5, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0170",
+    "question": "Tại Điều 16 khoản 5, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 2 Điều 16» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0171",
+    "question": "Khoản được dẫn tại Điều 16 khoản 5, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0172",
+    "question": "Theo Điều 16 khoản 6, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "moc_khong_co_so"
+  },
+  {
+    "id": "ve0173",
+    "question": "Điều 16 khoản 6, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0174",
+    "question": "Trong Điều 16 khoản 6, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối đa được công nhận, trường hợp phải đánh giá bổ sung, thẩm quyền quyết địn» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0175",
+    "question": "Điều 17 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0176",
+    "question": "Điều 17 khoản 1 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0177",
+    "question": "Điều 17 khoản 1 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0178",
+    "question": "Điều 17 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0179",
+    "question": "Điều 17 khoản 3 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0180",
+    "question": "Tại Điều 17 khoản 3 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 5 Điều 13» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0181",
+    "question": "Khoản được dẫn tại Điều 17 khoản 3 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0182",
+    "question": "Điều 17 khoản 3 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0183",
+    "question": "Tại Điều 17 khoản 3 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 5 Điều 13» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0184",
+    "question": "Khoản được dẫn tại Điều 17 khoản 3 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0185",
+    "question": "Điều 17 khoản 3 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0186",
+    "question": "Tại Điều 17 khoản 3 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 5 Điều 13» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0187",
+    "question": "Khoản được dẫn tại Điều 17 khoản 3 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0188",
+    "question": "Điều 17 khoản 4 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0189",
+    "question": "Điều 17 khoản 4 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0190",
+    "question": "Điều 17 khoản 5 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0191",
+    "question": "Điều 17 khoản 5 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0192",
+    "question": "Theo Điều 18 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "moc_khong_co_so"
+  },
+  {
+    "id": "ve0193",
+    "question": "Điều 18 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0194",
+    "question": "Trong Điều 18 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối đa của chương trình đào tạo: Được điều động vào lực lượng vũ trang» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0195",
+    "question": "Theo Điều 18 khoản 1 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "moc_khong_co_so"
+  },
+  {
+    "id": "ve0196",
+    "question": "Điều 18 khoản 1 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0197",
+    "question": "Trong Điều 18 khoản 1 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối đa của chương trình đào tạo: Được điều động, đại diện quốc gia tham dự cá» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0198",
+    "question": "Theo Điều 18 khoản 1 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "moc_khong_co_so"
+  },
+  {
+    "id": "ve0199",
+    "question": "Điều 18 khoản 1 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0200",
+    "question": "Trong Điều 18 khoản 1 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối đa của chương trình đào tạo: Bị ốm, thai sản hoặc tai nạn phải điều trị t» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0201",
+    "question": "Theo Điều 18 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0202",
+    "question": "Điều 18 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0203",
+    "question": "Trong Điều 18 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối thiểu 01 học kỳ ở cơ sở đào tạo và không thuộc các trường hợp bị xem xét buộ» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0204",
+    "question": "Điều 18 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0205",
+    "question": "Tại Điều 18 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 3 Điều 3» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0206",
+    "question": "Khoản được dẫn tại Điều 18 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0207",
+    "question": "Tại Điều 18 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 1 Điều 18» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0208",
+    "question": "Theo Điều 18 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "template": "han_che",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0209",
+    "question": "Điều 18 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT cấm hoặc loại trừ nội dung gì?",
+    "template": "han_che_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0210",
+    "question": "Điều 18 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0211",
+    "question": "Theo Điều 19 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "template": "han_che",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0212",
+    "question": "Điều 19 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT cấm hoặc loại trừ nội dung gì?",
+    "template": "han_che_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0213",
+    "question": "Điều 19 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0214",
+    "question": "Tại Điều 19 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 3 Điều 3» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0215",
+    "question": "Khoản được dẫn tại Điều 19 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0216",
+    "question": "Theo Điều 19 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, điều gì bị hạn chế hoặc không được tính?",
+    "template": "han_che",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0217",
+    "question": "Điều 19 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT cấm hoặc loại trừ nội dung gì?",
+    "template": "han_che_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0218",
+    "question": "Điều 19 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0219",
+    "question": "Tại Điều 19 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 3 Điều 3» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0220",
+    "question": "Khoản được dẫn tại Điều 19 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0221",
+    "question": "Tại Điều 19 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 4 Điều 19» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0222",
+    "question": "Điều 19 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0223",
+    "question": "Tại Điều 19 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 4 Điều 19» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0224",
+    "question": "Khoản được dẫn tại Điều 19 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0225",
+    "question": "Điều 19 khoản 2 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0226",
+    "question": "Tại Điều 19 khoản 2 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 4 Điều 19» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0227",
+    "question": "Khoản được dẫn tại Điều 19 khoản 2 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0228",
+    "question": "Điều 19 khoản 2 điểm d, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0229",
+    "question": "Tại Điều 19 khoản 2 điểm d, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 4 Điều 19» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0230",
+    "question": "Khoản được dẫn tại Điều 19 khoản 2 điểm d, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0231",
+    "question": "Điều 19 khoản 5, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0232",
+    "question": "Điều 20 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0233",
+    "question": "Điều 21 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0234",
+    "question": "Tại Điều 21 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 2 Điều 21» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0235",
+    "question": "Khoản được dẫn tại Điều 21 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0236",
+    "question": "Theo Điều 21 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0237",
+    "question": "Điều 21 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0238",
+    "question": "Trong Điều 21 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối thiểu 25% khối lượng học tập chuẩn của chương trình đào tạo và đạt điểm trun» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0239",
+    "question": "Theo Điều 21 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0240",
+    "question": "Điều 21 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0241",
+    "question": "Trong Điều 21 khoản 2 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối thiểu 25% khối lượng học tập chuẩn của chương trình đào tạo và đạt điểm trun» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0242",
+    "question": "Theo Điều 21 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "moc_khong_co_so"
+  },
+  {
+    "id": "ve0243",
+    "question": "Điều 21 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0244",
+    "question": "Trong Điều 21 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối đa được phép học đối với sinh viên học cùng lúc hai chương trình là thời» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0245",
+    "question": "Điều 21 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0246",
+    "question": "Tại Điều 21 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 3 Điều 3» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0247",
+    "question": "Khoản được dẫn tại Điều 21 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0248",
+    "question": "Điều 21 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0249",
+    "question": "Điều 21 khoản 5, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0250",
+    "question": "Theo Điều 22 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "moc_khong_co_so"
+  },
+  {
+    "id": "ve0251",
+    "question": "Điều 22 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0252",
+    "question": "Trong Điều 22 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối đa của học phần trình độ thạc sĩ được sinh viên tích lũy trong giai đoạn» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0253",
+    "question": "Theo Điều 22 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0254",
+    "question": "Điều 22 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0255",
+    "question": "Trong Điều 22 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «ít nhất 3/4 khối lượng học tập chuẩn của chương trình đào tạo trình độ đại học» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0256",
+    "question": "Điều 22 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0257",
+    "question": "Theo Điều 23 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0258",
+    "question": "Điều 23 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0259",
+    "question": "Trong Điều 23 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «tối thiểu 03 khóa theo chương trình, ngành đào tạo và hình thức đào tạo mà sinh» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0260",
+    "question": "Điều 23 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0261",
+    "question": "Điều 24 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0262",
+    "question": "Điều 24 khoản 3, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0263",
+    "question": "Theo Điều 26 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0264",
+    "question": "Điều 26 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0265",
+    "question": "Trong Điều 26 khoản 1 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «Trước ngày 31 tháng 12 hằng năm: Cơ sở đào tạo lưu trữ, cập nhật dữ liệu về hoạt» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0266",
+    "question": "Theo Điều 26 khoản 1 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0267",
+    "question": "Điều 26 khoản 1 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0268",
+    "question": "Trong Điều 26 khoản 1 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «Trước ngày 31 tháng 12 hằng năm: Cơ sở đào tạo thông báo Ủy ban nhân dân cấp tỉnh» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0269",
+    "question": "Điều 26 khoản 1 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0270",
+    "question": "Điều 26 khoản 2 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0271",
+    "question": "Theo Điều 26 khoản 3 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0272",
+    "question": "Điều 26 khoản 3 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0273",
+    "question": "Trong Điều 26 khoản 3 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «chậm nhất 45 ngày trước khi tổ chức đào tạo: Quy chế của cơ sở đào tạo và các qu» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0274",
+    "question": "Điều 26 khoản 3 điểm a, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0275",
+    "question": "Theo Điều 26 khoản 3 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0276",
+    "question": "Điều 26 khoản 3 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0277",
+    "question": "Trong Điều 26 khoản 3 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «chậm nhất 45 ngày trước khi tổ chức đào tạo: Quyết định ban hành chương trình đà» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0278",
+    "question": "Điều 26 khoản 3 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0279",
+    "question": "Tại Điều 26 khoản 3 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «khoản 1 Điều 26» dẫn tới nội dung gì?",
+    "template": "vien_dan",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "chi_hoi_doan_duoc_dan"
+  },
+  {
+    "id": "ve0280",
+    "question": "Khoản được dẫn tại Điều 26 khoản 3 điểm b, Quy chế kèm Thông tư 56/2026/TT-BGDĐT nói gì?",
+    "template": "vien_dan_para",
+    "hop": 2,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0281",
+    "question": "Theo Điều 26 khoản 3 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0282",
+    "question": "Điều 26 khoản 3 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0283",
+    "question": "Trong Điều 26 khoản 3 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «chậm nhất 45 ngày trước khi tổ chức đào tạo: Các điều kiện bảo đảm chất lượng th» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0284",
+    "question": "Điều 26 khoản 3 điểm c, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0285",
+    "question": "Theo Điều 26 khoản 3 điểm d, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0286",
+    "question": "Điều 26 khoản 3 điểm d, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0287",
+    "question": "Trong Điều 26 khoản 3 điểm d, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «chậm nhất 45 ngày trước khi tổ chức đào tạo: Các minh chứng về việc các chương t» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0288",
+    "question": "Điều 26 khoản 3 điểm d, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0289",
+    "question": "Theo Điều 26 khoản 3 điểm đ, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0290",
+    "question": "Điều 26 khoản 3 điểm đ, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0291",
+    "question": "Trong Điều 26 khoản 3 điểm đ, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «chậm nhất 45 ngày trước khi tổ chức đào tạo: Thông báo tuyển sinh theo quy chế t» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0292",
+    "question": "Điều 26 khoản 3 điểm đ, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0293",
+    "question": "Theo Điều 26 khoản 3 điểm e, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0294",
+    "question": "Điều 26 khoản 3 điểm e, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0295",
+    "question": "Trong Điều 26 khoản 3 điểm e, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «chậm nhất 45 ngày trước khi tổ chức đào tạo: Các minh chứng về việc đáp ứng các» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0296",
+    "question": "Điều 26 khoản 3 điểm e, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  },
+  {
+    "id": "ve0297",
+    "question": "Điều 26 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0298",
+    "question": "Điều 27 khoản 1, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0299",
+    "question": "Theo Điều 27 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "moc_khong_co_so"
+  },
+  {
+    "id": "ve0300",
+    "question": "Điều 27 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0301",
+    "question": "Trong Điều 27 khoản 2, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «trước ngày Thông tư này có hiệu lực và chưa nhập học hoặc chưa tổ chức đào tạo, c» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0302",
+    "question": "Theo Điều 27 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, mốc hoặc mức được quy định là gì?",
+    "template": "moc_muc",
+    "hop": 1,
+    "review_status": "da_doi_chieu",
+    "review_reason": "dap_an_nam_trong_khoan"
+  },
+  {
+    "id": "ve0303",
+    "question": "Điều 27 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định mức/mốc nào liên quan đến hạn mức hoặc thời hạn?",
+    "template": "moc_muc_para",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "trung_dien_dat"
+  },
+  {
+    "id": "ve0304",
+    "question": "Trong Điều 27 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT, cụm «trước ngày 31 tháng 12 năm 2026» nằm trong điều kiện nào?",
+    "template": "moc_muc_span",
+    "hop": 1,
+    "review_status": "loai",
+    "review_reason": "lech_cau_hoi_va_dap_an"
+  },
+  {
+    "id": "ve0305",
+    "question": "Điều 27 khoản 4, Quy chế kèm Thông tư 56/2026/TT-BGDĐT quy định nội dung gì?",
+    "template": "nguyen_van",
+    "hop": 1,
+    "review_status": "chua_chon",
+    "review_reason": "du_dieu_kien_nhung_ngoai_mau_150"
+  }
+]

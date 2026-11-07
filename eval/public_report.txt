@@ -1,0 +1,21 @@
+ViKAG-Faith trên văn bản công khai, thu 2026-10-30
+Khoản/điểm: 545 | REFERS_TO 125 | REPLACES 2
+Theo văn bản: 08-2021-tt-bgddt=3, 08-2021-qc-dh=165, 23-2021-tt-bgddt=3, 23-2021-qc-ths=156, 56-2026-tt-bgddt=3, 56-2026-qc-dh=215
+Câu hỏi: 63
+
+Recall@5 theo hệ (phần gold nằm trong top 5):
+  naive: trich_khoan=0.361 vien_dan=0.458 thoi_gian=0.833 all=0.421
+  graph: trich_khoan=0.25 vien_dan=0.396 thoi_gian=0.833 all=0.333
+  lightrag: trich_khoan=0.222 vien_dan=0.375 thoi_gian=1.0 all=0.317
+  hipporag: trich_khoan=0.5 vien_dan=0.625 thoi_gian=0.833 all=0.563
+  kag_style: trich_khoan=0.361 vien_dan=0.458 thoi_gian=0.5 all=0.405
+
+Verifier trên claim sinh từ chính các khoản (không phải nhãn người):
+  triple macro=0.717 supported=1.0 contradicted=0.15 unsupported=1.0
+  chunk  macro=0.7 supported=0.95 contradicted=0.15 unsupported=1.0
+
+Verify-then-revise trên câu cố ý sai số (thay claim lệch bằng đúng khoản, không gọi LLM):
+  n=20 GGF 0.45 -> 1.0
+  contradicted 0.362 -> 0.0
+
+ViHERMES chưa nạp: dataset gated, cần token Hugging Face.

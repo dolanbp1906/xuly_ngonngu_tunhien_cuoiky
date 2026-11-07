@@ -35,3 +35,13 @@ Mỗi claim là **một** khẳng định. Gán đúng một nhãn và một spa
 ## Trường bắt buộc trong JSON
 
 `id`, `claim`, `label`, `doc`, `dieu`, `span` (có thể rỗng nếu unsupported), `answer_id` (gom theo câu trả lời để tính GGF người).
+
+## Bộ hiệu chỉnh tháng 1
+
+Mười lăm claim tách từ câu trả lời mẫu Thông tư 08/2021 nằm ở `data/thang1/hieu_chinh_15_r2.json`. Người thứ hai chỉ mở file đó, đối chiếu `evidence_text`, điền `label` và `span`, rồi:
+
+```bash
+python run.py kappa --a data/thang1/hieu_chinh_15_a.json --b data/thang1/hieu_chinh_15_r2.json
+```
+
+Không mở `hieu_chinh_15_a.json` trước khi gán xong.

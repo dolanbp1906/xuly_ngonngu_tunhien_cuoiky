@@ -1,0 +1,123 @@
+{
+  "collected_on": "2026-10-30",
+  "chunks": 545,
+  "edges": {
+    "REFERS_TO": 125,
+    "REPLACES": 2
+  },
+  "by_doc": {
+    "08-2021-tt-bgddt": 3,
+    "08-2021-qc-dh": 165,
+    "23-2021-tt-bgddt": 3,
+    "23-2021-qc-ths": 156,
+    "56-2026-tt-bgddt": 3,
+    "56-2026-qc-dh": 215
+  },
+  "questions": 63,
+  "recall_at_5": {
+    "naive": {
+      "trich_khoan": 0.361,
+      "vien_dan": 0.458,
+      "thoi_gian": 0.833,
+      "all": 0.421
+    },
+    "graph": {
+      "trich_khoan": 0.25,
+      "vien_dan": 0.396,
+      "thoi_gian": 0.833,
+      "all": 0.333
+    },
+    "lightrag": {
+      "trich_khoan": 0.222,
+      "vien_dan": 0.375,
+      "thoi_gian": 1.0,
+      "all": 0.317
+    },
+    "hipporag": {
+      "trich_khoan": 0.5,
+      "vien_dan": 0.625,
+      "thoi_gian": 0.833,
+      "all": 0.563
+    },
+    "kag_style": {
+      "trich_khoan": 0.361,
+      "vien_dan": 0.458,
+      "thoi_gian": 0.5,
+      "all": 0.405
+    }
+  },
+  "verifier_on_synthetic": {
+    "n": {
+      "supported": 80,
+      "contradicted": 80,
+      "unsupported": 80
+    },
+    "accuracy": {
+      "triple": {
+        "supported": 1.0,
+        "contradicted": 0.15,
+        "unsupported": 1.0,
+        "macro": 0.717
+      },
+      "chunk": {
+        "supported": 0.95,
+        "contradicted": 0.15,
+        "unsupported": 1.0,
+        "macro": 0.7
+      }
+    }
+  },
+  "verify_then_revise": {
+    "n": 20,
+    "ggf_before": 0.45,
+    "ggf_after": 1.0,
+    "contradicted_before": 0.362,
+    "contradicted_after": 0.0
+  },
+  "sources": {
+    "08-2021-tt-bgddt": {
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "url": "https://vbpl.moj.gov.vn/FileData/TW/Lists/vbpq/Attachments/147704/VanBanGoc_08-2021-TT-BGDĐT%20full.pdf",
+      "note": "Chữ trích từ PDF Công báo số 569+570. File nhị phân không tải được vì DNS vbpl.moj.gov.vn không phân giải trên máy này.",
+      "status": "chuyen_tiep_khoa_cu"
+    },
+    "08-2021-qc-dh": {
+      "so_hieu": "08/2021/TT-BGDĐT",
+      "url": "https://vbpl.moj.gov.vn/FileData/TW/Lists/vbpq/Attachments/147704/VanBanGoc_08-2021-TT-BGDĐT%20full.pdf",
+      "note": "Cùng PDF Công báo với phần thông tư.",
+      "status": "chuyen_tiep_khoa_cu"
+    },
+    "23-2021-tt-bgddt": {
+      "so_hieu": "23/2021/TT-BGDĐT",
+      "url": "https://apolatlegal.com/wp-content/uploads/2025/05/Thong-tu-23_2021_TT-BGDDT.pdf",
+      "note": "PDF công khai. Trang thuộc tính: https://congbao.chinhphu.vn/van-ban/thong-tu-so-23-2021-tt-bgddt-34353.htm. Hết hiệu lực toàn bộ từ 30/06/2026 theo vbpl, được Thông tư 53/2026 thay thế; thông tư thay thế chưa nạp vào đồ thị.",
+      "status": "het_hieu_luc"
+    },
+    "23-2021-qc-ths": {
+      "so_hieu": "23/2021/TT-BGDĐT",
+      "url": "https://apolatlegal.com/wp-content/uploads/2025/05/Thong-tu-23_2021_TT-BGDDT.pdf",
+      "note": "Cùng PDF với phần thông tư.",
+      "status": "het_hieu_luc"
+    },
+    "56-2026-tt-bgddt": {
+      "so_hieu": "56/2026/TT-BGDĐT",
+      "url": "https://nhansu.vn/van-ban-phap-luat/Thong-tu-56-2026-TT-BGDDT-Quy-che-dao-tao-trinh-do-dai-hoc-717414.html",
+      "note": "Toàn văn công khai. Thuộc tính trên cổng Chính phủ: https://chinhphu.vn/?classid=1&docid=219044&pageid=27160&typegroupid=6. Không phải file Công báo PDF.",
+      "status": "con_hieu_luc"
+    },
+    "56-2026-qc-dh": {
+      "so_hieu": "56/2026/TT-BGDĐT",
+      "url": "https://nhansu.vn/van-ban-phap-luat/Thong-tu-56-2026-TT-BGDDT-Quy-che-dao-tao-trinh-do-dai-hoc-717414.html",
+      "note": "Cùng trang toàn văn với phần thông tư.",
+      "status": "con_hieu_luc"
+    }
+  },
+  "code": {
+    "naive": "BM25 trong src/graph.py",
+    "graph": "BM25 cộng cạnh REFERS_TO",
+    "lightrag": "Cổng dual-level của HKUDS/LightRAG, không chạy repo Docker",
+    "hipporag": "Cổng PPR một lớp của OSU-NLP-Group/HippoRAG, không chạy OpenIE LLM",
+    "kag_style": "Cổng logical-form của OpenSPG/KAG, không chạy KAG v0.8",
+    "vihermes": "ura-hcmut/ViHERMES là dataset gated; lần chạy này không gọi vì cần token Hugging Face"
+  }
+}

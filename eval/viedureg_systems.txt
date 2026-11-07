@@ -1,0 +1,14 @@
+ViEduReg — truy hồi trên 150 câu đã đối chiếu
+Đoạn vàng là evidence của câu hỏi. Pool = top khoản đưa cho verifier. Chosen = khoản ghi vào câu trả lời.
+Câu: 150 (dev 30, test 120).
+Đầu ra: 900. Claim theo hệ: 1166. Claim không trùng để gán: 127 (chép khoản 1016, đổi mốc 150).
+
+Hệ            Recall pool   Recall câu trả lời   Pool đủ   Pool hop-2   Câu trả lời hop-2
+naive         0.440         0.200                0.433     0.983        0.450
+graph         0.400         0.257                0.333     0.783        0.525
+lightrag      0.413         0.260                0.380     0.917        0.600
+hipporag      0.633         0.270                0.613     0.950        0.592
+kag_style     0.460         0.213                0.453     0.983        0.500
+unfaithful    0.400         0.257                0.333     0.783        0.525
+
+Câu trả lời chép khoản truy hồi, chưa phải LLM viết lại. unfaithful đổi mốc bằng distort. Nhãn người điền ở claims_unique.jsonl.

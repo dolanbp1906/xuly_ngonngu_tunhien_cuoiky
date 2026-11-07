@@ -8,7 +8,7 @@ GraphRAG/KAG tiếng Việt thường được chấm bằng F1 hoặc LLM-judge
 
 ## 2. Related Work
 
-KAG, LightRAG, HippoRAG 2, GraphRAG, RAGAS, ViHERMES Auditor, ViHallu, ViNLI/VLUE, SHROOM. **[TODO]** đối chiếu số liệu preprint mới nhất.
+KAG, LightRAG, HippoRAG 2, GraphRAG, RAGAS, ViHERMES Auditor, ViHallu, ViNLI/VLUE, SHROOM. Số ViHERMES, ViHallu, ViNLI và R2GQA đã đối chiếu ngày 2026-10-30 trong `BAO_CAO_THANG_1.md`. LightRAG, HippoRAG 2 và SHROOM còn đối chiếu khi viết related work đầy đủ.
 
 ## 3. Method
 

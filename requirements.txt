@@ -1,5 +1,6 @@
 # Demo tối thiểu: thư viện chuẩn Python 3.10+
 # Gói đầy đủ (PhoBERT verifier):
+pypdf>=4.0
 torch>=2.0
 transformers>=4.36
 datasets>=2.14
