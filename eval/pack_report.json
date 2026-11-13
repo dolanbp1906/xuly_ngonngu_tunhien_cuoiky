@@ -1,42 +1,67 @@
 {
   "viedureg": {
     "chunks": 213,
-    "edges": 54,
-    "questions": 303,
-    "hop2": 55,
+    "edges": 57,
+    "questions": 305,
+    "hop2": 56,
     "samples": 6
   },
   "claims": {
-    "n": 1538,
-    "train": 1372,
-    "dev": 152,
+    "n": 3000,
+    "train": 2688,
+    "dev": 298,
     "test": 14,
-    "rule_agree_train200": 0.864,
+    "rule_agree_train200": 0.719,
     "paths": {
-      "synthetic": "/Users/dothilan.vn/Downloads/Lanaaaa/Source Code/MyCH/xuly_ngonngu_tunhien_cuoiky/data/synthetic/pairs.jsonl",
-      "train": "/Users/dothilan.vn/Downloads/Lanaaaa/Source Code/MyCH/xuly_ngonngu_tunhien_cuoiky/data/claims/train.jsonl",
-      "dev": "/Users/dothilan.vn/Downloads/Lanaaaa/Source Code/MyCH/xuly_ngonngu_tunhien_cuoiky/data/claims/dev.jsonl",
-      "test": "/Users/dothilan.vn/Downloads/Lanaaaa/Source Code/MyCH/xuly_ngonngu_tunhien_cuoiky/data/claims/test.jsonl"
+      "synthetic": "C:\\Cao Hoc\\NNL\\content\\xuly_ngonngu_tunhien_cuoiky\\data\\synthetic\\pairs.jsonl",
+      "train": "C:\\Cao Hoc\\NNL\\content\\xuly_ngonngu_tunhien_cuoiky\\data\\claims\\train.jsonl",
+      "dev": "C:\\Cao Hoc\\NNL\\content\\xuly_ngonngu_tunhien_cuoiky\\data\\claims\\dev.jsonl",
+      "test": "C:\\Cao Hoc\\NNL\\content\\xuly_ngonngu_tunhien_cuoiky\\data\\claims\\test.jsonl"
     }
   },
   "verifier": {
-    "model": "/Users/dothilan.vn/Downloads/Lanaaaa/Source Code/MyCH/xuly_ngonngu_tunhien_cuoiky/models/tfidf_logreg.pkl",
+    "model": "C:\\Cao Hoc\\NNL\\content\\xuly_ngonngu_tunhien_cuoiky\\models\\tfidf_logreg.pkl",
     "train": {
-      "n": 1372,
-      "acc": 0.95,
-      "macro_f1": 0.951
+      "n": 2000,
+      "acc": 0.993,
+      "macro_f1": 0.993
     },
     "dev": {
-      "n": 152,
-      "acc": 0.914,
-      "macro_f1": 0.917
+      "n": 298,
+      "acc": 0.966,
+      "macro_f1": 0.967
     },
     "test_human": {
       "n": 14,
-      "acc": 0.5,
-      "macro_f1": 0.534
+      "acc": 0.571,
+      "macro_f1": 0.578
     },
     "note": "CPU TF-IDF+LogReg. PhoBERT-large là mục tiêu khi có GPU (KE_HOACH)."
+  },
+  "phobert": {
+    "model": "vinai/phobert-base",
+    "device": "cpu",
+    "max_train": 800,
+    "epochs": 1,
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.3929
+      }
+    ],
+    "dev": {
+      "supported": 0.96,
+      "contradicted": 0.95,
+      "unsupported": 1.0,
+      "macro": 0.97
+    },
+    "test_human": {
+      "supported": 0.7,
+      "contradicted": 0.0,
+      "unsupported": 0.667,
+      "macro": 0.456
+    },
+    "path": "C:\\Cao Hoc\\NNL\\content\\xuly_ngonngu_tunhien_cuoiky\\models\\phobert_verifier"
   },
   "eval": {
     "n_questions": 13,
@@ -58,24 +83,32 @@
         "recall_hop2": 1.0,
         "hit_hop2": 1.0
       },
-      "lightrag_style": {
+      "lightrag": {
         "ggf": 1.0,
         "contradicted": 0.0,
-        "hit": 1.0,
+        "hit": 0.9615384615384616,
         "recall": 1.0,
         "recall_hop2": 1.0,
-        "hit_hop2": 1.0
+        "hit_hop2": 0.5
       },
-      "hipporag_style": {
+      "hipporag": {
         "ggf": 1.0,
         "contradicted": 0.0,
-        "hit": 1.0,
+        "hit": 0.9615384615384616,
         "recall": 1.0,
         "recall_hop2": 1.0,
-        "hit_hop2": 1.0
+        "hit_hop2": 0.5
+      },
+      "kag_style": {
+        "ggf": 1.0,
+        "contradicted": 0.0,
+        "hit": 0.9615384615384616,
+        "recall": 1.0,
+        "recall_hop2": 1.0,
+        "hit_hop2": 0.5
       },
       "unfaithful": {
-        "ggf": 0.23076923076923078,
+        "ggf": 0.23076923076923073,
         "contradicted": 0.7435897435897435,
         "hit": 1.0,
         "recall": 1.0,
@@ -114,10 +147,16 @@
       }
     },
     "f1_learned": {
-      "supported": 0.5714285714285714,
-      "contradicted": 0.3636363636363636,
+      "supported": 0.6666666666666666,
+      "contradicted": 0.4000000000000001,
       "unsupported": 0.6666666666666666,
-      "macro": 0.5339105339105339
+      "macro": 0.5777777777777778
+    },
+    "f1_phobert": {
+      "supported": 0.7000000000000001,
+      "contradicted": 0.0,
+      "unsupported": 0.6666666666666666,
+      "macro": 0.45555555555555555
     },
     "spearman": {
       "triple": 0.9999999999999998,
@@ -128,7 +167,12 @@
       "triple": 1.0,
       "chunk": 1.0,
       "lexical": 0.0
+    },
+    "judge_corr": {
+      "ragas": 0.7503664793768668,
+      "llm_judge": 0.7627700713964738,
+      "ggf_rule": 0.7627700713964738
     }
   },
-  "hand20": "/Users/dothilan.vn/Downloads/Lanaaaa/Source Code/MyCH/xuly_ngonngu_tunhien_cuoiky/data/demo/hand20.json"
+  "hand20": "C:\\Cao Hoc\\NNL\\content\\xuly_ngonngu_tunhien_cuoiky\\data\\demo\\hand20.json"
 }

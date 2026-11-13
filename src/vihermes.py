@@ -1,13 +1,18 @@
 """Kho ViHERMES, tách khỏi đồ thị quy chế để không đổi BM25 của bản demo.
 
-Bộ tải từ cache Hugging Face của máy đang chạy. Không ghi dữ liệu vào repo.
+Ưu tiên bản phát hành trên GitHub (data/external/vihermes/dataset.jsonl, MIT);
+nếu chưa tải thì thử Hugging Face (cần token vì dataset gated).
 """
 
 from __future__ import annotations
 
+import ast
+import json
+import re
 from dataclasses import dataclass
 
 from src.graph import Chunk, Store, _tokens, bm25
+from src.paths import DATA
 from src.text_norm import normalize
 
 PREFIX = "vihermes:"
@@ -56,11 +61,36 @@ def _chunk(row: dict) -> Chunk:
     )
 
 
-def load_vihermes() -> ViHermes:
-    from datasets import load_dataset
+LOCAL = DATA / "external" / "vihermes" / "dataset.jsonl"
+_CTX_RE = re.compile(r"\[CONTEXT \d+\]\s*\nID:\s*(.+?)\s*\nTitle:\s*(.*?)\s*\nBody:\s*\n(.*?)(?=\n\[CONTEXT \d+\]|\Z)", re.S)
 
-    corpus = load_dataset("ura-hcmut/ViHERMES", "corpus", split="corpus")
-    qa = load_dataset("ura-hcmut/ViHERMES", "qa", split="test")
+
+def read_local() -> tuple[list[dict], list[dict]]:
+    """Đọc bản phát hành công khai github.com/ura-hcmut/ViHERMES (dataset/dataset.jsonl, 1.561 câu).
+
+    Kho ngữ liệu được dựng lại từ context_block như README của ViHERMES hướng dẫn (998 đoạn).
+    """
+    corpus: dict[str, dict] = {}
+    qa: list[dict] = []
+    with LOCAL.open(encoding="utf-8") as handle:
+        for line in handle:
+            row = json.loads(line)
+            for cid, title, body in _CTX_RE.findall(row.get("context_block") or ""):
+                corpus.setdefault(cid.strip(), {"context_id": cid.strip(), "title": title, "text": body})
+            ids = row.get("used_context_ids") or "[]"
+            ids = ast.literal_eval(ids) if isinstance(ids, str) else ids
+            qa.append({**row, "context_ids": [str(cid) for cid in ids]})
+    return list(corpus.values()), qa
+
+
+def load_vihermes() -> ViHermes:
+    if LOCAL.exists():
+        corpus, qa = read_local()
+    else:
+        from datasets import load_dataset
+
+        corpus = load_dataset("ura-hcmut/ViHERMES", "corpus", split="corpus")
+        qa = load_dataset("ura-hcmut/ViHERMES", "qa", split="test")
     store = Store()
     titles: set[str] = set()
     for row in corpus:

@@ -1,0 +1,31 @@
+ViKAG-Faith — đánh giá trên bộ dữ liệu công bố (đề cương Project 4)
+
+ViHERMES (y tế–pháp quy): 1561 câu, 998 đoạn, 490 văn bản.
+Recall@5 theo số hop:
+  naive      1=0.897 2=0.729 3=0.496 4=0.39 5=0.291 all=0.561
+  graph      1=0.897 2=0.729 3=0.496 4=0.39 5=0.291 all=0.561
+  lightrag   1=0.869 2=0.684 3=0.45 4=0.345 5=0.232 all=0.516
+  hipporag   1=0.897 2=0.729 3=0.496 4=0.39 5=0.291 all=0.561
+  kag_style  1=0.885 2=0.694 3=0.45 4=0.325 5=0.254 all=0.521
+Verifier rule trên đáp án vàng (LLM viết, đã duyệt) so với đoạn vàng:
+  n=300 GGF đáp án đúng=0.911  bắt được câu đổi số=0.985 (n=68)
+
+ViRHE4QA (quy chế trường, câu hỏi người viết): 976 câu test, 1048 điều.
+Recall@5:
+  naive      1=0.609 all=0.609
+  graph      1=0.377 all=0.377
+  lightrag   1=0.435 all=0.435
+  hipporag   1=0.43 all=0.43
+  kag_style  1=0.597 all=0.597
+Verifier rule trên đáp án diễn đạt lại do người viết:
+  n=300 GGF đáp án đúng=0.993  bắt được câu đổi số=0.87 (n=23)
+
+ViANLI: train 8012, test 1000 (entailment→supported, contradiction→contradicted, neutral→unsupported).
+macro-F1 (supported / contradicted / unsupported):
+  tong_hop         human14        macro=0.578 S=0.667 C=0.4 U=0.667 (n=14)
+  tong_hop         synthetic_dev  macro=0.967 S=0.963 C=0.948 U=0.989 (n=298)
+  tong_hop         vianli_test    macro=0.266 S=0.439 C=0.243 U=0.114 (n=1000)
+  tong_hop+vianli  human14        macro=0.624 S=0.706 C=0.5 U=0.667 (n=14)
+  tong_hop+vianli  synthetic_dev  macro=0.812 S=0.718 C=0.82 U=0.9 (n=298)
+  tong_hop+vianli  vianli_test    macro=0.24 S=0.254 C=0.218 U=0.249 (n=1000)
+  rule_triple      vianli_test    macro=0.193 S=0.35 C=0.018 U=0.211 (n=1000)

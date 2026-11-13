@@ -14,10 +14,13 @@ from src.viedureg import build_viedureg
 
 
 def _train_phobert() -> dict:
+    """Dùng lại model đã có (huấn luyện ~27 phút trên CPU). Train mới: 800 claim tổng hợp + 800 cặp ViANLI."""
     try:
-        from src.phobert_verifier import train_phobert
+        from src.phobert_verifier import MODEL_DIR, REPORT_PATH, train_phobert
 
-        return train_phobert(max_train=800, epochs=1, batch_size=4)
+        if (MODEL_DIR / "model.safetensors").exists() and REPORT_PATH.exists():
+            return json.loads(REPORT_PATH.read_text(encoding="utf-8"))
+        return train_phobert(max_train=800, epochs=1, batch_size=8, nli=800)
     except Exception as exc:
         return {"error": str(exc), "skipped": True}
 

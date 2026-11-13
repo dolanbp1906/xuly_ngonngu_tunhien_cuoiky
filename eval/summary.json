@@ -43,7 +43,7 @@
       "hit_hop2": 0.5
     },
     "unfaithful": {
-      "ggf": 0.23076923076923078,
+      "ggf": 0.23076923076923073,
       "contradicted": 0.7435897435897435,
       "hit": 1.0,
       "recall": 1.0,
@@ -87,7 +87,12 @@
     "unsupported": 0.6666666666666666,
     "macro": 0.5777777777777778
   },
-  "f1_phobert": null,
+  "f1_phobert": {
+    "supported": 0.7368421052631579,
+    "contradicted": 0.0,
+    "unsupported": 1.0,
+    "macro": 0.5789473684210527
+  },
   "auroc_wrong": 1.0,
   "spearman": {
     "triple": 0.9999999999999998,

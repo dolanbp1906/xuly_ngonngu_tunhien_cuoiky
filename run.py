@@ -14,6 +14,7 @@
     python run.py kappa --a data/gold/human_claims.json --b data/gold/human_claims_r2.json
     python run.py pack
     python run.py public
+    python run.py external
 """
 
 from __future__ import annotations
@@ -71,9 +72,13 @@ def main() -> None:
     sub.add_parser("outputs")
     sub.add_parser("claims")
     sub.add_parser("train-verifier")
-    sub.add_parser("train-phobert")
+    phobert_cmd = sub.add_parser("train-phobert")
+    phobert_cmd.add_argument("--max-train", type=int, default=800)
+    phobert_cmd.add_argument("--epochs", type=int, default=1)
+    phobert_cmd.add_argument("--nli", type=int, default=0, help="số cặp ViANLI trộn vào huấn luyện")
     sub.add_parser("pack")
     sub.add_parser("public")
+    sub.add_parser("external")
     kappa_cmd = sub.add_parser("kappa")
     kappa_cmd.add_argument("--a", required=True)
     kappa_cmd.add_argument("--b", required=True)
@@ -153,7 +158,12 @@ def main() -> None:
     if args.cmd == "train-phobert":
         from src.phobert_verifier import train_phobert
 
-        print(json.dumps(train_phobert(), ensure_ascii=False, indent=2))
+        print(json.dumps(train_phobert(max_train=args.max_train, epochs=args.epochs, nli=args.nli), ensure_ascii=False, indent=2))
+        return
+    if args.cmd == "external":
+        from src.external_eval import run_external, write_report
+
+        print(write_report(run_external()))
         return
     if args.cmd == "kappa":
         from src.kappa_stats import compare_files

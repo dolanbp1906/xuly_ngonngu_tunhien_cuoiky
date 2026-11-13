@@ -14,7 +14,7 @@ Cập nhật tự động bởi `python run.py pack`.
 | Nhãn claim | 127 claim không trùng đã có nhãn một người đối chiếu khoản (supported 72, contradicted 26, unsupported 29). Chưa có người thứ hai, kappa claim còn trống. `data/viedureg/claims_unique.jsonl` |
 | Claim splits | train 2688 / dev 298 / test 14 (tổng ≥3000) |
 | Verifier TF-IDF | test macro-F1 0.578 |
-| Verifier PhoBERT | {'model': 'vinai/phobert-base', 'device': 'cpu', 'max_train': 800, 'epochs': 1, 'history': [{'epoch': 1, 'train_loss': 0.3936}], 'dev': {'supported': 0.894, 'contradicted': 0.88, 'unsupported': 1.0, 'macro': 0.925}, 'test_human': {'supported': 0.533, 'contradicted': 0.222, 'unsupported': 0.5, 'macro': 0.419}, 'path': '/Users/dothilan.vn/Downloads/Lanaaaa/Source Code/MyCH/xuly_ngonngu_tunhien_cuoiky/models/phobert_verifier'} |
+| Verifier PhoBERT | {'model': 'vinai/phobert-base', 'device': 'cpu', 'max_train': 800, 'epochs': 1, 'history': [{'epoch': 1, 'train_loss': 0.3929}], 'dev': {'supported': 0.96, 'contradicted': 0.95, 'unsupported': 1.0, 'macro': 0.97}, 'test_human': {'supported': 0.7, 'contradicted': 0.0, 'unsupported': 0.667, 'macro': 0.456}, 'path': 'C:\\Cao Hoc\\NNL\\content\\xuly_ngonngu_tunhien_cuoiky\\models\\phobert_verifier'} |
 | Hệ truy hồi | naive, graph, lightrag, hipporag, kag_style |
 | RQ1 bổ sung | RAGAS-style + LLM-judge trong `eval/summary.txt` |
 | Eval offline | `eval/summary.txt` — 13 câu, 14 claim người |

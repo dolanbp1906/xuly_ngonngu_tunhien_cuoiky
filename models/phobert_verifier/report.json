@@ -1,25 +1,32 @@
 {
   "model": "vinai/phobert-base",
   "device": "cpu",
-  "max_train": 800,
+  "max_train": 1600,
   "epochs": 1,
   "history": [
     {
       "epoch": 1,
-      "train_loss": 0.3936
+      "train_loss": 0.8471
     }
   ],
   "dev": {
-    "supported": 0.894,
-    "contradicted": 0.88,
-    "unsupported": 1.0,
-    "macro": 0.925
+    "supported": 0.96,
+    "contradicted": 0.944,
+    "unsupported": 0.995,
+    "macro": 0.967
   },
   "test_human": {
-    "supported": 0.533,
-    "contradicted": 0.222,
-    "unsupported": 0.5,
-    "macro": 0.419
+    "supported": 0.737,
+    "contradicted": 0.0,
+    "unsupported": 1.0,
+    "macro": 0.579
   },
-  "path": "/Users/dothilan.vn/Downloads/Lanaaaa/Source Code/MyCH/xuly_ngonngu_tunhien_cuoiky/models/phobert_verifier"
+  "nli_train": 800,
+  "vianli_test": {
+    "supported": 0.239,
+    "contradicted": 0.019,
+    "unsupported": 0.475,
+    "macro": 0.244
+  },
+  "path": "C:\\Cao Hoc\\NNL\\content\\xuly_ngonngu_tunhien_cuoiky\\models\\phobert_verifier"
 }

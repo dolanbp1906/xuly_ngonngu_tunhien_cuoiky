@@ -5,7 +5,9 @@ Nguồn chữ, thu ngày 2026-10-30:
   được DNS vbpl, bản chữ lấy từ chính URL PDF đó).
 - 23/2021/TT-BGDĐT: PDF công khai, đối chiếu Công báo 809+810.
 - 56/2026/TT-BGDĐT: toàn văn công khai trên nhansu.vn; thuộc tính văn bản
-  đối chiếu cổng Chính phủ (docid 219044).
+  đối chiếu cổng Chính phủ (docid 219044). Đến 13/11/2026 chưa thấy trên
+  congbao.chinhphu.vn (đã quét mã văn bản Bộ GD&ĐT năm 2026).
+- 53/2026/TT-BGDĐT: PDF Công báo số 447 (28/07/2026), thay thế 23/2021.
 
 Năm hệ truy hồi là cổng offline của BM25, LightRAG (dual-level), HippoRAG 2
 (PPR một lớp), KAG (logical form tối giản) và graph theo cạnh REFERS_TO.
@@ -54,7 +56,7 @@ DOCS = {
         "valid_to": "2026-06-30",
         "status": "het_hieu_luc",
         "source_url": "https://apolatlegal.com/wp-content/uploads/2025/05/Thong-tu-23_2021_TT-BGDDT.pdf",
-        "source_note": "PDF công khai. Trang thuộc tính: https://congbao.chinhphu.vn/van-ban/thong-tu-so-23-2021-tt-bgddt-34353.htm. Hết hiệu lực toàn bộ từ 30/06/2026 theo vbpl, được Thông tư 53/2026 thay thế; thông tư thay thế chưa nạp vào đồ thị.",
+        "source_note": "PDF công khai. Trang thuộc tính: https://congbao.chinhphu.vn/van-ban/thong-tu-so-23-2021-tt-bgddt-34353.htm. Hết hiệu lực toàn bộ từ 30/06/2026, được Thông tư 53/2026 thay thế (đã nạp, cạnh REPLACES).",
     },
     "23-2021-qc-ths": {
         "so_hieu": "23/2021/TT-BGDĐT",
@@ -82,6 +84,24 @@ DOCS = {
         "status": "con_hieu_luc",
         "source_url": "https://nhansu.vn/van-ban-phap-luat/Thong-tu-56-2026-TT-BGDDT-Quy-che-dao-tao-trinh-do-dai-hoc-717414.html",
         "source_note": "Cùng trang toàn văn với phần thông tư.",
+    },
+    "53-2026-tt-bgddt": {
+        "so_hieu": "53/2026/TT-BGDĐT",
+        "title": "Thông tư ban hành Quy chế tuyển sinh và đào tạo sau đại học",
+        "valid_from": "2026-06-30",
+        "valid_to": None,
+        "status": "con_hieu_luc",
+        "source_url": "https://congbaocdn.chinhphu.vn/180507251028987904/2026/7/28/470098-1785226633_v1_1785226989_signed.pdf",
+        "source_note": "PDF Công báo số 447 ngày 28/07/2026 (trang văn bản: https://congbao.chinhphu.vn/van-ban/thong-tu-so-53-2026-tt-bgddt-470098.htm). Hiệu lực 30/06/2026, áp dụng cho khóa thông báo tuyển sinh từ 01/01/2027; thay thế 23/2021 và 18/2021.",
+    },
+    "53-2026-qc-sdh": {
+        "so_hieu": "53/2026/TT-BGDĐT",
+        "title": "Quy chế tuyển sinh và đào tạo sau đại học, ban hành kèm Thông tư 53/2026",
+        "valid_from": "2026-06-30",
+        "valid_to": None,
+        "status": "con_hieu_luc",
+        "source_url": "https://congbaocdn.chinhphu.vn/180507251028987904/2026/7/28/470098-1785226633_v1_1785226989_signed.pdf",
+        "source_note": "Cùng PDF Công báo với phần thông tư.",
     },
 }
 
@@ -112,6 +132,14 @@ def load_08() -> str:
 
 def load_23() -> str:
     return _read("23-2021.txt")
+
+
+def load_53() -> str:
+    """Chữ trích từ PDF Công báo số 447 (pypdf). Bỏ dòng đầu trang và nối số hiệu bị tách ('TT -BGDĐT')."""
+    text = _read("53-2026.source.txt")
+    text = re.sub(r"\d*\s*CÔNG BÁO/Số[^\n]*", "\n", text)
+    text = re.sub(r"(TT|NĐ|QĐ)\s+-\s*(BGDĐT|CP|TTg)", r"\1-\2", text)
+    return text
 
 
 def load_56() -> str:
@@ -260,11 +288,13 @@ def build_public_store() -> Store:
         "08-2021-tt-bgddt": load_08(),
         "23-2021-tt-bgddt": load_23(),
         "56-2026-tt-bgddt": load_56(),
+        "53-2026-tt-bgddt": load_53(),
     }
     bodies = {
         "08-2021-tt-bgddt": "08-2021-qc-dh",
         "23-2021-tt-bgddt": "23-2021-qc-ths",
         "56-2026-tt-bgddt": "56-2026-qc-dh",
+        "53-2026-tt-bgddt": "53-2026-qc-sdh",
     }
     for thong_tu_id, raw in parts.items():
         head, body = _split_quy_che(raw)
@@ -403,6 +433,29 @@ def _temporal(store: Store) -> list[dict]:
                 "kind": "thoi_gian",
             }
         )
+    sdh = _first(store, "53-2026-tt-bgddt", 2, None)
+    if sdh is not None:
+        rows.append(
+            {
+                "id": "t-53-hieu-luc",
+                "question": "Thông tư 53/2026/TT-BGDĐT có hiệu lực từ ngày nào, áp dụng cho khóa tuyển sinh nào và thay thế những thông tư nào?",
+                "gold_answer": sdh.context,
+                "hop": 1,
+                "evidence": [sdh.cid],
+                "kind": "thoi_gian",
+            }
+        )
+    if sdh is not None and ths is not None:
+        rows.append(
+            {
+                "id": "t-ths-con-hieu-luc",
+                "question": "Quy chế đào tạo thạc sĩ theo Thông tư 23/2021 còn hiệu lực không, văn bản nào thay thế?",
+                "gold_answer": sdh.context,
+                "hop": 2,
+                "evidence": [sdh.cid, ths.cid],
+                "kind": "thoi_gian",
+            }
+        )
     return rows
 
 
@@ -514,7 +567,7 @@ def run_public() -> dict:
             "lightrag": "Cổng dual-level của HKUDS/LightRAG, không chạy repo Docker",
             "hipporag": "Cổng PPR một lớp của OSU-NLP-Group/HippoRAG, không chạy OpenIE LLM",
             "kag_style": "Cổng logical-form của OpenSPG/KAG, không chạy KAG v0.8",
-            "vihermes": "ura-hcmut/ViHERMES là dataset gated; lần chạy này không gọi vì cần token Hugging Face",
+            "vihermes": "ViHERMES lấy từ github.com/ura-hcmut/ViHERMES (dataset/dataset.jsonl); đánh giá riêng trong eval/external_report.txt",
         },
     }
     OUT.mkdir(parents=True, exist_ok=True)
@@ -543,7 +596,7 @@ def run_public() -> dict:
             f"  n={report['verify_then_revise']['n']} GGF {report['verify_then_revise']['ggf_before']} -> {report['verify_then_revise']['ggf_after']}",
             f"  contradicted {report['verify_then_revise']['contradicted_before']} -> {report['verify_then_revise']['contradicted_after']}",
             "",
-            "ViHERMES chưa nạp: dataset gated, cần token Hugging Face.",
+            "ViHERMES, ViANLI, ViRHE4QA: xem eval/external_report.txt (python run.py external).",
         ]
     )
     text = "\n".join(lines) + "\n"

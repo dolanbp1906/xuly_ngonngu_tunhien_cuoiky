@@ -26,7 +26,7 @@
       "valid_to": "2026-06-30",
       "status": "het_hieu_luc",
       "source_url": "https://apolatlegal.com/wp-content/uploads/2025/05/Thong-tu-23_2021_TT-BGDDT.pdf",
-      "source_note": "PDF công khai. Trang thuộc tính: https://congbao.chinhphu.vn/van-ban/thong-tu-so-23-2021-tt-bgddt-34353.htm. Hết hiệu lực toàn bộ từ 30/06/2026 theo vbpl, được Thông tư 53/2026 thay thế; thông tư thay thế chưa nạp vào đồ thị."
+      "source_note": "PDF công khai. Trang thuộc tính: https://congbao.chinhphu.vn/van-ban/thong-tu-so-23-2021-tt-bgddt-34353.htm. Hết hiệu lực toàn bộ từ 30/06/2026, được Thông tư 53/2026 thay thế (đã nạp, cạnh REPLACES)."
     },
     "23-2021-qc-ths": {
       "so_hieu": "23/2021/TT-BGDĐT",
@@ -54,6 +54,24 @@
       "status": "con_hieu_luc",
       "source_url": "https://nhansu.vn/van-ban-phap-luat/Thong-tu-56-2026-TT-BGDDT-Quy-che-dao-tao-trinh-do-dai-hoc-717414.html",
       "source_note": "Cùng trang toàn văn với phần thông tư."
+    },
+    "53-2026-tt-bgddt": {
+      "so_hieu": "53/2026/TT-BGDĐT",
+      "title": "Thông tư ban hành Quy chế tuyển sinh và đào tạo sau đại học",
+      "valid_from": "2026-06-30",
+      "valid_to": null,
+      "status": "con_hieu_luc",
+      "source_url": "https://congbaocdn.chinhphu.vn/180507251028987904/2026/7/28/470098-1785226633_v1_1785226989_signed.pdf",
+      "source_note": "PDF Công báo số 447 ngày 28/07/2026 (trang văn bản: https://congbao.chinhphu.vn/van-ban/thong-tu-so-53-2026-tt-bgddt-470098.htm). Hiệu lực 30/06/2026, áp dụng cho khóa thông báo tuyển sinh từ 01/01/2027; thay thế 23/2021 và 18/2021."
+    },
+    "53-2026-qc-sdh": {
+      "so_hieu": "53/2026/TT-BGDĐT",
+      "title": "Quy chế tuyển sinh và đào tạo sau đại học, ban hành kèm Thông tư 53/2026",
+      "valid_from": "2026-06-30",
+      "valid_to": null,
+      "status": "con_hieu_luc",
+      "source_url": "https://congbaocdn.chinhphu.vn/180507251028987904/2026/7/28/470098-1785226633_v1_1785226989_signed.pdf",
+      "source_note": "Cùng PDF Công báo với phần thông tư."
     }
   }
 }

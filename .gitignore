@@ -10,3 +10,7 @@ models/phobert_verifier/pytorch_model.bin
 models/phobert_verifier/optimizer.pt
 models/phobert_verifier/scheduler.pt
 models/phobert_verifier/training_args.bin
+
+# ViRHE4QA chỉ cho phép dùng nghiên cứu, không phát hành lại trong repo công khai.
+# Tải: curl -L -o data/external/virhe4qa/ViRHE4QA.zip https://raw.githubusercontent.com/DoPhamPhucTinh/R2GQA/main/ViRHE4QA.zip rồi giải nén tại chỗ.
+data/external/virhe4qa/

@@ -13,17 +13,6 @@
   "review_status": "da_doi_chieu_nguon_chua_giang_vien",
   "kappa": null,
   "kappa_reason": "Bộ 150 câu đã đối chiếu nguồn Thông tư 56/2026 trong repo. Chưa có giảng viên duyệt kép, nên chưa có kappa.",
-  "nhan_claim": {
-    "path": "data/viedureg/claims_unique.jsonl",
-    "n": 127,
-    "filled": true,
-    "supported": 72,
-    "contradicted": 26,
-    "unsupported": 29,
-    "annotators": ["doi_chieu_khoan"],
-    "kappa": null,
-    "note": "Một lượt đối chiếu claim với khoản được dẫn trong evidence_chunk_ids. Verifier không gán nhãn này. Chưa có người thứ hai, nên chưa có kappa."
-  },
   "da_doi_chieu_rieng": "13 câu trong data/questions/questions.json và 14 claim trong data/gold/human_claims.json là trích Thông tư 08/2021, đối chiếu Công báo khi lập demo. Không gộp vào 500 câu chờ duyệt.",
   "hieu_luc": "Ngày 2026-10-28, Thông tư 56/2026 có hiệu lực từ 07/07/2026 và thay thế Thông tư 08/2021, Thông tư 28/2023. Điều 27: khóa tuyển sinh 2026 áp dụng quy chế mới; khóa đã thông báo tuyển sinh trước ngày hiệu lực vẫn theo quy chế tại thời điểm thông báo.",
   "thieu_dieu": "Đã khôi phục tiêu đề Điều 4 và Điều 10 từ bản đối chiếu công khai (nội dung khoản vốn đã có trong file nhưng mất dòng tiêu đề). Nguồn đối chiếu: luatvietnam/thanhdo PDF Thông tư 56/2026; vẫn nên đối chiếu Công báo gốc.",
@@ -34,6 +23,19 @@
     "REPLACES khi câu hiệu lực nói 'thay thế' và nêu số thông tư."
   ],
   "neo4j": "Chưa cài Neo4j trên máy này. Đồ thị xem được trong Kho dữ liệu của demo và nạp được bằng data/viedureg/load.cypher.",
+  "nhan_claim": {
+    "path": "data/viedureg/claims_unique.jsonl",
+    "n": 127,
+    "filled": true,
+    "supported": 72,
+    "contradicted": 26,
+    "unsupported": 29,
+    "annotators": [
+      "doi_chieu_khoan"
+    ],
+    "kappa": null,
+    "note": "Một lượt đối chiếu claim với khoản được dẫn trong evidence_chunk_ids. Verifier không gán nhãn này. Chưa có người thứ hai, nên chưa có kappa."
+  },
   "bo_da_chot": {
     "path": "data/viedureg/questions_reviewed.json",
     "n": 150,

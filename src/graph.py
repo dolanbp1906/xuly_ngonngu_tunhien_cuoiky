@@ -174,12 +174,19 @@ def bm25(store: Store, query: str, k1: float = 1.5, b: float = 0.75) -> list[tup
         return []
     n_docs = len(store.chunks)
     scores: list[tuple[float, Chunk]] = []
+    # Cache tần suất từ theo cid: kết quả như tính lại mỗi lần, chỉ nhanh hơn trên kho lớn.
+    tf_cache: dict[str, tuple[int, dict[str, int]]] = store.__dict__.setdefault("_tf_cache", {})
     for chunk in store.chunks:
         if not chunk.tokens:
             continue
-        tf: dict[str, int] = {}
-        for tok in chunk.tokens:
-            tf[tok] = tf.get(tok, 0) + 1
+        cached = tf_cache.get(chunk.cid)
+        if cached is None or cached[0] != len(chunk.tokens):
+            tf = {}
+            for tok in chunk.tokens:
+                tf[tok] = tf.get(tok, 0) + 1
+            tf_cache[chunk.cid] = (len(chunk.tokens), tf)
+        else:
+            tf = cached[1]
         dl = len(chunk.tokens)
         score = 0.0
         for tok in q_tokens:

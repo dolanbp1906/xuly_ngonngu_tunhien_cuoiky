@@ -46,7 +46,10 @@ def train_phobert(
     batch_size: int = 8,
     lr: float = 2e-5,
     model_name: str = "vinai/phobert-base",
+    nli: int = 0,
+    nli_eval: int = 300,
 ) -> dict:
+    """nli > 0: trộn thêm `nli` cặp ViANLI (UIT) vào tập huấn luyện, nhãn ánh xạ sang 3 nhãn ViKAG-Faith."""
     import torch
     from torch.utils.data import DataLoader, Dataset
     from transformers import AutoModelForSequenceClassification, AutoTokenizer
@@ -60,6 +63,15 @@ def train_phobert(
     rng = random.Random(0)
     rng.shuffle(train_rows)
     train_rows = train_rows[:max_train]
+    nli_test: list[dict] = []
+    if nli > 0 or nli_eval > 0:
+        from src.external_eval import load_vianli
+
+        nli_rows = load_vianli("train")
+        rng.shuffle(nli_rows)
+        train_rows = train_rows + nli_rows[:nli]
+        rng.shuffle(train_rows)
+        nli_test = load_vianli("test")[:nli_eval]
 
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForSequenceClassification.from_pretrained(
@@ -143,6 +155,8 @@ def train_phobert(
         "history": history,
         "dev": _macro_f1([row["label"] for row in dev_rows], predict_rows(dev_rows)) if dev_rows else None,
         "test_human": _macro_f1([row["label"] for row in test_rows], predict_rows(test_rows)) if test_rows else None,
+        "nli_train": nli,
+        "vianli_test": _macro_f1([row["label"] for row in nli_test], predict_rows(nli_test)) if nli_test else None,
         "path": str(MODEL_DIR),
     }
     REPORT_PATH.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")

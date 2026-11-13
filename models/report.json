@@ -1,5 +1,5 @@
 {
-  "model": "/Users/dothilan.vn/Downloads/Lanaaaa/Source Code/MyCH/xuly_ngonngu_tunhien_cuoiky/models/tfidf_logreg.pkl",
+  "model": "C:\\Cao Hoc\\NNL\\content\\xuly_ngonngu_tunhien_cuoiky\\models\\tfidf_logreg.pkl",
   "train": {
     "n": 2000,
     "acc": 0.993,
